@@ -387,23 +387,31 @@ mov N171 <$MAXMC>
 
 
 #IF
+EQUAL <$STR(N100)> 1
 #ACT
 MUL N171 <$STR(N169)>
 DIV N171 100
-
-
 
 MOV N172 <$MAXAC>
 MUL N172 <$STR(N169)>
 DIV N172 100
 
+MOV N173 <$MAXMAC>
+MUL N173 <$STR(N169)>
+DIV N173 100
+GOTO @宠物面板UI
+#ELSEACT
+MUL N171 <$STR(N169)>
+DIV N171 100
+
+MOV N172 <$MAXAC>
+MUL N172 <$STR(N169)>
+DIV N172 100
 
 MOV N173 <$MAXMAC>
 MUL N173 <$STR(N169)>
 DIV N173 100
-
-GOTO @宠物面板UI
-
+GOTO @宠物出战
 
 [@宠物面板UI](3400,1000,800,3,)
 {234=x}{56=y}{战宠以及战宠技能书可开宠物宝箱或特定怪物获得!战宠可交易!=FCO=250}\
@@ -1671,7 +1679,7 @@ NOT EQUAL S170 已附体
 #act
 MobSlave 灵兽系统 1 10
 MOV S666 已出战
-Goto @宠物初始化
+;Goto @宠物初始化
 #ELSEACT
 SendMsg 7 宠物已附体，无法出战，请取消附体后再来。
 

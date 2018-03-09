@@ -68,6 +68,56 @@ GOTO @灭世套
 break
 #ELSEACT
 
+#if
+CheckContainsText <$ItemInfo[$STR(N888)].Name> 星皇
+#act
+GOTO @灭世套
+break
+#ELSEACT
+
+#if
+CheckContainsText <$ItemInfo[$STR(N888)].Name> 四象
+#act
+GOTO @灭世套
+break
+#ELSEACT
+
+#if
+CheckContainsText <$ItemInfo[$STR(N888)].Name> 紫华
+#act
+GOTO @灭世套
+break
+#ELSEACT
+
+#if
+CheckContainsText <$ItemInfo[$STR(N888)].Name> 潜龙
+#act
+GOTO @灭世套
+break
+#ELSEACT
+
+#if
+CheckContainsText <$ItemInfo[$STR(N888)].Name> 皓神
+#act
+GOTO @灭世套
+break
+#ELSEACT
+
+#if
+CheckContainsText <$ItemInfo[$STR(N888)].Name> 天王
+#act
+GOTO @灭世套
+break
+#ELSEACT
+
+#if
+CheckContainsText <$ItemInfo[$STR(N888)].Name> 神皇
+Not Equal <$ItemInfo[$STR(N888)].Stdmode> 0
+#act
+GOTO @灭世套
+break
+#ELSEACT
+
 
 #if
 CHECKTEXTLIST <$str(S0)> ../QuestDiary/游戏配置/灵宠配置/灵宠列表.txt
@@ -15972,7 +16022,7 @@ break
 [@灭世套]
 #IF
 Random 230
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -15986,7 +16036,7 @@ break
 
 #IF
 Random 229
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16000,7 +16050,7 @@ break
 
 #IF
 Random 228
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16014,7 +16064,7 @@ break
 
 #IF
 Random 227
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16028,7 +16078,7 @@ break
 
 #IF
 Random 226
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16043,7 +16093,7 @@ break
 
 #IF
 Random 225
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16057,7 +16107,7 @@ break
 
 #IF
 Random 224
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16071,7 +16121,7 @@ break
 
 #IF
 Random 223
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16085,7 +16135,7 @@ break
 
 #IF
 Random 222
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16099,7 +16149,7 @@ break
 
 #IF
 Random 221
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16114,7 +16164,7 @@ break
 
 #IF
 Random 220
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16128,7 +16178,7 @@ break
 
 #IF
 Random 219
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16142,7 +16192,7 @@ break
 
 #IF
 Random 218
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16156,7 +16206,7 @@ break
 
 #IF
 Random 217
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16170,7 +16220,7 @@ break
 
 #IF
 Random 216
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16184,7 +16234,7 @@ break
 
 #IF
 Random 215
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16198,7 +16248,7 @@ break
 
 #IF
 Random 214
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16212,7 +16262,7 @@ break
 
 #IF
 Random 213
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16226,7 +16276,7 @@ break
 
 #IF
 Random 212
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16240,7 +16290,7 @@ break
 
 #IF
 Random 211
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16255,7 +16305,7 @@ break
 
 #IF
 Random 212
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16269,7 +16319,7 @@ break
 
 #IF
 Random 211
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16283,7 +16333,7 @@ break
 
 #IF
 Random 210
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16297,7 +16347,7 @@ break
 
 #IF
 Random 209
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16311,7 +16361,7 @@ break
 
 #IF
 Random 208
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16325,7 +16375,7 @@ break
 
 #IF
 Random 1207
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16339,7 +16389,7 @@ break
 
 #IF
 Random 1206
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16353,7 +16403,7 @@ break
 
 #IF
 Random 1205
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16367,7 +16417,7 @@ break
 
 #IF
 Random 1204
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16381,7 +16431,7 @@ break
 
 #IF
 Random 1203
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16395,7 +16445,7 @@ break
 
 #IF
 Random 202
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16409,7 +16459,7 @@ break
 
 #IF
 Random 201
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16423,7 +16473,7 @@ break
 
 #IF
 Random 200
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16437,7 +16487,7 @@ break
 
 #IF
 Random 199
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16451,7 +16501,7 @@ break
 
 #IF
 Random 198
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16465,7 +16515,7 @@ break
 
 #IF
 Random 1197
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16479,7 +16529,7 @@ break
 
 #IF
 Random 1196
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16493,7 +16543,7 @@ break
 
 #IF
 Random 1195
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16507,7 +16557,7 @@ break
 
 #IF
 Random 1194
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16521,7 +16571,7 @@ break
 
 #IF
 Random 1193
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16535,7 +16585,7 @@ break
 
 #IF
 Random 192
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16549,7 +16599,7 @@ break
 
 #IF
 Random 191
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16563,7 +16613,7 @@ break
 
 #IF
 Random 190
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16577,7 +16627,7 @@ break
 
 #IF
 Random 189
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16591,7 +16641,7 @@ break
 
 #IF
 Random 188
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16605,7 +16655,7 @@ break
 
 #IF
 Random 1187
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16619,7 +16669,7 @@ break
 
 #IF
 Random 1186
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16633,7 +16683,7 @@ break
 
 #IF
 Random 1185
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16647,7 +16697,7 @@ break
 
 #IF
 Random 1184
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16661,7 +16711,7 @@ break
 
 #IF
 Random 1183
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16676,7 +16726,7 @@ break
 
 #IF
 Random 182
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16690,7 +16740,7 @@ break
 
 #IF
 Random 181
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16704,7 +16754,7 @@ break
 
 #IF
 Random 180
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16718,7 +16768,7 @@ break
 
 #IF
 Random 179
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16732,7 +16782,7 @@ break
 
 #IF
 Random 178
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16746,7 +16796,7 @@ break
 
 #IF
 Random 1177
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16760,7 +16810,7 @@ break
 
 #IF
 Random 1176
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16774,7 +16824,7 @@ break
 
 #IF
 Random 1175
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16788,7 +16838,7 @@ break
 
 #IF
 Random 1174
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16802,7 +16852,7 @@ break
 
 #IF
 Random 1173
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16817,7 +16867,7 @@ break
 
 #IF
 Random 172
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16831,7 +16881,7 @@ break
 
 #IF
 Random 171
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16845,7 +16895,7 @@ break
 
 #IF
 Random 170
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16859,7 +16909,7 @@ break
 
 #IF
 Random 169
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16873,7 +16923,7 @@ break
 
 #IF
 Random 168
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16887,7 +16937,7 @@ break
 
 #IF
 Random 1167
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16901,7 +16951,7 @@ break
 
 #IF
 Random 1166
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16915,7 +16965,7 @@ break
 
 #IF
 Random 1165
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16929,7 +16979,7 @@ break
 
 #IF
 Random 1164
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16943,7 +16993,7 @@ break
 
 #IF
 Random 1163
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16958,7 +17008,7 @@ break
 
 #IF
 Random 162
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16972,7 +17022,7 @@ break
 
 #IF
 Random 161
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -16986,7 +17036,7 @@ break
 
 #IF
 Random 160
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17000,7 +17050,7 @@ break
 
 #IF
 Random 159
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17014,7 +17064,7 @@ break
 
 #IF
 Random 158
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17028,7 +17078,7 @@ break
 
 #IF
 Random 1157
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17042,7 +17092,7 @@ break
 
 #IF
 Random 1156
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17056,7 +17106,7 @@ break
 
 #IF
 Random 1155
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17070,7 +17120,7 @@ break
 
 #IF
 Random 1154
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17084,7 +17134,7 @@ break
 
 #IF
 Random 1153
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17099,7 +17149,7 @@ break
 
 #IF
 Random 152
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17115,7 +17165,7 @@ break
 
 #IF
 Random 151
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17131,7 +17181,7 @@ break
 
 #IF
 Random 150
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17147,7 +17197,7 @@ break
 
 #IF
 Random 149
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17163,7 +17213,7 @@ break
 
 #IF
 Random 148
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17179,7 +17229,7 @@ break
 
 #IF
 Random 1147
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17195,7 +17245,7 @@ break
 
 #IF
 Random 1146
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17211,7 +17261,7 @@ break
 
 #IF
 Random 1145
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17227,7 +17277,7 @@ break
 
 #IF
 Random 1144
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17243,7 +17293,7 @@ break
 
 #IF
 Random 1143
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17260,7 +17310,7 @@ break
 
 #IF
 Random 142
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17276,7 +17326,7 @@ break
 
 #IF
 Random 141
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17292,7 +17342,7 @@ break
 
 #IF
 Random 140
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17308,7 +17358,7 @@ break
 
 #IF
 Random 139
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17324,7 +17374,7 @@ break
 
 #IF
 Random 138
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17340,7 +17390,7 @@ break
 
 #IF
 Random 1137
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17356,7 +17406,7 @@ break
 
 #IF
 Random 1136
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17372,7 +17422,7 @@ break
 
 #IF
 Random 1135
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17388,7 +17438,7 @@ break
 
 #IF
 Random 1134
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17404,7 +17454,7 @@ break
 
 #IF
 Random 1133
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17421,7 +17471,7 @@ break
 
 #IF
 Random 132
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17436,7 +17486,7 @@ break
 
 #IF
 Random 131
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17451,7 +17501,7 @@ break
 
 #IF
 Random 130
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17466,7 +17516,7 @@ break
 
 #IF
 Random 129
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17482,7 +17532,7 @@ break
 
 #IF
 Random 128
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17498,7 +17548,7 @@ break
 
 #IF
 Random 1127
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17514,7 +17564,7 @@ break
 
 #IF
 Random 1126
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17530,7 +17580,7 @@ break
 
 #IF
 Random 1125
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17546,7 +17596,7 @@ break
 
 #IF
 Random 1124
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17562,7 +17612,7 @@ break
 
 #IF
 Random 1123
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17579,7 +17629,7 @@ break
 
 #IF
 Random 122
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17594,7 +17644,7 @@ break
 
 #IF
 Random 121
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17609,7 +17659,7 @@ break
 
 #IF
 Random 120
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17624,7 +17674,7 @@ break
 
 #IF
 Random 119
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17640,7 +17690,7 @@ break
 
 #IF
 Random 118
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17656,7 +17706,7 @@ break
 
 #IF
 Random 1117
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17672,7 +17722,7 @@ break
 
 #IF
 Random 1116
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17688,7 +17738,7 @@ break
 
 #IF
 Random 1115
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17704,7 +17754,7 @@ break
 
 #IF
 Random 1114
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17720,7 +17770,7 @@ break
 
 #IF
 Random 1113
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17737,7 +17787,7 @@ break
 
 #IF
 Random 112
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17752,7 +17802,7 @@ break
 
 #IF
 Random 111
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17767,7 +17817,7 @@ break
 
 #IF
 Random 110
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17782,7 +17832,7 @@ break
 
 #IF
 Random 109
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17797,7 +17847,7 @@ break
 
 #IF
 Random 108
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17812,7 +17862,7 @@ break
 
 #IF
 Random 1107
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17827,7 +17877,7 @@ break
 
 #IF
 Random 1106
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17842,7 +17892,7 @@ break
 
 #IF
 Random 1105
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17857,7 +17907,7 @@ break
 
 #IF
 Random 1104
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17872,7 +17922,7 @@ break
 
 #IF
 Random 1103
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17888,7 +17938,7 @@ break
 
 #IF
 Random 102
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17903,7 +17953,7 @@ break
 
 #IF
 Random 101
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17918,7 +17968,7 @@ break
 
 #IF
 Random 100
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17933,7 +17983,7 @@ break
 
 #IF
 Random 99
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17948,7 +17998,7 @@ break
 
 #IF
 Random 98
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17963,7 +18013,7 @@ break
 
 #IF
 Random 1197
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17978,7 +18028,7 @@ break
 
 #IF
 Random 1196
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -17993,7 +18043,7 @@ break
 
 #IF
 Random 1195
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18008,7 +18058,7 @@ break
 
 #IF
 Random 1194
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18023,7 +18073,7 @@ break
 
 #IF
 Random 1193
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18039,7 +18089,7 @@ break
 
 #IF
 Random 94
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18056,7 +18106,7 @@ break
 
 #IF
 Random 93
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18073,7 +18123,7 @@ break
 
 #IF
 Random 92
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18090,7 +18140,7 @@ break
 
 #IF
 Random 91
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18107,7 +18157,7 @@ break
 
 #IF
 Random 90
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18124,7 +18174,7 @@ break
 
 #IF
 Random 1189
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18141,7 +18191,7 @@ break
 
 #IF
 Random 1188
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18158,7 +18208,7 @@ break
 
 #IF
 Random 1187
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18175,7 +18225,7 @@ break
 
 #IF
 Random 1186
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18192,7 +18242,7 @@ break
 
 #IF
 Random 1185
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18210,7 +18260,7 @@ break
 
 #IF
 Random 84
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18231,7 +18281,7 @@ break
 
 #IF
 Random 83
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18252,7 +18302,7 @@ break
 
 #IF
 Random 82
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18273,7 +18323,7 @@ break
 
 #IF
 Random 181
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18294,7 +18344,7 @@ break
 
 #IF
 Random 280
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18315,7 +18365,7 @@ break
 
 #IF
 Random 1179
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18336,7 +18386,7 @@ break
 
 #IF
 Random 2178
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18357,7 +18407,7 @@ break
 
 #IF
 Random 3177
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18378,7 +18428,7 @@ break
 
 #IF
 Random 4178
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18399,7 +18449,7 @@ break
 
 #IF
 Random 5177
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18421,7 +18471,7 @@ break
 
 #IF
 Random 76
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18436,7 +18486,7 @@ break
 
 #IF
 Random 75
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18451,7 +18501,7 @@ break
 
 #IF
 Random 74
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18466,7 +18516,7 @@ break
 
 #IF
 Random 73
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18481,7 +18531,7 @@ break
 
 #IF
 Random 72
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18496,7 +18546,7 @@ break
 
 #IF
 Random 1171
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18511,7 +18561,7 @@ break
 
 #IF
 Random 1170
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18526,7 +18576,7 @@ break
 
 #IF
 Random 1169
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18541,7 +18591,7 @@ break
 
 #IF
 Random 1168
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18556,7 +18606,7 @@ break
 
 #IF
 Random 1167
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18572,7 +18622,7 @@ break
 
 #IF
 Random 66
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18587,7 +18637,7 @@ break
 
 #IF
 Random 65
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18602,7 +18652,7 @@ break
 
 #IF
 Random 64
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18617,7 +18667,7 @@ break
 
 #IF
 Random 63
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18632,7 +18682,7 @@ break
 
 #IF
 Random 62
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18647,7 +18697,7 @@ break
 
 #IF
 Random 1161
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18662,7 +18712,7 @@ break
 
 #IF
 Random 1160
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18677,7 +18727,7 @@ break
 
 #IF
 Random 1159
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18692,7 +18742,7 @@ break
 
 #IF
 Random 1158
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18707,7 +18757,7 @@ break
 
 #IF
 Random 1157
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18723,7 +18773,7 @@ break
 
 #IF
 Random 56
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18738,7 +18788,7 @@ break
 
 #IF
 Random 55
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18753,7 +18803,7 @@ break
 
 #IF
 Random 54
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18768,7 +18818,7 @@ break
 
 #IF
 Random 53
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18783,7 +18833,7 @@ break
 
 #IF
 Random 52
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18798,7 +18848,7 @@ break
 
 #IF
 Random 1151
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18813,7 +18863,7 @@ break
 
 #IF
 Random 1150
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18828,7 +18878,7 @@ break
 
 #IF
 Random 1149
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18843,7 +18893,7 @@ break
 
 #IF
 Random 1148
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18858,7 +18908,7 @@ break
 
 #IF
 Random 1147
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18874,7 +18924,7 @@ break
 
 #IF
 Random 46
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18891,7 +18941,7 @@ break
 
 #IF
 Random 45
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18908,7 +18958,7 @@ break
 
 #IF
 Random 44
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18925,7 +18975,7 @@ break
 
 #IF
 Random 43
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18942,7 +18992,7 @@ break
 
 #IF
 Random 42
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18959,7 +19009,7 @@ break
 
 #IF
 Random 1141
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18976,7 +19026,7 @@ break
 
 #IF
 Random 1140
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -18993,7 +19043,7 @@ break
 
 #IF
 Random 1139
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19010,7 +19060,7 @@ break
 
 #IF
 Random 1138
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19027,7 +19077,7 @@ break
 
 #IF
 Random 1137
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19044,7 +19094,7 @@ break
 
 #IF
 Random 36
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19066,7 +19116,7 @@ break
 
 #IF
 Random 35
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19088,7 +19138,7 @@ break
 
 #IF
 Random 34
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19110,7 +19160,7 @@ break
 
 #IF
 Random 33
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19132,7 +19182,7 @@ break
 
 #IF
 Random 32
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19154,7 +19204,7 @@ break
 
 #IF
 Random 1131
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19176,7 +19226,7 @@ break
 
 #IF
 Random 1130
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19198,7 +19248,7 @@ break
 
 #IF
 Random 1129
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19220,7 +19270,7 @@ break
 
 #IF
 Random 1128
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19242,7 +19292,7 @@ break
 
 #IF
 Random 1127
-Equal <$ItemInfo[$STR(N888)].Color> 58
+;Equal <$ItemInfo[$STR(N888)].Color> 58
 #ACT
 GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
@@ -19270,9 +19320,10 @@ GetRandomName ../QuestDiary/游戏配置/鉴定系统/属性脚本2.txt S18
 HOOKITEMIDX <$STR(N0)>
 ChangeGiveItem 14 +<$str(s18)>
 ChangeGiveItem 7 75 249
-
+ChangeGiveItem 15 普通-<$STR(S0)>
 ChangeGiveItem 7 14 +1
 ChangeGiveItem 8
+SendMsg 6 鉴定完毕！
 break
 
 

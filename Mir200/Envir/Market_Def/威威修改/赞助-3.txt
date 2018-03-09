@@ -40,7 +40,7 @@ GENDER MAN
 　　　1,{i.1684,c.1=item}        2,{i.1680,c.1=item}        3,{i.1796,c.1=item}        4,{i.1704,c.1=item}
 　　　　5,{i.1737,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.2000=item} \  \
 　  　  \
-　　　{宣传赞助请联系管理=FCO=250}   {QQ：2264841338=FCO=253}   {你当前累计充值积分:[<$STR(C33)>]=FCO=253}\ 
+　　　{宣传赞助请联系管理=FCO=250}   {QQ：121652993=FCO=253}   {你当前累计充值积分:[<$STR(C33)>]=FCO=253}\ 
 #ELSESAY 
 　\
 　　   {伊春传奇感谢有你，现在充值送豪礼！绝不影响游戏平衡,请依次领取奖励,否则后果自负!=FCO=249}\
@@ -80,7 +80,7 @@ GENDER MAN
 　　　1,{i.1684,c.1=item}        2,{i.1680,c.1=item}        3,{i.1796,c.1=item}        4,{i.1704,c.1=item}
 　　　　5,{i.1737,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.2000=item} \  \
 　  　  \
-　　　{宣传赞助请联系管理=FCO=250}   {QQ：2264841338=FCO=253}   {你当前累计充值积分:[<$STR(C33)>]=FCO=253}\ 
+　　　{宣传赞助请联系管理=FCO=250}   {QQ：121652993=FCO=253}   {你当前累计充值积分:[<$STR(C33)>]=FCO=253}\ 
 
 
 
@@ -106,9 +106,9 @@ Break
 [@青铜赞助2]
 #if
 #act
-DynamicDynamicGive 50元赞助礼包 1
-DynamicDynamicGive 沃玛教主(宠) 1
-DynamicDynamicGive 伊春传奇会员 1
+DynamicGive 50元赞助礼包 1
+DynamicGive 沃玛教主(宠) 1
+DynamicGive 会员卡 1
 DynamicGive 星级卷礼包 5
 DynamicGive 强化卷礼包 5
 DynamicGive 铭文洗练石 100

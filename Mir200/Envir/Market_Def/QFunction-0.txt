@@ -35,6 +35,7 @@
 
 [@ClickDiyBtn7]
 #ACT
+MOV N100 1
 #CALLX [\\游戏配置\灵宠配置\灵宠界面1.txt] @灵宠界面
 
 [@ClickDiyBtn8]
@@ -3772,8 +3773,9 @@ MOV N78 1
 
 [@MagSelfFunc188]
 #act
-#CALLX [\\会员系统\宝宝系统.txt] @宝宝系统
-;#CALLX [\\游戏配置\灵宠配置\灵宠界面1.txt] @灵宠界面
+MOV N100 0
+;#CALLX [\\会员系统\宝宝系统.txt] @宝宝系统
+#CALLX [\\游戏配置\灵宠配置\灵宠界面1.txt] @灵宠界面
 
 [@StdModeFunc503]
 #if

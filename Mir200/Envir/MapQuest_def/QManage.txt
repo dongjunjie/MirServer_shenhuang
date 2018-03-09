@@ -64,7 +64,7 @@ SHOWBTN 9 0 3.1977.1.1979.1978.986.171.-1.<称号系统/FCOLOR=$40FF00>
 #IF
 ISNEWHUMAN
 #ACT
-;ADDSKILL 御魔术 3
+;ADDSKILL 召唤战宠 3
 Give 小僵尸(宠)
 give 金币 100000
 Give 铭文[新手印] 2
@@ -84,6 +84,7 @@ ADDSKILL 攻杀剑术 0
 ADDSKILL 刺杀剑术 0
 ADDSKILL 野蛮冲撞 0
 ADDSKILL 半月弯刀 0
+ADDSKILL 召唤战宠 0
 DynamicGive 布衣(男) 1
 DynamicGive 新手开荒剑 1
 ;--------------上面给装备名字
@@ -112,6 +113,7 @@ ADDSKILL 攻杀剑术 0
 ADDSKILL 刺杀剑术 0
 ADDSKILL 野蛮冲撞 0
 ADDSKILL 半月弯刀 0
+ADDSKILL 召唤战宠 0
 DynamicGive 布衣(女) 1
 DynamicGive 新手开荒剑 1
 ;--------------上面给装备名字
@@ -144,6 +146,7 @@ ADDSKILL 疾光电影 0
 ADDSKILL 瞬息移动 0
 ADDSKILL 魔法盾 0
 ADDSKILL 圣言术 0
+ADDSKILL 召唤战宠 0
 DynamicGive 布衣(女) 1
 DynamicGive 新手开荒剑 1
 ;--------------上面给装备名字
@@ -175,6 +178,7 @@ ADDSKILL 疾光电影 0
 ADDSKILL 瞬息移动 0
 ADDSKILL 魔法盾 0
 ADDSKILL 圣言术 0
+ADDSKILL 召唤战宠 0
 DynamicGive 布衣(男) 1
 DynamicGive 新手开荒剑 1
 ;--------------上面给装备名字
@@ -208,6 +212,7 @@ ADDSKILL 幽灵盾 0
 ADDSKILL 心灵启示 0
 ADDSKILL 困魔咒 0
 ADDSKILL 群体治疗术 0
+ADDSKILL 召唤战宠 0
 DynamicGive 布衣(女) 1
 DynamicGive 新手开荒剑 1
 ;--------------上面给装备名字
@@ -240,6 +245,7 @@ ADDSKILL 幽灵盾 0
 ADDSKILL 心灵启示 0
 ADDSKILL 困魔咒 0
 ADDSKILL 群体治疗术 0
+ADDSKILL 召唤战宠 0
 DynamicGive 布衣(男) 1
 DynamicGive 新手开荒剑 1
 ;--------------上面给装备名字
@@ -601,7 +607,7 @@ Break
  {提示：超出15群，每群多送1元平台充值，可累计=FCO=23}\
  {充值积分，每人每日限宣传100群封顶，不接受群=FCO=23}\
  {发器，新老区每天均可宣传。=FCO=23}\
- {[管理员QQ]:2264841338  [群号]:526552598=FCO=250}\ \
+ {[管理员QQ]:121652993  [群号]:720086232=FCO=250}\ \
 　<{[关闭页面]=FCO=249}/@exit>\
 
 

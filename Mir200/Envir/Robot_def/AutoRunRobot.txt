@@ -13,7 +13,8 @@
 ;#AutoRun NPC RUNONDAY 22:29 @充值竞价
 
 #AutoRun NPC RUNONWEEK 6:23:00 @清除个人消费积分
-#AutoRun NPC HOUR 72 @神秘商店清理
+;#AutoRun NPC HOUR 72 @神秘商店清理
+#AutoRun NPC RUNONDAY 6:20 @神秘商店清理
 
 #AutoRun NPC MIN 30 @刷新天下第一称号
 
