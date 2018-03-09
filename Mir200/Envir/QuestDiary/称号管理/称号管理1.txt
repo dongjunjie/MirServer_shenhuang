@@ -1,0 +1,69 @@
+[@称号管理1]
+
+{
+#IF
+#ACT
+MOV C150 <$HUMAN(杀人次数)>
+
+#IF
+#ACT
+MOV C151 <$HUMAN(被杀次数)>
+
+#if
+CHECKLEVELEX > 0
+#ACT
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\
+
+#if
+CheckRenewLevel = 1
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮筑基前期≯
+
+
+#if
+CheckRenewLevel = 2
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮筑基后期≯
+
+
+#if
+CheckRenewLevel = 3
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮金丹前期≯
+
+
+#if
+CheckRenewLevel = 4
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮金丹后期≯
+
+
+#if
+CheckRenewLevel = 5
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮元婴前期≯
+
+
+#if
+CheckRenewLevel = 6
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮元婴后期≯
+
+#if
+CheckRenewLevel = 7
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮渡劫前期≯
+
+
+#if
+CheckRenewLevel = 8
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮渡劫后期≯
+
+#if
+CheckRenewLevel = 9
+#act
+SetRankLevelName %S\≮斩杀[<$STR(C150)>]人★死亡[<$STR(C151)>]次≯\≮武破虚空★白日飞升≯
+
+
+}

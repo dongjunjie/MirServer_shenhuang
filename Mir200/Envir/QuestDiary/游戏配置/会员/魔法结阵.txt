@@ -1,0 +1,197 @@
+[@魔法结阵]
+{
+[@main]
+<$USERNAME>：\ \
+　{[投入祖玛装备或结阵神石]=FCO=147}\
+　可获得:{元宝、经验]=FCO=250}或:{宝宝]=FCO=250}\
+　宝宝仅限战士获得:{35级之前可获得半兽勇士x3]=FCO=250}\
+　                 {42级之后可获得傲视锤手x3]=FCO=250}\ \
+
+<&【投入物品】/@结阵开始>\
+
+[@结阵开始]
+#ACT
+ShowItemBox 放入要投入的装备： @检测道具
+Break
+[@检测道具]
+#IF
+Random 3
+NOT CheckLevelEx > 42
+CheckJob Warrior
+CheckSlaveCount < 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+RecallMob 半兽勇士1 1 120
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckLevelEx > 42
+CheckJob Warrior
+CheckSlaveCount < 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+RecallMob 傲视锤手 1 120
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GIVE 祝福油 1
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GIVE 洗炼符 1
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GIVE 10元宝 1
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GIVE 20元宝 1
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GIVE 5元宝 1
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 10
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GIVE 50元宝 1
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+ChangeExp + 100000
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+ChangeExp + 50000
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+ChangeExp + 200000
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+ChangeExp + 300000
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 3
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GameGold + 10
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 4
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GameGold + 20
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 5
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GameGold + 30
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 10
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GameGold + 100
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#IF
+Random 20
+CheckTextList <$ItemInfo[$Param0].Name> ../QuestDiary/游戏配置/会员/结阵物品.txt
+#ACT
+TakeIdx <$Param0>
+GameGold + 1000
+SENDMSG 7 投入成功！
+INC G609 1
+ShowItemBox 放入要投入的装备： @检测道具
+BREAK
+#iF
+#ACT
+MESSAGEBOX 提示:你放入的物品无法结阵。
+BREAK
+}

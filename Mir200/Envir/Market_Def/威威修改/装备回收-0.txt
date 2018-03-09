@@ -1,0 +1,10812 @@
+
+[@main](2393,300,540,3)
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=23}\
+　{请点清背包的重要物品，误回收了一概不=FCO=23}\
+　{负责！=FCO=23}\
+　\
+　\
+　\
+　\
+　\
+　\
+　　　　　　<{[一键回收商店套]=FCO=70}|点击进入回收各级别前缀商店套装备页面/@商店套装备回收> \  
+　　　　　　<{[一键回收沃玛套]=FCO=70}|点击进入回收各级别前缀沃玛套装备页面/@沃玛套装备回收> \  
+　　　　　　<{[一键回收祖玛套]=FCO=70}|点击进入回收各级别前缀祖玛套装备页面/@祖玛套装备回收> \  
+　　　　　　<{[一键回收赤月套]=FCO=70}|点击进入回收各级别前缀赤月套装备页面/@赤月套装备回收> \  
+　　　　　　<{[一键回收魔龙套]=FCO=70}|点击进入回收各级别前缀魔龙套装备页面/@魔龙套装备回收> \  
+　　　　　　<{[一键回收魔宠蛋]=FCO=70}|点击进入回收页面/@一键回收魔宠蛋> \ 
+　　　　　<{[一键回收强化技能书]=FCO=70}|35级强化技能书20元宝+2000经验，其他强化技能书均为5元宝+5000经验/@回收强化技能书> \  
+
+<{[结束对话]=FCO=249}/@exit>\
+
+
+[@商店套装备回收](2393,300,540,3)
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:所有妖玛套以下装备都属于商店套,=FCO=23}\
+　{商店套只支持回收[筑基]前缀以上的装备.=FCO=23}\
+　{[筑基]商店套,每件2元宝+1000经验=FCO=254}\
+　{[金丹]商店套,每件4元宝+2000经验=FCO=254}\
+　{[元婴]商店套,每件6元宝+3000经验=FCO=254}\
+　{[渡劫]商店套,每件8元宝+4000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀商店套]=FCO=70}/@筑基商店套装备回收> \  
+
+　<{[返回主页]=FCO=249}/@main>\
+
+
+[@筑基商店套装备回收](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @筑基商店套装备回收提示
+#IF
+CHECKITEM [筑基]木剑 1
+#ACT
+TAKE [筑基]木剑 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]乌木剑 1
+#ACT
+TAKE [筑基]乌木剑 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]铁剑 1
+#ACT
+TAKE [筑基]铁剑 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]青铜剑 1
+#ACT
+TAKE [筑基]青铜剑 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]短剑 1
+#ACT
+TAKE [筑基]短剑 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]青铜斧 1
+#ACT
+TAKE [筑基]青铜斧 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]匕首 1
+#ACT
+TAKE [筑基]匕首 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]八荒 1
+#ACT
+TAKE [筑基]八荒 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]半月 1
+#ACT
+TAKE [筑基]半月 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]凌风 1
+#ACT
+TAKE [筑基]凌风 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]破魂 1
+#ACT
+TAKE [筑基]破魂 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]降魔 1
+#ACT
+TAKE [筑基]降魔 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]斩马刀 1
+#ACT
+TAKE [筑基]斩马刀 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]修罗 1
+#ACT
+TAKE [筑基]修罗 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]凝霜 1
+#ACT
+TAKE [筑基]凝霜 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]海魂 1
+#ACT
+TAKE [筑基]海魂 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]偃月 1
+#ACT
+TAKE [筑基]偃月 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]布衣(男) 1
+#ACT
+TAKE [筑基]布衣(男) 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]轻盔甲男 1
+#ACT
+TAKE [筑基]轻盔甲男 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]中盔甲男 1
+#ACT
+TAKE [筑基]中盔甲男 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]布衣(女) 1
+#ACT
+TAKE [筑基]布衣(女) 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]轻盔甲女 1
+#ACT
+TAKE [筑基]轻盔甲女 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]中盔甲女 1
+#ACT
+TAKE [筑基]中盔甲女 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]青铜头盔 1
+#ACT
+TAKE [筑基]青铜头盔 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]魔法头盔 1
+#ACT
+TAKE [筑基]魔法头盔 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]骷髅头盔 1
+#ACT
+TAKE [筑基]骷髅头盔 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [筑基]道士头盔 1
+#ACT
+TAKE [筑基]道士头盔 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]灯笼项链 1
+#ACT
+TAKE [筑基]灯笼项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]白虎齿链 1
+#ACT
+TAKE [筑基]白虎齿链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]传统项链 1
+#ACT
+TAKE [筑基]传统项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]金项链 1
+#ACT
+TAKE [筑基]金项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]黑檀项链 1
+#ACT
+TAKE [筑基]黑檀项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]黄水晶链 1
+#ACT
+TAKE [筑基]黄水晶链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]黑水晶链 1
+#ACT
+TAKE [筑基]黑水晶链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]琥珀项链 1
+#ACT
+TAKE [筑基]琥珀项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]白金项链 1
+#ACT
+TAKE [筑基]白金项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]凤凰明珠 1
+#ACT
+TAKE [筑基]凤凰明珠 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]放大镜 1
+#ACT
+TAKE [筑基]放大镜 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]竹笛 1
+#ACT
+TAKE [筑基]竹笛 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]蓝翡翠项链 1
+#ACT
+TAKE [筑基]蓝翡翠项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]躲避手链 1
+#ACT
+TAKE [筑基]躲避手链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]魔鬼项链 1
+#ACT
+TAKE [筑基]魔鬼项链 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]古铜戒指 1
+#ACT
+TAKE [筑基]古铜戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]玻璃戒指 1
+#ACT
+TAKE [筑基]玻璃戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]牛角戒指 1
+#ACT
+TAKE [筑基]牛角戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]蓝水晶戒 1
+#ACT
+TAKE [筑基]蓝水晶戒 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]六角戒指 1
+#ACT
+TAKE [筑基]六角戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]生铁戒指 1
+#ACT
+TAKE [筑基]生铁戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]金戒指 1
+#ACT
+TAKE [筑基]金戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]黑水晶戒 1
+#ACT
+TAKE [筑基]黑水晶戒 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]珊瑚戒指 1
+#ACT
+TAKE [筑基]珊瑚戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]蛇眼戒指 1
+#ACT
+TAKE [筑基]蛇眼戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]降妖戒指 1
+#ACT
+TAKE [筑基]降妖戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]珍珠戒指 1
+#ACT
+TAKE [筑基]珍珠戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]骷髅戒指 1
+#ACT
+TAKE [筑基]骷髅戒指 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]铁手镯 1
+#ACT
+TAKE [筑基]铁手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]银手镯 1
+#ACT
+TAKE [筑基]银手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]夏普儿镯 1
+#ACT
+TAKE [筑基]夏普儿镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]避邪手镯 1
+#ACT
+TAKE [筑基]避邪手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]皮制手套 1
+#ACT
+TAKE [筑基]皮制手套 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]坚固手套 1
+#ACT
+TAKE [筑基]坚固手套 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]钢手镯 1
+#ACT
+TAKE [筑基]钢手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]小手镯 1
+#ACT
+TAKE [筑基]小手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]大手镯 1
+#ACT
+TAKE [筑基]大手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]死神手套 1
+#ACT
+TAKE [筑基]死神手套 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]魔法手镯 1
+#ACT
+TAKE [筑基]魔法手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [筑基]金手镯 1
+#ACT
+TAKE [筑基]金手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]道士手镯 1
+#ACT
+TAKE [筑基]道士手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]黑檀手镯 1
+#ACT
+TAKE [筑基]黑檀手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]魔力手镯 1
+#ACT
+TAKE [筑基]魔力手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]金手镯 1
+#ACT
+TAKE [筑基]金手镯 1
+GAMEGOLD + 2
+ChangeExp + 1000
+INC M0 2
+INC M99 1000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]木剑 1
+#ACT
+TAKE [金丹]木剑 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]乌木剑 1
+#ACT
+TAKE [金丹]乌木剑 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]铁剑 1
+#ACT
+TAKE [金丹]铁剑 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]青铜剑 1
+#ACT
+TAKE [金丹]青铜剑 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]短剑 1
+#ACT
+TAKE [金丹]短剑 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]青铜斧 1
+#ACT
+TAKE [金丹]青铜斧 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]匕首 1
+#ACT
+TAKE [金丹]匕首 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]八荒 1
+#ACT
+TAKE [金丹]八荒 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]半月 1
+#ACT
+TAKE [金丹]半月 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]凌风 1
+#ACT
+TAKE [金丹]凌风 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]破魂 1
+#ACT
+TAKE [金丹]破魂 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]降魔 1
+#ACT
+TAKE [金丹]降魔 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]斩马刀 1
+#ACT
+TAKE [金丹]斩马刀 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]修罗 1
+#ACT
+TAKE [金丹]修罗 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]凝霜 1
+#ACT
+TAKE [金丹]凝霜 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]海魂 1
+#ACT
+TAKE [金丹]海魂 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]偃月 1
+#ACT
+TAKE [金丹]偃月 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]布衣(男) 1
+#ACT
+TAKE [金丹]布衣(男) 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]轻盔甲男 1
+#ACT
+TAKE [金丹]轻盔甲男 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]中盔甲男 1
+#ACT
+TAKE [金丹]中盔甲男 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]布衣(女) 1
+#ACT
+TAKE [金丹]布衣(女) 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]轻盔甲女 1
+#ACT
+TAKE [金丹]轻盔甲女 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]中盔甲女 1
+#ACT
+TAKE [金丹]中盔甲女 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]青铜头盔 1
+#ACT
+TAKE [金丹]青铜头盔 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]魔法头盔 1
+#ACT
+TAKE [金丹]魔法头盔 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]骷髅头盔 1
+#ACT
+TAKE [金丹]骷髅头盔 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [金丹]道士头盔 1
+#ACT
+TAKE [金丹]道士头盔 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]灯笼项链 1
+#ACT
+TAKE [金丹]灯笼项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]白虎齿链 1
+#ACT
+TAKE [金丹]白虎齿链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]传统项链 1
+#ACT
+TAKE [金丹]传统项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]金项链 1
+#ACT
+TAKE [金丹]金项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]黑檀项链 1
+#ACT
+TAKE [金丹]黑檀项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]黄水晶链 1
+#ACT
+TAKE [金丹]黄水晶链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]黑水晶链 1
+#ACT
+TAKE [金丹]黑水晶链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]琥珀项链 1
+#ACT
+TAKE [金丹]琥珀项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]白金项链 1
+#ACT
+TAKE [金丹]白金项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]凤凰明珠 1
+#ACT
+TAKE [金丹]凤凰明珠 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]放大镜 1
+#ACT
+TAKE [金丹]放大镜 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]竹笛 1
+#ACT
+TAKE [金丹]竹笛 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]蓝翡翠项链 1
+#ACT
+TAKE [金丹]蓝翡翠项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]躲避手链 1
+#ACT
+TAKE [金丹]躲避手链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]魔鬼项链 1
+#ACT
+TAKE [金丹]魔鬼项链 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]古铜戒指 1
+#ACT
+TAKE [金丹]古铜戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]玻璃戒指 1
+#ACT
+TAKE [金丹]玻璃戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]牛角戒指 1
+#ACT
+TAKE [金丹]牛角戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]蓝水晶戒 1
+#ACT
+TAKE [金丹]蓝水晶戒 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]六角戒指 1
+#ACT
+TAKE [金丹]六角戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]生铁戒指 1
+#ACT
+TAKE [金丹]生铁戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]金戒指 1
+#ACT
+TAKE [金丹]金戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]黑水晶戒 1
+#ACT
+TAKE [金丹]黑水晶戒 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]珊瑚戒指 1
+#ACT
+TAKE [金丹]珊瑚戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]蛇眼戒指 1
+#ACT
+TAKE [金丹]蛇眼戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]降妖戒指 1
+#ACT
+TAKE [金丹]降妖戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]珍珠戒指 1
+#ACT
+TAKE [金丹]珍珠戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]骷髅戒指 1
+#ACT
+TAKE [金丹]骷髅戒指 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]铁手镯 1
+#ACT
+TAKE [金丹]铁手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]银手镯 1
+#ACT
+TAKE [金丹]银手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]夏普儿镯 1
+#ACT
+TAKE [金丹]夏普儿镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]避邪手镯 1
+#ACT
+TAKE [金丹]避邪手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]皮制手套 1
+#ACT
+TAKE [金丹]皮制手套 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]坚固手套 1
+#ACT
+TAKE [金丹]坚固手套 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]钢手镯 1
+#ACT
+TAKE [金丹]钢手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]小手镯 1
+#ACT
+TAKE [金丹]小手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]大手镯 1
+#ACT
+TAKE [金丹]大手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]死神手套 1
+#ACT
+TAKE [金丹]死神手套 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]魔法手镯 1
+#ACT
+TAKE [金丹]魔法手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [金丹]金手镯 1
+#ACT
+TAKE [金丹]金手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]道士手镯 1
+#ACT
+TAKE [金丹]道士手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]黑檀手镯 1
+#ACT
+TAKE [金丹]黑檀手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]魔力手镯 1
+#ACT
+TAKE [金丹]魔力手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]金手镯 1
+#ACT
+TAKE [金丹]金手镯 1
+GAMEGOLD + 4
+ChangeExp + 2000
+INC M0 4
+INC M99 2000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]木剑 1
+#ACT
+TAKE [元婴]木剑 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]乌木剑 1
+#ACT
+TAKE [元婴]乌木剑 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]铁剑 1
+#ACT
+TAKE [元婴]铁剑 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]青铜剑 1
+#ACT
+TAKE [元婴]青铜剑 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]短剑 1
+#ACT
+TAKE [元婴]短剑 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]青铜斧 1
+#ACT
+TAKE [元婴]青铜斧 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]匕首 1
+#ACT
+TAKE [元婴]匕首 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]八荒 1
+#ACT
+TAKE [元婴]八荒 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]半月 1
+#ACT
+TAKE [元婴]半月 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]凌风 1
+#ACT
+TAKE [元婴]凌风 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]破魂 1
+#ACT
+TAKE [元婴]破魂 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]降魔 1
+#ACT
+TAKE [元婴]降魔 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]斩马刀 1
+#ACT
+TAKE [元婴]斩马刀 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]修罗 1
+#ACT
+TAKE [元婴]修罗 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]凝霜 1
+#ACT
+TAKE [元婴]凝霜 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]海魂 1
+#ACT
+TAKE [元婴]海魂 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]偃月 1
+#ACT
+TAKE [元婴]偃月 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]布衣(男) 1
+#ACT
+TAKE [元婴]布衣(男) 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]轻盔甲男 1
+#ACT
+TAKE [元婴]轻盔甲男 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]中盔甲男 1
+#ACT
+TAKE [元婴]中盔甲男 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]布衣(女) 1
+#ACT
+TAKE [元婴]布衣(女) 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]轻盔甲女 1
+#ACT
+TAKE [元婴]轻盔甲女 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]中盔甲女 1
+#ACT
+TAKE [元婴]中盔甲女 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]青铜头盔 1
+#ACT
+TAKE [元婴]青铜头盔 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]魔法头盔 1
+#ACT
+TAKE [元婴]魔法头盔 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]骷髅头盔 1
+#ACT
+TAKE [元婴]骷髅头盔 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [元婴]道士头盔 1
+#ACT
+TAKE [元婴]道士头盔 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]灯笼项链 1
+#ACT
+TAKE [元婴]灯笼项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]白虎齿链 1
+#ACT
+TAKE [元婴]白虎齿链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]传统项链 1
+#ACT
+TAKE [元婴]传统项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]金项链 1
+#ACT
+TAKE [元婴]金项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]黑檀项链 1
+#ACT
+TAKE [元婴]黑檀项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]黄水晶链 1
+#ACT
+TAKE [元婴]黄水晶链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]黑水晶链 1
+#ACT
+TAKE [元婴]黑水晶链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]琥珀项链 1
+#ACT
+TAKE [元婴]琥珀项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]白金项链 1
+#ACT
+TAKE [元婴]白金项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]凤凰明珠 1
+#ACT
+TAKE [元婴]凤凰明珠 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]放大镜 1
+#ACT
+TAKE [元婴]放大镜 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]竹笛 1
+#ACT
+TAKE [元婴]竹笛 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]蓝翡翠项链 1
+#ACT
+TAKE [元婴]蓝翡翠项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]躲避手链 1
+#ACT
+TAKE [元婴]躲避手链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]魔鬼项链 1
+#ACT
+TAKE [元婴]魔鬼项链 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]古铜戒指 1
+#ACT
+TAKE [元婴]古铜戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]玻璃戒指 1
+#ACT
+TAKE [元婴]玻璃戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]牛角戒指 1
+#ACT
+TAKE [元婴]牛角戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]蓝水晶戒 1
+#ACT
+TAKE [元婴]蓝水晶戒 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]六角戒指 1
+#ACT
+TAKE [元婴]六角戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]生铁戒指 1
+#ACT
+TAKE [元婴]生铁戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]金戒指 1
+#ACT
+TAKE [元婴]金戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]黑水晶戒 1
+#ACT
+TAKE [元婴]黑水晶戒 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]珊瑚戒指 1
+#ACT
+TAKE [元婴]珊瑚戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]蛇眼戒指 1
+#ACT
+TAKE [元婴]蛇眼戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]降妖戒指 1
+#ACT
+TAKE [元婴]降妖戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]珍珠戒指 1
+#ACT
+TAKE [元婴]珍珠戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]骷髅戒指 1
+#ACT
+TAKE [元婴]骷髅戒指 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]铁手镯 1
+#ACT
+TAKE [元婴]铁手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]银手镯 1
+#ACT
+TAKE [元婴]银手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]夏普儿镯 1
+#ACT
+TAKE [元婴]夏普儿镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]避邪手镯 1
+#ACT
+TAKE [元婴]避邪手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]皮制手套 1
+#ACT
+TAKE [元婴]皮制手套 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]坚固手套 1
+#ACT
+TAKE [元婴]坚固手套 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]钢手镯 1
+#ACT
+TAKE [元婴]钢手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]小手镯 1
+#ACT
+TAKE [元婴]小手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]大手镯 1
+#ACT
+TAKE [元婴]大手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]死神手套 1
+#ACT
+TAKE [元婴]死神手套 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]魔法手镯 1
+#ACT
+TAKE [元婴]魔法手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [元婴]金手镯 1
+#ACT
+TAKE [元婴]金手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]道士手镯 1
+#ACT
+TAKE [元婴]道士手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]黑檀手镯 1
+#ACT
+TAKE [元婴]黑檀手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]魔力手镯 1
+#ACT
+TAKE [元婴]魔力手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]金手镯 1
+#ACT
+TAKE [元婴]金手镯 1
+GAMEGOLD + 6
+ChangeExp + 3000
+INC M0 6
+INC M99 3000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]木剑 1
+#ACT
+TAKE [渡劫]木剑 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]乌木剑 1
+#ACT
+TAKE [渡劫]乌木剑 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]铁剑 1
+#ACT
+TAKE [渡劫]铁剑 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]青铜剑 1
+#ACT
+TAKE [渡劫]青铜剑 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]短剑 1
+#ACT
+TAKE [渡劫]短剑 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]青铜斧 1
+#ACT
+TAKE [渡劫]青铜斧 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]匕首 1
+#ACT
+TAKE [渡劫]匕首 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]八荒 1
+#ACT
+TAKE [渡劫]八荒 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]半月 1
+#ACT
+TAKE [渡劫]半月 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]凌风 1
+#ACT
+TAKE [渡劫]凌风 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]破魂 1
+#ACT
+TAKE [渡劫]破魂 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]降魔 1
+#ACT
+TAKE [渡劫]降魔 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]斩马刀 1
+#ACT
+TAKE [渡劫]斩马刀 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]修罗 1
+#ACT
+TAKE [渡劫]修罗 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]凝霜 1
+#ACT
+TAKE [渡劫]凝霜 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]海魂 1
+#ACT
+TAKE [渡劫]海魂 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]偃月 1
+#ACT
+TAKE [渡劫]偃月 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]布衣(男) 1
+#ACT
+TAKE [渡劫]布衣(男) 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]轻盔甲男 1
+#ACT
+TAKE [渡劫]轻盔甲男 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]中盔甲男 1
+#ACT
+TAKE [渡劫]中盔甲男 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]布衣(女) 1
+#ACT
+TAKE [渡劫]布衣(女) 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]轻盔甲女 1
+#ACT
+TAKE [渡劫]轻盔甲女 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]中盔甲女 1
+#ACT
+TAKE [渡劫]中盔甲女 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]青铜头盔 1
+#ACT
+TAKE [渡劫]青铜头盔 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]魔法头盔 1
+#ACT
+TAKE [渡劫]魔法头盔 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]骷髅头盔 1
+#ACT
+TAKE [渡劫]骷髅头盔 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [渡劫]道士头盔 1
+#ACT
+TAKE [渡劫]道士头盔 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]灯笼项链 1
+#ACT
+TAKE [渡劫]灯笼项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]白虎齿链 1
+#ACT
+TAKE [渡劫]白虎齿链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]传统项链 1
+#ACT
+TAKE [渡劫]传统项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]金项链 1
+#ACT
+TAKE [渡劫]金项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]黑檀项链 1
+#ACT
+TAKE [渡劫]黑檀项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]黄水晶链 1
+#ACT
+TAKE [渡劫]黄水晶链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]黑水晶链 1
+#ACT
+TAKE [渡劫]黑水晶链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]琥珀项链 1
+#ACT
+TAKE [渡劫]琥珀项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]白金项链 1
+#ACT
+TAKE [渡劫]白金项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]凤凰明珠 1
+#ACT
+TAKE [渡劫]凤凰明珠 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]放大镜 1
+#ACT
+TAKE [渡劫]放大镜 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]竹笛 1
+#ACT
+TAKE [渡劫]竹笛 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]蓝翡翠项链 1
+#ACT
+TAKE [渡劫]蓝翡翠项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]躲避手链 1
+#ACT
+TAKE [渡劫]躲避手链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]魔鬼项链 1
+#ACT
+TAKE [渡劫]魔鬼项链 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]古铜戒指 1
+#ACT
+TAKE [渡劫]古铜戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]玻璃戒指 1
+#ACT
+TAKE [渡劫]玻璃戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]牛角戒指 1
+#ACT
+TAKE [渡劫]牛角戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]蓝水晶戒 1
+#ACT
+TAKE [渡劫]蓝水晶戒 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]六角戒指 1
+#ACT
+TAKE [渡劫]六角戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]生铁戒指 1
+#ACT
+TAKE [渡劫]生铁戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]金戒指 1
+#ACT
+TAKE [渡劫]金戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]黑水晶戒 1
+#ACT
+TAKE [渡劫]黑水晶戒 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]珊瑚戒指 1
+#ACT
+TAKE [渡劫]珊瑚戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]蛇眼戒指 1
+#ACT
+TAKE [渡劫]蛇眼戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]降妖戒指 1
+#ACT
+TAKE [渡劫]降妖戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]珍珠戒指 1
+#ACT
+TAKE [渡劫]珍珠戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]骷髅戒指 1
+#ACT
+TAKE [渡劫]骷髅戒指 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]铁手镯 1
+#ACT
+TAKE [渡劫]铁手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]银手镯 1
+#ACT
+TAKE [渡劫]银手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]夏普儿镯 1
+#ACT
+TAKE [渡劫]夏普儿镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]避邪手镯 1
+#ACT
+TAKE [渡劫]避邪手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]皮制手套 1
+#ACT
+TAKE [渡劫]皮制手套 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]坚固手套 1
+#ACT
+TAKE [渡劫]坚固手套 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]钢手镯 1
+#ACT
+TAKE [渡劫]钢手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]小手镯 1
+#ACT
+TAKE [渡劫]小手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]大手镯 1
+#ACT
+TAKE [渡劫]大手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]死神手套 1
+#ACT
+TAKE [渡劫]死神手套 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]魔法手镯 1
+#ACT
+TAKE [渡劫]魔法手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]金手镯 1
+#ACT
+TAKE [渡劫]金手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]道士手镯 1
+#ACT
+TAKE [渡劫]道士手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]黑檀手镯 1
+#ACT
+TAKE [渡劫]黑檀手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]魔力手镯 1
+#ACT
+TAKE [渡劫]魔力手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]金手镯 1
+#ACT
+TAKE [渡劫]金手镯 1
+GAMEGOLD + 8
+ChangeExp + 4000
+INC M0 8
+INC M99 4000
+DELAYGOTO 0  @筑基商店套装备回收
+break
+
+
+
+[@筑基商店套装备回收提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[所有前缀]商店套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[所有前缀]商店套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @商店套装备回收
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:所有妖玛套以下装备都属于商店套,=FCO=23}\
+　{商店套只支持回收[筑基]前缀以上的装备.=FCO=23}\
+　{[筑基]商店套,每件2元宝+1000经验=FCO=254}\
+　{[金丹]商店套,每件4元宝+2000经验=FCO=254}\
+　{[元婴]商店套,每件6元宝+3000经验=FCO=254}\
+　{[渡劫]商店套,每件8元宝+4000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀商店套]=FCO=70}/@筑基商店套装备回收> \  
+
+　<{[返回主页]=FCO=249}/@main>\
+
+
+
+
+[@沃玛套装备回收](2393,300,540,3)
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:22级衣服属于沃玛套=FCO=23}\
+　{普通沃玛套，每件3元宝+3000经验=FCO=254}\
+　{[筑基]沃玛套，每件5元宝+5000经验=FCO=254}\
+　{[金丹]沃玛套，每件10元宝+10000经验=FCO=254}\
+　{[元婴]沃玛套，每件15元宝+15000经验=FCO=254}\
+　{[渡劫]沃玛套，每件20元宝+20000经验=FCO=254}\
+　\　\　\
+<{[一键回收所有前缀沃玛套]=FCO=70}/@普通沃玛套装备回收> \  
+
+<{[返回主页]=FCO=249}/@main>\
+
+
+[@普通沃玛套装备回收](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @普通沃玛套装备回收提示
+#IF
+CHECKITEM 幽灵项链 1
+#ACT
+TAKE 幽灵项链 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 幽灵手套 1
+#ACT
+TAKE 幽灵手套 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 龙之戒指 1
+#ACT
+TAKE 龙之戒指 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 生命项链 1
+#ACT
+TAKE 生命项链 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 思贝儿镯 1
+#ACT
+TAKE 思贝儿镯 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 红宝石戒 1
+#ACT
+TAKE 红宝石戒 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 天珠项链 1
+#ACT
+TAKE 天珠项链 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 心灵手镯 1
+#ACT
+TAKE 心灵手镯 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 铂金戒指 1
+#ACT
+TAKE 铂金戒指 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 炼狱 1
+#ACT
+TAKE 炼狱 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 魔杖 1
+#ACT
+TAKE 魔杖 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 银蛇 1
+#ACT
+TAKE 银蛇 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 井中月 1
+#ACT
+TAKE 井中月 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM 无极棍 1
+#ACT
+TAKE 无极棍 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM 魔法袍女 1
+#ACT
+TAKE 魔法袍女 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM 灵魂衣女 1
+#ACT
+TAKE 灵魂衣女 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM 重盔甲女 1
+#ACT
+TAKE 重盔甲女 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM 重盔甲男 1
+#ACT
+TAKE 重盔甲男 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM 魔法袍男 1
+#ACT
+TAKE 魔法袍男 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM 灵魂衣男 1
+#ACT
+TAKE 灵魂衣男 1
+GAMEGOLD + 3
+ChangeExp + 3000
+INC M0 3
+INC M99 3000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]幽灵项链 1
+#ACT
+TAKE [筑基]幽灵项链 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]幽灵手套 1
+#ACT
+TAKE [筑基]幽灵手套 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]龙之戒指 1
+#ACT
+TAKE [筑基]龙之戒指 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]生命项链 1
+#ACT
+TAKE [筑基]生命项链 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]思贝儿镯 1
+#ACT
+TAKE [筑基]思贝儿镯 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]红宝石戒 1
+#ACT
+TAKE [筑基]红宝石戒 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天珠项链 1
+#ACT
+TAKE [筑基]天珠项链 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]心灵手镯 1
+#ACT
+TAKE [筑基]心灵手镯 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]铂金戒指 1
+#ACT
+TAKE [筑基]铂金戒指 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]炼狱 1
+#ACT
+TAKE [筑基]炼狱 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]魔杖 1
+#ACT
+TAKE [筑基]魔杖 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]银蛇 1
+#ACT
+TAKE [筑基]银蛇 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]井中月 1
+#ACT
+TAKE [筑基]井中月 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]无极棍 1
+#ACT
+TAKE [筑基]无极棍 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]魔法袍女 1
+#ACT
+TAKE [筑基]魔法袍女 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]灵魂衣女 1
+#ACT
+TAKE [筑基]灵魂衣女 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]重盔甲女 1
+#ACT
+TAKE [筑基]重盔甲女 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [筑基]重盔甲男 1
+#ACT
+TAKE [筑基]重盔甲男 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]魔法袍男 1
+#ACT
+TAKE [筑基]魔法袍男 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]灵魂衣男 1
+#ACT
+TAKE [筑基]灵魂衣男 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]幽灵项链 1
+#ACT
+TAKE [金丹]幽灵项链 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]幽灵手套 1
+#ACT
+TAKE [金丹]幽灵手套 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]龙之戒指 1
+#ACT
+TAKE [金丹]龙之戒指 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]生命项链 1
+#ACT
+TAKE [金丹]生命项链 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]思贝儿镯 1
+#ACT
+TAKE [金丹]思贝儿镯 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]红宝石戒 1
+#ACT
+TAKE [金丹]红宝石戒 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天珠项链 1
+#ACT
+TAKE [金丹]天珠项链 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]心灵手镯 1
+#ACT
+TAKE [金丹]心灵手镯 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]铂金戒指 1
+#ACT
+TAKE [金丹]铂金戒指 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]炼狱 1
+#ACT
+TAKE [金丹]炼狱 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]魔杖 1
+#ACT
+TAKE [金丹]魔杖 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]银蛇 1
+#ACT
+TAKE [金丹]银蛇 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]井中月 1
+#ACT
+TAKE [金丹]井中月 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]无极棍 1
+#ACT
+TAKE [金丹]无极棍 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]魔法袍女 1
+#ACT
+TAKE [金丹]魔法袍女 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]灵魂衣女 1
+#ACT
+TAKE [金丹]灵魂衣女 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]重盔甲女 1
+#ACT
+TAKE [金丹]重盔甲女 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [金丹]重盔甲男 1
+#ACT
+TAKE [金丹]重盔甲男 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]魔法袍男 1
+#ACT
+TAKE [金丹]魔法袍男 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]灵魂衣男 1
+#ACT
+TAKE [金丹]灵魂衣男 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]幽灵项链 1
+#ACT
+TAKE [元婴]幽灵项链 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]幽灵手套 1
+#ACT
+TAKE [元婴]幽灵手套 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]龙之戒指 1
+#ACT
+TAKE [元婴]龙之戒指 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]生命项链 1
+#ACT
+TAKE [元婴]生命项链 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]思贝儿镯 1
+#ACT
+TAKE [元婴]思贝儿镯 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]红宝石戒 1
+#ACT
+TAKE [元婴]红宝石戒 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天珠项链 1
+#ACT
+TAKE [元婴]天珠项链 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]心灵手镯 1
+#ACT
+TAKE [元婴]心灵手镯 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]铂金戒指 1
+#ACT
+TAKE [元婴]铂金戒指 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]炼狱 1
+#ACT
+TAKE [元婴]炼狱 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]魔杖 1
+#ACT
+TAKE [元婴]魔杖 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]银蛇 1
+#ACT
+TAKE [元婴]银蛇 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]井中月 1
+#ACT
+TAKE [元婴]井中月 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]无极棍 1
+#ACT
+TAKE [元婴]无极棍 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]魔法袍女 1
+#ACT
+TAKE [元婴]魔法袍女 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]灵魂衣女 1
+#ACT
+TAKE [元婴]灵魂衣女 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]重盔甲女 1
+#ACT
+TAKE [元婴]重盔甲女 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [元婴]重盔甲男 1
+#ACT
+TAKE [元婴]重盔甲男 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]魔法袍男 1
+#ACT
+TAKE [元婴]魔法袍男 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]灵魂衣男 1
+#ACT
+TAKE [元婴]灵魂衣男 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]幽灵项链 1
+#ACT
+TAKE [渡劫]幽灵项链 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]幽灵手套 1
+#ACT
+TAKE [渡劫]幽灵手套 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]龙之戒指 1
+#ACT
+TAKE [渡劫]龙之戒指 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]生命项链 1
+#ACT
+TAKE [渡劫]生命项链 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]思贝儿镯 1
+#ACT
+TAKE [渡劫]思贝儿镯 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]红宝石戒 1
+#ACT
+TAKE [渡劫]红宝石戒 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天珠项链 1
+#ACT
+TAKE [渡劫]天珠项链 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]心灵手镯 1
+#ACT
+TAKE [渡劫]心灵手镯 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]铂金戒指 1
+#ACT
+TAKE [渡劫]铂金戒指 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]炼狱 1
+#ACT
+TAKE [渡劫]炼狱 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]魔杖 1
+#ACT
+TAKE [渡劫]魔杖 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]银蛇 1
+#ACT
+TAKE [渡劫]银蛇 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]井中月 1
+#ACT
+TAKE [渡劫]井中月 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]无极棍 1
+#ACT
+TAKE [渡劫]无极棍 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]魔法袍女 1
+#ACT
+TAKE [渡劫]魔法袍女 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]灵魂衣女 1
+#ACT
+TAKE [渡劫]灵魂衣女 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]重盔甲女 1
+#ACT
+TAKE [渡劫]重盔甲女 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [渡劫]重盔甲男 1
+#ACT
+TAKE [渡劫]重盔甲男 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]魔法袍男 1
+#ACT
+TAKE [渡劫]魔法袍男 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]灵魂衣男 1
+#ACT
+TAKE [渡劫]灵魂衣男 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通沃玛套装备回收
+break
+
+
+
+
+
+[@普通沃玛套装备回收提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[普通]沃玛套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[普通]沃玛套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @沃玛套装备回收
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:22级衣服属于沃玛套=FCO=23}\
+　{普通沃玛套，每件3元宝+3000经验=FCO=254}\
+　{[筑基]沃玛套，每件5元宝+5000经验=FCO=254}\
+　{[金丹]沃玛套，每件10元宝+10000经验=FCO=254}\
+　{[元婴]沃玛套，每件15元宝+15000经验=FCO=254}\
+　{[渡劫]沃玛套，每件20元宝+20000经验=FCO=254}\
+　\　\　\
+<{[一键回收所有前缀沃玛套]=FCO=70}/@普通沃玛套装备回收> \  
+
+<{[返回主页]=FCO=249}/@main>\
+
+
+
+
+[@祖玛套装备回收](2393,300,540,3)
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:战神，幽灵，恶魔等衣服均属于祖玛套=FCO=23}\
+　{普通祖玛套，每件10元宝+10000经验=FCO=254}\
+　{[筑基]祖玛套，每件15元宝+15000经验=FCO=254}\
+　{[金丹]祖玛套，每件30元宝+30000经验=FCO=254}\
+　{[元婴]祖玛套，每件45元宝+45000经验=FCO=254}\
+　{[渡劫]祖玛套，每件60元宝+60000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀祖玛套]=FCO=70}/@普通祖玛套装备回收> \  
+　<{[返回主页]=FCO=249}/@main>\
+
+
+[@普通祖玛套装备回收](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @普通祖玛套装备回收提示
+#IF
+CHECKITEM 裁决之杖 1
+#ACT
+TAKE 裁决之杖 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 血饮 1
+#ACT
+TAKE 血饮 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 骨玉权杖 1
+#ACT
+TAKE 骨玉权杖 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 龙纹剑 1
+#ACT
+TAKE 龙纹剑 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 黑铁头盔 1
+#ACT
+TAKE 黑铁头盔 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 绿色项链 1
+#ACT
+TAKE 绿色项链 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 恶魔铃铛 1
+#ACT
+TAKE 恶魔铃铛 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 灵魂项链 1
+#ACT
+TAKE 灵魂项链 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 骑士手镯 1
+#ACT
+TAKE 骑士手镯 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 阎罗手套 1
+#ACT
+TAKE 阎罗手套 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 龙之手镯 1
+#ACT
+TAKE 龙之手镯 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 三眼手镯 1
+#ACT
+TAKE 三眼手镯 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 力量戒指 1
+#ACT
+TAKE 力量戒指 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM 紫碧螺 1
+#ACT
+TAKE 紫碧螺 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 泰坦戒指 1
+#ACT
+TAKE 泰坦戒指 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM 祖玛道带 1
+#ACT
+TAKE 祖玛道带 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM 祖玛战带 1
+#ACT
+TAKE 祖玛战带 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM 祖玛法带 1
+#ACT
+TAKE 祖玛法带 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM 祖玛战靴 1
+#ACT
+TAKE 祖玛战靴 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM 祖玛法靴 1
+#ACT
+TAKE 祖玛法靴 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 祖玛道靴 1
+#ACT
+TAKE 祖玛道靴 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 幽灵衣男 1
+#ACT
+TAKE 幽灵衣男 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 战神甲男 1
+#ACT
+TAKE 战神甲男 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 恶魔袍男 1
+#ACT
+TAKE 恶魔袍男 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 战神盔女 1
+#ACT
+TAKE 战神盔女 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 幽灵衣女 1
+#ACT
+TAKE 幽灵衣女 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM 恶魔袍女 1
+#ACT
+TAKE 恶魔袍女 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]裁决之杖 1
+#ACT
+TAKE [筑基]裁决之杖 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]血饮 1
+#ACT
+TAKE [筑基]血饮 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]骨玉权杖 1
+#ACT
+TAKE [筑基]骨玉权杖 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]龙纹剑 1
+#ACT
+TAKE [筑基]龙纹剑 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]黑铁头盔 1
+#ACT
+TAKE [筑基]黑铁头盔 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]绿色项链 1
+#ACT
+TAKE [筑基]绿色项链 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]恶魔铃铛 1
+#ACT
+TAKE [筑基]恶魔铃铛 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]灵魂项链 1
+#ACT
+TAKE [筑基]灵魂项链 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]骑士手镯 1
+#ACT
+TAKE [筑基]骑士手镯 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]阎罗手套 1
+#ACT
+TAKE [筑基]阎罗手套 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]龙之手镯 1
+#ACT
+TAKE [筑基]龙之手镯 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]三眼手镯 1
+#ACT
+TAKE [筑基]三眼手镯 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]力量戒指 1
+#ACT
+TAKE [筑基]力量戒指 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]紫碧螺 1
+#ACT
+TAKE [筑基]紫碧螺 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]泰坦戒指 1
+#ACT
+TAKE [筑基]泰坦戒指 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]祖玛道带 1
+#ACT
+TAKE [筑基]祖玛道带 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]祖玛战带 1
+#ACT
+TAKE [筑基]祖玛战带 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [筑基]祖玛法带 1
+#ACT
+TAKE [筑基]祖玛法带 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]祖玛战靴 1
+#ACT
+TAKE [筑基]祖玛战靴 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]祖玛法靴 1
+#ACT
+TAKE [筑基]祖玛法靴 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]祖玛道靴 1
+#ACT
+TAKE [筑基]祖玛道靴 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]幽灵衣男 1
+#ACT
+TAKE [筑基]幽灵衣男 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]战神甲男 1
+#ACT
+TAKE [筑基]战神甲男 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]恶魔袍男 1
+#ACT
+TAKE [筑基]恶魔袍男 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]战神盔女 1
+#ACT
+TAKE [筑基]战神盔女 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]幽灵衣女 1
+#ACT
+TAKE [筑基]幽灵衣女 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [筑基]恶魔袍女 1
+#ACT
+TAKE [筑基]恶魔袍女 1
+GAMEGOLD + 15
+ChangeExp + 15000
+INC M0 15
+INC M99 15000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]裁决之杖 1
+#ACT
+TAKE [金丹]裁决之杖 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]血饮 1
+#ACT
+TAKE [金丹]血饮 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]骨玉权杖 1
+#ACT
+TAKE [金丹]骨玉权杖 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]龙纹剑 1
+#ACT
+TAKE [金丹]龙纹剑 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]黑铁头盔 1
+#ACT
+TAKE [金丹]黑铁头盔 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]绿色项链 1
+#ACT
+TAKE [金丹]绿色项链 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]恶魔铃铛 1
+#ACT
+TAKE [金丹]恶魔铃铛 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]灵魂项链 1
+#ACT
+TAKE [金丹]灵魂项链 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]骑士手镯 1
+#ACT
+TAKE [金丹]骑士手镯 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]阎罗手套 1
+#ACT
+TAKE [金丹]阎罗手套 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]龙之手镯 1
+#ACT
+TAKE [金丹]龙之手镯 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]三眼手镯 1
+#ACT
+TAKE [金丹]三眼手镯 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]力量戒指 1
+#ACT
+TAKE [金丹]力量戒指 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]紫碧螺 1
+#ACT
+TAKE [金丹]紫碧螺 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]泰坦戒指 1
+#ACT
+TAKE [金丹]泰坦戒指 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]祖玛道带 1
+#ACT
+TAKE [金丹]祖玛道带 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]祖玛战带 1
+#ACT
+TAKE [金丹]祖玛战带 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [金丹]祖玛法带 1
+#ACT
+TAKE [金丹]祖玛法带 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]祖玛战靴 1
+#ACT
+TAKE [金丹]祖玛战靴 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]祖玛法靴 1
+#ACT
+TAKE [金丹]祖玛法靴 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]祖玛道靴 1
+#ACT
+TAKE [金丹]祖玛道靴 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]幽灵衣男 1
+#ACT
+TAKE [金丹]幽灵衣男 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]战神甲男 1
+#ACT
+TAKE [金丹]战神甲男 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]恶魔袍男 1
+#ACT
+TAKE [金丹]恶魔袍男 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]战神盔女 1
+#ACT
+TAKE [金丹]战神盔女 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]幽灵衣女 1
+#ACT
+TAKE [金丹]幽灵衣女 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [金丹]恶魔袍女 1
+#ACT
+TAKE [金丹]恶魔袍女 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]裁决之杖 1
+#ACT
+TAKE [元婴]裁决之杖 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]血饮 1
+#ACT
+TAKE [元婴]血饮 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]骨玉权杖 1
+#ACT
+TAKE [元婴]骨玉权杖 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]龙纹剑 1
+#ACT
+TAKE [元婴]龙纹剑 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]黑铁头盔 1
+#ACT
+TAKE [元婴]黑铁头盔 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]绿色项链 1
+#ACT
+TAKE [元婴]绿色项链 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]恶魔铃铛 1
+#ACT
+TAKE [元婴]恶魔铃铛 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]灵魂项链 1
+#ACT
+TAKE [元婴]灵魂项链 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]骑士手镯 1
+#ACT
+TAKE [元婴]骑士手镯 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]阎罗手套 1
+#ACT
+TAKE [元婴]阎罗手套 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]龙之手镯 1
+#ACT
+TAKE [元婴]龙之手镯 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]三眼手镯 1
+#ACT
+TAKE [元婴]三眼手镯 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]力量戒指 1
+#ACT
+TAKE [元婴]力量戒指 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]紫碧螺 1
+#ACT
+TAKE [元婴]紫碧螺 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]泰坦戒指 1
+#ACT
+TAKE [元婴]泰坦戒指 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]祖玛道带 1
+#ACT
+TAKE [元婴]祖玛道带 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]祖玛战带 1
+#ACT
+TAKE [元婴]祖玛战带 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [元婴]祖玛法带 1
+#ACT
+TAKE [元婴]祖玛法带 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]祖玛战靴 1
+#ACT
+TAKE [元婴]祖玛战靴 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]祖玛法靴 1
+#ACT
+TAKE [元婴]祖玛法靴 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]祖玛道靴 1
+#ACT
+TAKE [元婴]祖玛道靴 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]幽灵衣男 1
+#ACT
+TAKE [元婴]幽灵衣男 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]战神甲男 1
+#ACT
+TAKE [元婴]战神甲男 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]恶魔袍男 1
+#ACT
+TAKE [元婴]恶魔袍男 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]战神盔女 1
+#ACT
+TAKE [元婴]战神盔女 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]幽灵衣女 1
+#ACT
+TAKE [元婴]幽灵衣女 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [元婴]恶魔袍女 1
+#ACT
+TAKE [元婴]恶魔袍女 1
+GAMEGOLD + 45
+ChangeExp + 45000
+INC M0 45
+INC M99 45000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]裁决之杖 1
+#ACT
+TAKE [渡劫]裁决之杖 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]血饮 1
+#ACT
+TAKE [渡劫]血饮 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]骨玉权杖 1
+#ACT
+TAKE [渡劫]骨玉权杖 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]龙纹剑 1
+#ACT
+TAKE [渡劫]龙纹剑 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]黑铁头盔 1
+#ACT
+TAKE [渡劫]黑铁头盔 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]绿色项链 1
+#ACT
+TAKE [渡劫]绿色项链 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]恶魔铃铛 1
+#ACT
+TAKE [渡劫]恶魔铃铛 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]灵魂项链 1
+#ACT
+TAKE [渡劫]灵魂项链 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]骑士手镯 1
+#ACT
+TAKE [渡劫]骑士手镯 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]阎罗手套 1
+#ACT
+TAKE [渡劫]阎罗手套 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]龙之手镯 1
+#ACT
+TAKE [渡劫]龙之手镯 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]三眼手镯 1
+#ACT
+TAKE [渡劫]三眼手镯 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]力量戒指 1
+#ACT
+TAKE [渡劫]力量戒指 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]紫碧螺 1
+#ACT
+TAKE [渡劫]紫碧螺 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]泰坦戒指 1
+#ACT
+TAKE [渡劫]泰坦戒指 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]祖玛道带 1
+#ACT
+TAKE [渡劫]祖玛道带 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]祖玛战带 1
+#ACT
+TAKE [渡劫]祖玛战带 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [渡劫]祖玛法带 1
+#ACT
+TAKE [渡劫]祖玛法带 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]祖玛战靴 1
+#ACT
+TAKE [渡劫]祖玛战靴 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]祖玛法靴 1
+#ACT
+TAKE [渡劫]祖玛法靴 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]祖玛道靴 1
+#ACT
+TAKE [渡劫]祖玛道靴 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]幽灵衣男 1
+#ACT
+TAKE [渡劫]幽灵衣男 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]战神甲男 1
+#ACT
+TAKE [渡劫]战神甲男 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]恶魔袍男 1
+#ACT
+TAKE [渡劫]恶魔袍男 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]战神盔女 1
+#ACT
+TAKE [渡劫]战神盔女 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]幽灵衣女 1
+#ACT
+TAKE [渡劫]幽灵衣女 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]恶魔袍女 1
+#ACT
+TAKE [渡劫]恶魔袍女 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通祖玛套装备回收
+break
+
+
+
+
+[@普通祖玛套装备回收提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[所有前缀]祖玛套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[所有前缀]祖玛套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @祖玛套装备回收
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:战神，幽灵，恶魔等衣服均属于祖玛套=FCO=23}\
+　{普通祖玛套，每件10元宝+10000经验=FCO=254}\
+　{[筑基]祖玛套，每件15元宝+15000经验=FCO=254}\
+　{[金丹]祖玛套，每件30元宝+30000经验=FCO=254}\
+　{[元婴]祖玛套，每件45元宝+45000经验=FCO=254}\
+　{[渡劫]祖玛套，每件60元宝+60000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀祖玛套]=FCO=70}/@普通祖玛套装备回收> \  
+　<{[返回主页]=FCO=249}/@main>\
+
+
+
+
+
+
+
+[@赤月套装备回收](2393,300,540,3)
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:40级衣服均属于赤月套=FCO=23}\
+　{普通赤月套，每件20元宝+20000经验=FCO=254}\
+　{[筑基]赤月套，每件30元宝+30000经验=FCO=254}\
+　{[金丹]赤月套，每件60元宝+60000经验=FCO=254}\
+　{[元婴]赤月套，每件90元宝+90000经验=FCO=254}\
+　{[渡劫]赤月套，每件120元宝+120000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀赤月套]=FCO=70}/@普通赤月套装备回收> \
+　<{[返回主页]=FCO=249}/@main>\
+
+[@普通赤月套装备回收](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @普通赤月套装备回收提示
+#IF
+CHECKITEM 圣战头盔 1
+#ACT
+TAKE 圣战头盔 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 圣战项链 1
+#ACT
+TAKE 圣战项链 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 圣战手镯 1
+#ACT
+TAKE 圣战手镯 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 圣战戒指 1
+#ACT
+TAKE 圣战戒指 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 法神头盔 1
+#ACT
+TAKE 法神头盔 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM 法神项链 1
+#ACT
+TAKE 法神项链 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM 法神手镯 1
+#ACT
+TAKE 法神手镯 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 法神戒指 1
+#ACT
+TAKE 法神戒指 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天尊头盔 1
+#ACT
+TAKE 天尊头盔 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天尊项链 1
+#ACT
+TAKE 天尊项链 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天尊手镯 1
+#ACT
+TAKE 天尊手镯 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天尊戒指 1
+#ACT
+TAKE 天尊戒指 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天尊道靴 1
+#ACT
+TAKE 天尊道靴 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 圣战战带 1
+#ACT
+TAKE 圣战战带 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM 法神魔带 1
+#ACT
+TAKE 法神魔带 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天尊道带 1
+#ACT
+TAKE 天尊道带 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM 圣战战靴 1
+#ACT
+TAKE 圣战战靴 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM 法神魔靴 1
+#ACT
+TAKE 法神魔靴 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM 龙牙 1
+#ACT
+TAKE 龙牙 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM 怒斩 1
+#ACT
+TAKE 怒斩 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM 屠龙 1
+#ACT
+TAKE 屠龙 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 嗜魂法杖 1
+#ACT
+TAKE 嗜魂法杖 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 逍遥扇 1
+#ACT
+TAKE 逍遥扇 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天尊道袍 1
+#ACT
+TAKE 天尊道袍 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天师长袍 1
+#ACT
+TAKE 天师长袍 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 天魔神甲 1
+#ACT
+TAKE 天魔神甲 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 圣战宝甲 1
+#ACT
+TAKE 圣战宝甲 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 法神披风 1
+#ACT
+TAKE 法神披风 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM 霓裳羽衣 1
+#ACT
+TAKE 霓裳羽衣 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]圣战头盔 1
+#ACT
+TAKE [筑基]圣战头盔 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]圣战项链 1
+#ACT
+TAKE [筑基]圣战项链 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]圣战手镯 1
+#ACT
+TAKE [筑基]圣战手镯 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]圣战戒指 1
+#ACT
+TAKE [筑基]圣战戒指 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]法神头盔 1
+#ACT
+TAKE [筑基]法神头盔 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]法神项链 1
+#ACT
+TAKE [筑基]法神项链 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]法神手镯 1
+#ACT
+TAKE [筑基]法神手镯 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]法神戒指 1
+#ACT
+TAKE [筑基]法神戒指 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天尊头盔 1
+#ACT
+TAKE [筑基]天尊头盔 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天尊项链 1
+#ACT
+TAKE [筑基]天尊项链 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天尊手镯 1
+#ACT
+TAKE [筑基]天尊手镯 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天尊戒指 1
+#ACT
+TAKE [筑基]天尊戒指 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天尊道靴 1
+#ACT
+TAKE [筑基]天尊道靴 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]圣战战带 1
+#ACT
+TAKE [筑基]圣战战带 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]法神魔带 1
+#ACT
+TAKE [筑基]法神魔带 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天尊道带 1
+#ACT
+TAKE [筑基]天尊道带 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]圣战战靴 1
+#ACT
+TAKE [筑基]圣战战靴 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]法神魔靴 1
+#ACT
+TAKE [筑基]法神魔靴 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [筑基]龙牙 1
+#ACT
+TAKE [筑基]龙牙 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]怒斩 1
+#ACT
+TAKE [筑基]怒斩 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]屠龙 1
+#ACT
+TAKE [筑基]屠龙 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]嗜魂法杖 1
+#ACT
+TAKE [筑基]嗜魂法杖 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]逍遥扇 1
+#ACT
+TAKE [筑基]逍遥扇 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天尊道袍 1
+#ACT
+TAKE [筑基]天尊道袍 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天师长袍 1
+#ACT
+TAKE [筑基]天师长袍 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]天魔神甲 1
+#ACT
+TAKE [筑基]天魔神甲 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]圣战宝甲 1
+#ACT
+TAKE [筑基]圣战宝甲 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]法神披风 1
+#ACT
+TAKE [筑基]法神披风 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [筑基]霓裳羽衣 1
+#ACT
+TAKE [筑基]霓裳羽衣 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]圣战头盔 1
+#ACT
+TAKE [金丹]圣战头盔 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]圣战项链 1
+#ACT
+TAKE [金丹]圣战项链 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]圣战手镯 1
+#ACT
+TAKE [金丹]圣战手镯 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]圣战戒指 1
+#ACT
+TAKE [金丹]圣战戒指 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]法神头盔 1
+#ACT
+TAKE [金丹]法神头盔 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]法神项链 1
+#ACT
+TAKE [金丹]法神项链 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]法神手镯 1
+#ACT
+TAKE [金丹]法神手镯 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]法神戒指 1
+#ACT
+TAKE [金丹]法神戒指 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天尊头盔 1
+#ACT
+TAKE [金丹]天尊头盔 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天尊项链 1
+#ACT
+TAKE [金丹]天尊项链 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天尊手镯 1
+#ACT
+TAKE [金丹]天尊手镯 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天尊戒指 1
+#ACT
+TAKE [金丹]天尊戒指 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天尊道靴 1
+#ACT
+TAKE [金丹]天尊道靴 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]圣战战带 1
+#ACT
+TAKE [金丹]圣战战带 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]法神魔带 1
+#ACT
+TAKE [金丹]法神魔带 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天尊道带 1
+#ACT
+TAKE [金丹]天尊道带 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]圣战战靴 1
+#ACT
+TAKE [金丹]圣战战靴 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]法神魔靴 1
+#ACT
+TAKE [金丹]法神魔靴 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [金丹]龙牙 1
+#ACT
+TAKE [金丹]龙牙 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]怒斩 1
+#ACT
+TAKE [金丹]怒斩 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]屠龙 1
+#ACT
+TAKE [金丹]屠龙 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]嗜魂法杖 1
+#ACT
+TAKE [金丹]嗜魂法杖 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]逍遥扇 1
+#ACT
+TAKE [金丹]逍遥扇 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天尊道袍 1
+#ACT
+TAKE [金丹]天尊道袍 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天师长袍 1
+#ACT
+TAKE [金丹]天师长袍 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]天魔神甲 1
+#ACT
+TAKE [金丹]天魔神甲 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]圣战宝甲 1
+#ACT
+TAKE [金丹]圣战宝甲 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]法神披风 1
+#ACT
+TAKE [金丹]法神披风 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [金丹]霓裳羽衣 1
+#ACT
+TAKE [金丹]霓裳羽衣 1
+GAMEGOLD + 60
+ChangeExp + 60000
+INC M0 60
+INC M99 60000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]圣战头盔 1
+#ACT
+TAKE [元婴]圣战头盔 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]圣战项链 1
+#ACT
+TAKE [元婴]圣战项链 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]圣战手镯 1
+#ACT
+TAKE [元婴]圣战手镯 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]圣战戒指 1
+#ACT
+TAKE [元婴]圣战戒指 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]法神头盔 1
+#ACT
+TAKE [元婴]法神头盔 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]法神项链 1
+#ACT
+TAKE [元婴]法神项链 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]法神手镯 1
+#ACT
+TAKE [元婴]法神手镯 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]法神戒指 1
+#ACT
+TAKE [元婴]法神戒指 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天尊头盔 1
+#ACT
+TAKE [元婴]天尊头盔 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天尊项链 1
+#ACT
+TAKE [元婴]天尊项链 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天尊手镯 1
+#ACT
+TAKE [元婴]天尊手镯 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天尊戒指 1
+#ACT
+TAKE [元婴]天尊戒指 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天尊道靴 1
+#ACT
+TAKE [元婴]天尊道靴 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]圣战战带 1
+#ACT
+TAKE [元婴]圣战战带 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]法神魔带 1
+#ACT
+TAKE [元婴]法神魔带 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天尊道带 1
+#ACT
+TAKE [元婴]天尊道带 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]圣战战靴 1
+#ACT
+TAKE [元婴]圣战战靴 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]法神魔靴 1
+#ACT
+TAKE [元婴]法神魔靴 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [元婴]龙牙 1
+#ACT
+TAKE [元婴]龙牙 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]怒斩 1
+#ACT
+TAKE [元婴]怒斩 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]屠龙 1
+#ACT
+TAKE [元婴]屠龙 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]嗜魂法杖 1
+#ACT
+TAKE [元婴]嗜魂法杖 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]逍遥扇 1
+#ACT
+TAKE [元婴]逍遥扇 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天尊道袍 1
+#ACT
+TAKE [元婴]天尊道袍 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天师长袍 1
+#ACT
+TAKE [元婴]天师长袍 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]天魔神甲 1
+#ACT
+TAKE [元婴]天魔神甲 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]圣战宝甲 1
+#ACT
+TAKE [元婴]圣战宝甲 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]法神披风 1
+#ACT
+TAKE [元婴]法神披风 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [元婴]霓裳羽衣 1
+#ACT
+TAKE [元婴]霓裳羽衣 1
+GAMEGOLD + 90
+ChangeExp + 90000
+INC M0 90
+INC M99 90000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]圣战头盔 1
+#ACT
+TAKE [渡劫]圣战头盔 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]圣战项链 1
+#ACT
+TAKE [渡劫]圣战项链 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]圣战手镯 1
+#ACT
+TAKE [渡劫]圣战手镯 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]圣战戒指 1
+#ACT
+TAKE [渡劫]圣战戒指 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]法神头盔 1
+#ACT
+TAKE [渡劫]法神头盔 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]法神项链 1
+#ACT
+TAKE [渡劫]法神项链 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]法神手镯 1
+#ACT
+TAKE [渡劫]法神手镯 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]法神戒指 1
+#ACT
+TAKE [渡劫]法神戒指 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天尊头盔 1
+#ACT
+TAKE [渡劫]天尊头盔 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天尊项链 1
+#ACT
+TAKE [渡劫]天尊项链 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天尊手镯 1
+#ACT
+TAKE [渡劫]天尊手镯 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天尊戒指 1
+#ACT
+TAKE [渡劫]天尊戒指 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天尊道靴 1
+#ACT
+TAKE [渡劫]天尊道靴 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]圣战战带 1
+#ACT
+TAKE [渡劫]圣战战带 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]法神魔带 1
+#ACT
+TAKE [渡劫]法神魔带 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天尊道带 1
+#ACT
+TAKE [渡劫]天尊道带 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]圣战战靴 1
+#ACT
+TAKE [渡劫]圣战战靴 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]法神魔靴 1
+#ACT
+TAKE [渡劫]法神魔靴 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [渡劫]龙牙 1
+#ACT
+TAKE [渡劫]龙牙 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]怒斩 1
+#ACT
+TAKE [渡劫]怒斩 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]屠龙 1
+#ACT
+TAKE [渡劫]屠龙 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]嗜魂法杖 1
+#ACT
+TAKE [渡劫]嗜魂法杖 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]逍遥扇 1
+#ACT
+TAKE [渡劫]逍遥扇 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天尊道袍 1
+#ACT
+TAKE [渡劫]天尊道袍 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天师长袍 1
+#ACT
+TAKE [渡劫]天师长袍 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]天魔神甲 1
+#ACT
+TAKE [渡劫]天魔神甲 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]圣战宝甲 1
+#ACT
+TAKE [渡劫]圣战宝甲 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]法神披风 1
+#ACT
+TAKE [渡劫]法神披风 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]霓裳羽衣 1
+#ACT
+TAKE [渡劫]霓裳羽衣 1
+GAMEGOLD + 120
+ChangeExp + 120000
+INC M0 120
+INC M99 120000
+DELAYGOTO 0  @普通赤月套装备回收
+break
+
+
+
+[@普通赤月套装备回收提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[普通]赤月套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[普通]赤月套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @赤月套装备回收
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:40级衣服均属于赤月套=FCO=23}\
+　{普通赤月套，每件20元宝+20000经验=FCO=254}\
+　{[筑基]赤月套，每件30元宝+30000经验=FCO=254}\
+　{[金丹]赤月套，每件60元宝+60000经验=FCO=254}\
+　{[元婴]赤月套，每件90元宝+90000经验=FCO=254}\
+　{[渡劫]赤月套，每件120元宝+120000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀赤月套]=FCO=70}/@普通赤月套装备回收> \
+　<{[返回主页]=FCO=249}/@main>\
+
+
+
+
+
+
+[@魔龙套装备回收](2393,300,540,3)
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:黄金武器都属于魔龙套=FCO=23}\
+　{普通魔龙套，每件50元宝+50000经验=FCO=254}\
+　{[筑基]魔龙套，每件100元宝+100000经验=FCO=254}\
+　{[金丹]魔龙套，每件200元宝+200000经验=FCO=254}\
+　{[元婴]魔龙套，每件300元宝+300000经验=FCO=254}\
+　{[渡劫]魔龙套，每件400元宝+400000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀魔龙套]=FCO=254}/@普通魔龙套装备回收> \  
+
+　<{[返回主页]=FCO=249}/@main>\
+
+
+[@普通魔龙套装备回收](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @普通魔龙套装备回收提示
+#IF
+CHECKITEM 黄金道扇 1
+#ACT
+TAKE 黄金道扇 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 黄金屠龙 1
+#ACT
+TAKE 黄金屠龙 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 黄金嗜魂 1
+#ACT
+TAKE 黄金嗜魂 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 雷霆甲男 1
+#ACT
+TAKE 雷霆甲男 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 烈焰衣男 1
+#ACT
+TAKE 烈焰衣男 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM 光芒袍男 1
+#ACT
+TAKE 光芒袍男 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM 雷霆甲女 1
+#ACT
+TAKE 雷霆甲女 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 烈焰衣女 1
+#ACT
+TAKE 烈焰衣女 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 光芒袍女 1
+#ACT
+TAKE 光芒袍女 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 雷霆头盔 1
+#ACT
+TAKE 雷霆头盔 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 烈焰头盔 1
+#ACT
+TAKE 烈焰头盔 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 光芒头盔 1
+#ACT
+TAKE 光芒头盔 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 雷霆项链 1
+#ACT
+TAKE 雷霆项链 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 烈焰项链 1
+#ACT
+TAKE 烈焰项链 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM 光芒项链 1
+#ACT
+TAKE 光芒项链 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 雷霆战戒 1
+#ACT
+TAKE 雷霆战戒 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM 烈焰魔戒 1
+#ACT
+TAKE 烈焰魔戒 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM 光芒道戒 1
+#ACT
+TAKE 光芒道戒 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM 雷霆护腕 1
+#ACT
+TAKE 雷霆护腕 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM 烈焰护腕 1
+#ACT
+TAKE 烈焰护腕 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM 光芒护腕 1
+#ACT
+TAKE 光芒护腕 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 雷霆腰带 1
+#ACT
+TAKE 雷霆腰带 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 烈焰腰带 1
+#ACT
+TAKE 烈焰腰带 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 光芒腰带 1
+#ACT
+TAKE 光芒腰带 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 雷霆战靴 1
+#ACT
+TAKE 雷霆战靴 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 烈焰魔靴 1
+#ACT
+TAKE 烈焰魔靴 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM 光芒道靴 1
+#ACT
+TAKE 光芒道靴 1
+GAMEGOLD + 50
+ChangeExp + 50000
+INC M0 50
+INC M99 50000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]黄金道扇 1
+#ACT
+TAKE [筑基]黄金道扇 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]黄金屠龙 1
+#ACT
+TAKE [筑基]黄金屠龙 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]黄金嗜魂 1
+#ACT
+TAKE [筑基]黄金嗜魂 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]雷霆甲男 1
+#ACT
+TAKE [筑基]雷霆甲男 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]烈焰衣男 1
+#ACT
+TAKE [筑基]烈焰衣男 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]光芒袍男 1
+#ACT
+TAKE [筑基]光芒袍男 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]雷霆甲女 1
+#ACT
+TAKE [筑基]雷霆甲女 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]烈焰衣女 1
+#ACT
+TAKE [筑基]烈焰衣女 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]光芒袍女 1
+#ACT
+TAKE [筑基]光芒袍女 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]雷霆头盔 1
+#ACT
+TAKE [筑基]雷霆头盔 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]烈焰头盔 1
+#ACT
+TAKE [筑基]烈焰头盔 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]光芒头盔 1
+#ACT
+TAKE [筑基]光芒头盔 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]雷霆项链 1
+#ACT
+TAKE [筑基]雷霆项链 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]烈焰项链 1
+#ACT
+TAKE [筑基]烈焰项链 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]光芒项链 1
+#ACT
+TAKE [筑基]光芒项链 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]雷霆战戒 1
+#ACT
+TAKE [筑基]雷霆战戒 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]烈焰魔戒 1
+#ACT
+TAKE [筑基]烈焰魔戒 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [筑基]光芒道戒 1
+#ACT
+TAKE [筑基]光芒道戒 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [筑基]雷霆护腕 1
+#ACT
+TAKE [筑基]雷霆护腕 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]烈焰护腕 1
+#ACT
+TAKE [筑基]烈焰护腕 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [筑基]光芒护腕 1
+#ACT
+TAKE [筑基]光芒护腕 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]雷霆腰带 1
+#ACT
+TAKE [筑基]雷霆腰带 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]烈焰腰带 1
+#ACT
+TAKE [筑基]烈焰腰带 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]光芒腰带 1
+#ACT
+TAKE [筑基]光芒腰带 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]雷霆战靴 1
+#ACT
+TAKE [筑基]雷霆战靴 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]烈焰魔靴 1
+#ACT
+TAKE [筑基]烈焰魔靴 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [筑基]光芒道靴 1
+#ACT
+TAKE [筑基]光芒道靴 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]黄金道扇 1
+#ACT
+TAKE [金丹]黄金道扇 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]黄金屠龙 1
+#ACT
+TAKE [金丹]黄金屠龙 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]黄金嗜魂 1
+#ACT
+TAKE [金丹]黄金嗜魂 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]雷霆甲男 1
+#ACT
+TAKE [金丹]雷霆甲男 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]烈焰衣男 1
+#ACT
+TAKE [金丹]烈焰衣男 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]光芒袍男 1
+#ACT
+TAKE [金丹]光芒袍男 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]雷霆甲女 1
+#ACT
+TAKE [金丹]雷霆甲女 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]烈焰衣女 1
+#ACT
+TAKE [金丹]烈焰衣女 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]光芒袍女 1
+#ACT
+TAKE [金丹]光芒袍女 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]雷霆头盔 1
+#ACT
+TAKE [金丹]雷霆头盔 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]烈焰头盔 1
+#ACT
+TAKE [金丹]烈焰头盔 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]光芒头盔 1
+#ACT
+TAKE [金丹]光芒头盔 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]雷霆项链 1
+#ACT
+TAKE [金丹]雷霆项链 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]烈焰项链 1
+#ACT
+TAKE [金丹]烈焰项链 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]光芒项链 1
+#ACT
+TAKE [金丹]光芒项链 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]雷霆战戒 1
+#ACT
+TAKE [金丹]雷霆战戒 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]烈焰魔戒 1
+#ACT
+TAKE [金丹]烈焰魔戒 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [金丹]光芒道戒 1
+#ACT
+TAKE [金丹]光芒道戒 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [金丹]雷霆护腕 1
+#ACT
+TAKE [金丹]雷霆护腕 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]烈焰护腕 1
+#ACT
+TAKE [金丹]烈焰护腕 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [金丹]光芒护腕 1
+#ACT
+TAKE [金丹]光芒护腕 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]雷霆腰带 1
+#ACT
+TAKE [金丹]雷霆腰带 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]烈焰腰带 1
+#ACT
+TAKE [金丹]烈焰腰带 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]光芒腰带 1
+#ACT
+TAKE [金丹]光芒腰带 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]雷霆战靴 1
+#ACT
+TAKE [金丹]雷霆战靴 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]烈焰魔靴 1
+#ACT
+TAKE [金丹]烈焰魔靴 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [金丹]光芒道靴 1
+#ACT
+TAKE [金丹]光芒道靴 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 200000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]黄金道扇 1
+#ACT
+TAKE [元婴]黄金道扇 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]黄金屠龙 1
+#ACT
+TAKE [元婴]黄金屠龙 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]黄金嗜魂 1
+#ACT
+TAKE [元婴]黄金嗜魂 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]雷霆甲男 1
+#ACT
+TAKE [元婴]雷霆甲男 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]烈焰衣男 1
+#ACT
+TAKE [元婴]烈焰衣男 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]光芒袍男 1
+#ACT
+TAKE [元婴]光芒袍男 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]雷霆甲女 1
+#ACT
+TAKE [元婴]雷霆甲女 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]烈焰衣女 1
+#ACT
+TAKE [元婴]烈焰衣女 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]光芒袍女 1
+#ACT
+TAKE [元婴]光芒袍女 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]雷霆头盔 1
+#ACT
+TAKE [元婴]雷霆头盔 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]烈焰头盔 1
+#ACT
+TAKE [元婴]烈焰头盔 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]光芒头盔 1
+#ACT
+TAKE [元婴]光芒头盔 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]雷霆项链 1
+#ACT
+TAKE [元婴]雷霆项链 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]烈焰项链 1
+#ACT
+TAKE [元婴]烈焰项链 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]光芒项链 1
+#ACT
+TAKE [元婴]光芒项链 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]雷霆战戒 1
+#ACT
+TAKE [元婴]雷霆战戒 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]烈焰魔戒 1
+#ACT
+TAKE [元婴]烈焰魔戒 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [元婴]光芒道戒 1
+#ACT
+TAKE [元婴]光芒道戒 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [元婴]雷霆护腕 1
+#ACT
+TAKE [元婴]雷霆护腕 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]烈焰护腕 1
+#ACT
+TAKE [元婴]烈焰护腕 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [元婴]光芒护腕 1
+#ACT
+TAKE [元婴]光芒护腕 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]雷霆腰带 1
+#ACT
+TAKE [元婴]雷霆腰带 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]烈焰腰带 1
+#ACT
+TAKE [元婴]烈焰腰带 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]光芒腰带 1
+#ACT
+TAKE [元婴]光芒腰带 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]雷霆战靴 1
+#ACT
+TAKE [元婴]雷霆战靴 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]烈焰魔靴 1
+#ACT
+TAKE [元婴]烈焰魔靴 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [元婴]光芒道靴 1
+#ACT
+TAKE [元婴]光芒道靴 1
+GAMEGOLD + 300
+ChangeExp + 300000
+INC M0 300
+INC M99 300000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]黄金道扇 1
+#ACT
+TAKE [渡劫]黄金道扇 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]黄金屠龙 1
+#ACT
+TAKE [渡劫]黄金屠龙 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]黄金嗜魂 1
+#ACT
+TAKE [渡劫]黄金嗜魂 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]雷霆甲男 1
+#ACT
+TAKE [渡劫]雷霆甲男 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]烈焰衣男 1
+#ACT
+TAKE [渡劫]烈焰衣男 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]光芒袍男 1
+#ACT
+TAKE [渡劫]光芒袍男 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]雷霆甲女 1
+#ACT
+TAKE [渡劫]雷霆甲女 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]烈焰衣女 1
+#ACT
+TAKE [渡劫]烈焰衣女 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]光芒袍女 1
+#ACT
+TAKE [渡劫]光芒袍女 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]雷霆头盔 1
+#ACT
+TAKE [渡劫]雷霆头盔 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]烈焰头盔 1
+#ACT
+TAKE [渡劫]烈焰头盔 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]光芒头盔 1
+#ACT
+TAKE [渡劫]光芒头盔 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]雷霆项链 1
+#ACT
+TAKE [渡劫]雷霆项链 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]烈焰项链 1
+#ACT
+TAKE [渡劫]烈焰项链 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]光芒项链 1
+#ACT
+TAKE [渡劫]光芒项链 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]雷霆战戒 1
+#ACT
+TAKE [渡劫]雷霆战戒 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]烈焰魔戒 1
+#ACT
+TAKE [渡劫]烈焰魔戒 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+#IF
+CHECKITEM [渡劫]光芒道戒 1
+#ACT
+TAKE [渡劫]光芒道戒 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+
+#IF
+CHECKITEM [渡劫]雷霆护腕 1
+#ACT
+TAKE [渡劫]雷霆护腕 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]烈焰护腕 1
+#ACT
+TAKE [渡劫]烈焰护腕 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+#IF
+CHECKITEM [渡劫]光芒护腕 1
+#ACT
+TAKE [渡劫]光芒护腕 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]雷霆腰带 1
+#ACT
+TAKE [渡劫]雷霆腰带 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]烈焰腰带 1
+#ACT
+TAKE [渡劫]烈焰腰带 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]光芒腰带 1
+#ACT
+TAKE [渡劫]光芒腰带 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]雷霆战靴 1
+#ACT
+TAKE [渡劫]雷霆战靴 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]烈焰魔靴 1
+#ACT
+TAKE [渡劫]烈焰魔靴 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+#IF
+CHECKITEM [渡劫]光芒道靴 1
+#ACT
+TAKE [渡劫]光芒道靴 1
+GAMEGOLD + 400
+ChangeExp + 400000
+INC M0 400
+INC M99 400000
+DELAYGOTO 0  @普通魔龙套装备回收
+break
+
+
+
+
+
+[@普通魔龙套装备回收提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[所有前缀]魔龙套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[所有前缀]魔龙套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @魔龙套装备回收
+#ELSESAY
+
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{提示:黄金武器都属于魔龙套=FCO=23}\
+　{普通魔龙套，每件50元宝+50000经验=FCO=254}\
+　{[筑基]魔龙套，每件100元宝+100000经验=FCO=254}\
+　{[金丹]魔龙套，每件200元宝+200000经验=FCO=254}\
+　{[元婴]魔龙套，每件300元宝+300000经验=FCO=254}\
+　{[渡劫]魔龙套，每件400元宝+400000经验=FCO=254}\
+　\　\　\
+　<{[一键回收所有前缀魔龙套]=FCO=254}/@普通魔龙套装备回收> \  
+
+　<{[返回主页]=FCO=249}/@main>\
+
+
+
+
+
+
+[@回收强化技能书](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @回收强化技能书提示
+#IF
+CHECKITEM 强化基本剑术 1
+#ACT
+TAKE 强化基本剑术 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化攻杀剑术 1
+#ACT
+TAKE 强化攻杀剑术 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化刺杀剑术 1
+#ACT
+TAKE 强化刺杀剑术 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化半月弯刀 1
+#ACT
+TAKE 强化半月弯刀 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化烈火剑法 1
+#ACT
+TAKE 强化烈火剑法 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @回收强化技能书
+break
+
+
+#IF
+CHECKITEM 强化疾光电影 1
+#ACT
+TAKE 强化疾光电影 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+
+#IF
+CHECKITEM 强化雷电术 1
+#ACT
+TAKE 强化雷电术 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化火墙 1
+#ACT
+TAKE 强化火墙 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化爆裂火焰 1
+#ACT
+TAKE 强化爆裂火焰 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化冰咆哮 1
+#ACT
+TAKE 强化冰咆哮 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化施毒术 1
+#ACT
+TAKE 强化施毒术 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化灵魂火符 1
+#ACT
+TAKE 强化灵魂火符 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化幽灵盾 1
+#ACT
+TAKE 强化幽灵盾 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化神圣战甲术 1
+#ACT
+TAKE 强化神圣战甲术 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+
+#IF
+CHECKITEM 强化召唤骷髅 1
+#ACT
+TAKE 强化召唤骷髅 1
+GAMEGOLD + 5
+ChangeExp + 5000
+INC M0 5
+INC M99 5000
+DELAYGOTO 0  @回收强化技能书
+break
+
+#IF
+CHECKITEM 强化召唤神兽 1
+#ACT
+TAKE 强化召唤神兽 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @回收强化技能书
+break
+
+
+
+[@回收强化技能书提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[渡劫]强化技能书#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[渡劫]强化技能书#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @main
+#ELSESAY
+
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=254}\
+　{请点清背包的重要物品，误回收了一概不=FCO=254}\
+　{负责！=FCO=254}\
+　\
+　\
+　\
+　\
+　\
+　\
+　　　　　　<{[一键回收商店套]=FCO=70}|点击进入回收各级别前缀商店套装备页面/@商店套装备回收> \  
+　　　　　　<{[一键回收沃玛套]=FCO=70}|点击进入回收各级别前缀沃玛套装备页面/@沃玛套装备回收> \  
+　　　　　　<{[一键回收祖玛套]=FCO=70}|点击进入回收各级别前缀祖玛套装备页面/@祖玛套装备回收> \  
+　　　　　　<{[一键回收赤月套]=FCO=70}|点击进入回收各级别前缀赤月套装备页面/@赤月套装备回收> \  
+　　　　　　<{[一键回收魔龙套]=FCO=70}|点击进入回收各级别前缀魔龙套装备页面/@魔龙套装备回收> \  
+　　　　　　<{[一键回收魔宠蛋]=FCO=70}|点击进入回收页面/@一键回收魔宠蛋> \ 
+　　　　　<{[一键回收强化技能书]=FCO=70}|35级强化技能书20元宝+2000经验，其他强化技能书均为5元宝+5000经验/@回收强化技能书> \  
+
+<{[结束对话]=FCO=249}/@exit>\
+
+[@一键回收魔宠蛋](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @一键回收魔宠蛋提示
+#IF
+CHECKITEM 兽蛋(骨翼蝠王) 1
+#ACT
+TAKE 兽蛋(骨翼蝠王) 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 2000000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(火龙神) 1
+#ACT
+TAKE 兽蛋(火龙神) 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 2000000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(千年树妖) 1
+#ACT
+TAKE 兽蛋(千年树妖) 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 2000000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(赤月恶魔) 1
+#ACT
+TAKE 兽蛋(赤月恶魔) 1
+GAMEGOLD + 200
+ChangeExp + 200000
+INC M0 200
+INC M99 2000000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(触龙神) 1
+#ACT
+TAKE 兽蛋(触龙神) 1
+GAMEGOLD + 20
+ChangeExp + 20000
+INC M0 20
+INC M99 20000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+
+#IF
+CHECKITEM 兽蛋(藏经法老) 1
+#ACT
+TAKE 兽蛋(藏经法老) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(巨型多角虫) 1
+#ACT
+TAKE 兽蛋(巨型多角虫) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(祖玛卫士) 1
+#ACT
+TAKE 兽蛋(祖玛卫士) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+
+#IF
+CHECKITEM 兽蛋(沃玛战士) 1
+#ACT
+TAKE 兽蛋(沃玛战士) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(沃玛勇士) 1
+#ACT
+TAKE 兽蛋(沃玛勇士) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(沃玛战将) 1
+#ACT
+TAKE 兽蛋(沃玛战将) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(火焰沃玛) 1
+#ACT
+TAKE 兽蛋(火焰沃玛) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(沃玛卫士) 1
+#ACT
+TAKE 兽蛋(沃玛卫士) 1
+GAMEGOLD + 100
+ChangeExp + 100000
+INC M0 100
+INC M99 100000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(沃玛教主) 1
+#ACT
+TAKE 兽蛋(沃玛教主) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暗黑战士) 1
+#ACT
+TAKE 兽蛋(暗黑战士) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(粪虫) 1
+#ACT
+TAKE 兽蛋(粪虫) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+
+#IF
+CHECKITEM 兽蛋(尸王) 1
+#ACT
+TAKE 兽蛋(尸王) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(蜈蚣) 1
+#ACT
+TAKE 兽蛋(蜈蚣) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(黑色恶蛆) 1
+#ACT
+TAKE 兽蛋(黑色恶蛆) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(邪恶钳虫) 1
+#ACT
+TAKE 兽蛋(邪恶钳虫) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(跳跳蜂) 1
+#ACT
+TAKE 兽蛋(跳跳蜂) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(巨型蠕虫) 1
+#ACT
+TAKE 兽蛋(巨型蠕虫) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(红野猪) 1
+#ACT
+TAKE 兽蛋(红野猪) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(黑野猪) 1
+#ACT
+TAKE 兽蛋(黑野猪) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(白野猪) 1
+#ACT
+TAKE 兽蛋(白野猪) 1
+GAMEGOLD + 30
+ChangeExp + 30000
+INC M0 30
+INC M99 30000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(蝎蛇) 1
+#ACT
+TAKE 兽蛋(蝎蛇) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(邪恶毒蛇) 1
+#ACT
+TAKE 兽蛋(邪恶毒蛇) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(大老鼠) 1
+#ACT
+TAKE 兽蛋(大老鼠) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+
+#IF
+CHECKITEM 兽蛋(祖玛弓箭手) 1
+#ACT
+TAKE 兽蛋(祖玛弓箭手) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(祖玛雕像) 1
+#ACT
+TAKE 兽蛋(祖玛雕像) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(月魔蜘蛛) 1
+#ACT
+TAKE 兽蛋(月魔蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暴牙蜘蛛) 1
+#ACT
+TAKE 兽蛋(暴牙蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(钢牙蜘蛛) 1
+#ACT
+TAKE 兽蛋(钢牙蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(天狼蜘蛛) 1
+#ACT
+TAKE 兽蛋(天狼蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(黑锷蜘蛛) 1
+#ACT
+TAKE 兽蛋(黑锷蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(花吻蜘蛛) 1
+#ACT
+TAKE 兽蛋(花吻蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(血巨人) 1
+#ACT
+TAKE 兽蛋(血巨人) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(邪恶巨人) 1
+#ACT
+TAKE 兽蛋(邪恶巨人) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(双头血魔) 1
+#ACT
+TAKE 兽蛋(双头血魔) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(双头金刚) 1
+#ACT
+TAKE 兽蛋(双头金刚) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暗之双头金刚) 1
+#ACT
+TAKE 兽蛋(暗之双头金刚) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(虹魔蝎卫) 1
+#ACT
+TAKE 兽蛋(虹魔蝎卫) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(虹魔猪卫) 1
+#ACT
+TAKE 兽蛋(虹魔猪卫) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(虹魔教主) 1
+#ACT
+TAKE 兽蛋(虹魔教主) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(剧毒蜘蛛) 1
+#ACT
+TAKE 兽蛋(剧毒蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(多钩猫王) 1
+#ACT
+TAKE 兽蛋(多钩猫王) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(钉耙猫王) 1
+#ACT
+TAKE 兽蛋(钉耙猫王) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(恶灵尸王) 1
+#ACT
+TAKE 兽蛋(恶灵尸王) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(黄泉教主) 1
+#ACT
+TAKE 兽蛋(黄泉教主) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暗之黄泉教主) 1
+#ACT
+TAKE 兽蛋(暗之黄泉教主) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+
+#IF
+CHECKITEM 兽蛋(牛头魔) 1
+#ACT
+TAKE 兽蛋(牛头魔) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(牛魔斗士) 1
+#ACT
+TAKE 兽蛋(牛魔斗士) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(牛魔战士) 1
+#ACT
+TAKE 兽蛋(牛魔战士) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(牛魔将军) 1
+#ACT
+TAKE 兽蛋(牛魔将军) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(牛魔法师) 1
+#ACT
+TAKE 兽蛋(牛魔法师) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(牛魔祭司) 1
+#ACT
+TAKE 兽蛋(牛魔祭司) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(牛魔王) 1
+#ACT
+TAKE 兽蛋(牛魔王) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暗之牛魔王) 1
+#ACT
+TAKE 兽蛋(暗之牛魔王) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暗之虹魔教主) 1
+#ACT
+TAKE 兽蛋(暗之虹魔教主) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暗之双头血魔) 1
+#ACT
+TAKE 兽蛋(暗之双头血魔) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(暗之沃玛教主) 1
+#ACT
+TAKE 兽蛋(暗之沃玛教主) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(绿泥怪) 1
+#ACT
+TAKE 兽蛋(绿泥怪) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(龙骨鬼) 1
+#ACT
+TAKE 兽蛋(龙骨鬼) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(刺脊冰狼) 1
+#ACT
+TAKE 兽蛋(刺脊冰狼) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(刺脊火狼) 1
+#ACT
+TAKE 兽蛋(刺脊火狼) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(长毛猛犸象) 1
+#ACT
+TAKE 兽蛋(长毛猛犸象) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(黑刺领斑虎) 1
+#ACT
+TAKE 兽蛋(黑刺领斑虎) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(白刺领斑虎) 1
+#ACT
+TAKE 兽蛋(白刺领斑虎) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(红鬃熊狸) 1
+#ACT
+TAKE 兽蛋(红鬃熊狸) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+#IF
+CHECKITEM 兽蛋(雷炎蜘蛛) 1
+#ACT
+TAKE 兽蛋(雷炎蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(绿魔蜘蛛) 1
+#ACT
+TAKE 兽蛋(绿魔蜘蛛) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+#IF
+CHECKITEM 兽蛋(圣地卫士) 1
+#ACT
+TAKE 兽蛋(圣地卫士) 1
+GAMEGOLD + 10
+ChangeExp + 10000
+INC M0 10
+INC M99 10000
+DELAYGOTO 0  @一键回收魔宠蛋
+break
+
+
+[@一键回收魔宠蛋提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6魔宠蛋#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6魔宠蛋#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @main
+#ELSESAY
+
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=254}\
+　{请点清背包的重要物品，误回收了一概不=FCO=254}\
+　{负责！=FCO=254}\
+　\
+　\
+　\
+　\
+　\
+　\
+　　　　　　<{[一键回收商店套]=FCO=70}|点击进入回收各级别前缀商店套装备页面/@商店套装备回收> \  
+　　　　　　<{[一键回收沃玛套]=FCO=70}|点击进入回收各级别前缀沃玛套装备页面/@沃玛套装备回收> \  
+　　　　　　<{[一键回收祖玛套]=FCO=70}|点击进入回收各级别前缀祖玛套装备页面/@祖玛套装备回收> \  
+　　　　　　<{[一键回收赤月套]=FCO=70}|点击进入回收各级别前缀赤月套装备页面/@赤月套装备回收> \  
+　　　　　　<{[一键回收魔龙套]=FCO=70}|点击进入回收各级别前缀魔龙套装备页面/@魔龙套装备回收> \  
+　　　　　　<{[一键回收魔宠蛋]=FCO=70}|点击进入回收页面/@一键回收魔宠蛋> \ 
+　　　　　<{[一键回收强化技能书]=FCO=70}|35级强化技能书20元宝+2000经验，其他强化技能书均为5元宝+5000经验/@回收强化技能书> \  
+
+<{[结束对话]=FCO=249}/@exit>\

@@ -1,0 +1,164 @@
+[@MAIN](2250,300,540,3)
+　　　　　　　　　　　　 {本服主打群服，所=FCO=254}\
+　　　　　　　　　　　　 {以群宣传奖励十分好，=FCO=254}\
+　　　　　　　　　　　　 {散人玩家想要起步快，=FCO=254}\
+　　　　　　　　　　　　 {最好宣传一下。=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\　\　\　\
+　{本服121级封顶，当人物达到121级后可在我这=FCO=254}\
+　{免费无限修炼轮回。=FCO=254}\
+　{每轮回一次，等级降级回120级0经验，=FCO=254}\
+　{并可获得100点属性点。=FCO=254}\
+　\
+　\
+　\
+　\
+　<{[ 轮  回 ]=FCO=70}/@轮回> \  
+　<{[结束对话]=FCO=249}/@exit>\  
+　\
+　\
+　\
+　\
+　\
+　\
+　{你当前已轮回：[<$STR(C170)>次]=FCO=253}\
+
+
+[@轮回]
+#if
+CheckLevelEx > 120
+#ACT
+INC C170 1
+RENEWLEVEL 0 120 100
+ChangeExp = 0
+SendMsg 0 [系统]:恭喜<$USERNAME>成功修炼轮回1次，获得100点属性点，当前已轮回[<$STR(C170)>次]。
+#ELSEACT
+MESSAGEBOX 对不起，你等级不足121级。
+
+[@连杀1]
+#if
+EQUAL C170 0
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀2
+GOTO @计时
+Break
+
+[@连杀2]
+#if
+EQUAL C170 1
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀3
+GOTO @计时
+Break
+
+[@连杀3]
+#if
+EQUAL C170 2
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀4
+GOTO @计时
+Break
+
+[@连杀4]
+#if
+EQUAL C170 3
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀5
+GOTO @计时
+Break
+
+[@连杀5]
+#if
+EQUAL C170 4
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀6
+GOTO @计时
+Break
+
+[@连杀6]
+#if
+EQUAL C170 5
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀7
+GOTO @计时
+Break
+
+[@连杀7]
+#if
+EQUAL C170 6
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀8
+GOTO @计时
+Break
+
+[@连杀8]
+#if
+EQUAL C170 7
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀9
+GOTO @计时
+Break
+
+[@连杀9]
+#if
+EQUAL C170 8
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀10
+GOTO @计时
+Break
+
+[@连杀10]
+#if
+EQUAL C170 9
+#ACT
+INC C170 1
+MOV C171 10
+;GOTO @连杀2
+GOTO @计时
+Break
+
+[@连杀1]
+#if
+EQUAL C170 0
+#ACT
+INC C170 1
+MOV C171 10
+GOTO @连杀2
+GOTO @计时
+Break
+
+
+
+
+[@计时]
+#if
+LARGE C171 0
+#ACT
+DEC C170 1
+DelayGoto 1 @计时
+#ELSEACT
+SENDMSG 6 10秒内没杀怪记录，连击数量已清空。

@@ -1,0 +1,21 @@
+[@main]
+#IF
+#SAY
+<$USERNAME>你好，欢迎来到<$SERVERNAME>，很高兴为您服务\
+-----------------------注意充值事项------------------------\
+①本系统支持移动,联通短信,网银和盛大,骏网,征途,神州行充值卡\
+②点卡、网银、手机充值卡,请登录本服【官网】充值\
+③请在充值5分钟后在本NPC处领取元宝\
+④本服元宝比例:1元=100元宝\
+<领取元宝/@HF领取> \
+<点击进入充值/@weburl>\\
+<关闭/@exit>\
+
+[@HF领取]
+#CALL [\yuanbaob\hf.txt] @领取元宝
+
+[@weburl]
+#IF
+#ACT
+OPENURL http://cz.92cz.net/User/Center/CC2A65D6DDFCF8C4C60CFDB1AC5D9FDC
+break

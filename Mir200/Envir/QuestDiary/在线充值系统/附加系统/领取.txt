@@ -1,0 +1,1171 @@
+[@领取附加]
+{
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1j\1.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1j\2.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1j\3.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1j\4.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1j\5.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2j\1.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2j\2.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2j\3.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2j\4.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2j\5.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3j\1.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3j\2.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3j\3.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3j\4.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3j\5.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\4j\1.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\4j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\4j\2.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\4j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\4j\3.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\4j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\4j\4.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\4j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\4j\5.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\4j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5j\1.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5j\2.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5j\3.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5j\4.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5j\5.txt
+#ACT
+ChangeGameDiamond + 0
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值0个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\6j\1.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\6j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\6j\2.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\6j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\6j\3.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\6j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\6j\4.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\6j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\6j\5.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\6j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\7j\1.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\7j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\7j\2.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\7j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\7j\3.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\7j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\7j\4.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\7j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\7j\5.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\7j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\8j\1.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\8j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\8j\2.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\8j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\8j\3.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\8j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\8j\4.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\8j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\8j\5.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\8j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\9j\1.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\9j\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\9j\2.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\9j\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\9j\3.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\9j\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\9j\4.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\9j\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\9j\5.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\9j\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1y\1.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1y\2.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1y\3.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1y\4.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1y\5.txt
+#ACT
+ChangeGameDiamond + 1
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2y\1.txt
+#ACT
+ChangeGameDiamond + 2
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2y\2.txt
+#ACT
+ChangeGameDiamond + 2
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2y\3.txt
+#ACT
+ChangeGameDiamond + 2
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2y\4.txt
+#ACT
+ChangeGameDiamond + 2
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2y\5.txt
+#ACT
+ChangeGameDiamond + 2
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3y\1.txt
+#ACT
+ChangeGameDiamond + 3
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3y\2.txt
+#ACT
+ChangeGameDiamond + 3
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3y\3.txt
+#ACT
+ChangeGameDiamond + 3
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3y\4.txt
+#ACT
+ChangeGameDiamond + 3
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3y\5.txt
+#ACT
+ChangeGameDiamond + 3
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5y\1.txt
+#ACT
+ChangeGameDiamond + 5
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5y\2.txt
+#ACT
+ChangeGameDiamond + 5
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5y\3.txt
+#ACT
+ChangeGameDiamond + 5
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5y\4.txt
+#ACT
+ChangeGameDiamond + 5
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5y\5.txt
+#ACT
+ChangeGameDiamond + 5
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10y\1.txt
+#ACT
+ChangeGameDiamond + 10
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10y\2.txt
+#ACT
+ChangeGameDiamond + 10
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10y\3.txt
+#ACT
+ChangeGameDiamond + 10
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10y\4.txt
+#ACT
+ChangeGameDiamond + 10
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10y\5.txt
+#ACT
+ChangeGameDiamond + 10
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20y\1.txt
+#ACT
+ChangeGameDiamond + 20
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20y\2.txt
+#ACT
+ChangeGameDiamond + 20
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20y\3.txt
+#ACT
+ChangeGameDiamond + 20
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20y\4.txt
+#ACT
+ChangeGameDiamond + 20
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20y\5.txt
+#ACT
+ChangeGameDiamond + 20
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30y\1.txt
+#ACT
+ChangeGameDiamond + 30
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30y\2.txt
+#ACT
+ChangeGameDiamond + 30
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30y\3.txt
+#ACT
+ChangeGameDiamond + 30
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30y\4.txt
+#ACT
+ChangeGameDiamond + 30
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30y\5.txt
+#ACT
+ChangeGameDiamond + 30
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50y\1.txt
+#ACT
+ChangeGameDiamond + 50
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50y\2.txt
+#ACT
+ChangeGameDiamond + 50
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50y\3.txt
+#ACT
+ChangeGameDiamond + 50
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50y\4.txt
+#ACT
+ChangeGameDiamond + 50
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50y\5.txt
+#ACT
+ChangeGameDiamond + 50
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\100y\1.txt
+#ACT
+ChangeGameDiamond + 100
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\100y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值100个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\100y\2.txt
+#ACT
+ChangeGameDiamond + 100
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\100y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值100个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\100y\3.txt
+#ACT
+ChangeGameDiamond + 100
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\100y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值100个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\100y\4.txt
+#ACT
+ChangeGameDiamond + 100
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\100y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值100个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\100y\5.txt
+#ACT
+ChangeGameDiamond + 100
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\100y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值100个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\200y\1.txt
+#ACT
+ChangeGameDiamond + 200
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\200y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值200个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\200y\2.txt
+#ACT
+ChangeGameDiamond + 200
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\200y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值200个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\200y\3.txt
+#ACT
+ChangeGameDiamond + 200
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\200y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值200个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\200y\4.txt
+#ACT
+ChangeGameDiamond + 200
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\200y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值200个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\200y\5.txt
+#ACT
+ChangeGameDiamond + 200
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\200y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值200个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\300y\1.txt
+#ACT
+ChangeGameDiamond + 300
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\300y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值300个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\300y\2.txt
+#ACT
+ChangeGameDiamond + 300
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\300y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值300个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\300y\3.txt
+#ACT
+ChangeGameDiamond + 300
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\300y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值300个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\300y\4.txt
+#ACT
+ChangeGameDiamond + 300
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\300y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值300个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\300y\5.txt
+#ACT
+ChangeGameDiamond + 300
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\300y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值300个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\500y\1.txt
+#ACT
+ChangeGameDiamond + 500
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\500y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值500个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\500y\2.txt
+#ACT
+ChangeGameDiamond + 500
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\500y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值500个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\500y\3.txt
+#ACT
+ChangeGameDiamond + 500
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\500y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值500个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\500y\4.txt
+#ACT
+ChangeGameDiamond + 500
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\500y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值500个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\500y\5.txt
+#ACT
+ChangeGameDiamond + 500
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\500y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值500个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\1.txt
+#ACT
+ChangeGameDiamond + 1000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\2.txt
+#ACT
+ChangeGameDiamond + 1000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\3.txt
+#ACT
+ChangeGameDiamond + 1000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\4.txt
+#ACT
+ChangeGameDiamond + 1000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\5.txt
+#ACT
+ChangeGameDiamond + 1000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\1000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值1000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\1.txt
+#ACT
+ChangeGameDiamond + 2000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\2.txt
+#ACT
+ChangeGameDiamond + 2000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\3.txt
+#ACT
+ChangeGameDiamond + 2000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\4.txt
+#ACT
+ChangeGameDiamond + 2000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\5.txt
+#ACT
+ChangeGameDiamond + 2000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\2000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值2000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\1.txt
+#ACT
+ChangeGameDiamond + 3000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\2.txt
+#ACT
+ChangeGameDiamond + 3000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\3.txt
+#ACT
+ChangeGameDiamond + 3000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\4.txt
+#ACT
+ChangeGameDiamond + 3000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\5.txt
+#ACT
+ChangeGameDiamond + 3000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\3000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值3000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\1.txt
+#ACT
+ChangeGameDiamond + 5000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\2.txt
+#ACT
+ChangeGameDiamond + 5000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\3.txt
+#ACT
+ChangeGameDiamond + 5000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\4.txt
+#ACT
+ChangeGameDiamond + 5000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\5.txt
+#ACT
+ChangeGameDiamond + 5000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\5000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值5000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\1.txt
+#ACT
+ChangeGameDiamond + 10000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\2.txt
+#ACT
+ChangeGameDiamond + 10000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\3.txt
+#ACT
+ChangeGameDiamond + 10000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\4.txt
+#ACT
+ChangeGameDiamond + 10000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\5.txt
+#ACT
+ChangeGameDiamond + 10000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\10000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值10000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\1.txt
+#ACT
+ChangeGameDiamond + 20000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\2.txt
+#ACT
+ChangeGameDiamond + 20000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\3.txt
+#ACT
+ChangeGameDiamond + 20000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\4.txt
+#ACT
+ChangeGameDiamond + 20000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\5.txt
+#ACT
+ChangeGameDiamond + 20000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\20000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值20000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\1.txt
+#ACT
+ChangeGameDiamond + 30000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\2.txt
+#ACT
+ChangeGameDiamond + 30000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\3.txt
+#ACT
+ChangeGameDiamond + 30000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\4.txt
+#ACT
+ChangeGameDiamond + 30000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\5.txt
+#ACT
+ChangeGameDiamond + 30000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\30000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值30000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\1.txt
+#ACT
+ChangeGameDiamond + 50000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\1.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\2.txt
+#ACT
+ChangeGameDiamond + 50000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\2.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\3.txt
+#ACT
+ChangeGameDiamond + 50000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\3.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\4.txt
+#ACT
+ChangeGameDiamond + 50000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\4.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50000个
+goto @领取附加
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\5.txt
+#ACT
+ChangeGameDiamond + 50000
+DelAccountList ..\QuestDiary\在线充值系统\附加系统\50000y\5.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>使用本服在线自动冲值系统购买,累计充值50000个
+goto @领取附加
+
+#Elsesay
+请查看自己的元宝数量!\
+没有充值请按提示进行充值!\
+如有任何充值问题,请登陆冲值服务网站\
+本服唯一充值网址： http://999.zzbae.cn/Paycenter/?m=18316\
+<返回/@main>\
+}
+

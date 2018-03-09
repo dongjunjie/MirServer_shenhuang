@@ -1,0 +1,203 @@
+[@升级提示]
+{
+[@PlayLevelUpEx22]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到22级
+
+[@PlayLevelUpEx23]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到23级
+
+[@PlayLevelUpEx24]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到24级
+
+[@PlayLevelUpEx25]
+#IF
+#ACT
+SENDMSG 0 恭喜<$USERNAME>升到25级
+
+
+
+[@PlayLevelUpEx26]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到26级
+
+
+[@PlayLevelUpEx27]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到27级
+
+[@PlayLevelUpEx28]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到28级
+
+
+
+[@PlayLevelUpEx29]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到29级
+
+[@PlayLevelUpEx30]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到30级
+
+[@PlayLevelUpEx31]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到31级
+
+
+[@PlayLevelUpEx32]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到32级
+
+[@PlayLevelUpEx33]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到33级
+
+[@PlayLevelUpEx34]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到34级
+
+[@PlayLevelUpEx35]
+#IF
+#ACT
+SENDMSG 0 恭喜<$USERNAME>升到35级
+
+[@PlayLevelUpEx36]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到36级
+
+
+[@PlayLevelUpEx37]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到37级
+
+[@PlayLevelUpEx38]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到38级
+
+[@PlayLevelUpEx39]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到39级
+
+[@PlayLevelUpEx40]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到40级
+
+[@PlayLevelUpEx41]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到41级
+
+[@PlayLevelUpEx42]
+#IF
+#ACT
+SENDMSG 0 恭喜<$USERNAME>升到42级
+
+[@PlayLevelUpEx43]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到43级
+
+[@PlayLevelUpEx44]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到44级
+
+[@PlayLevelUpEx45]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到45级
+#IF
+Equal G678 0
+#ACT
+MOV G678 1
+
+SENDMSG 0 恭喜<$USERNAME>升到45级，天关活动已正式开放,请到土城NPC参加挑战！
+SENDMSG 0 恭喜<$USERNAME>升到45级，天关活动已正式开放,请到土城NPC参加挑战！
+SENDMSG 0 恭喜<$USERNAME>升到45级，天关活动已正式开放,请到土城NPC参加挑战！
+SENDMSG 0 恭喜<$USERNAME>升到45级，天关活动已正式开放,请到土城NPC参加挑战！
+
+
+
+[@PlayLevelUpEx46]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到46级
+
+[@PlayLevelUpEx47]
+#IF
+#ACT
+
+SENDMSG 0 恭喜<$USERNAME>升到47级
+
+[@PlayLevelUpEx48]
+#IF
+#ACT
+HUMANHP + 20
+HUMANMP + 20
+ChangeHumAbility 2 + 2
+ChangeHumAbility 4 + 2
+SENDMSG 8 恭喜<$USERNAME>升到48级，获得HP+20,MP+20,魔防+2额外属性加成
+SENDMSG 0 恭喜<$USERNAME>升到48级
+
+[@PlayLevelUpEx49]
+#IF
+#ACT
+HUMANHP + 30
+HUMANMP + 30
+ChangeHumAbility 2 + 3
+ChangeHumAbility 4 + 3
+SENDMSG 8 恭喜<$USERNAME>升到49级，获得HP+30,MP+30,魔防+3额外属性加成
+SENDMSG 0 恭喜<$USERNAME>升到49级
+
+[@PlayLevelUpEx50]
+#IF
+#ACT
+HUMANHP + 50
+HUMANMP + 50
+ChangeHumAbility 2 + 5
+ChangeHumAbility 4 + 5
+SENDMSG 8 恭喜<$USERNAME>升到50级，获得HP+50,MP+50,魔防+5额外属性加成
+SENDMSG 0 恭喜<$USERNAME>升到50级
+}

@@ -1,0 +1,83 @@
+[@封号]
+{
+
+#IF
+NOT CheckMapName mfgj
+NOT CheckMapName mfgj2
+NOT CheckMapName mfgj3
+NOT CheckMapName mfgj4
+#act
+VAR Integer HUMAN 功勋
+LOADVAR HUMAN 功勋 ..\QuestDiary\数据\功勋.txt
+VAR Integer HUMAN 英雄值
+LOADVAR HUMAN 英雄值 ..\QuestDiary\数据\英雄值.txt
+#IF
+CHECKGUILDLIST ../QuestDiary/据点战/天下第一名单.txt
+#act
+SetRankLevelName %S\武林至尊
+#IF
+check [778] 1
+#act
+SET [778] 0
+#IF
+check [779] 1
+#act
+SET [779] 0
+#IF
+check [774] 0
+check [775] 0
+check [776] 0
+check [777] 0
+#act
+sethumicon 0 0 0 0
+break
+
+#IF
+Check [206] 1
+#ACT
+ChangeNameColor 241
+SENDMSG 0 【#6FFFF/8#6欢迎#5】：王者赞助[#7<$USERNAME>#7]进入了游戏！
+Break
+
+#IF
+Check [205] 1
+#ACT
+ChangeNameColor 241
+SENDMSG 0 【#6FFFF/8#6欢迎#5】：钻石赞助[#7<$USERNAME>#7]进入了游戏！
+Break
+
+#IF
+Check [204] 1
+#ACT
+ChangeNameColor 151
+SENDMSG 0 【#6FFFF/8#6欢迎#5】：白金赞助[#7<$USERNAME>#7]进入了游戏！
+Break
+
+#IF
+Check [203] 1
+#ACT
+ChangeNameColor 231
+SENDMSG 0 【#6FFFF/8#6欢迎#5】：黄金赞助[#7<$USERNAME>#7]进入了游戏！
+Break
+
+#IF
+Check [202] 1
+#ACT
+ChangeNameColor 2
+SENDMSG 0 【#6FFFF/8#6欢迎#5】：白银赞助[#7<$USERNAME>#7]进入了游戏！
+Break
+
+#IF
+Check [201] 1
+#ACT
+ChangeNameColor 2
+SENDMSG 0 【#6FFFF/8#6欢迎#5】：青铜赞助[#7<$USERNAME>#7]进入了游戏！
+Break
+
+#IF
+check [770] 1
+#ACT
+ChangeNameColor 252
+SENDMSG 0 【#6FFFF/8#6欢迎#5】：飞升玩家[#7<$USERNAME>#7]进入了游戏！
+Break
+}

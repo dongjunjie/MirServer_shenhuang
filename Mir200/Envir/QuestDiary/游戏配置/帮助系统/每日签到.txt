@@ -1,0 +1,331 @@
+[@每日签到]
+{
+#IF
+#ACT
+GOTO @签到
+
+[@签到](2311,1000,1000)
+#act
+MOV <$STR(S1)>
+MOV <$STR(S2)>
+MOV <$STR(S3)>
+MOV <$STR(S4)>
+MOV <$STR(S5)>
+MOV <$STR(S6)>
+MOV <$STR(S7)>
+#IF
+CheckVar Human 签到周数 = <$STR(G2)>
+#ACT
+#ELSEACT
+CalcVar Human 连续签到 = 0
+SAVEVAR HUMAN 连续签到 ..\QuestDiary\自定义变量\登录信息.txt
+CalcVar Human 签到周数 = <$STR(G2)>
+SAVEVAR HUMAN 签到周数 ..\QuestDiary\自定义变量\登录信息.txt
+
+#if
+CheckVar Human 连1领取 = <$STR(G2)>
+#act
+MOV <$STR(S1)> <已领取>
+#ELSEACT
+MOV <$STR(S1)> <领取/@签到奖励1>
+#if
+CheckVar Human 连2领取 = <$STR(G2)>
+#act
+MOV <$STR(S2)> <已领取>
+#ELSEACT
+MOV <$STR(S2)> <领取/@签到奖励2>
+#if
+CheckVar Human 连3领取 = <$STR(G2)>
+#act
+MOV <$STR(S3)> <已领取>
+#ELSEACT
+MOV <$STR(S3)> <领取/@签到奖励3>
+#if
+CheckVar Human 连4领取 = <$STR(G2)>
+#act
+MOV <$STR(S4)> <已领取>
+#ELSEACT
+MOV <$STR(S4)> <领取/@签到奖励4>
+#if
+CheckVar Human 连5领取 = <$STR(G2)>
+#act
+MOV <$STR(S5)> <已领取>
+#ELSEACT
+MOV <$STR(S5)> <领取/@签到奖励5>
+#if
+CheckVar Human 连6领取 = <$STR(G2)>
+#act
+MOV <$STR(S6)> <已领取>
+#ELSEACT
+MOV <$STR(S6)> <领取/@签到奖励6>
+#if
+CheckVar Human 连7领取 = <$STR(G2)>
+#act
+MOV <$STR(S7)> <已领取>
+#ELSEACT
+MOV <$STR(S7)> <领取/@签到奖励7>
+#IF
+#say
+{280=x}{-3=y}\
+{47=x}{57=y}{『注意事项』=FCO=70}<$STR(G2)>\
+{17=x}{10=y}①{人物等级必须达到35级=FCO=95}\
+{17=x}{10=y}②{人物在线必须达到60分钟=FCO=110}\
+{17=x}{10=y}③{每个帐号每天只能签到1次=FCO=110}\
+{17=x}{10=y}④{最好的奖励需连续签到7天=FCO=112}\
+{17=x}{10=y}⑤{每天0点5分刷新签到=FCO=113}\
+{17=x}{10=y}⑥{一个签到周期为7天=FCO=60}\
+{17=x}{10=y}⑦{签到可以获得20点活跃度=FCO=60}\
+{22=x}{10=y}{『请仔细阅读上述事项』=FCO=250}\
+{40=x}{35=y}<{f.3,i.2407=img}/@每日_签到>\
+{260=x}{-283=y}{i.344,c.1=item}{60=x}{i.337,c.1=item}{60=x}{i.338,c.1=item}{5=y}{220=x}<$STR(S1)>\
+{260=x}{28=y}{i.345,c.1=item}{60=x}{i.538,c.1=item}{60=x}{i.327,c.1=item}{60=x}{i.572,c.1=item}{100=x}{5=y}{60=x}<$STR(S2)>\
+{260=x}{27=y}{i.345,c.1=item}{60=x}{i.329,c.1=item}{60=x}{i.572,c.1=item}{60=x}{i.581,c.2=item}{160=x}{5=y}<$STR(S3)>\
+{260=x}{28=y}{i.345,c.1=item}{60=x}{i.337,c.2=item}{60=x}{i.333,c.1=item}{60=x}{i.476,c.1=item}{60=x}{i.559,c.5=item}{100=x}{5=y}<$STR(S4)>\
+{260=x}{28=y}{i.346,c.1=item}{60=x}{i.566,c.1=item}{60=x}{i.642,c.1=item}{60=x}{i.582,c.1=item}{60=x}{i.563,c.5=item}{100=x}{5=y}<$STR(S5)>\
+{260=x}{28=y}{i.346,c.1=item}{60=x}{i.328,c.1=item}{60=x}{i.578,c.1=item}{60=x}{i.558,c.5=item}{60=x}{i.564,c.1=item}{100=x}{5=y}<$STR(S6)>\
+{260=x}{28=y}{i.346,c.1=item}{60=x}{i.570,c.1=item}{60=x}{i.554,c.5=item}{60=x}{i.643,c.1=item}{60=x}{i.565,c.1=item}{100=x}{5=y}<$STR(S7)>\
+
+[@每日_签到]
+#IF
+OnLineLongMin > 30
+#ACT
+Messagebox 在线时间没有达到30分钟,无法签到!<$WEEK>
+Break
+
+#if
+CHECKVAR HUMAN 签到日期 = <$STR(G1)>
+#ACT
+Messagebox 您今日已签到,请明日再签!
+Break
+#IF
+#act
+CalcVar Human 签到日期 = <$STR(G1)>
+SaveVar Human 签到日期 ..\QuestDiary\自定义变量\登录信息.txt
+CalcVar Human 连续签到 + 1
+SAVEVAR HUMAN 连续签到 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]刚刚完成签到,正在准备领取奖励呢！ 7 6
+Messagebox 今日签到成功,请领取奖励!
+goto @main
+Break
+
+[@签到奖励1]
+#if
+CheckVar Human 连1领取 = <$STR(G2)>
+#act
+Messagebox 请勿重复领取奖励!
+Break
+#if
+CheckVar Human 连续签到 < 1
+#act
+Messagebox 您签到的天数不足1天，无法领取奖励！
+Break
+#IF
+CheckBagSize 3
+#ACT
+DynamicGive 5元宝 1
+DynamicGive 随机传送石 1
+DynamicGive 盟重传送石 1
+ChangeGiveItem 2 0
+ChangeGiveItem 2 4
+ChangeGiveItem 2 6
+ChangeGiveItem 2 7
+ChangeGiveItem 8
+CalcVar Human 连1领取 = <$STR(G2)>
+SAVEVAR HUMAN 连1领取 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]领取了第一天的签到奖励！ 7 6
+goto @main
+Break
+#ELSEACT
+Messagebox 您的包袱空位不足3个，无法领取奖励!
+Break
+[@签到奖励2]
+#if
+CheckVar Human 连2领取 = <$STR(G2)>
+#act
+Messagebox 请勿重复领取奖励!
+Break
+#if
+CheckVar Human 连续签到 < 2
+#act
+Messagebox 您连续签到的天数不足2天，无法领取奖励！
+Break
+#IF
+CheckBagSize 4
+#ACT
+DynamicGive 10元宝 1
+DynamicGive 农家包 1
+DynamicGive 修复神水 1
+DynamicGive 气血石(体验) 1
+ChangeGiveItem 2 0
+ChangeGiveItem 2 4
+ChangeGiveItem 2 6
+ChangeGiveItem 2 7
+ChangeGiveItem 8
+CalcVar Human 连2领取 = <$STR(G2)>
+SAVEVAR HUMAN 连2领取 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]领取了第二天的签到奖励！ 7 6
+goto @main
+Break
+#ELSEACT
+Messagebox 您的包袱空位不足4个，无法领取奖励!
+Break
+[@签到奖励3]
+#if
+CheckVar Human 连3领取 = <$STR(G2)>
+#act
+Messagebox 请勿重复领取奖励!
+Break
+#if
+CheckVar Human 连续签到 < 3
+#act
+Messagebox 您连续签到的天数不足3天，无法领取奖励！
+Break
+#IF
+CheckBagSize 4
+#ACT
+DynamicGive 10元宝 1
+DynamicGive 千里传音 1
+DynamicGive 气血石(体验) 1
+DynamicGive 神佑符 1
+ChangeGiveItem 2 0
+ChangeGiveItem 2 4
+ChangeGiveItem 2 6
+ChangeGiveItem 2 7
+ChangeGiveItem 8
+CalcVar Human 连3领取 = <$STR(G2)>
+SAVEVAR HUMAN 连3领取 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]领取了第三天的签到奖励！ 7 6
+goto @main
+Break
+#ELSEACT
+Messagebox 您的包袱空位不足4个，无法领取奖励!
+Break
+[@签到奖励4]
+#if
+CheckVar Human 连4领取 = <$STR(G2)>
+#act
+Messagebox 请勿重复领取奖励!
+Break
+#if
+CheckVar Human 连续签到 < 4
+#act
+Messagebox 您连续签到的天数不足4天，无法领取奖励！
+Break
+#IF
+CheckBagSize 5
+#ACT
+DynamicGive 10元宝 1
+DynamicGive 随机传送石 1
+DynamicGive 10点声望 1
+DynamicGive 1点5倍勋章 1
+DynamicGive 刷属性页(左戒) 5
+ChangeGiveItem 2 0
+ChangeGiveItem 2 4
+ChangeGiveItem 2 6
+ChangeGiveItem 2 7
+ChangeGiveItem 8
+CalcVar Human 连4领取 = <$STR(G2)>
+SAVEVAR HUMAN 连4领取 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]领取了第四天的签到奖励！ 7 6
+goto @main
+Break
+#ELSEACT
+Messagebox 您的包袱空位不足5个，无法领取奖励!
+Break
+[@签到奖励5]
+#if
+CheckVar Human 连5领取 = <$STR(G2)>
+#act
+Messagebox 请勿重复领取奖励!
+Break
+#if
+CheckVar Human 连续签到 < 5
+#act
+Messagebox 您连续签到的天数不足5天，无法领取奖励！
+Break
+#IF
+CheckBagSize 5
+#ACT
+DynamicGive 20元宝 1
+DynamicGive 气血石(普通) 1
+DynamicGive 银质保险 1
+DynamicGive 天运符 1
+DynamicGive 刷属性页(右戒) 5
+ChangeGiveItem 2 0
+ChangeGiveItem 2 4
+ChangeGiveItem 2 6
+ChangeGiveItem 2 7
+ChangeGiveItem 8
+CalcVar Human 连5领取 = <$STR(G2)>
+SAVEVAR HUMAN 连5领取 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]领取了第五天的签到奖励！ 7 6
+goto @main
+Break
+#ELSEACT
+Messagebox 您的包袱空位不足5个，无法领取奖励!
+Break
+[@签到奖励6]
+#if
+CheckVar Human 连6领取 = <$STR(G2)>
+#act
+Messagebox 请勿重复领取奖励!
+Break
+#if
+CheckVar Human 连续签到 < 6
+#act
+Messagebox 您连续签到的天数不足6天，无法领取奖励！
+Break
+#IF
+CheckBagSize 5
+#ACT
+DynamicGive 20元宝 1
+DynamicGive 千里传音(大) 1
+DynamicGive 开孔卷轴(一孔) 1
+DynamicGive 聚灵珠(小) 1
+DynamicGive 刷属性页(左镯) 5
+ChangeGiveItem 2 0
+ChangeGiveItem 2 4
+ChangeGiveItem 2 6
+ChangeGiveItem 2 7
+ChangeGiveItem 8
+CalcVar Human 连6领取 = <$STR(G2)>
+SAVEVAR HUMAN 连6领取 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]领取了第六天的签到奖励！ 7 6
+goto @main
+Break
+#ELSEACT
+Messagebox 您的包袱空位不足5个，无法领取奖励!
+Break
+[@签到奖励7]
+#if
+CheckVar Human 连7领取 = <$STR(G2)>
+#act
+Messagebox 请勿重复领取奖励!
+Break
+#if
+CheckVar Human 连续签到 < 7
+#act
+Messagebox 您连续签到的天数不足7天，无法领取奖励！
+Break
+#IF
+CheckBagSize 5
+#ACT
+DynamicGive 20元宝 1
+DynamicGive 魔血石(普通) 1
+DynamicGive 金质保险 1
+DynamicGive 聚灵珠(大) 1
+DynamicGive 刷属性页(武器) 5
+ChangeGiveItem 2 0
+ChangeGiveItem 2 4
+ChangeGiveItem 2 6
+ChangeGiveItem 2 7
+ChangeGiveItem 8
+CalcVar Human 连7领取 = <$STR(G2)>
+SAVEVAR HUMAN 连7领取 ..\QuestDiary\自定义变量\登录信息.txt
+SendMsg 9 [%s]领取了第七天的签到奖励！ 7 6
+goto @main
+Break
+#ELSEACT
+Messagebox 您的包袱空位不足5个，无法领取奖励!
+Break
+}

@@ -1,0 +1,44 @@
+[@重新排行]
+{
+
+#IF
+large <$HUMAN(元宝消费)> 9
+#ACT
+MOV G90 <$HUMAN(元宝消费)>
+Goto  @11
+BREAK
+
+
+[@11]
+#IF
+large G90 <$STR(G91)>
+#ACT
+MOV G91 <$STR(G90)>
+MOV A91 <$USERNAME>
+#ELSEACT
+Goto  @22
+BREAK
+
+[@22]
+#IF
+large G90 <$STR(G92)>
+SMALL G90 <$STR(G91)>
+#ACT
+MOV G92 <$STR(G90)>
+MOV A92 <$USERNAME>
+#ELSEACT
+Goto  @33
+BREAK
+
+[@33]
+#IF
+large G90 <$STR(G93)>
+SMALL G90 <$STR(G92)>
+#ACT
+MOV G93 <$STR(G90)>
+MOV A93 <$USERNAME>
+BREAK
+
+
+
+}

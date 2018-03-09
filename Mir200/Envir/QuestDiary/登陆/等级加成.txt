@@ -1,0 +1,27 @@
+[@等级加成]
+{
+#IF
+CHECKLEVELEX = 48
+#ACT
+HUMANHP + 20
+HUMANMP + 20
+ChangeHumAbility 2 + 2
+ChangeHumAbility 4 + 2
+
+#IF
+CHECKLEVELEX = 49
+#ACT
+HUMANHP + 30
+HUMANMP + 30
+ChangeHumAbility 2 + 3
+ChangeHumAbility 4 + 3
+
+#IF
+CHECKLEVELEX = 50
+#ACT
+HUMANHP + 50
+HUMANMP + 50
+ChangeHumAbility 2 + 5
+ChangeHumAbility 4 + 5
+}
+

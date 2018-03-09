@@ -1,0 +1,120 @@
+[@结阵]
+{
+#IF
+Random 3
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+CheckJob Warrior
+CheckSlaveCount < 3
+#ACT
+RecallMob 半兽勇士1 1 120
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5获得半兽勇士宝宝一只2小时叛变
+Break
+#IF
+Random 15
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+give 金币 100000
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5获得10万金币
+Break
+#IF
+Random 10
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+TAKE 结阵神石 1
+ChangeExp + 50000
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5获得5万经验
+Break
+#IF
+Random 30
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+ChangeExp + 100000
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5获得10万经验
+Break
+#IF
+Random 50
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+GIVE 洗炼符 1
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5获得洗炼符
+Break
+#IF
+Random 5
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+GIVE 祝福油 1
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5获得祝福油
+Break
+#IF
+Random 100
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+mapmove REDCAVE01
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5传送到了潘夜洞
+Break
+#IF
+Random 100
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+mapmove HELL101
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5传送到了地狱入口
+Break
+#IF
+Random 100
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+mapmove hl002
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5传送到了雷炎洞穴
+Break
+#IF
+Random 100
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+mapmove JZ006
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5传送到了静之冰窟
+Break
+#IF
+Random 100
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+mapmove HELL301
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5传送到了暗黑之门
+Break
+#IF
+Random 100
+CHECKITEM 结阵神石 1
+CheckLevelEx ? 35
+#ACT
+mapmove d2082
+TAKE 结阵神石 1
+SENDMSG 0 【#6FFFF/8#6结阵#5】：[#7<$USERNAME>#7]递交#6FFFF/8#6结阵神石#5传送到了火龙洞穴
+Break
+
+}
+
+
+
+
+
+

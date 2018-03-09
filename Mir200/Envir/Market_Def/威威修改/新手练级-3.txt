@@ -1,0 +1,81 @@
+(@@InPutString @@InputInteger)
+[@MAIN](2250,300,540,3)
+　　　　　　　　　　　　 {本服主打群服，所=FCO=254}\
+　　　　　　　　　　　　 {以群宣传奖励十分好，=FCO=254}\
+　　　　　　　　　　　　 {散人玩家想要起步快，=FCO=254}\
+　　　　　　　　　　　　 {最好宣传一下。=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\　\
+　{本练级场只刷普通怪物，=FCO=254}\
+　{刷新时间5分钟=FCO=254} \
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　<{[低级练级场]=FCO=70}|收费50元宝，限制70以下/@低级>\ 
+　<{[中级练级场]=FCO=70}|收费500元宝，限制70-100级/@中级>\ 
+　<{[高级练级场]=FCO=70}|收费3000元宝，限制100以上/@高级>\ 
+　<{[关闭页面]=FCO=249}/@exit>\
+
+[@低级]
+#if
+CheckGameGold ? 50
+CHECKLEVELEX < 70
+#act
+GameGold - 50
+mapmove LJC1
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7[<$USERNAME>]#7花费50元宝闯进了#7[低级练级场]#7地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有50元宝。需要等级1-69！
+
+
+[@中级]
+#if
+CheckGameGold ? 500
+CHECKLEVELEX < 100
+CHECKLEVELEX > 69
+#act
+GameGold - 500
+mapmove LJC2
+GIVE 回城卷 1
+INC G100 500
+CALCVAR HUMAN 消费积分 + 500
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[500]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7[<$USERNAME>]#7花费500元宝闯进了#7[中级练级场]#7地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有500元宝。需要等级70-99！
+
+
+[@高级]
+#if
+CheckGameGold ? 300
+CHECKLEVELEX < 122
+CHECKLEVELEX > 99
+#act
+GameGold - 3000
+mapmove LJC3
+GIVE 回城卷 1
+INC G100 3000
+CALCVAR HUMAN 消费积分 + 3000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[3000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7[<$USERNAME>]#7花费3000元宝闯进了#7[高级练级场]#7地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有3000元宝。需要等级100-121！
+

@@ -1,0 +1,446 @@
+[@称号管理]
+
+{
+#if
+CHECKLEVELEX > 0
+#ACT
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\
+
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮伊春传奇会员≯
+SENDMSG 0 热烈欢迎伊春传奇会员[%s]进入游戏!
+
+#if
+EQUAL A3 <$USERNAME>
+#act
+SETHUMICON 4 23 130 1 20 0 75 -35
+ChangeHumAbility 21 = 10 
+SENDMSG 6 你是#7≮天下第一法师≯#7获得#7伤害+10%#7属性加成.
+
+#if
+EQUAL A4 <$USERNAME>
+#act
+SETHUMICON 4 23 129 1 20 0 75 -35
+ChangeHumAbility 21 = 10 
+SENDMSG 6 你是#7≮天下第一道士≯#7获得#7伤害+10%#7属性加成.
+
+#if
+EQUAL A2 <$USERNAME>
+#act
+SETHUMICON 4 23 131 1 20 0 75 -35
+ChangeHumAbility 21 = 10 
+SENDMSG 6 你是#7≮天下第一战士≯#7获得#7伤害+10%#7属性加成.
+
+#if
+EQUAL A1 <$USERNAME>
+#act
+SETHUMICON 4 23 126 1 20 0 92 -5
+ChangeHumAbility 21 = 15 
+SENDMSG 6 你是#7≮天下第一练级狂≯#7获得#7伤害+15%#7属性加成.
+
+#if
+CheckRenewLevel = 1
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮一重の筑基期≯
+
+#if
+CheckRenewLevel = 2
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮二重の金丹期≯
+
+#if
+CheckRenewLevel = 3
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮三重の元婴期≯
+
+#if
+CheckRenewLevel = 4
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮四重の出窍期≯
+
+#if
+CheckRenewLevel = 5
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮五重の分神期≯
+
+#if
+CheckRenewLevel = 6
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮六重の合体期≯
+
+#if
+CheckRenewLevel = 7
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮七重の洞虚期≯
+
+#if
+CheckRenewLevel = 8
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮八重の大乘期≯
+
+#if
+CheckRenewLevel = 9
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮九重の渡劫期≯
+
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 1
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮一重の筑基期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 2
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮二重の金丹期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 3
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮三重の元婴期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 4
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮四重の出窍期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 5
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮五重の分神期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 6
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮六重の合体期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 7
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮七重の洞虚期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 8
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮八重の大乘期≯\≮伊春传奇会员≯
+
+#if
+checknamelist ..\QuestDiary\会员名单.txt
+CheckRenewLevel = 9
+#act
+SetRankLevelName %S\≮无限轮回[<$STR(C170)>]次≯\≮九重の渡劫期≯\≮伊春传奇会员≯
+
+
+#IF
+large <$HUMAN(赞助币)> 49
+SMALL <$HUMAN(赞助币)> 100
+#ACT
+SETHUMICON 2 23 0 10 20 0 55 -30
+PowerRate 110 99000 1
+SENDMSG 9 热烈欢迎[VIP1青铜赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP1青铜赞助]，获得爆率1.1倍。
+
+#IF
+Check [201] 1
+#ACT
+SETHUMICON 2 23 0 10 20 0 55 -30
+PowerRate 110 99000 1
+SENDMSG 9 热烈欢迎[VIP1青铜赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP1青铜赞助]，获得爆率1.1倍。
+
+
+#IF
+large <$HUMAN(赞助币)> 99
+SMALL <$HUMAN(赞助币)> 300
+#ACT
+SETHUMICON 2 23 20 10 20 0 55 -30
+PowerRate 120 99000 1
+SENDMSG 9 热烈欢迎[VIP2白银赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP2白银赞助]，获得爆率1.2倍。
+
+
+#IF
+Check [202] 1
+#ACT
+SETHUMICON 2 23 20 10 20 0 55 -30
+PowerRate 120 99000 1
+SENDMSG 9 热烈欢迎[VIP2白银赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP2白银赞助]，获得爆率1.2倍。
+
+#IF
+large <$HUMAN(赞助币)> 299
+SMALL <$HUMAN(赞助币)> 500
+#ACT
+SETHUMICON 2 23 40 10 20 0 55 -30
+PowerRate 130 99000 1
+SENDMSG 9 热烈欢迎[VIP3黄金赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP3黄金赞助]，获得爆率1.3倍。
+
+
+#IF
+Check [203] 1
+#ACT
+SETHUMICON 2 23 40 10 20 0 55 -30
+PowerRate 130 99000 1
+SENDMSG 9 热烈欢迎[VIP3黄金赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP3黄金赞助]，获得爆率1.3倍。
+
+#IF
+large <$HUMAN(赞助币)> 499
+SMALL <$HUMAN(赞助币)> 700
+#ACT
+SETHUMICON 2 23 60 10 20 0 55 -30
+PowerRate 140 99000 1
+SENDMSG 9 热烈欢迎[VIP4白金赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP4白金赞助]，获得爆率1.4倍。
+
+#IF
+Check [204] 1
+#ACT
+SETHUMICON 2 23 60 10 20 0 55 -30
+PowerRate 140 99000 1
+SENDMSG 9 热烈欢迎[VIP4白金赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP4白金赞助]，获得爆率1.4倍。
+
+#IF
+large <$HUMAN(赞助币)> 699
+SMALL <$HUMAN(赞助币)> 1000
+#ACT
+SETHUMICON 2 23 80 10 20 0 55 -30
+PowerRate 150 99000 1
+SENDMSG 9 热烈欢迎[VIP5钻石赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP5钻石赞助]，获得爆率1.5倍。
+
+#IF
+Check [205] 1
+#ACT
+SETHUMICON 2 23 80 10 20 0 55 -30
+PowerRate 150 99000 1
+SENDMSG 9 热烈欢迎[VIP5钻石赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP5钻石赞助]，获得爆率1.5倍。
+
+#IF
+large <$HUMAN(赞助币)> 999
+#ACT
+SETHUMICON 2 23 100 10 20 0 55 -30
+PowerRate 160 99000 1
+SENDMSG 9 热烈欢迎[VIP6王者赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP6王者赞助],，获得爆率1.6倍。
+
+#IF
+Check [206] 1
+#ACT
+SETHUMICON 2 23 100 10 20 0 55 -30
+PowerRate 160 99000 1
+SENDMSG 9 热烈欢迎[VIP6王者赞助:%s]进入游戏！ 70 500
+SENDMSG 6 你是[VIP6王者赞助],，获得爆率1.6倍。
+
+
+#if
+checknamelist ..\QuestDiary\称号管理\一掷千金.txt
+#act
+SETHUMICON 3 23 125 1 20 0 50 19
+ChangeHumAbility 26 = 30
+MESSAGEBOX 佩戴称号[一掷千金]，获得称号属性经验加成30%。
+
+#if
+checknamelist ..\QuestDiary\称号管理\挥金如土.txt
+#act
+SETHUMICON 3 23 124 1 20 0 98 10
+ChangeHumAbility 26 = 40
+MESSAGEBOX 佩戴称号[挥金如土]，获得称号属性经验加成40%。
+
+#if
+checknamelist ..\QuestDiary\称号管理\纸醉金迷.txt
+#act
+SETHUMICON 3 23 123 1 20 0 83 10
+ChangeHumAbility 26 = 50
+MESSAGEBOX 佩戴称号[纸醉金迷]，获得称号属性经验加成50%。
+
+#if
+checknamelist ..\QuestDiary\称号管理\富可敌国.txt
+#act
+SETHUMICON 3 23 122 1 20 0 55 19
+ChangeHumAbility 26 = 60
+MESSAGEBOX 佩戴称号[富可敌国]，获得称号属性经验加成60%。
+
+#if
+checknamelist ..\QuestDiary\称号管理\富甲天下.txt
+#act
+SETHUMICON 3 23 121 1 20 0 60 19
+ChangeHumAbility 26 = 70
+MESSAGEBOX 佩戴称号[富甲天下]，获得称号属性经验加成70%。
+
+#if
+checknamelist ..\QuestDiary\称号管理\我是土豪.txt
+#act
+SETHUMICON 3 23 120 1 20 0 60 15
+ChangeHumAbility 26 = 80
+MESSAGEBOX 佩戴称号[我是土豪]，获得称号属性经验加成80%。
+
+#if
+checknamelist ..\QuestDiary\称号管理\武林高手.txt
+#act
+SETHUMICON 3 23 255 12 15 0 170 -245
+PowerRate 120 99000
+MESSAGEBOX 佩戴称号[武林高手]，获得称号属性攻击倍数1.20
+
+#if
+checknamelist ..\QuestDiary\称号管理\傲视群雄.txt
+#act
+SETHUMICON 3 23 218 7 15 0 170 -255
+PowerRate 125 99000
+MESSAGEBOX 佩戴称号[傲视群雄]，获得称号属性攻击倍数1.25
+
+
+#if
+checknamelist ..\QuestDiary\称号管理\一代天骄.txt
+#act
+SETHUMICON 3 23 328 15 15 0 175 -255
+PowerRate 130 99000
+MESSAGEBOX 佩戴称号[一代天骄]，获得称号属性攻击倍数1.30
+
+
+#if
+checknamelist ..\QuestDiary\称号管理\不死邪神.txt
+#act
+SETHUMICON 3 23 225 15 15 0 175 -245
+PowerRate 135 99000
+MESSAGEBOX 佩戴称号[不死邪神]，获得称号属性攻击倍数1.35
+
+
+#if
+checknamelist ..\QuestDiary\称号管理\独步青云.txt
+#act
+SETHUMICON 3 23 196 11 15 0 95 5
+PowerRate 140 99000
+MESSAGEBOX 佩戴称号[独步青云]，获得称号属性攻击倍数1.40
+
+#if
+checknamelist ..\QuestDiary\称号管理\登峰造极.txt
+#act
+SETHUMICON 3 23 185 11 15 0 105 5
+PowerRate 145 99000
+MESSAGEBOX 佩戴称号[登峰造极]，获得称号属性攻击倍数1.45
+
+#if
+checknamelist ..\QuestDiary\称号管理\战力无双.txt
+#act
+SETHUMICON 3 23 163 10 15 0 95 5
+PowerRate 150 99000
+MESSAGEBOX 佩戴称号[战力无双]，获得称号属性攻击倍数1.50
+
+#if
+checknamelist ..\QuestDiary\称号管理\盖世无双.txt
+#act
+SETHUMICON 3 23 153 10 15 0 100 1
+PowerRate 155 99000
+MESSAGEBOX 佩戴称号[盖世无双]，获得称号属性攻击倍数1.55
+
+#if
+checknamelist ..\QuestDiary\称号管理\天下第一.txt
+#act
+SETHUMICON 3 23 343 10 15 0 173 -250
+PowerRate 160 99000
+MESSAGEBOX 佩戴称号[天下第一]，获得称号属性攻击倍数1.60
+
+
+#if
+checknamelist ..\QuestDiary\称号管理\十大高手.txt
+#act
+SETHUMICON 3 23 207 11 15 0 90 1
+ChangeHumAbility 11 = 1000
+ChangeHumAbility 12 = 1000
+ChangeHumAbility 1 = 15
+ChangeHumAbility 2 = 15
+ChangeHumAbility 3 = 15
+ChangeHumAbility 4 = 15
+MESSAGEBOX 佩戴称号[十大高手]，获得称号属性HP+1000,MP+1000,防御+15，魔御+15
+
+
+#if
+checknamelist ..\QuestDiary\称号管理\十大战神.txt
+#act
+SETHUMICON 3 23 173 12 15 0 100 1
+ChangeHumAbility 11 = 2000
+ChangeHumAbility 12 = 2000
+ChangeHumAbility 1 = 30
+ChangeHumAbility 2 = 30
+ChangeHumAbility 3 = 30
+ChangeHumAbility 4 = 30
+MESSAGEBOX 佩戴称号[十大战神]，获得称号属性HP+2000,MP+2000,防御+30，魔御+30
+
+#if
+checknamelist ..\QuestDiary\称号管理\凤舞九天.txt
+#act
+SETHUMICON 3 23 128 1 15 0 93 10
+ChangeHumAbility 11 = 3000
+ChangeHumAbility 12 = 3000
+ChangeHumAbility 1 = 45
+ChangeHumAbility 2 = 45
+ChangeHumAbility 3 = 45
+ChangeHumAbility 4 = 45
+MESSAGEBOX 佩戴称号[凤舞九天]，获得称号属性HP+3000,MP+3000,防御+45，魔御+45
+
+#if
+checknamelist ..\QuestDiary\称号管理\威震八方.txt
+#act
+SETHUMICON 3 23 313 15 15 0 170 -260
+ChangeHumAbility 11 = 4000
+ChangeHumAbility 12 = 4000
+ChangeHumAbility 1 = 60
+ChangeHumAbility 2 = 60
+ChangeHumAbility 3 = 60
+ChangeHumAbility 4 = 60
+MESSAGEBOX 佩戴称号[威震八方]，获得称号属性HP+4000,MP+4000,防御+60，魔御+60
+
+#if
+checknamelist ..\QuestDiary\称号管理\羽化登仙.txt
+#act
+SETHUMICON 3 23 127 1 15 0 98 1
+ChangeHumAbility 11 = 5000
+ChangeHumAbility 12 = 5000
+ChangeHumAbility 1 = 75
+ChangeHumAbility 2 = 75
+ChangeHumAbility 3 = 75
+ChangeHumAbility 4 = 75
+MESSAGEBOX 佩戴称号[羽化登仙]，获得称号属性HP+5000,MP+5000,防御+75，魔御+75
+
+#if
+checknamelist ..\QuestDiary\称号管理\盟主.txt
+#act
+SETHUMICON 3 23 240 15 15 0 170 -255
+ChangeHumAbility 11 = 1000
+ChangeHumAbility 12 = 1000
+ChangeHumAbility 1 = 15
+ChangeHumAbility 2 = 15
+ChangeHumAbility 3 = 15
+ChangeHumAbility 4 = 15
+MESSAGEBOX 佩戴称号[盟主]，获得称号属性HP+1000,MP+1000,防御+15，魔御+15
+
+#if
+checknamelist ..\QuestDiary\称号管理\统领皇城.txt
+#act
+SETHUMICON 3 23 141 12 15 0 77 -5
+ChangeHumAbility 11 = 10000
+ChangeHumAbility 12 = 10000
+ChangeHumAbility 1 = 90
+ChangeHumAbility 2 = 90
+ChangeHumAbility 3 = 90
+ChangeHumAbility 4 = 90
+PowerRate 170 99000 1
+MESSAGEBOX 佩戴称号[统领皇城]，获得称号属性HP+10000,MP+10000,防御+90，魔御+90,爆率1.7倍
+
+
+}

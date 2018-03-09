@@ -1,0 +1,28 @@
+(@@InputInteger)
+[@main](30,600,400,3,0,0,1,258,2)
+<{f.3,x.10,y.65,i.1701,t.300=img}>
+<{f.3,x.172,y.65,i.1701,t.300=img}>
+{元宝兑换=FCO=254} {可以将多余的金币兑换为元宝!~=FCO=253}\ \
+{兑换比例为=FCO=249} : {100万金币等于1元宝=FCO=250}\ \
+{6=y}
+{18=x}<兑换元宝/@@InputInteger98>                   <没有金币/@EXIT>\
+
+
+[@@InputInteger98]
+#IF
+SMALL N98 1000000
+#ACT
+MESSAGEBOX 你输入的金币数不正确，必须大于“1000000”
+BREAK
+
+#IF
+CHECKGOLD <$STR(N98)>
+#ACT
+MOV N18 <$STR(N98)>
+TAKE 金币 <$STR(N18)>
+DIV N18 1000000
+GAMEGOLD + <$STR(N18)>
+SendMsg 6 您成功兑换<$STR(N18)>元宝！
+#ELSEACT
+MESSAGEBOX 你的金币不足<$STR(N98)>！！
+BREAK

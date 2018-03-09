@@ -1,0 +1,145 @@
+[@main]
+#if
+NOT CHECKNAMELIST ../QuestDiary/2016全名战争名单.txt
+#act
+ADDNAMELIST ../QuestDiary/2016全名战争名单.txt
+MOV C198 3
+#if
+#SAY
+   全民战争[活动]\
+{活动时间=FCO=253}{：21:10-21:40[今日次数<$STR(C198)>次]=FCO=254}\
+{活动介绍=FCO=253}{：进入地图后随机分配一个阵营=FCO=254}\
+{活动介绍=FCO=253}{：配合战友保护自家BOOS，杀死对方BOOS=FCO=254}\
+{活动介绍=FCO=253}{：任何一方BOOS死亡活动结束，获胜方会传送领奖地=FCO=254}\
+{活动介绍=FCO=253}{：领奖地每3分钟会刷新10个宝箱，刷新3次！=FCO=254}\
+{活动介绍=FCO=253}{：杀死敌方阵营玩家+5点战场积分可兑换物品=FCO=254}\
+<参加战斗√/@jin>               <关闭×/@exit>        <积分兑换/@兑换>\
+{温馨提示:联合战友，保存自己才能更好的杀敌！=FCO=254}\
+[@jin]
+#if
+NOT min  10 40
+#ACT
+MESSAGEBOX 当前不是活动时间。
+BREAK
+#if
+NOT hour 21 21
+#ACT
+MESSAGEBOX 当前不是活动时间。
+BREAK
+#if
+SMALL C198 1
+#ACT
+MESSAGEBOX 今日次数已用完，不能参加。
+BREAK
+#if
+EQUAL I989 0
+#act
+DEC C198 1
+INC I989 1
+MOV C5 1
+SETRANKLEVELNAME 联盟阵营
+SendMsg 0 【#6FFFF/8#6全民战争#5】：勇士[#7<$USERNAME>#7]参加了全民战争活动，成为了联盟阵营中的一员！！！
+mapmove lol 44 163
+BREAK
+#elseact
+DEC C198 1
+DEC I989 1
+MOV C5 2
+SETRANKLEVELNAME 部落阵营
+SendMsg 0 【#6FFFF/8#6全民战争#5】：勇士[#7<$USERNAME>#7]参加了全民战争活动，成为了部落阵营中的一员！！！
+mapmove lol 131 54
+BREAK
+[@兑换]
+{玛雅大陆的勇士，当前你战场积分为：=FCO=254}<$HUMAN(战场积分)>\
+
+<50点战场积分兑换/@双倍>{:限时双倍勋章[可和双倍经验卷叠加使用是3倍]=FCO=254}\
+{-----------------------------------------------------------=FCO=253}\
+<50点战场积分兑换/@打孔石>{：装备打孔石[可到综合功能处给喜欢的装备打孔]=FCO=254}\
+{-----------------------------------------------------------=FCO=253}\
+<50点战场积分兑换/@金刚石>{：100个金刚石[可到综合功能处兑换限时物品或者宝图]=FCO=254}\
+{-----------------------------------------------------------=FCO=253}\
+<50点战场积分兑换/@力量神石>{：力量神石[可为您带孔的装备附加一点攻击]=FCO=254}\
+{-----------------------------------------------------------=FCO=253}\
+<50点战场积分兑换/@魔法神石>{：魔法神石[可为您带孔的装备附加一点魔法]=FCO=254}\
+{-----------------------------------------------------------=FCO=253}\
+<50点战场积分兑换/@道法神石>{：道法神石[可为您带孔的装备附加一点道术]=FCO=254}\
+[@道法神石]
+#IF
+CHECKVAR HUMAN 战场积分 ? 50
+#ACT
+CALCVAR HUMAN 战场积分 - 50
+SAVEVAR HUMAN 战场积分 ..\QuestDiary\数据\战场积分.txt
+Give 道法神石 1
+SENDMSG 0 尊敬的玩家【<$USERNAME>】成功兑换了道法神石！
+GOTO @兑换
+SendMsg 7 提示：你用50点战场积分成功兑换了：道法神石.
+#ELSEACT 
+MESSAGEBOX 你没有50点战场积分，无法兑换！！！
+
+[@魔法神石]
+#IF
+CHECKVAR HUMAN 战场积分 ? 50
+#ACT
+CALCVAR HUMAN 战场积分 - 50
+SAVEVAR HUMAN 战场积分 ..\QuestDiary\数据\战场积分.txt
+Give 魔法神石 1
+SENDMSG 0 尊敬的玩家【<$USERNAME>】成功兑换了魔法神石！
+GOTO @兑换
+SendMsg 7 提示：你用50点战场积分成功兑换了：魔法神石.
+#ELSEACT 
+MESSAGEBOX 你没有50点战场积分，无法兑换！！！
+[@力量神石]
+#IF
+CHECKVAR HUMAN 战场积分 ? 50
+#ACT
+CALCVAR HUMAN 战场积分 - 50
+SAVEVAR HUMAN 战场积分 ..\QuestDiary\数据\战场积分.txt
+Give 力量神石 1
+SENDMSG 0 尊敬的玩家【<$USERNAME>】成功兑换了力量神石！
+GOTO @兑换
+SendMsg 7 提示：你用50点战场积分成功兑换了：力量神石.
+#ELSEACT 
+MESSAGEBOX 你没有50点战场积分，无法兑换！！！
+
+
+
+
+
+[@金刚石]
+#IF
+CHECKVAR HUMAN 战场积分 ? 50
+#ACT
+CALCVAR HUMAN 战场积分 - 50
+SAVEVAR HUMAN 战场积分 ..\QuestDiary\数据\战场积分.txt
+Give 金刚石 100
+SENDMSG 0 尊敬的玩家【<$USERNAME>】成功兑换了100颗金刚石！
+GOTO @兑换
+SendMsg 7 提示：你用50点战场积分成功兑换了：100颗金刚石.
+#ELSEACT 
+MESSAGEBOX 你没有50点战场积分，无法兑换！！！
+[@打孔石]
+#IF
+CHECKVAR HUMAN 战场积分 ? 50
+#ACT
+CALCVAR HUMAN 战场积分 - 50
+SAVEVAR HUMAN 战场积分 ..\QuestDiary\数据\战场积分.txt
+Give 装备打孔石 1
+SENDMSG 0 尊敬的玩家【<$USERNAME>】成功兑换了装备打孔石！
+GOTO @兑换
+SendMsg 7 提示：你用50点战场积分成功兑换了：装备打孔石.
+#ELSEACT 
+MESSAGEBOX 你没有50点战场积分，无法兑换！！！
+[@双倍]
+#IF
+CHECKVAR HUMAN 战场积分 ? 50
+#ACT
+CALCVAR HUMAN 战场积分 - 50
+SAVEVAR HUMAN 战场积分 ..\QuestDiary\数据\战场积分.txt
+DynamicGive 限时双倍勋章 1
+ChangeGiveItem 1 1 HOUR
+ChangeGiveItem 8
+SENDMSG 0 尊敬的玩家【<$USERNAME>】成功兑换了限时双倍勋章一枚！
+GOTO @兑换
+SendMsg 7 提示：你用50点战场积分成功兑换了：限时双倍勋章.
+#ELSEACT 
+MESSAGEBOX 你没有50点战场积分，无法兑换！！！

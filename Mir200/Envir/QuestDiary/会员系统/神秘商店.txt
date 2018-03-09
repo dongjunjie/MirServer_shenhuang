@@ -1,0 +1,385 @@
+[@神秘商店]
+{
+#IF
+#ACT
+Goto @mainXXX22
+
+[@mainXXX22](2231,750,500,3,0,1,442,685,32,1)
+<{f.3,x.0,y.86,i.2232,t.100=img}>
+<{f.3,x.170,y.86,i.2232,t.100=img}>
+<{f.3,x.340,y.86,i.2232,t.100=img}>
+<{f.3,x.0,y.161,i.2232,t.100=img}>
+<{f.3,x.170,y.161,i.2232,t.100=img}>
+<{f.3,x.340,y.161,i.2232,t.100=img}>
+<{f.3,x.0,y.236,i.2232,t.100=img}>
+<{f.3,x.170,y.236,i.2232,t.100=img}>
+<{f.3,x.340,y.236,i.2232,t.100=img}>
+<{f.3,x.0,y.311,i.2232,t.100=img}>
+<{f.3,x.170,y.311,i.2232,t.100=img}>
+<{f.3,x.340,y.311,i.2232,t.100=img}>
+;-----------按钮第一排-------------
+<{f.3,x.63,y.118,i.1705,t.100=img}>
+<{f.3,x.233,y.118,i.1705,t.100=img}>
+<{f.3,x.403,y.118,i.1705,t.100=img}>
+;-----------按钮第二排-------------
+<{f.3,x.63,y.193,i.1705,t.100=img}>
+<{f.3,x.233,y.193,i.1705,t.100=img}>
+<{f.3,x.403,y.193,i.1705,t.100=img}>
+;-----------按钮第三排-------------
+<{f.3,x.63,y.268,i.1705,t.100=img}>
+<{f.3,x.233,y.268,i.1705,t.100=img}>
+<{f.3,x.403,y.268,i.1705,t.100=img}>
+;-----------按钮第四排-------------
+<{f.3,x.63,y.343,i.1705,t.100=img}>
+<{f.3,x.233,y.343,i.1705,t.100=img}>
+<{f.3,x.403,y.343,i.1705,t.100=img}>
+;-----------按钮第五排-------------
+<{f.3,x.76,y.390,i.1701,t.100=img}>
+<{f.3,x.416,y.390,i.1701,t.100=img}>\ \
+　                          {[欢迎光临2.5D伊春传奇Ⅱ神宠天下]=FCO=253}\
+　         {神秘商店物美价廉!超值哦!勇士注意把握机会!过了这村就没这店了哟!=FCO=250}\
+　                      {[友情提示]:=FCO=249}{商品每日刷新时间为凌晨6:20分=FCO=250}\
+;------------第一排-----------------
+{12=x}{16=y}{i.1818,c.0=item}\
+{65=x}{-13=y}{需要元宝=FCO=243}:{2000=FCO=249}\
+{69=x}{8=y}<{购 买=FCO=254}/@购买钻石>  {<$STR(G300)>/300=FCO=253}\
+{182=x}{-43=y}{i.752,c.0=item}\
+{235=x}{-13=y}{需要元宝=FCO=243}:{100=FCO=249}\
+{239=x}{8=y}<{购 买=FCO=254}/@购买经验勋章>  {<$STR(G301)>/9999=FCO=253}\
+{352=x}{-43=y}{i.753,c.0=item}\
+{405=x}{-13=y}{需要元宝=FCO=243}:{300=FCO=249}\
+{409=x}{8=y}<{购 买=FCO=254}/@购买经验勋章2>  {<$STR(G302)>/9999=FCO=253}\ \
+;------------第二排-----------------
+{12=x}{16=y}{i.1731,c.0=item}\
+{65=x}{-13=y}{需要元宝=FCO=243}:{500=FCO=249}\
+{69=x}{8=y}<{购 买=FCO=254}/@海底龙宫>  {<$STR(G303)>/300=FCO=253}\
+{182=x}{-43=y}{i.1732,c.0=item}\
+{235=x}{-13=y}{需要元宝=FCO=243}:{700=FCO=249}\
+{239=x}{8=y}<{购 买=FCO=254}/@轮回海>  {<$STR(G304)>/300=FCO=253}\
+{352=x}{-43=y}{i.1733,c.0=item}\
+{405=x}{-13=y}{需要元宝=FCO=243}:{900=FCO=249}\
+{409=x}{8=y}<{购 买=FCO=254}/@荒古禁地>  {<$STR(G305)>/300=FCO=253}\ \
+;------------第三排-----------------
+{12=x}{16=y}{i.1734,c.0=item}\
+{65=x}{-13=y}{需要元宝=FCO=243}:{1200=FCO=249}\
+{69=x}{8=y}<{购 买=FCO=254}/@天之颠>  {<$STR(G306)>/300=FCO=253}\
+{182=x}{-43=y}{i.1944,c.0=item}\
+{235=x}{-13=y}{需要元宝=FCO=243}:{1500=FCO=249}\
+{239=x}{8=y}<{购 买=FCO=254}/@十方阵>  {<$STR(G307)>/300=FCO=253}\
+{352=x}{-43=y}{i.1945,c.0=item}\
+{405=x}{-13=y}{需要元宝=FCO=243}:{2000=FCO=249}\
+{409=x}{8=y}<{购 买=FCO=254}/@幽冥海>  {<$STR(G308)>/300=FCO=253}\ \
+;------------第四排-----------------
+{12=x}{16=y}{i.1946,c.0=item}\
+{65=x}{-13=y}{需要元宝=FCO=243}:{2500=FCO=249}\
+{69=x}{8=y}<{购 买=FCO=254}/@地狱>  {<$STR(G309)>/300=FCO=253}\
+{182=x}{-43=y}{i.1947,c.0=item}\
+{235=x}{-13=y}{需要元宝=FCO=243}:{3000=FCO=249}\
+{239=x}{8=y}<{购 买=FCO=254}/@遗迹>  {<$STR(G310)>/300=FCO=253}\
+{352=x}{-43=y}{i.1948,c.0=item}\
+{405=x}{-13=y}{需要元宝=FCO=243}:{5000=FCO=249}\
+{409=x}{8=y}<{购 买=FCO=254}/@龙神>  {<$STR(G311)>/300=FCO=253}\
+{84=x}{31=y}<{元宝充值=FCO=254}/@充值>{292=x}<{关闭对话=FCO=254}/@Exit>\
+;装备特效排版
+{f.3,x.15,y.99,i.990-999,t.100=img}{f.3,x.185,y.99,i.990-999,t.100=img}{f.3,x.355,y.99,i.990-999,t.100=img}
+{f.3,x.15,y.174,i.990-999,t.100=img}{f.3,x.185,y.174,i.990-999,t.100=img}{f.3,x.355,y.174,i.990-999,t.100=img}
+{f.3,x.15,y.249,i.990-999,t.100=img}{f.3,x.185,y.249,i.990-999,t.100=img}{f.3,x.355,y.249,i.990-999,t.100=img}
+{f.3,x.15,y.324,i.990-999,t.100=img}{f.3,x.185,y.324,i.990-999,t.100=img}{f.3,x.355,y.324,i.990-999,t.100=img}
+
+[@购买钻石]
+#if
+Small G300 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 2000
+#Act
+GameGold - 2000
+DynamicGive 钻石 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G300 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@购买经验勋章]
+#if
+Small G301 9999
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 100
+#Act
+GameGold - 100
+DynamicGive 魔皇之血 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G301 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@购买经验勋章2]
+#if
+Small G302 9999
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 300
+#Act
+GameGold - 3000
+DynamicGive 神皇之血 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G302 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@海底龙宫]
+#if
+Small G303 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 500
+#Act
+GameGold - 500
+DynamicGive 海底龙宫传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G303 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@轮回海]
+#if
+Small G304 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 700
+#Act
+GameGold - 7200
+DynamicGive 轮回海传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G304 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@荒古禁地]
+#if
+Small G305 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 900
+#Act
+GameGold - 900
+DynamicGive 荒古禁地传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G305 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@天之颠]
+#if
+Small G306 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 1200
+#Act
+GameGold - 1200
+DynamicGive 天之颠传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G306 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+[@十方阵]
+#if
+Small G307 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 1500
+#Act
+GameGold - 1500
+DynamicGive 十方阵传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G307 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+[@幽冥海]
+#if
+Small G308 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 2000
+#Act
+GameGold - 2000
+DynamicGive 幽冥海传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G308 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+[@地狱]
+#if
+Small G309 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 2500
+#Act
+GameGold - 2500
+DynamicGive 地狱传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G309 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@遗迹]
+#if
+Small G310 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 3000
+#Act
+GameGold - 3000
+DynamicGive 遗迹传送卷 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G310 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+
+[@龙神]
+#if
+Small G311 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 5000
+#Act
+GameGold - 5000
+DynamicGive 龙神传送卷礼包 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G311 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+
+}

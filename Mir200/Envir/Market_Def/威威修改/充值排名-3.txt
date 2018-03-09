@@ -1,0 +1,103 @@
+[@MAIN](2396,550,367,3)
+　\　\
+　　{尊敬的[<$USERNAME>]你好！=FCO=254}\
+　　{高凉传奇感谢有你！你的赞助就是对我们最大的支持。=FCO=254}\
+　　{------------------------------------------------------------------------------=FCO=254}\
+　　{当前服务器=FCO=254}{(商城+传送NPC+功能NPC)=FCO=23}{元宝总收入=FCO=254}{[<$STR(G100)>]=FCO=23}{ 个。=FCO=254}\
+　　{提示：服务器收入计算时间为每天23点整至第2天23点整.=FCO=23}\
+　　{领奖时间为22.50至22.59分.过期作废，后果自负！=FCO=23}\
+　　{------------------------------------------------------------------------------=FCO=254}\
+　　{ 今日充值第一名:=FCO=254}{[<$STR(A91)>]=FCO=250}{共充值:=FCO=254}{[<$STR(G91)>]=FCO=23}{元,可领=FCO=254}{[<$STR(G102)>]=FCO=23}{元宝(总收入15%)=FCO=254}\
+　　{ 今日充值第二名:=FCO=254}{[<$STR(A92)>]=FCO=250}{共充值:=FCO=254}{[<$STR(G92)>]=FCO=23}{元,可领=FCO=254}{[<$STR(G103)>]=FCO=23}{元宝(总收入10%)=FCO=254}\
+　　{ 今日充值第三名:=FCO=254}{[<$STR(A93)>]=FCO=250}{共充值:=FCO=254}{[<$STR(G93)>]=FCO=23}{元,可领=FCO=254}{[<$STR(G104)>]=FCO=23}{元宝(总收入 5%)=FCO=254}\
+　　{------------------------------------------------------------------------------=FCO=254}\
+　　{你今日总充值=FCO=254} {[<$HUMAN(元宝消费)>]=FCO=23}{ 元。=FCO=254}\
+　　{提示：每日充值大于10元以上才能参与竞价排名！=FCO=23}\
+　　{提示：每人每日只能领取一种排名奖励！=FCO=23}\
+　　{------------------------------------------------------------------------------=FCO=254}\
+　　<{[我要领奖]=FCO=70}|领奖时间为22.50至22.59分.过期作废，后果自负！/@领取奖励> \  
+　　<{[结束页面]=FCO=249}/@exit>\
+
+
+
+
+
+
+
+[@领取奖励]
+#IF
+hour 22 22
+min  50 59
+#ACT
+DelayGoto 1 @领取奖励1
+Break
+#ELSEACT
+MESSAGEBOX 对不起！\.\.\领奖时间为22.50至22.59分.
+
+[@领取奖励1]
+#IF
+EQUAL A91 <$USERNAME>
+#ACT
+GOTO @第1
+Break
+#IF
+EQUAL A92 <$USERNAME>
+#ACT
+GOTO @第2
+Break
+#IF
+EQUAL A93 <$USERNAME>
+#ACT
+GOTO @第3
+Break
+#ELSEACT
+MESSAGEBOX 对不起！\你今日的充值金额没有在前3名内。
+[@第1]
+#IF
+NOT CHECKNAMELIST ../QuestDiary/充值第1领奖.txt
+NOT CHECKNAMELIST ../QuestDiary/充值第2领奖.txt
+NOT CHECKNAMELIST ../QuestDiary/充值第3领奖.txt
+#ACT
+GAMEGOLD + <$STR(G102)>
+AddNameList ../QuestDiary/充值第1领奖.txt
+MESSAGEBOX 恭喜你成功领取今日充值第1名奖励<$STR(G102)>元宝！
+SendMsg 0 #7恭喜#7[%s]#7成功领取今日充值第1名奖励,获得#7[<$STR(G102)>]#7元宝。高凉传奇感谢有你！你的赞助就是对我们最大的支持。
+Break
+#ELSEACT
+MESSAGEBOX 对不起！你已经领过今日的奖励了。
+
+[@第2]
+#IF
+NOT CHECKNAMELIST ../QuestDiary/充值第1领奖.txt
+NOT CHECKNAMELIST ../QuestDiary/充值第2领奖.txt
+NOT CHECKNAMELIST ../QuestDiary/充值第3领奖.txt
+#ACT
+GAMEGOLD + <$STR(G103)>
+AddNameList ../QuestDiary/充值第2领奖.txt
+MESSAGEBOX 恭喜你成功领取今日充值第2名奖励<$STR(G103)>元宝！
+SendMsg 0 #7恭喜#7[%s]#7成功领取今日充值第2名奖励,获得#7[<$STR(G103)>]#7元宝。高凉传奇感谢有你！你的赞助就是对我们最大的支持。
+Break
+#ELSEACT
+MESSAGEBOX 对不起！你已经领过今日的奖励了。
+
+[@第3]
+#IF
+NOT CHECKNAMELIST ../QuestDiary/充值第1领奖.txt
+NOT CHECKNAMELIST ../QuestDiary/充值第2领奖.txt
+NOT CHECKNAMELIST ../QuestDiary/充值第3领奖.txt
+#ACT
+GAMEGOLD + <$STR(G104)>
+AddNameList ../QuestDiary/充值第3领奖.txt
+MESSAGEBOX 恭喜你成功领取今日充值第3名奖励<$STR(G104)>元宝！
+SendMsg 0 #7恭喜#7[%s]#7成功领取今日充值第3名奖励,获得#7[<$STR(G104)>]#7元宝。高凉传奇感谢有你！你的赞助就是对我们最大的支持。
+Break
+#ELSEACT
+MESSAGEBOX 对不起！你已经领过今日的奖励了。
+
+
+
+
+
+
+
+

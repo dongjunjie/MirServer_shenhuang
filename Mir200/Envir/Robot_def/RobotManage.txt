@@ -1,0 +1,352 @@
+[@每5分钟运行一次]
+#IF
+CheckGameGold ? 10
+#ACT
+#ELSEACT
+Kick
+MESSAGEBOX 你的时间已经到，请明天再登录游戏！
+
+[@正式开区]
+#IF
+EQUAL G955 0
+#ACT
+MOV G955 1
+SendMsg 0 该游戏区正式开启，请各位朋友正式开启您的旅途吧！
+SendMsg 0 该游戏区正式开启，请各位朋友正式开启您的旅途吧！
+SendMsg 0 该游戏区正式开启，请各位朋友正式开启您的旅途吧！
+SendMsg 0 该游戏区正式开启，请各位朋友正式开启您的旅途吧！
+SendMsg 0 该游戏区正式开启，请各位朋友正式开启您的旅途吧！
+SendMsg 0 该游戏区正式开启，请各位朋友正式开启您的旅途吧！
+
+
+
+[@清除每日充值排名]
+#IF
+#ACT
+GMEXECUTE 开始提问 @清除每日充值排名1
+SendMsg 0 #7今天充值排行榜已清零，感谢你对本服的支持#7
+SendMsg 0 #7今天充值排行榜已清零，感谢你对本服的支持#7
+SendMsg 0 #7今天充值排行榜已清零，感谢你对本服的支持#7
+SendMsg 0 #7今天充值排行榜已清零，感谢你对本服的支持#7
+SendMsg 0 #7今天充值排行榜已清零，感谢你对本服的支持#7
+SendMsg 0 #7今天充值排行榜已清零，感谢你对本服的支持#7
+
+[@清除个人消费积分]
+#IF
+#ACT
+GMEXECUTE 开始提问 @清除个人消费积分1
+GMEXECUTE 开始提问 @清理杀敌
+SendMsg 0 #7本周的个人累计消费元宝已清零，感谢你对本服的支持#7
+SendMsg 0 #7本周的个人累计消费元宝已清零，感谢你对本服的支持#7
+SendMsg 0 #7本周的个人累计消费元宝已清零，感谢你对本服的支持#7
+SendMsg 0 #7本周的个人累计消费元宝已清零，感谢你对本服的支持#7
+SENDMSG 0 【#6FFFF/8#6公告#5】：【杀敌次数】已重置！#7现在北京时间晚上23点整，各位玩家注意休息时间！#7
+SENDMSG 0 【#6FFFF/8#6公告#5】：【被杀次数】已重置！#7现在北京时间晚上23点整，各位玩家注意休息时间！#7
+
+
+[@清除时间领取]
+#IF
+#ACT
+GMEXECUTE 开始提问 @清理杀敌
+ClearList ../QuestDiary/2016押镖名单.txt
+ClearNameList ../QuestDiary/神秘战场次数/1.txt
+ClearNameList ../QuestDiary/神秘战场次数/2.txt
+ClearNameList ../QuestDiary/神秘战场次数/3.txt
+CLEARLIST ../QuestDiary/大旗领奖限制.txt
+CLEARNAMELIST ..\QuestDiary\七天循环签到\签到名单.txt
+ClearNameList ../QuestDiary/每日清理/赤月每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/洞天每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/火龙每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/雷炎每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/圣者每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/雪域每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/妖玛每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/祖玛每日副本名单.txt
+ClearNameList ../QuestDiary/每日清理/会员每日礼包.txt
+SENDMSG 0 【#6FFFF/8#6公告#5】：【副本次数】已重置！#7现在北京时间晚上24点整，各位玩家注意休息时间！#7
+SENDMSG 0 【#6FFFF/8#6公告#5】：【押镖次数】已重置！#7现在北京时间晚上24点整，各位玩家注意休息时间！#7
+SENDMSG 0 【#6FFFF/8#6公告#5】：【战场次数】已重置！#7现在北京时间晚上24点整，各位玩家注意休息时间！#7
+
+[@坐庄游戏A]
+#IF
+EQUAL G212 0
+#ACT
+GMEXECUTE 开始提问 @抢庄开始
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 60
+#ACT
+GMEXECUTE 开始提问 @抢庄结束
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 61
+#ACT
+GMEXECUTE 开始提问 @下注开始
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 117
+#ACT
+GMEXECUTE 开始提问 @下注结束
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 118
+EQUAL G445 0
+#ACT
+MOVR G242 6
+inc G242 1
+MOVR G243 6
+inc G243 1
+MOVR G244 6
+inc G244 1
+MOV G245 <$STR(G242)>
+INC G245 <$STR(G243)>
+INC G245 <$STR(G244)>
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 119
+LARGE G445 1
+#ACT
+MOV G245 <$STR(G242)>
+INC G245 <$STR(G243)>
+INC G245 <$STR(G244)>
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 120
+#ACT
+GMEXECUTE 开始提问 @猜点开始
+MOV G445 0
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 126
+#ACT
+GMEXECUTE 开始提问 @赌博结帐
+INC G212 1
+BREAK
+
+#IF
+EQUAL G212 128
+#ACT
+GMEXECUTE 开始提问 @赌博清零
+MOV A233 无
+MOV G216 0
+MOV G217 0
+MOV G211 0
+MOV G213 0
+MOV G214 0
+MOV G229 0
+MOV G242 0
+MOV G243 0
+MOV G244 0
+MOV G245 0
+INC G212 1
+BREAK
+#IF
+EQUAL G212 130
+#ACT
+MOV A234 无
+MOV G212 0
+BREAK
+#IF
+#ACT
+INC G212 1
+BREAK
+
+[@坐庄游戏B]
+#IF
+#ACT
+MOV G218 0
+MOV G219 0
+MOV G215 130
+DEC G215 <$STR(G212)>
+MOV G211 <$STR(G213)>
+INC G211 <$STR(G214)>
+MOV G216 <$STR(G229)>
+INC G216 <$STR(G214)>
+DEC G216 <$STR(G213)>
+MOV G217 <$STR(G229)>
+INC G217 <$STR(G213)>
+DEC G217 <$STR(G214)>
+BREAK
+
+[@坐庄游戏C]
+#IF
+EQUAL G212 122
+EQUAL G242 <$STR(G243)>
+EQUAL G242 <$STR(G244)>
+#ACT
+MOV A233 豹子
+BREAK
+
+#IF
+EQUAL G212 122
+SMALL G245 11
+#ACT
+MOV A233 小
+BREAK
+
+#IF
+EQUAL G212 122
+LARGE G245 10
+#ACT
+MOV A233 大
+BREAK
+[@尸王洞僵尸_刷新]
+#IF
+#ACT
+SendMsg 0 开启通往尸王神殿的守门僵尸复活了.想学习强化技能的兄弟赶紧了！
+SendMsg 0 开启通往尸王神殿的守门僵尸复活了.想学习强化技能的兄弟赶紧了！
+SendMsg 0 开启通往尸王神殿的守门僵尸复活了.想学习强化技能的兄弟赶紧了！
+SendMsg 0 开启通往尸王神殿的守门僵尸复活了.想学习强化技能的兄弟赶紧了！
+BREAK
+
+
+[@星空战场开启]
+#IF
+EQUAL G955 1
+#ACT
+SendMsg 0 【星空战场】降临了，星空恶魔带领手下精英进入战场，勇士们战胜他们！
+SendMsg 0 【星空战场】降临了，星空恶魔带领手下精英进入战场，勇士们战胜他们！
+SendMsg 0 【星空战场】降临了，星空恶魔带领手下精英进入战场，勇士们战胜他们！
+SendMsg 0 【星空战场】降临了，星空恶魔带领手下精英进入战场，勇士们战胜他们！
+SendMsg 0 【星空战场】降临了，星空恶魔带领手下精英进入战场，勇士们战胜他们！
+SendMsg 0 【星空战场】降临了，星空恶魔带领手下精英进入战场，勇士们战胜他们！
+SendMsg 0 【星空战场】降临了，星空恶魔带领手下精英进入战场，勇士们战胜他们！
+GMEXECUTE 开始提问 @星空战场提问
+BREAK
+
+[@星空战场结束]
+#act
+SendMsg 0 【星空战场】活动已结束，明天同一时间再见！
+SendMsg 0 【星空战场】活动已结束，明天同一时间再见！
+SendMsg 0 【星空战场】活动已结束，明天同一时间再见！
+SendMsg 0 【星空战场】活动已结束，明天同一时间再见！
+SendMsg 0 【星空战场】活动已结束，明天同一时间再见！
+GMEXECUTE 开始提问 @星空结束提问
+[@押镖开启]
+#act
+mov G953 1
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+SendMsg 0 【押镖活动】活动开始，押镖获得丰富的奖励，劫镖给你无限激情，赶紧回土城参加吧！！！
+GMEXECUTE 开始提问 @押镖开始提问
+BREAK
+[@押镖结束]
+#act
+mov G953 0
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+SendMsg 0 【押镖活动】活动已经结束，每晚20:10-21:00再次开启！
+GMEXECUTE 开始提问 @押镖结束提问
+BREAK
+[@全民开始]
+#act
+CLEARMAPMON LOL
+MOV I988 0
+MOV I989 0
+ MONGENEX LOL 37 171 生命之树[BOOS] 1 1 1
+ MONGENEX LOL 44 166 战场护法[法] 40 1 1
+ MONGENEX LOL 44 166 战场护法[道] 40 1 1
+ MONGENEX LOL 44 166 战场护法[战] 40 1 1
+ MONGENEX LOL 70 128 神圣弓弩手 60 12 1
+ MONGENEX LOL 70 128 神圣灭天魔 60 15 1
+ MONGENEX LOL 70 128 神圣大锤王 60 25 1
+
+ MONGENEX LOL 137 46 万恶之源[BOOS] 1 1 2
+ MONGENEX LOL 134 50 战场护法[战] 40 1 2
+ MONGENEX LOL 134 50 战场护法[道] 40 1 2
+ MONGENEX LOL 134 50 战场护法[法] 40 1 2
+ MONGENEX LOL 108 82 邪恶大力士 60 25 2
+ MONGENEX LOL 108 82 邪恶寒冰魔 60 15 2
+ MONGENEX LOL 108 82 邪恶五毒魔 60 12 2
+
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+SendMsg 0 【全民战争】活动已经开始，赶紧到土城活动使者处加入阵营开始战斗吧！
+GMEXECUTE 开始提问 @全民开始提问
+BREAK
+
+
+[@shemzhanc]
+#act
+GMEXECUTE 开始提问 @shenmi
+SendMsg 0 【神秘战场】活动已经开始，赶紧到土城活动使者处加入战场开始战斗吧！
+SendMsg 0 【神秘战场】活动已经开始，赶紧到土城活动使者处加入战场开始战斗吧！
+SendMsg 0 【神秘战场】活动已经开始，赶紧到土城活动使者处加入战场开始战斗吧！
+SendMsg 0 【神秘战场】活动已经开始，赶紧到土城活动使者处加入战场开始战斗吧！
+SendMsg 0 【神秘战场】活动已经开始，赶紧到土城活动使者处加入战场开始战斗吧！
+SendMsg 0 【神秘战场】活动已经开始，赶紧到土城活动使者处加入战场开始战斗吧！
+SendMsg 0 【神秘战场】活动已经开始，赶紧到土城活动使者处加入战场开始战斗吧！
+
+
+[@充值排名刷新]
+#act
+GMEXECUTE 开始提问 @排名刷新
+GMEXECUTE 开始提问 @奖金刷新
+;GMEXECUTE 开始提问 @称号刷新
+
+
+[@充值竞价]
+#act
+GMEXECUTE 开始提问 @充值竞价1
+SendMsg 0 #7今天充值排行榜第1名奖金已达到#7[<$STR(G102)>]#7元宝，还有30分钟结束，还有没人要参与竞价？#7
+SendMsg 0 #7今天充值排行榜第2名奖金已达到#7[<$STR(G103)>]#7元宝，还有30分钟结束，还有没人要参与竞价？#7
+SendMsg 0 #7今天充值排行榜第3名奖金已达到#7[<$STR(G104)>]#7元宝，还有30分钟结束，还有没人要参与竞价？#7
+
+
+[@刷新天下第一称号]
+#act
+GMEXECUTE 开始提问 @刷新天下第一称号1
+
+[@检测怪物攻城]
+#act
+GMEXECUTE 开始提问 @检测怪物攻城1
+
+[@神秘商店清理]
+#IF
+#ACT
+MOV G300 0
+MOV G301 0
+MOV G302 0
+MOV G303 0
+MOV G304 0
+MOV G305 0
+MOV G306 0
+MOV G307 0
+MOV G308 0
+MOV G309 0
+MOV G310 0
+MOV G311 0
+DEC C90 5
+SENDMSG 9 [提示]:今日[神秘商店]已经刷新!欲购从速哟! 249 60
+break
+
+

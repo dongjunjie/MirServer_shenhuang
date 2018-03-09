@@ -1,0 +1,7 @@
+[@MAIN]
+#IF
+#ACT
+CALCVAR HUMAN 英雄值 + 300
+SAVEVAR HUMAN 英雄值 ..\Questdiary\jgr\英雄值.txt
+SENDMSG 0 【#6FFFF/8#6押镖#5】：江洋大盗[#7<$USERNAME>#7]在(#6FFFF/8#6%m,%x:%y#5)劫获一辆英雄值镖[豪华]。
+SENDMSG 8 【#6FFFF/8#6押镖#5】：江洋大盗#6FFFF/8#6[<$USERNAME>]#5在(#6FFFF/8#6%m,%x:%y#5)成功劫获一辆英雄值镖[豪华]。

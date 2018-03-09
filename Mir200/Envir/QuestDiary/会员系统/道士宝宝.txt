@@ -1,0 +1,561 @@
+[@道士宝宝]
+{
+[@召唤骷髅]
+#if
+NOT CheckSlaveName 铭文①骷髅护卫
+CHECKITEMW 铭文[珈兰印] 1
+#act
+MOBSLAVE 铭文①骷髅护卫 3 10
+Goto @召唤骷髅1
+
+
+#if
+NOT CheckSlaveName 铭文②骷髅战神
+CHECKITEMW 铭文[偷天印] 1
+#act
+MOBSLAVE 铭文②骷髅战神 3 10
+Goto @召唤骷髅1
+
+
+
+
+#if
+NOT CheckSlaveName 铭文③骷髅君王
+CHECKITEMW 铭文[君王印] 1
+#act
+MOBSLAVE 铭文③骷髅君王 3 10
+Goto @召唤骷髅1
+
+
+[@召唤骷髅1]
+#if
+EQUAL <$BBINFO[1].name> 铭文①骷髅护卫
+#act
+goto @召唤骷髅2
+
+#if
+EQUAL <$BBINFO[1].name> 铭文②骷髅战神
+#act
+goto @召唤骷髅3
+
+#if
+EQUAL <$BBINFO[1].name> 铭文③骷髅君王
+#act
+goto @召唤骷髅4
+
+#if
+EQUAL <$BBINFO[2].name> 铭文①骷髅护卫
+#act
+goto @召唤骷髅22
+
+#if
+EQUAL <$BBINFO[2].name> 铭文②骷髅战神
+#act
+goto @召唤骷髅33
+
+#if
+EQUAL <$BBINFO[2].name> 铭文③骷髅君王
+#act
+goto @召唤骷髅44
+
+#if
+EQUAL <$BBINFO[3].name> 铭文①骷髅护卫
+#act
+goto @召唤骷髅222
+
+#if
+EQUAL <$BBINFO[3].name> 铭文②骷髅战神
+#act
+goto @召唤骷髅333
+
+#if
+EQUAL <$BBINFO[3].name> 铭文③骷髅君王
+#act
+goto @召唤骷髅444
+
+#if
+EQUAL <$BBINFO[4].name> 铭文①骷髅护卫
+#act
+goto @召唤骷髅2222
+
+#if
+EQUAL <$BBINFO[4].name> 铭文②骷髅战神
+#act
+goto @召唤骷髅3333
+
+#if
+EQUAL <$BBINFO[4].name> 铭文③骷髅君王
+#act
+goto @召唤骷髅4444
+
+#if
+EQUAL <$BBINFO[5].name> 铭文①骷髅护卫
+#act
+goto @召唤骷髅22222
+
+#if
+EQUAL <$BBINFO[5].name> 铭文②骷髅战神
+#act
+goto @召唤骷髅33333
+
+#if
+EQUAL <$BBINFO[5].name> 铭文③骷髅君王
+#act
+goto @召唤骷髅44444
+
+#if
+EQUAL <$BBINFO[6].name> 铭文①骷髅护卫
+#act
+goto @召唤骷髅222222
+
+#if
+EQUAL <$BBINFO[6].name> 铭文②骷髅战神
+#act
+goto @召唤骷髅333333
+
+#if
+EQUAL <$BBINFO[6].name> 铭文③骷髅君王
+#act
+goto @召唤骷髅444444
+
+
+[@召唤骷髅2]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 2000
+
+;攻击
+MOV N201 50
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 50
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[珈兰印]生效，成功使用召唤骷髅召唤#7[铭文①骷髅护卫]#7 [获得道术上限加成#75%#7]
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+
+[@召唤骷髅3]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 3000
+;攻击
+MOV N201 70
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 70
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[偷天印]生效，成功使用召唤骷髅召唤#7[铭文②骷髅战神]#7 [获得道术上限加成#710%#7]
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@召唤骷髅4]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 4000
+;攻击
+MOV N201 90
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 90
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[君王印]生效，成功使用召唤骷髅召唤#7[铭文③骷髅君王]#7 [获得道术上限加成#715%#7]
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@召唤骷髅22]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 2000
+;攻击
+MOV N201 50
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 50
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[珈兰印]生效，成功使用召唤骷髅召唤#7[铭文①骷髅护卫]#7 [获得道术上限加成#75%#7]
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+
+[@召唤骷髅33]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 3000
+;攻击
+MOV N201 70
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 70
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[偷天印]生效，成功使用召唤骷髅召唤#7[铭文②骷髅战神]#7 [获得道术上限加成#710%#7]
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@召唤骷髅44]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 4000
+;攻击
+MOV N201 90
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 90
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[君王印]生效，成功使用召唤骷髅召唤#7[铭文③骷髅君王]#7 [获得道术上限加成#715%#7]
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@召唤骷髅222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 2000
+;攻击
+MOV N201 50
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 50
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[珈兰印]生效，成功使用召唤骷髅召唤#7[铭文①骷髅护卫]#7 [获得道术上限加成#75%#7]
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+
+[@召唤骷髅333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 3000
+;攻击
+MOV N201 70
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 70
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[偷天印]生效，成功使用召唤骷髅召唤#7[铭文②骷髅战神]#7 [获得道术上限加成#710%#7]
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@召唤骷髅444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 4000
+;攻击
+MOV N201 90
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 90
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[君王印]生效，成功使用召唤骷髅召唤#7[铭文③骷髅君王]#7 [获得道术上限加成#715%#7]
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@召唤骷髅2222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 2000
+;攻击
+MOV N201 50
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 50
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[珈兰印]生效，成功使用召唤骷髅召唤#7[铭文①骷髅护卫]#7 [获得道术上限加成#75%#7]
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+
+[@召唤骷髅3333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 3000
+;攻击
+MOV N201 70
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 70
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[偷天印]生效，成功使用召唤骷髅召唤#7[铭文②骷髅战神]#7 [获得道术上限加成#710%#7]
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@召唤骷髅4444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 4000
+;攻击
+MOV N201 90
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 90
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[君王印]生效，成功使用召唤骷髅召唤#7[铭文③骷髅君王]#7 [获得道术上限加成#715%#7]
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@召唤骷髅22222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 2000
+;攻击
+MOV N201 50
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 50
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[珈兰印]生效，成功使用召唤骷髅召唤#7[铭文①骷髅护卫]#7 [获得道术上限加成#75%#7]
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+
+[@召唤骷髅33333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 3000
+;攻击
+MOV N201 70
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 70
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[偷天印]生效，成功使用召唤骷髅召唤#7[铭文②骷髅战神]#7 [获得道术上限加成#710%#7]
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@召唤骷髅44444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 4000
+;攻击
+MOV N201 90
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 90
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[君王印]生效，成功使用召唤骷髅召唤#7[铭文③骷髅君王]#7 [获得道术上限加成#715%#7]
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@召唤骷髅222222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 2000
+;攻击
+MOV N201 50
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 50
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[珈兰印]生效，成功使用召唤骷髅召唤#7[铭文①骷髅护卫]#7 [获得道术上限加成#75%#7]
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+[@召唤骷髅333333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 3000
+;攻击
+MOV N201 70
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 70
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[偷天印]生效，成功使用召唤骷髅召唤#7[铭文②骷髅战神]#7 [获得道术上限加成#710%#7]
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@召唤骷髅444444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 4000
+;攻击
+MOV N201 90
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 90
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[君王印]生效，成功使用召唤骷髅召唤#7[铭文③骷髅君王]#7 [获得道术上限加成#715%#7]
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+}

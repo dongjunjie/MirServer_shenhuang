@@ -1,0 +1,1316 @@
+[@领取元宝]
+{
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1j\1.txt
+#ACT
+GameGold +  20
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1j\2.txt
+#ACT
+GameGold +  20
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1j\3.txt
+#ACT
+GameGold +  20
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1j\4.txt
+#ACT
+GameGold +  20
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1j\5.txt
+#ACT
+GameGold +  20
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2j\1.txt
+#ACT
+GameGold +  40
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2j\2.txt
+#ACT
+GameGold +  40
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2j\3.txt
+#ACT
+GameGold +  40
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2j\4.txt
+#ACT
+GameGold +  40
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2j\5.txt
+#ACT
+GameGold +  40
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3j\1.txt
+#ACT
+GameGold +  60
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3j\2.txt
+#ACT
+GameGold +  60
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3j\3.txt
+#ACT
+GameGold +  60
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3j\4.txt
+#ACT
+GameGold +  60
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3j\5.txt
+#ACT
+GameGold +  60
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\4j\1.txt
+#ACT
+GameGold +  80
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\4j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝80个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\4j\2.txt
+#ACT
+GameGold +  80
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\4j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝80个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\4j\3.txt
+#ACT
+GameGold +  80
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\4j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝80个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\4j\4.txt
+#ACT
+GameGold +  80
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\4j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝80个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\4j\5.txt
+#ACT
+GameGold +  80
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\4j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝80个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5j\1.txt
+#ACT
+GameGold +  100
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5j\2.txt
+#ACT
+GameGold +  100
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5j\3.txt
+#ACT
+GameGold +  100
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5j\4.txt
+#ACT
+GameGold +  100
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5j\5.txt
+#ACT
+GameGold +  100
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\6j\1.txt
+#ACT
+GameGold +  120
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\6j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝120个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\6j\2.txt
+#ACT
+GameGold +  120
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\6j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝120个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\6j\3.txt
+#ACT
+GameGold +  120
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\6j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝120个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\6j\4.txt
+#ACT
+GameGold +  120
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\6j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝120个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\6j\5.txt
+#ACT
+GameGold +  120
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\6j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝120个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\7j\1.txt
+#ACT
+GameGold +  140
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\7j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝140个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\7j\2.txt
+#ACT
+GameGold +  140
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\7j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝140个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\7j\3.txt
+#ACT
+GameGold +  140
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\7j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝140个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\7j\4.txt
+#ACT
+GameGold +  140
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\7j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝140个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\7j\5.txt
+#ACT
+GameGold +  140
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\7j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝140个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\8j\1.txt
+#ACT
+GameGold +  160
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\8j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝160个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\8j\2.txt
+#ACT
+GameGold +  160
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\8j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝160个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\8j\3.txt
+#ACT
+GameGold +  160
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\8j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝160个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\8j\4.txt
+#ACT
+GameGold +  160
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\8j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝160个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\8j\5.txt
+#ACT
+GameGold +  160
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\8j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝160个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\9j\1.txt
+#ACT
+GameGold +  180
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\9j\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝180个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\9j\2.txt
+#ACT
+GameGold +  180
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\9j\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝180个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\9j\3.txt
+#ACT
+GameGold +  180
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\9j\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝180个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\9j\4.txt
+#ACT
+GameGold +  180
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\9j\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝180个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\9j\5.txt
+#ACT
+GameGold +  180
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\9j\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝180个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1y\1.txt
+#ACT
+GameGold +  200
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1y\2.txt
+#ACT
+GameGold +  200
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1y\3.txt
+#ACT
+GameGold +  200
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1y\4.txt
+#ACT
+GameGold +  200
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1y\5.txt
+#ACT
+GameGold +  200
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2y\1.txt
+#ACT
+GameGold +  400
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2y\2.txt
+#ACT
+GameGold +  400
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2y\3.txt
+#ACT
+GameGold +  400
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2y\4.txt
+#ACT
+GameGold +  400
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2y\5.txt
+#ACT
+GameGold +  400
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3y\1.txt
+#ACT
+GameGold +  600
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3y\2.txt
+#ACT
+GameGold +  600
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3y\3.txt
+#ACT
+GameGold +  600
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3y\4.txt
+#ACT
+GameGold +  600
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3y\5.txt
+#ACT
+GameGold +  600
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5y\1.txt
+#ACT
+GameGold +  1000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5y\2.txt
+#ACT
+GameGold +  1000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5y\3.txt
+#ACT
+GameGold +  1000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5y\4.txt
+#ACT
+GameGold +  1000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5y\5.txt
+#ACT
+GameGold +  1000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10y\1.txt
+#ACT
+GameGold +  2000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10y\2.txt
+#ACT
+GameGold +  2000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10y\3.txt
+#ACT
+GameGold +  2000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10y\4.txt
+#ACT
+GameGold +  2000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10y\5.txt
+#ACT
+GameGold +  2000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20y\1.txt
+#ACT
+GameGold +  4000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20y\2.txt
+#ACT
+GameGold +  4000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20y\3.txt
+#ACT
+GameGold +  4000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20y\4.txt
+#ACT
+GameGold +  4000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20y\5.txt
+#ACT
+GameGold +  4000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30y\1.txt
+#ACT
+GameGold +  6000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30y\2.txt
+#ACT
+GameGold +  6000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30y\3.txt
+#ACT
+GameGold +  6000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30y\4.txt
+#ACT
+GameGold +  6000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30y\5.txt
+#ACT
+GameGold +  6000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50y\1.txt
+#ACT
+GameGold +  10000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50y\2.txt
+#ACT
+GameGold +  10000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50y\3.txt
+#ACT
+GameGold +  10000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50y\4.txt
+#ACT
+GameGold +  10000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50y\5.txt
+#ACT
+GameGold +  10000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\100y\1.txt
+#ACT
+GameGold +  20000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\100y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\100y\2.txt
+#ACT
+GameGold +  20000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\100y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\100y\3.txt
+#ACT
+GameGold +  20000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\100y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\100y\4.txt
+#ACT
+GameGold +  20000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\100y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\100y\5.txt
+#ACT
+GameGold +  20000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\100y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝20000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\200y\1.txt
+#ACT
+GameGold +  40000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\200y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\200y\2.txt
+#ACT
+GameGold +  40000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\200y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\200y\3.txt
+#ACT
+GameGold +  40000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\200y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\200y\4.txt
+#ACT
+GameGold +  40000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\200y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\200y\5.txt
+#ACT
+GameGold +  40000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\200y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝40000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\300y\1.txt
+#ACT
+GameGold +  60000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\300y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\300y\2.txt
+#ACT
+GameGold +  60000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\300y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\300y\3.txt
+#ACT
+GameGold +  60000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\300y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\300y\4.txt
+#ACT
+GameGold +  60000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\300y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\300y\5.txt
+#ACT
+GameGold +  60000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\300y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝60000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\500y\1.txt
+#ACT
+GameGold +  100000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\500y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\500y\2.txt
+#ACT
+GameGold +  100000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\500y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\500y\3.txt
+#ACT
+GameGold +  100000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\500y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\500y\4.txt
+#ACT
+GameGold +  100000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\500y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\500y\5.txt
+#ACT
+GameGold +  100000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\500y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝100000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\1.txt
+#ACT
+GameGold +  200000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\2.txt
+#ACT
+GameGold +  200000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\3.txt
+#ACT
+GameGold +  200000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\4.txt
+#ACT
+GameGold +  200000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\5.txt
+#ACT
+GameGold +  200000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\1000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝200000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\1.txt
+#ACT
+GameGold +  400000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\2.txt
+#ACT
+GameGold +  400000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\3.txt
+#ACT
+GameGold +  400000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\4.txt
+#ACT
+GameGold +  400000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\5.txt
+#ACT
+GameGold +  400000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\2000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝400000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\1.txt
+#ACT
+GameGold +  600000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\2.txt
+#ACT
+GameGold +  600000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\3.txt
+#ACT
+GameGold +  600000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\4.txt
+#ACT
+GameGold +  600000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\5.txt
+#ACT
+GameGold +  600000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\3000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝600000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\1.txt
+#ACT
+GameGold +  1000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\2.txt
+#ACT
+GameGold +  1000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\3.txt
+#ACT
+GameGold +  1000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\4.txt
+#ACT
+GameGold +  1000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\5.txt
+#ACT
+GameGold +  1000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\5000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝1000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\1.txt
+#ACT
+GameGold +  2000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\2.txt
+#ACT
+GameGold +  2000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\3.txt
+#ACT
+GameGold +  2000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\4.txt
+#ACT
+GameGold +  2000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\5.txt
+#ACT
+GameGold +  2000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\10000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝2000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\1.txt
+#ACT
+GameGold +  4000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\2.txt
+#ACT
+GameGold +  4000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\3.txt
+#ACT
+GameGold +  4000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\4.txt
+#ACT
+GameGold +  4000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\5.txt
+#ACT
+GameGold +  4000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\20000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝4000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\1.txt
+#ACT
+GameGold +  6000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\2.txt
+#ACT
+GameGold +  6000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\3.txt
+#ACT
+GameGold +  6000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\4.txt
+#ACT
+GameGold +  6000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\5.txt
+#ACT
+GameGold +  6000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\30000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝6000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\1.txt
+#ACT
+GameGold +  10000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\1.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\2.txt
+#ACT
+GameGold +  10000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\2.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\3.txt
+#ACT
+GameGold +  10000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\3.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\4.txt
+#ACT
+GameGold +  10000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\4.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#IF
+CheckAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\5.txt
+#ACT
+GameGold +  10000000
+DelAccountList ..\QuestDiary\在线充值系统\充值系统\50000y\5.txt
+sendmsg 7 领取成功.您当前元宝为:<$GAMEGOLD>
+SENDMSG 1 ★[%s]:玩家<$USERNAME>使用我服推出的在线充值购买功能，获得元宝10000000个.如果您也需要充值,请赶紧找充值使者充值获取吧！！
+goto @领取元宝
+
+#Elsesay
+请查看自己的元宝数量!\
+没有充值请按提示进行充值!\
+如有任何充值问题,请登陆冲值服务网站\
+本服唯一充值网址： http://999.zzbae.cn/Paycenter/?m=18316\
+<返回/@main>\
+}
+

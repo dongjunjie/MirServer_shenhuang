@@ -1,0 +1,791 @@
+[@main](2300,300,540,3,0,1,442,273,10,1)
+　\
+　　　　　　　　　　　　 {啊哈!听说过嫦娥么？=FCO=250}\
+　　　　　　　　　　　　 {俺就是嫦娥!对吧!!!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\　\
+ 　  {去帮我收集一些装备来.再拿一些钻石来!=FCO=254}\
+ 　  {我可以为你打造玛法大陆魔神级武器...!=FCO=254}\
+ 　  {打造的武器会获得随机能力的加成属性!!=FCO=249}\
+ 　  {重要提示=FCO=249}:{打造为30%几率,并非100%获得!=FCO=250}\
+ 　  {打造失败不会有任何提示!且会扣除材料!=FCO=250}\
+　1.{i.1939,c.0=item}        2.{i.1950,c.0=item}　　　　3.{i.1941,c.0=item}        4.{i.1942,c.0=item}\  \  \　\　\　\　\
+　　　  <{[七杀裁决]=FCO=253}|[打造需求：=FCO=00FF00]^[神皇神杵.钻石X50=FCO=7280FA]/@七杀裁决>
+　　　  <{[破军道皇]=FCO=253}|[打造需求：=FCO=00FF00]^[神皇神杵.钻石X100=FCO=7280FA]/@破军道皇>\　\　\
+　　　  <{[破军神皇]=FCO=253}|[打造需求：=FCO=00FF00]^[神皇神杵.钻石X100=FCO=7280FA]/@破军神皇>
+　　　  <{[破军魔皇]=FCO=253}|[打造需求：=FCO=00FF00]^[神皇神杵.钻石X100=FCO=7280FA]/@破军魔皇>\　\
+　　　　　　　   <{[关闭对话]=FCO=249}/@exit>\
+
+;------------------------------------------------------------------------------------------------------
+[@七杀裁决]
+#if
+CheckItemCount 钻石 ? 50
+CheckItemCount 神皇神杵 ? 1
+#ACT
+TakeCount 钻石50
+TakeCount 神皇神杵 1
+GOTO @七杀裁决1
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和钻石是否足够？
+Break
+
+[@七杀裁决1]
+#IF
+Random 10
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆七杀裁决
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆七杀裁决
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆七杀裁决
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆七杀裁决
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆七杀裁决
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆七杀裁决
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆七杀裁决
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆七杀裁决
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆七杀裁决
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆七杀裁决
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆七杀裁决
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆七杀裁决
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+
+#IF
+Random 500
+#ACT
+DynamicGive 七杀裁决 1
+ChangeGiveItem 7 75 253
+ChangeGiveItem 15 全能☆七杀裁决
+ChangeGiveItem 7 23 +9
+ChangeGiveItem 7 2 +45
+ChangeGiveItem 7 3 +45
+ChangeGiveItem 7 4 +45
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 7 10 +225
+ChangeGiveItem 7 11 +225
+ChangeGiveItem 7 0 +45
+ChangeGiveItem 7 1 +45
+ChangeGiveItem 7 26 +9
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[七杀裁决]#7!!!
+break
+;------------------------------------------------------------------------------------------------------
+
+
+[@破军神皇]
+#if
+CheckItemCount 钻石 ? 100
+CheckItemCount 神皇神杵 ? 1
+#ACT
+TakeCount 钻石 100
+TakeCount 神皇神杵 1
+GOTO @破军神皇1
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和钻石是否足够？
+Break
+
+[@破军神皇1]
+#IF
+Random 10
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆破军神皇
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆破军神皇
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆破军神皇
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆破军神皇
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆破军神皇
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆破军神皇
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆破军神皇
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆破军神皇
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆破军神皇
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆破军神皇
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆破军神皇
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆破军神皇
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+#IF
+Random 500
+#ACT
+DynamicGive 破军神皇 1
+ChangeGiveItem 7 75 253
+ChangeGiveItem 15 全能☆破军神皇
+ChangeGiveItem 7 23 +9
+ChangeGiveItem 7 2 +45
+ChangeGiveItem 7 3 +45
+ChangeGiveItem 7 4 +45
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 7 10 +225
+ChangeGiveItem 7 11 +225
+ChangeGiveItem 7 0 +45
+ChangeGiveItem 7 1 +45
+ChangeGiveItem 7 26 +9
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军神皇]#7!!!
+break
+
+;------------------------------------------------------------------------------------------------------
+
+[@破军魔皇]
+#if
+CheckItemCount 钻石 ? 100
+CheckItemCount 神皇神杵 ? 1
+#ACT
+TakeCount 钻石 100
+TakeCount 神皇神杵 1
+GOTO @破军魔皇1
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和钻石是否足够？
+Break
+
+[@破军魔皇1]
+#IF
+Random 10
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆破军魔皇
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆破军魔皇
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆破军魔皇
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆破军魔皇
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆破军魔皇
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆破军魔皇
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆破军魔皇
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆破军魔皇
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆破军魔皇
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆破军魔皇
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆破军魔皇
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆破军魔皇
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+
+#IF
+Random 500
+#ACT
+DynamicGive 破军魔皇 1
+ChangeGiveItem 7 75 253
+ChangeGiveItem 15 全能☆破军魔皇
+ChangeGiveItem 7 23 +9
+ChangeGiveItem 7 2 +45
+ChangeGiveItem 7 3 +45
+ChangeGiveItem 7 4 +45
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 7 10 +225
+ChangeGiveItem 7 11 +225
+ChangeGiveItem 7 0 +45
+ChangeGiveItem 7 1 +45
+ChangeGiveItem 7 26 +9
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军魔皇]#7!!!
+break
+;------------------------------------------------------------------------------------------------------
+
+[@破军道皇]
+#if
+CheckItemCount 钻石 ? 100
+CheckItemCount 神皇神杵 ? 1
+#ACT
+TakeCount 钻石 100
+TakeCount 神皇神杵 1
+GOTO @破军道皇1
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和钻石是否足够？
+Break
+
+[@破军道皇1]
+#IF
+Random 10
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆破军道皇
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆破军道皇
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆破军道皇
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆破军道皇
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆破军道皇
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆破军道皇
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆破军道皇
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆破军道皇
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆破军道皇
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆破军道皇
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆破军道皇
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆破军道皇
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+#IF
+Random 500
+#ACT
+DynamicGive 破军道皇 1
+ChangeGiveItem 7 75 253
+ChangeGiveItem 15 全能☆破军道皇
+ChangeGiveItem 7 23 +9
+ChangeGiveItem 7 2 +45
+ChangeGiveItem 7 3 +45
+ChangeGiveItem 7 4 +45
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 7 10 +225
+ChangeGiveItem 7 11 +225
+ChangeGiveItem 7 0 +45
+ChangeGiveItem 7 1 +45
+ChangeGiveItem 7 26 +9
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[破军道皇]#7!!!
+break
+
+
+
+
+

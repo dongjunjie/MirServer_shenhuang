@@ -1,0 +1,4179 @@
+( @@sendmsg @storage @getback @buy @sell @repair @s_repair @@offlinemsg @getnextpage @getPreviouspage @@InPutString @@useitemname @@InputInteger)
+%100
+
+[@PickUpItems]
+#ACT
+#CALLX [\\游戏配置\鉴定系统\商店套.txt] @商店套
+
+[@ClickDiyBtn0]
+#ACT
+#CALLX [\\会员系统\充值礼包.txt] @充值礼包  
+
+[@ClickDiyBtn1]
+#ACT
+#CALLX [\\会员系统\首冲礼包.txt] @首冲礼包
+
+[@ClickDiyBtn2]
+#ACT
+#CALLX [\\会员系统\冲级奖励.txt] @冲级奖励
+
+[@ClickDiyBtn3]
+#ACT
+#CALLX [\\会员系统\惊喜抽奖.txt] @惊喜抽奖
+
+[@ClickDiyBtn4]
+#ACT
+#CALLX [\\会员系统\神秘商店.txt] @神秘商店
+
+[@ClickDiyBtn5]
+#ACT
+#CALLX [\\会员系统\会员.txt] @会员
+
+[@ClickDiyBtn6]
+#ACT
+#CALLX [\\会员系统\版本简介.txt] @版本简介
+
+[@ClickDiyBtn7]
+#ACT
+#CALLX [\\游戏配置\灵宠配置\灵宠界面1.txt] @灵宠界面
+
+[@ClickDiyBtn8]
+#ACT
+#CALLX [\\会员系统\个人资料.txt] @个人资料
+
+[@ClickDiyBtn9]
+#ACT
+#CALLX [\\会员系统\称号系统.txt] @称号系统
+
+[@KillPlay]
+#if
+CHECKITEMW VIP1青铜赞助 1
+CHECKITEMADDVALUE 4 24 < 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 +10
+CHANGEGIVEITEM 7 3 +10
+CHANGEGIVEITEM 7 4 +10
+CHANGEGIVEITEM 7 7 +10
+CHANGEGIVEITEM 7 8 +10
+CHANGEGIVEITEM 7 9 +10
+CHANGEGIVEITEM 7 24 +1
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP2白银赞助 1
+CHECKITEMADDVALUE 4 24 < 4
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 +10
+CHANGEGIVEITEM 7 3 +10
+CHANGEGIVEITEM 7 4 +10
+CHANGEGIVEITEM 7 7 +10
+CHANGEGIVEITEM 7 8 +10
+CHANGEGIVEITEM 7 9 +10
+CHANGEGIVEITEM 7 24 +1
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP3黄金赞助 1
+CHECKITEMADDVALUE 4 24 < 5
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 +10
+CHANGEGIVEITEM 7 3 +10
+CHANGEGIVEITEM 7 4 +10
+CHANGEGIVEITEM 7 7 +10
+CHANGEGIVEITEM 7 8 +10
+CHANGEGIVEITEM 7 9 +10
+CHANGEGIVEITEM 7 24 +1
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP4白金赞助 1
+CHECKITEMADDVALUE 4 24 < 6
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 +10
+CHANGEGIVEITEM 7 3 +10
+CHANGEGIVEITEM 7 4 +10
+CHANGEGIVEITEM 7 7 +10
+CHANGEGIVEITEM 7 8 +10
+CHANGEGIVEITEM 7 9 +10
+CHANGEGIVEITEM 7 24 +1
+ChangeGiveItem 8
+
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 < 7
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 +10
+CHANGEGIVEITEM 7 3 +10
+CHANGEGIVEITEM 7 4 +10
+CHANGEGIVEITEM 7 7 +10
+CHANGEGIVEITEM 7 8 +10
+CHANGEGIVEITEM 7 9 +10
+CHANGEGIVEITEM 7 24 +1
+ChangeGiveItem 8
+
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 < 8
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 +10
+CHANGEGIVEITEM 7 3 +10
+CHANGEGIVEITEM 7 4 +10
+CHANGEGIVEITEM 7 7 +10
+CHANGEGIVEITEM 7 8 +10
+CHANGEGIVEITEM 7 9 +10
+CHANGEGIVEITEM 7 24 +1
+ChangeGiveItem 8
+
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 < 9
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 +10
+CHANGEGIVEITEM 7 3 +10
+CHANGEGIVEITEM 7 4 +10
+CHANGEGIVEITEM 7 7 +10
+CHANGEGIVEITEM 7 8 +10
+CHANGEGIVEITEM 7 9 +10
+CHANGEGIVEITEM 7 24 +1
+ChangeGiveItem 8
+
+
+#if
+CheckInMapRange smzc 20 22 100
+#act
+ChangeExp + 500000
+GameGold + 50
+;-----------------------------------------------------------------------------------------
+#IF
+#ACT
+CALCVAR HUMAN 杀人次数 + 1
+SAVEVAR HUMAN 杀人次数 ..\QuestDiary\充值排行榜\杀人次数.txt
+SendMsg 6 #7你杀死了#7[<$STR(S0)>]#7，当前杀敌数量#7[<$HUMAN(杀人次数)>]#7！#7
+
+#IF
+Random 15
+CHECKITEMW 铭文[全能の恶人印] 1
+#ACT
+<$STR(S0)>.ChangePKPoint + 200
+SendMsg 0 玩家#7[<$USERNAME>]#7的铭文#7[全能の恶人印]#7触发生效，杀死#7[<$STR(S0)>]#7，还让他增加了200PK值。
+
+
+
+[@PlayDie]
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 9
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -90
+CHANGEGIVEITEM 7 3 -90
+CHANGEGIVEITEM 7 4 -90
+CHANGEGIVEITEM 7 7 -90
+CHANGEGIVEITEM 7 8 -90
+CHANGEGIVEITEM 7 9 -90
+CHANGEGIVEITEM 7 24 -9
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 8
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -80
+CHANGEGIVEITEM 7 3 -80
+CHANGEGIVEITEM 7 4 -80
+CHANGEGIVEITEM 7 7 -80
+CHANGEGIVEITEM 7 8 -80
+CHANGEGIVEITEM 7 9 -80
+CHANGEGIVEITEM 7 24 -8
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 7
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -70
+CHANGEGIVEITEM 7 3 -70
+CHANGEGIVEITEM 7 4 -70
+CHANGEGIVEITEM 7 7 -70
+CHANGEGIVEITEM 7 8 -70
+CHANGEGIVEITEM 7 9 -70
+CHANGEGIVEITEM 7 24 -7
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 6
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -60
+CHANGEGIVEITEM 7 3 -60
+CHANGEGIVEITEM 7 4 -60
+CHANGEGIVEITEM 7 7 -60
+CHANGEGIVEITEM 7 8 -60
+CHANGEGIVEITEM 7 9 -60
+CHANGEGIVEITEM 7 24 -6
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 5
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -50
+CHANGEGIVEITEM 7 3 -50
+CHANGEGIVEITEM 7 4 -50
+CHANGEGIVEITEM 7 7 -50
+CHANGEGIVEITEM 7 8 -50
+CHANGEGIVEITEM 7 9 -50
+CHANGEGIVEITEM 7 24 -5
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 4
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -40
+CHANGEGIVEITEM 7 3 -40
+CHANGEGIVEITEM 7 4 -40
+CHANGEGIVEITEM 7 7 -40
+CHANGEGIVEITEM 7 8 -40
+CHANGEGIVEITEM 7 9 -40
+CHANGEGIVEITEM 7 24 -4
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -30
+CHANGEGIVEITEM 7 3 -30
+CHANGEGIVEITEM 7 4 -30
+CHANGEGIVEITEM 7 7 -30
+CHANGEGIVEITEM 7 8 -30
+CHANGEGIVEITEM 7 9 -30
+CHANGEGIVEITEM 7 24 -3
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 2
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -20
+CHANGEGIVEITEM 7 3 -20
+CHANGEGIVEITEM 7 4 -20
+CHANGEGIVEITEM 7 7 -20
+CHANGEGIVEITEM 7 8 -20
+CHANGEGIVEITEM 7 9 -20
+CHANGEGIVEITEM 7 24 -2
+ChangeGiveItem 8
+
+#if
+CHECKITEMW 城主荣耀 1
+CHECKITEMADDVALUE 4 24 = 1
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -10
+CHANGEGIVEITEM 7 3 -10
+CHANGEGIVEITEM 7 4 -10
+CHANGEGIVEITEM 7 7 -10
+CHANGEGIVEITEM 7 8 -10
+CHANGEGIVEITEM 7 9 -10
+CHANGEGIVEITEM 7 24 -1
+ChangeGiveItem 8
+
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 8
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -80
+CHANGEGIVEITEM 7 3 -80
+CHANGEGIVEITEM 7 4 -80
+CHANGEGIVEITEM 7 7 -80
+CHANGEGIVEITEM 7 8 -80
+CHANGEGIVEITEM 7 9 -80
+CHANGEGIVEITEM 7 24 -8
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 7
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -70
+CHANGEGIVEITEM 7 3 -70
+CHANGEGIVEITEM 7 4 -70
+CHANGEGIVEITEM 7 7 -70
+CHANGEGIVEITEM 7 8 -70
+CHANGEGIVEITEM 7 9 -70
+CHANGEGIVEITEM 7 24 -7
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 6
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -60
+CHANGEGIVEITEM 7 3 -60
+CHANGEGIVEITEM 7 4 -60
+CHANGEGIVEITEM 7 7 -60
+CHANGEGIVEITEM 7 8 -60
+CHANGEGIVEITEM 7 9 -60
+CHANGEGIVEITEM 7 24 -6
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 5
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -50
+CHANGEGIVEITEM 7 3 -50
+CHANGEGIVEITEM 7 4 -50
+CHANGEGIVEITEM 7 7 -50
+CHANGEGIVEITEM 7 8 -50
+CHANGEGIVEITEM 7 9 -50
+CHANGEGIVEITEM 7 24 -5
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 4
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -40
+CHANGEGIVEITEM 7 3 -40
+CHANGEGIVEITEM 7 4 -40
+CHANGEGIVEITEM 7 7 -40
+CHANGEGIVEITEM 7 8 -40
+CHANGEGIVEITEM 7 9 -40
+CHANGEGIVEITEM 7 24 -4
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -30
+CHANGEGIVEITEM 7 3 -30
+CHANGEGIVEITEM 7 4 -30
+CHANGEGIVEITEM 7 7 -30
+CHANGEGIVEITEM 7 8 -30
+CHANGEGIVEITEM 7 9 -30
+CHANGEGIVEITEM 7 24 -3
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 2
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -20
+CHANGEGIVEITEM 7 3 -20
+CHANGEGIVEITEM 7 4 -20
+CHANGEGIVEITEM 7 7 -20
+CHANGEGIVEITEM 7 8 -20
+CHANGEGIVEITEM 7 9 -20
+CHANGEGIVEITEM 7 24 -2
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP6王者赞助 1
+CHECKITEMADDVALUE 4 24 = 1
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -10
+CHANGEGIVEITEM 7 3 -10
+CHANGEGIVEITEM 7 4 -10
+CHANGEGIVEITEM 7 7 -10
+CHANGEGIVEITEM 7 8 -10
+CHANGEGIVEITEM 7 9 -10
+CHANGEGIVEITEM 7 24 -1
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 = 7
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -70
+CHANGEGIVEITEM 7 3 -70
+CHANGEGIVEITEM 7 4 -70
+CHANGEGIVEITEM 7 7 -70
+CHANGEGIVEITEM 7 8 -70
+CHANGEGIVEITEM 7 9 -70
+CHANGEGIVEITEM 7 24 -7
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 = 6
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -60
+CHANGEGIVEITEM 7 3 -60
+CHANGEGIVEITEM 7 4 -60
+CHANGEGIVEITEM 7 7 -60
+CHANGEGIVEITEM 7 8 -60
+CHANGEGIVEITEM 7 9 -60
+CHANGEGIVEITEM 7 24 -6
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 = 5
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -50
+CHANGEGIVEITEM 7 3 -50
+CHANGEGIVEITEM 7 4 -50
+CHANGEGIVEITEM 7 7 -50
+CHANGEGIVEITEM 7 8 -50
+CHANGEGIVEITEM 7 9 -50
+CHANGEGIVEITEM 7 24 -5
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 = 4
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -40
+CHANGEGIVEITEM 7 3 -40
+CHANGEGIVEITEM 7 4 -40
+CHANGEGIVEITEM 7 7 -40
+CHANGEGIVEITEM 7 8 -40
+CHANGEGIVEITEM 7 9 -40
+CHANGEGIVEITEM 7 24 -4
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 = 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -30
+CHANGEGIVEITEM 7 3 -30
+CHANGEGIVEITEM 7 4 -30
+CHANGEGIVEITEM 7 7 -30
+CHANGEGIVEITEM 7 8 -30
+CHANGEGIVEITEM 7 9 -30
+CHANGEGIVEITEM 7 24 -3
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 = 2
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -20
+CHANGEGIVEITEM 7 3 -20
+CHANGEGIVEITEM 7 4 -20
+CHANGEGIVEITEM 7 7 -20
+CHANGEGIVEITEM 7 8 -20
+CHANGEGIVEITEM 7 9 -20
+CHANGEGIVEITEM 7 24 -2
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP5钻石赞助 1
+CHECKITEMADDVALUE 4 24 = 1
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -10
+CHANGEGIVEITEM 7 3 -10
+CHANGEGIVEITEM 7 4 -10
+CHANGEGIVEITEM 7 7 -10
+CHANGEGIVEITEM 7 8 -10
+CHANGEGIVEITEM 7 9 -10
+CHANGEGIVEITEM 7 24 -1
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP4白金赞助 1
+CHECKITEMADDVALUE 4 24 = 6
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -60
+CHANGEGIVEITEM 7 3 -60
+CHANGEGIVEITEM 7 4 -60
+CHANGEGIVEITEM 7 7 -60
+CHANGEGIVEITEM 7 8 -60
+CHANGEGIVEITEM 7 9 -60
+CHANGEGIVEITEM 7 24 -6
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP4白金赞助 1
+CHECKITEMADDVALUE 4 24 = 5
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -50
+CHANGEGIVEITEM 7 3 -50
+CHANGEGIVEITEM 7 4 -50
+CHANGEGIVEITEM 7 7 -50
+CHANGEGIVEITEM 7 8 -50
+CHANGEGIVEITEM 7 9 -50
+CHANGEGIVEITEM 7 24 -5
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP4白金赞助 1
+CHECKITEMADDVALUE 4 24 = 4
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -40
+CHANGEGIVEITEM 7 3 -40
+CHANGEGIVEITEM 7 4 -40
+CHANGEGIVEITEM 7 7 -40
+CHANGEGIVEITEM 7 8 -40
+CHANGEGIVEITEM 7 9 -40
+CHANGEGIVEITEM 7 24 -4
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP4白金赞助 1
+CHECKITEMADDVALUE 4 24 = 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -30
+CHANGEGIVEITEM 7 3 -30
+CHANGEGIVEITEM 7 4 -30
+CHANGEGIVEITEM 7 7 -30
+CHANGEGIVEITEM 7 8 -30
+CHANGEGIVEITEM 7 9 -30
+CHANGEGIVEITEM 7 24 -3
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP4白金赞助 1
+CHECKITEMADDVALUE 4 24 = 2
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -20
+CHANGEGIVEITEM 7 3 -20
+CHANGEGIVEITEM 7 4 -20
+CHANGEGIVEITEM 7 7 -20
+CHANGEGIVEITEM 7 8 -20
+CHANGEGIVEITEM 7 9 -20
+CHANGEGIVEITEM 7 24 -2
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP4白金赞助 1
+CHECKITEMADDVALUE 4 24 = 1
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -10
+CHANGEGIVEITEM 7 3 -10
+CHANGEGIVEITEM 7 4 -10
+CHANGEGIVEITEM 7 7 -10
+CHANGEGIVEITEM 7 8 -10
+CHANGEGIVEITEM 7 9 -10
+CHANGEGIVEITEM 7 24 -1
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP3黄金赞助 1
+CHECKITEMADDVALUE 4 24 = 5
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -50
+CHANGEGIVEITEM 7 3 -50
+CHANGEGIVEITEM 7 4 -50
+CHANGEGIVEITEM 7 7 -50
+CHANGEGIVEITEM 7 8 -50
+CHANGEGIVEITEM 7 9 -50
+CHANGEGIVEITEM 7 24 -5
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP3黄金赞助 1
+CHECKITEMADDVALUE 4 24 = 4
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -40
+CHANGEGIVEITEM 7 3 -40
+CHANGEGIVEITEM 7 4 -40
+CHANGEGIVEITEM 7 7 -40
+CHANGEGIVEITEM 7 8 -40
+CHANGEGIVEITEM 7 9 -40
+CHANGEGIVEITEM 7 24 -4
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP3黄金赞助 1
+CHECKITEMADDVALUE 4 24 = 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -30
+CHANGEGIVEITEM 7 3 -30
+CHANGEGIVEITEM 7 4 -30
+CHANGEGIVEITEM 7 7 -30
+CHANGEGIVEITEM 7 8 -30
+CHANGEGIVEITEM 7 9 -30
+CHANGEGIVEITEM 7 24 -3
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP3黄金赞助 1
+CHECKITEMADDVALUE 4 24 = 2
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -20
+CHANGEGIVEITEM 7 3 -20
+CHANGEGIVEITEM 7 4 -20
+CHANGEGIVEITEM 7 7 -20
+CHANGEGIVEITEM 7 8 -20
+CHANGEGIVEITEM 7 9 -20
+CHANGEGIVEITEM 7 24 -2
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP3黄金赞助 1
+CHECKITEMADDVALUE 4 24 = 1
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -10
+CHANGEGIVEITEM 7 3 -10
+CHANGEGIVEITEM 7 4 -10
+CHANGEGIVEITEM 7 7 -10
+CHANGEGIVEITEM 7 8 -10
+CHANGEGIVEITEM 7 9 -10
+CHANGEGIVEITEM 7 24 -1
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP2白银赞助 1
+CHECKITEMADDVALUE 4 24 = 4
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -40
+CHANGEGIVEITEM 7 3 -40
+CHANGEGIVEITEM 7 4 -40
+CHANGEGIVEITEM 7 7 -40
+CHANGEGIVEITEM 7 8 -40
+CHANGEGIVEITEM 7 9 -40
+CHANGEGIVEITEM 7 24 -4
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP2白银赞助 1
+CHECKITEMADDVALUE 4 24 = 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -30
+CHANGEGIVEITEM 7 3 -30
+CHANGEGIVEITEM 7 4 -30
+CHANGEGIVEITEM 7 7 -30
+CHANGEGIVEITEM 7 8 -30
+CHANGEGIVEITEM 7 9 -30
+CHANGEGIVEITEM 7 24 -3
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP2白银赞助 1
+CHECKITEMADDVALUE 4 24 = 2
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -20
+CHANGEGIVEITEM 7 3 -20
+CHANGEGIVEITEM 7 4 -20
+CHANGEGIVEITEM 7 7 -20
+CHANGEGIVEITEM 7 8 -20
+CHANGEGIVEITEM 7 9 -20
+CHANGEGIVEITEM 7 24 -2
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP2白银赞助 1
+CHECKITEMADDVALUE 4 24 = 1
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -10
+CHANGEGIVEITEM 7 3 -10
+CHANGEGIVEITEM 7 4 -10
+CHANGEGIVEITEM 7 7 -10
+CHANGEGIVEITEM 7 8 -10
+CHANGEGIVEITEM 7 9 -10
+CHANGEGIVEITEM 7 24 -1
+ChangeGiveItem 8
+
+
+#if
+CHECKITEMW VIP1青铜赞助 1
+CHECKITEMADDVALUE 4 24 = 3
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -30
+CHANGEGIVEITEM 7 3 -30
+CHANGEGIVEITEM 7 4 -30
+CHANGEGIVEITEM 7 7 -30
+CHANGEGIVEITEM 7 8 -30
+CHANGEGIVEITEM 7 9 -30
+CHANGEGIVEITEM 7 24 -3
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP1青铜赞助 1
+CHECKITEMADDVALUE 4 24 = 2
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -20
+CHANGEGIVEITEM 7 3 -20
+CHANGEGIVEITEM 7 4 -20
+CHANGEGIVEITEM 7 7 -20
+CHANGEGIVEITEM 7 8 -20
+CHANGEGIVEITEM 7 9 -20
+CHANGEGIVEITEM 7 24 -2
+ChangeGiveItem 8
+
+#if
+CHECKITEMW VIP1青铜赞助 1
+CHECKITEMADDVALUE 4 24 = 1
+#act
+HookItem 4
+CHANGEGIVEITEM 7 2 -10
+CHANGEGIVEITEM 7 3 -10
+CHANGEGIVEITEM 7 4 -10
+CHANGEGIVEITEM 7 7 -10
+CHANGEGIVEITEM 7 8 -10
+CHANGEGIVEITEM 7 9 -10
+CHANGEGIVEITEM 7 24 -1
+ChangeGiveItem 8
+
+
+#IF
+KillByHum
+#ACT
+CALCVAR HUMAN 被杀次数 + 1
+SAVEVAR HUMAN 被杀次数 ..\QuestDiary\充值排行榜\被杀次数.txt
+SendMsg 6 #7你被玩家#7[<$STR(S0)>]#7杀死了，当前被杀次数#7[<$HUMAN(被杀次数)>]#7！#7
+
+#if
+CheckInMapRange smzc 20 22 100
+#act
+SENDMSG 0 【#6FFFF/8#6传闻#5】：神秘战场，[#7<$USERNAME>#7]一不留神，被[#7<$STR(S0)>#7]放倒在地上！
+Break
+
+#IF
+CheckLevelEx > 0
+#ACT
+SENDMSG 8 [传闻：]人心险恶，[<$USERNAME>]一不留神在[<$MAPNAME>,<$X>,<$Y>。]被[<$STR(S0)>]杀死，抛尸野外。
+Break
+
+#IF
+Random 5
+KillByHum
+CHECKITEMW 铭文[全能の复仇印] 1
+#ACT
+<$STR(S0)>.humanhp - 999999
+SendMsg 0 玩家#7[<$USERNAME>]#7的铭文#7[全能の复仇印]#7触发生效，成功将恶霸#7[<$STR(S0)>]#7同归于尽。
+
+
+
+
+
+[@BUYSHOPITEM]
+#IF
+EQUAL N1 1 
+#ACT 
+INC G100 <$STR(N0)>
+CALCVAR HUMAN 消费积分 + <$STR(N0)>
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你在商城消费了#7[<$STR(N0)>]#7元宝，获得#7[<$STR(N0)>]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+
+
+
+;[@PickUpItems]
+
+
+
+[@PKMan]
+#ACT
+KillSlave <$STR(B15)>
+
+#IF
+Random 12
+CHECKITEMW 铭文[全能の秒杀印] 1
+#ACT
+<$STR(S0)>.humanhp - 5000
+SendMsg 6 铭文[全能の秒杀印]触发生效，#7[<$STR(S0)>]#7HP-5000！
+
+[@BeiPKMan]
+#IF
+#ACT
+KillSlave <$STR(B15)>
+
+
+#IF
+Random 10
+CHECKITEMW 铭文[全能の重生印] 1
+SMALL <$HP> 1000
+#ACT
+humanhp + 10000
+SendMsg 6 铭文[全能の重生印]触发生效，成功恢复HP+10000！
+
+#IF
+Random 18
+CHECKITEMW 铭文[全能の无敌印] 1
+#ACT
+ChangeMode 2 1
+SendMsg 6 铭文[全能の无敌印]触发生效，获得无敌模式5秒！
+DelayGoto 5 @恢复
+
+
+[@恢复]
+#IF
+#ACT
+ChangeMode 2 0
+
+
+
+[@KillMonster]
+
+#CALLX [\\游戏配置\杀怪触发.txt] @杀怪触发
+
+#IF
+#ACT
+INC G110 1
+CALCVAR HUMAN 个人杀怪 + 1
+SAVEVAR HUMAN 个人杀怪 ..\QuestDiary\充值排行榜\个人杀怪.txt
+
+
+
+
+#if
+Random 50
+CHECKITEMW 城主荣耀战袍 1
+CHECKITEMW 城主荣耀战剑 1
+#act
+HUMANHP + 1000
+GAMEGOLD + 300
+ChangeExp + 500000
+SendMsg 6 [城主荣耀套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得300元宝，50万经验，回复HP+1000。#7
+
+#if
+Random 50
+CHECKITEMW 城主荣耀战衣 1
+CHECKITEMW 城主荣耀战剑 1
+#act
+HUMANHP + 1000
+GAMEGOLD + 300
+ChangeExp + 500000
+SendMsg 6 [城主荣耀套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得300元宝，50万经验，回复HP+1000。#7
+
+#if
+Random 100
+CHECKITEMW 王者赞助袍 1
+CHECKITEMW 王者赞助剑 1
+#act
+HUMANHP + 800
+GAMEGOLD + 250
+ChangeExp + 400000
+SendMsg 6 [王者赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得250元宝，40万经验，回复HP+800。#7
+
+#if
+Random 100
+CHECKITEMW 王者赞助衣 1
+CHECKITEMW 王者赞助剑 1
+#act
+HUMANHP + 800
+GAMEGOLD + 250
+ChangeExp + 400000
+SendMsg 6 [王者赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得250元宝，40万经验，回复HP+800。#7
+
+#if
+Random 100
+CHECKITEMW 钻石赞助袍 1
+CHECKITEMW 钻石赞助剑 1
+#act
+HUMANHP + 600
+GAMEGOLD + 200
+ChangeExp + 300000
+SendMsg 6 [钻石赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得200元宝，30万经验，回复HP+600。#7
+
+#if
+Random 100
+CHECKITEMW 钻石赞助衣 1
+CHECKITEMW 钻石赞助剑 1
+#act
+HUMANHP + 600
+GAMEGOLD + 200
+ChangeExp + 300000
+SendMsg 6 [钻石赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得200元宝，30万经验，回复HP+600。#7
+
+#if
+Random 100
+CHECKITEMW 白金赞助袍 1
+CHECKITEMW 白金赞助剑 1
+#act
+HUMANHP + 500
+GAMEGOLD + 150
+ChangeExp + 250000
+SendMsg 6 [白金赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得150元宝，25万经验，回复HP+500。#7
+
+#if
+Random 100
+CHECKITEMW 白金赞助衣 1
+CHECKITEMW 白金赞助剑 1
+#act
+HUMANHP + 500
+GAMEGOLD + 150
+ChangeExp + 250000
+SendMsg 6 [白金赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得150元宝，25万经验，回复HP+500。#7
+
+
+#if
+Random 100
+CHECKITEMW 黄金赞助袍 1
+CHECKITEMW 黄金赞助剑 1
+#act
+HUMANHP + 400
+GAMEGOLD + 100
+ChangeExp + 200000
+SendMsg 6 [黄金赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得100元宝，20万经验，回复HP+400。#7
+
+#if
+Random 100
+CHECKITEMW 黄金赞助衣 1
+CHECKITEMW 黄金赞助剑 1
+#act
+HUMANHP + 400
+GAMEGOLD + 100
+ChangeExp + 200000
+SendMsg 6 [黄金赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得100元宝，20万经验，回复HP+400。#7
+
+#if
+Random 100
+CHECKITEMW 白银赞助袍 1
+CHECKITEMW 白银赞助剑 1
+#act
+HUMANHP + 300
+GAMEGOLD + 80
+ChangeExp + 150000
+SendMsg 6 [白银赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得80元宝，15万经验，回复HP+300。#7
+
+#if
+Random 100
+CHECKITEMW 白银赞助衣 1
+CHECKITEMW 白银赞助剑 1
+#act
+HUMANHP + 300
+GAMEGOLD + 80
+ChangeExp + 150000
+SendMsg 6 [白银赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得80元宝，15万经验，回复HP+300。#7
+
+#if
+Random 100
+CHECKITEMW 青铜赞助袍 1
+CHECKITEMW 青铜赞助剑 1
+#act
+HUMANHP + 200
+GAMEGOLD + 50
+ChangeExp + 100000
+SendMsg 6 [青铜赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得50元宝，10万经验，回复HP+200。#7
+
+#if
+Random 100
+CHECKITEMW 青铜赞助衣 1
+CHECKITEMW 青铜赞助剑 1
+#act
+HUMANHP + 200
+GAMEGOLD + 50
+ChangeExp + 100000
+SendMsg 6 [青铜赞助套]#7触发生效，恭喜你杀死#7<$STR(S0)>#7额外获得50元宝，10万经验，回复HP+200。#7
+
+
+
+
+
+;-----------------------------------------------------------------------------------------
+#IF
+Random 50
+CHECKSLAVECOUNT < 5
+CHECKITEMW 铭文[全能の招魂印] 1
+#ACT
+RecallMob <$STR(S0)> 1 30
+SendMsg 6 铭文[全能の招魂印]触发生效，成功复活#7[<$STR(S0)>]#7的灵魂成为宝宝。(限时30分钟)
+
+#IF
+CHECKITEMW 铭文[全能の财富印] 1
+#ACT
+Goto @财富印
+
+#IF
+CHECKITEMW 铭文[全能の经验印] 1
+#ACT
+Goto @经验印
+
+
+[@经验印]
+#IF
+Random 20
+#ACT
+ChangeExp + 100000
+SendMsg 6 铭文[全能の经验印]触发生效，恭喜你额外获得#7[10万经验]#7！
+
+#IF
+Random 40
+#ACT
+ChangeExp + 300000
+SendMsg 6 铭文[全能の经验印]触发生效，恭喜你额外获得#7[30万经验]#7！
+
+#IF
+Random 60
+#ACT
+ChangeExp + 500000
+SendMsg 6 铭文[全能の经验印]触发生效，恭喜你额外获得#7[50万经验]#7！
+
+[@财富印]
+#IF
+Random 25
+#ACT
+GAMEGOLD + 50
+SendMsg 6 铭文[全能の财富印]触发生效，恭喜你额外获得#7[50元宝]#7！
+
+#IF
+Random 50
+#ACT
+GAMEGOLD + 100
+SendMsg 6 铭文[全能の财富印]触发生效，恭喜你额外获得#7[100元宝]#7！
+
+#IF
+Random 100
+#ACT
+GAMEGOLD + 200
+SendMsg 6 铭文[全能の财富印]触发生效，恭喜你额外获得#7[200元宝]#7！
+
+[@BeiPKMon]
+#IF
+Random 18
+CHECKITEMW 铭文[全能の无敌印] 1
+#ACT
+ChangeMode 2 1
+SendMsg 6 铭文[全能の无敌印]触发生效，获得无敌模式5秒！
+DelayGoto 5 @恢复
+
+
+
+[@PKMon]
+#IF
+Random 25
+CHECKITEMW 铭文[全能の秒杀印] 1
+#ACT
+Mon..humanhp - 20000
+SendMsg 6 铭文[全能の秒杀印]触发生效，#7[<$STR(S0)>]#7HP-20000！
+
+
+
+#IF
+Random 50
+CHECKITEMW 铭文[霸王印] 1
+NOT CHECKSLAVENAME 铭文印★霸王
+#ACT
+Goto @BB1
+
+
+
+
+
+
+
+#if
+Random 10
+CHECKITEMW 铭文[回复印] 1
+#act
+HUMANHP + 500
+SendMsg 6 铭文[回复印]触发生效，回复500点HP！
+
+
+#if
+Random 10
+CHECKITEMW 铭文[神王印] 1
+#ACT
+Mon.humanhp - 2000
+SendMsg 6 铭文[神王印]生效,当前被攻击怪物HP-2000！（提示：对玩家无效）
+
+
+#if
+CHECKITEMW 铭文[吸蓝印] 1
+#act
+Mon.humanhp - 50
+HUMANMP + 30
+
+
+
+#if
+CHECKBAGSIZE 1
+Random 7
+CHECK [505] 0
+CHECKITEMW 铭文[攻速印] 1
+#ACT
+set [505] 1
+GIVE 攻速印 1 TAKEON 13
+SendMsg 6 铭文[攻速印]生效，获得物理攻击速度+10，持续时间为6秒 。
+DelayGoto 6 @调整武器攻速
+
+
+[@调整武器攻速]
+#ACT
+Mov S10 <$IDX(13)> 
+TAKEOFFITEM 13 1
+TakeIdx <$STR(S10)>
+set [505] 0
+SendMsg 6 铭文[攻速印]失效，攻击速度回复正常！
+
+[@BB1]
+#IF
+#ACT
+RecallMob 铭文印★霸王 10 1 
+Goto @霸王12
+DelayGoto 30 @杀死霸王12
+Break
+
+
+[@霸王12]
+#if
+EQUAL <$BBINFO[1].name> 铭文印★霸王
+#act
+goto @霸王2
+
+
+
+[@霸王2]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+
+;攻击
+MOV N201 60
+MOV N202 <$MAXDC>
+INC N202 150
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[霸王印]生效，成功召唤#7【铭文印★霸王】#7降临(限时30秒),[获得人物攻击加成#7100%#7]
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+
+
+[@杀死霸王12]
+#if
+#ACT
+KillSlave 铭文印★霸王
+SENDMSG 6 铭文[霸王印]失效，#7【铭文印★霸王】#7已消失。 
+
+
+[@Member]
+#CALLX [\\游戏配置\帮助系统\目录.txt] @目录
+[@USERCMD1]
+#CALLX [\\会员系统\会员.txt] @会员
+;[@官人秒杀]
+;#act
+;#CALLX [\\官人成长.txt] @官人秒杀
+;[@KillMonster]
+#if
+CheckKillMobName 普通月魔蜘蛛 1
+#ACT
+goto @普通副本
+Break
+#if
+CheckKillMobName 普通双头血魔 1
+#ACT
+goto @普通副本
+Break
+#if
+CheckKillMobName 普通双头金刚 1
+#ACT
+goto @普通副本
+Break
+#if
+CheckKillMobName 普通蚩尤魔神 1
+#ACT
+goto @普通副本
+Break
+#if
+CheckKillMobName 英雄月魔蜘蛛 1
+#ACT
+goto @英雄副本
+Break
+#if
+CheckKillMobName 英雄双头血魔 1
+#ACT
+goto @英雄副本
+Break
+#if
+CheckKillMobName 英雄双头金刚 1
+#ACT
+goto @英雄副本
+Break
+#if
+CheckKillMobName 英雄蚩尤魔神 1
+#ACT
+goto @英雄副本
+Break
+
+#if
+random 500
+CheckKillMobName 恶灵僵尸 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 恶灵僵尸精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[恶灵僵尸],[恶灵僵尸]狂暴化了! 146 252 
+Break
+#if
+random 100
+CheckKillMobName 恶灵僵尸精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 恶灵僵尸精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[恶灵僵尸精英],[恶灵僵尸精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 恶灵僵尸精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了恶灵僵尸精英 146 252 
+Break
+
+
+#if
+random 300
+CheckKillMobName 恶灵尸王 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 恶灵尸王精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[恶灵尸王],[恶灵尸王]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 恶灵尸王精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 恶灵尸王精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[恶灵尸王精英],[恶灵尸王精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 恶灵尸王精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了恶灵尸王精英 146 252 
+Break
+
+#if
+random 100
+CheckKillMobName 尸王 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 尸王精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[尸王],[尸王]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 尸王精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 尸王精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[尸王精英],[尸王精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 尸王精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了尸王精英 146 252 
+Break
+
+#if
+random 50
+CheckKillMobName 阎殿尸王 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 阎殿尸王精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[阎殿尸王],[阎殿尸王]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 阎殿尸王精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 阎殿尸王精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[阎殿尸王精英],[阎殿尸王精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 阎殿尸王精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了阎殿尸王精英 146 252 
+Break
+
+#if
+random 100
+CheckKillMobName 白野猪 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 白野猪精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[白野猪],[白野猪]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 白野猪精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 白野猪精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[白野猪精英],[白野猪精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 白野猪精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了白野猪精英 146 252 
+Break
+
+#if
+random 100
+CheckKillMobName 邪恶钳虫 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 邪恶钳虫精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[邪恶钳虫],[邪恶钳虫]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 邪恶钳虫精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 邪恶钳虫精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[邪恶钳虫精英],[邪恶钳虫精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 邪恶钳虫精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了邪恶钳虫精英 146 252 
+Break
+
+#if
+random 100
+CheckKillMobName 血巨人 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 血巨人精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[血巨人],[血巨人]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 血巨人精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 血巨人精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[血巨人精英],[血巨人精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 血巨人精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了血巨人精英 146 252 
+Break
+
+#if
+random 100
+CheckKillMobName 邪恶巨人 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 邪恶巨人精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[邪恶巨人],[邪恶巨人]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 邪恶巨人精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 邪恶巨人精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[邪恶巨人精英],[邪恶巨人精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 邪恶巨人精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了邪恶巨人精英 146 252 
+Break
+
+#if
+random 300
+CheckKillMobName 花吻蜘蛛 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 花吻蜘蛛精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[花吻蜘蛛],[花吻蜘蛛]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 花吻蜘蛛精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 花吻蜘蛛精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[花吻蜘蛛精英],[花吻蜘蛛精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 花吻蜘蛛精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了花吻蜘蛛精英 146 252 
+Break
+
+#if
+random 200
+CheckKillMobName 黑锷蜘蛛 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 黑锷蜘蛛精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[黑锷蜘蛛],[黑锷蜘蛛]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 黑锷蜘蛛精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 黑锷蜘蛛精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[黑锷蜘蛛精英],[黑锷蜘蛛精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 黑锷蜘蛛精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了黑锷蜘蛛精英 146 252 
+Break
+
+#if
+random 150
+CheckKillMobName 祖玛弓箭手3 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛弓箭手精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛弓箭手],[祖玛弓箭手]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 祖玛弓箭手精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛弓箭手精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛弓箭手精英],[祖玛弓箭手精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 祖玛弓箭手精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了祖玛弓箭手精英 146 252 
+Break
+#if
+#if
+random 150
+CheckKillMobName 祖玛弓箭手9 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛弓箭手精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛弓箭手],[祖玛弓箭手]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 祖玛弓箭手精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛弓箭手精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛弓箭手精英],[祖玛弓箭手精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 祖玛弓箭手精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了祖玛弓箭手精英 146 252 
+Break
+#if
+random 150
+CheckKillMobName 祖玛雕像9 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛雕像精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛雕像],[祖玛雕像]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 祖玛雕像精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛雕像精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛雕像精英],[祖玛雕像精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 祖玛雕像精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了祖玛雕像精英 146 252 
+Break
+#if
+random 150
+CheckKillMobName 祖玛雕像3 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛雕像精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛雕像],[祖玛雕像]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 祖玛雕像精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛雕像精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛雕像精英],[祖玛雕像精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 祖玛雕像精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了祖玛雕像精英 146 252 
+Break
+#if
+random 100
+CheckKillMobName 祖玛卫士3 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛卫士精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛卫士],[祖玛卫士]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 祖玛卫士精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛卫士精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛卫士精英],[祖玛卫士精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 祖玛卫士精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了祖玛卫士精英 146 252 
+Break
+#if
+random 100
+CheckKillMobName 祖玛卫士9 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛卫士精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛卫士],[祖玛卫士]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 祖玛卫士精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 祖玛卫士精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[祖玛卫士精英],[祖玛卫士精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 祖玛卫士精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了祖玛卫士精英 146 252 
+Break
+#if
+random 500
+CheckKillMobName 牛魔祭祀 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 牛魔祭祀精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[牛魔祭祀],[牛魔祭祀]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 牛魔祭祀精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 牛魔祭祀精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[牛魔祭祀精英],[牛魔祭祀精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 牛魔祭祀精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了牛魔祭祀精英 146 252 
+Break
+#if
+random 500
+CheckKillMobName 牛魔法师 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 牛魔法师精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[牛魔法师],[牛魔法师]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 牛魔法师精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 牛魔法师精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[牛魔法师精英],[牛魔法师精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 牛魔法师精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了牛魔法师精英 146 252 
+Break
+#if
+random 500
+CheckKillMobName 牛魔将军 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 牛魔将军精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[牛魔将军],[牛魔将军]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 牛魔将军精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 牛魔将军精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[牛魔将军精英],[牛魔将军精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 牛魔将军精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了牛魔将军精英 146 252 
+Break
+
+#if
+random 300
+CheckKillMobName 月魔蜘蛛 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 月魔蜘蛛精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[月魔蜘蛛],[月魔蜘蛛精英]狂暴化了! 146 252 
+Break
+#if
+random 50
+CheckKillMobName 月魔蜘蛛精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen 月魔蜘蛛精英 1 0
+SendMsg 0  【广播】:(%s)的队伍成功激怒了<$MAPNAME>的[月魔蜘蛛精英],[月魔蜘蛛精英]让召唤了同伴 146 252 
+Break
+#if
+random 1
+CheckKillMobName 月魔蜘蛛精英 1
+#ACT
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+SendMsg 0  【广播】:(%s)的队伍成功击杀了月魔蜘蛛精英 146 252 
+Break
+
+
+
+
+
+
+[@StdmodeFunc70]
+#if
+#act
+KILLMONEXPRATE 200 3600
+SENDMSG 0 [#7%s#7]获得了双倍经验1小时，下线时间照常计算！
+
+
+[@StdmodeFunc71]
+#if
+#act
+GAMEGOLD + 1
+SENDMSG 0 【#6FFFF/8#6传闻#5】：[#7%s#7]走在路上，被天外飞来的陨石砸到脑袋，获得金刚石一枚。
+
+
+[@StdmodeFunc72]
+#if
+#act
+ChangeTranPoint 强化雷电术 + 2000
+
+
+[@StdModeFunc5]
+#IF
+#ACT
+SENDMSG 0 [#7%s#7]正在%m(%x,%y)放一心一意烟花，大家快去看哦！
+SHOWEFFECT [$特效_烟花_一心一意]
+
+[@StdModeFunc6]
+#IF
+#ACT
+SENDMSG 0 [#7%s#7]正在%m(%x,%y)放心心相印烟花，大家快去看哦！
+SHOWEFFECT [$特效_烟花_心心相印]
+
+[@StdModeFunc7]
+#IF
+#ACT
+SENDMSG 0 [#7%s#7]正在%m(%x,%y)放飞火流星烟花，大家快去看哦！
+SHOWEFFECT [$特效_烟花_飞火流星]
+
+[@StdModeFunc8]
+#IF
+#ACT
+SENDMSG 0 [#7%s#7]正在%m(%x,%y)放浪漫星雨烟花，大家快去看哦！
+SHOWEFFECT [$特效_烟花_浪漫星雨]
+
+[@StdModeFunc9]
+#IF
+#ACT
+SENDMSG 0 [#7%s#7]正在%m(%x,%y)放绮梦幻想烟花，大家快去看哦！
+SHOWEFFECT [$特效_烟花_绮梦幻想]
+
+[@StdModeFunc10]
+#IF
+#ACT
+SENDMSG 0 [#7%s#7]正在%m(%x,%y)放长空火舞烟花，大家快去看哦！
+SHOWEFFECT [$特效_烟花_长空火舞]
+
+[@StdModeFunc11]
+#IF
+#ACT
+SENDMSG 0 [#7%s#7]正在%m(%x,%y)放如雾似梦烟花，大家快去看哦！
+SHOWEFFECT [$特效_烟花_如雾似梦]
+
+
+[@StdModeFunc12]
+#IF
+EQUAL M3 0
+#ACT
+SENDMSG 0 %s在:%m%x:%y处放庆典蛋糕、大家快去欣赏哦。
+
+#IF
+EQUAL M3 5
+#ACT
+SENDMSG 0 %s在:%m%x:%y处放庆典蛋糕、大家快去欣赏哦。
+
+#IF
+EQUAL M3 10
+#ACT
+SENDMSG 0 %s在:%m%x:%y处放庆典蛋糕、大家快去欣赏哦。
+
+#IF
+EQUAL M3 15
+#ACT
+SENDMSG 0 %s在:%m%x:%y处放庆典蛋糕、大家快去欣赏哦。
+
+#IF
+small M3 20
+#Act
+INC M3 1
+SHOWEFFECT [$特效_烟花_一心一意]
+SHOWEFFECT [$特效_烟花_心心相印]
+SHOWEFFECT [$特效_烟花_飞火流星]
+SHOWEFFECT [$特效_烟花_浪漫星雨]
+SHOWEFFECT [$特效_烟花_绮梦幻想]
+SHOWEFFECT [$特效_烟花_长空火舞]
+SHOWEFFECT [$特效_烟花_如雾似梦]
+DelayGoto 2 @StdModeFunc12
+#ELSEAct
+MOV M3 0
+ClearDelayGoto
+
+[@StdModeFunc13]
+#ACT
+CREDITPOINT + 1
+SENDMSG 5 兑换成功！人物增加1点声望，当前声望为：<$CREDITPOINT>
+
+[@StdModeFunc14]
+#ACT
+CREDITPOINT + 5
+SENDMSG 5 兑换成功！人物增加5点声望，当前声望为：<$CREDITPOINT>
+
+[@StdModeFunc15]
+#ACT
+CREDITPOINT + 10
+SENDMSG 5 兑换成功！人物增加10点声望，当前声望为：<$CREDITPOINT>
+
+[@StdModeFunc16]
+#ACT
+CREDITPOINT + 50
+SENDMSG 5 兑换成功！人物增加50点声望，当前声望为：<$CREDITPOINT>
+
+[@StdModeFunc17]
+#ACT
+CREDITPOINT + 100
+SENDMSG 5 兑换成功！人物增加100点声望，当前声望为：<$CREDITPOINT>
+
+
+[@StdModeFunc18]
+#IF
+#ACT
+mapmove 3 330 330
+
+[@StdModeFunc19]
+#IF
+#ACT
+mapmove 0 334 266
+
+[@StdModeFunc20]
+#IF
+#ACT
+mapmove 5 330 330
+
+[@StdModeFunc21]
+#IF
+#ACT
+mapmove 4 240 200
+
+[@StdModeFunc22]
+#IF
+#ACT
+mapmove 11 178 326
+
+[@StdModeFunc23] 
+#ACT
+GAMEGOLD + 2000
+SENDMSG 5 元宝数量增加2000个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc24]
+#ACT
+GAMEGOLD + 5000
+SENDMSG 5 元宝数量增加5000个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc25]
+#ACT
+GAMEGOLD + 10000
+SENDMSG 5 元宝数量增加10000个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc26]
+#ACT
+GAMEGOLD + 20000
+SENDMSG 5 元宝数量增加20000个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc27]
+#ACT
+GAMEGOLD + 50000
+SENDMSG 5 元宝数量增加50个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc28]
+#ACT
+GAMEGOLD + 100
+SENDMSG 5 元宝数量增加100个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc29]
+#ACT
+GAMEGOLD + 200
+SENDMSG 5 元宝数量增加200个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc30]
+#ACT
+GAMEGOLD + 500
+SENDMSG 5 元宝数量增加500个、目前元宝数:<$GAMEGOLD>个。
+
+[@StdModeFunc31]
+#ACT
+GAMEGOLD + 1000
+SENDMSG 5 元宝数量增加1000个、目前元宝数:<$GAMEGOLD>个。
+
+
+
+
+[@StdmodeFunc33]
+#if
+CHECKITEMCOUNT 强效太阳水 ? 6
+#act
+TAKECOUNT 强效太阳水 6
+GIVE 打捆强效太阳水 1
+#elseact
+SENDMSG 5 你没有足够多的强效太阳水.
+
+[@StdmodeFunc34]
+#if
+CHECKITEMCOUNT 万年雪霜 ? 6
+#act
+TAKECOUNT 万年雪霜 6
+GIVE 打捆万年雪霜 1
+#elseact
+SENDMSG 5 你没有足够多的万年雪霜.
+
+[@StdmodeFunc35]
+#if
+CHECKITEMCOUNT 疗伤药 ? 6
+#act
+TAKECOUNT 疗伤药 6
+GIVE 打捆疗伤药 1
+#elseact
+SENDMSG 5 你没有足够多的疗伤药.
+
+[@StdmodeFunc37]
+#IF
+CHECKBAGSIZE 5
+#ACT
+GIVE 金条 5
+Break
+#ELSEACT
+GIVE 金砖 1
+MESSAGEBOX 你的背包空间不足5个，请先整理一下！
+Break
+
+
+
+
+
+
+
+[@StdModeFunc53]
+#IF
+Not CHECKNAMELIST ../QuestDiary/会员名单.txt
+#act
+ADDNAMELIST ../QuestDiary/会员名单.txt
+SENDMSG 0 【#6FFFF/8#6动态#5】：感谢[#7<$USERNAME>#7]对本服的支持#6FFFF/8#6成功#5加入会员名单！
+#ELSEACT
+MESSAGEBOX 您已经获得过特权了，没收乱点工具。
+Break
+[@StdModeFunc60]
+#IF
+Not CHECKNAMELIST ../QuestDiary/赞助名单.txt
+#act
+ADDNAMELIST ../QuestDiary/赞助名单.txt
+SENDMSG 0 【#6FFFF/8#6动态#5】：感谢[#7<$USERNAME>#7]对本服的支持#6FFFF/8#6成功#5加入赞助名单！
+#ELSEACT
+MESSAGEBOX 您已经获得过特权了，没收乱点工具。
+Break
+
+[@StdModeFunc36]
+#IF
+CHECKGOLD 200000
+#act
+ChangeExp + 500000
+TAKE 金币 200000
+SENDMSG 0 【#6FFFF/8#6动态#5】：玩家[#7<$USERNAME>#7]使用聚灵珠#6FFFF/8#6获得50万经验#5！
+#ELSEACT
+DynamicGive 聚灵珠 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+MESSAGEBOX 您没有20W金币，请有了再点击兑换\物品已设置为绑定，哈哈。
+Break
+[@STDMODEFUNC39]
+#IF
+#ACT
+GIVE 祝福油 6
+SENDMSG 5 恭喜！你获得祝福油x6
+Break
+
+
+
+
+
+
+[@TakeOnItem]
+#if
+CHECKITEMW 城主荣耀战袍 1
+CHECKITEMW 城主荣耀战剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[城主荣耀2件套]#7成功，杀死任何怪物有50分1机率额外获得300元宝，50万经验，回复HP+1000。#7
+
+#if
+CHECKITEMW 城主荣耀战衣 1
+CHECKITEMW 城主荣耀战剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[城主荣耀2件套]#7成功，杀死任何怪物有50分1机率额外获得300元宝，50万经验，回复HP+1000。#7
+
+#if
+CHECKITEMW 王者赞助袍 1
+CHECKITEMW 王者赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[王者赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得250元宝，40万经验，回复HP+800。#7
+
+#if
+CHECKITEMW 王者赞助衣 1
+CHECKITEMW 王者赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[王者赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得250元宝，40万经验，回复HP+800。#7
+
+#if
+CHECKITEMW 钻石赞助袍 1
+CHECKITEMW 钻石赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[钻石赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得200元宝，30万经验，回复HP+600。#7
+
+#if
+CHECKITEMW 钻石赞助衣 1
+CHECKITEMW 钻石赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[钻石赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得200元宝，30万经验，回复HP+600。#7
+
+#if
+CHECKITEMW 白金赞助袍 1
+CHECKITEMW 白金赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[白金赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得150元宝，25万经验，回复HP+500。#7
+
+#if
+CHECKITEMW 白金赞助衣 1
+CHECKITEMW 白金赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[白金赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得150元宝，25万经验，回复HP+500。#7
+
+#if
+CHECKITEMW 黄金赞助袍 1
+CHECKITEMW 黄金赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[黄金赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得100元宝，20万经验，回复HP+400。#7
+
+#if
+CHECKITEMW 黄金赞助衣 1
+CHECKITEMW 黄金赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[黄金赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得100元宝，20万经验，回复HP+400。#7
+
+
+#if
+CHECKITEMW 白银赞助袍 1
+CHECKITEMW 白银赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[白银赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得80元宝，15万经验，回复HP+300。#7
+
+#if
+CHECKITEMW 白银赞助衣 1
+CHECKITEMW 白银赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[白银赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得80元宝，15万经验，回复HP+300。#7
+
+#if
+CHECKITEMW 青铜赞助袍 1
+CHECKITEMW 青铜赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[青铜赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得50元宝，10万经验，回复HP+200。#7
+
+#if
+CHECKITEMW 青铜赞助衣 1
+CHECKITEMW 青铜赞助剑 1
+#act
+SendMsg 6 #7恭喜你穿戴#7[青铜赞助2件套]#7成功，杀死任何怪物有100分1机率额外获得50元宝，10万经验，回复HP+200。#7
+
+;----------------------VIP勋章-----------------------------
+#if
+Equal S0 VIP1青铜赞助
+Equal N0 4
+#act
+SetHumIcon 2 23 0 11 20 0 58 -29
+break
+
+#if
+Equal S0 VIP2白银赞助
+Equal N0 4
+#act
+SetHumIcon 2 23 20 11 20 0 58 -29
+break
+
+#if
+Equal S0 VIP3黄金赞助
+Equal N0 4
+#act
+SetHumIcon 2 23 40 11 20 0 58 -29
+break
+
+#if
+Equal S0 VIP4白金赞助
+Equal N0 4
+#act
+SetHumIcon 2 23 60 11 20 0 58 -29
+break
+
+#if
+Equal S0 VIP5钻石赞助
+Equal N0 4
+#act
+SetHumIcon 2 23 80 11 20 0 58 -29
+break
+
+#if
+Equal S0 VIP6王者赞助
+Equal N0 4
+#act
+SetHumIcon 2 23 100 11 20 0 58 -29
+break
+
+;----------------------------------------------------------
+#if
+CHECKITEMW 铭文[吸蓝印] 1
+#act
+SendMsg 6 铭文[吸蓝印]触发生效，每次吸取怪物50HP并回复人物30点MP。
+
+
+
+#if
+CHECKITEMW 铭文[君皇印] 1
+#act
+SkillShow 25 7 30 4
+SENDMSG 6 铭文[君皇印]生效，使用半月弯刀有30%机率触发冰冻Buff.持续时间为4秒 。
+
+
+#if
+CHECKITEMW 铭文[强化の君皇印] 1
+#act
+SkillShow 204 7 35 7
+SENDMSG 6 铭文[强化の君皇印]生效，使用强化半月弯刀有35%机率触发冰冻Buff.持续时间为7秒 。
+
+#if
+CHECKITEMW 铭文[虚弱印] 1
+#act
+SkillShow 25 4 30 4
+SENDMSG 6 铭文[虚弱印]生效，使用半月弯刀有30%机率触发红毒Buff.持续时间为4秒 。
+
+#if
+CHECKITEMW 铭文[强化の虚弱印] 1
+#act
+SkillShow 204 4 35 7
+SENDMSG 6 铭文[强化の虚弱印]生效，使用强化半月弯刀有35%机率触发红毒Buff.持续时间为7秒 。
+
+
+#if
+CHECKITEMW 铭文[麻痹印] 1
+#act
+SkillShow 25 1 30 2
+SENDMSG 6 铭文[麻痹印]生效，使用半月弯刀有30%机率触发麻痹Buff.持续时间为2秒 。
+
+#if
+CHECKITEMW 铭文[强化の麻痹印] 1
+#act
+SkillShow 204 1 35 3
+SENDMSG 6 铭文[强化の麻痹印]生效，使用强化半月弯刀有35%机率触发麻痹Buff.持续时间为3秒 。
+
+
+#if
+CHECKITEMW 铭文[绿毒印] 1
+#act
+SkillShow 23 3 40 6
+SENDMSG 6 铭文[绿毒印]生效，使用爆裂火焰有40%机率触发绿毒Buff.持续时间为6秒 。
+
+#if
+CHECKITEMW 铭文[强化の绿毒印] 1
+#act
+SkillShow 210 3 50 10
+SENDMSG 6 铭文[强化の绿毒印]生效，使用强化爆裂火焰有50%机率触发绿毒Buff.持续时间为10秒 。
+
+#if
+CHECKITEMW 铭文[红毒印] 1
+#act
+SkillShow 23 5 40 6
+SENDMSG 6 铭文[红毒印]生效，使用爆裂火焰有40%机率触发红毒Buff.持续时间为6秒 。
+
+#if
+CHECKITEMW 铭文[强化の红毒印] 1
+#act
+SkillShow 210 5 50 10
+SENDMSG 6 铭文[强化の红毒印]生效，使用强化爆裂火焰有50%机率触发红毒Buff.持续时间为10秒 。
+
+#if
+CHECKITEMADDVALUE 1 75 = 13
+#act
+SkillShow 22 11 100 7000
+SENDMSG 6 铭文武器BUFF技能替换成功。
+
+
+#if
+CHECKITEMW 铭文[冰冻印] 1
+#act
+SkillShow 10 7 40 3
+SENDMSG 6 铭文[冰冻印]生效，使用激光电影有40%机率触发冰冻Buff.持续时间为3秒 。
+
+#if
+CHECKITEMW 铭文[强化の冰冻印] 1
+#act
+SkillShow 207 7 50 4
+SENDMSG 6 铭文[强化の冰冻印]生效，使用激光电影有50%机率触发冰冻Buff.持续时间为5秒 。
+
+#if
+CHECKITEMW 铭文[红毒印] 1
+#act
+SkillShow 24 4 50 5
+SENDMSG 6 铭文[红毒印]生效，使用地狱雷光有50%机率触发红毒Buff.持续时间为5秒 。
+
+
+
+
+#if
+CHECKITEMADDVALUE 1 75 = 22
+#act
+SkillShow 24 10 70 10
+SENDMSG 6 铭文武器BUFF技能替换成功。
+
+
+
+
+#if
+CHECKITEMW 铭文[蛛网印] 1
+#act
+SkillShow 202 2 70 4
+SendMsg 6 铭文[蛛网印]生效，使用强化攻杀剑术有70%机率触发蛛网Buff.持续时间为3秒 。
+
+
+
+#if
+CHECKITEMW 铭文[击退印] 1
+#act
+SkillShow 202 6 70 3
+SendMsg 6 铭文[击退印]生效，使用强化攻杀剑术有70%机率击退对方3格。
+
+
+
+#if
+CHECKITEMW 铭文[爆杀印] 1
+#act
+SkillShow 203 11 40 350
+SendMsg 6 铭文[爆杀印]生效，使用强化刺杀剑术有40%机率出现350%双伤害。
+
+
+
+#if
+CHECKITEMW 铭文[爆月印] 1
+#act
+SkillShow 204 11 40 350
+SendMsg 6 铭文[爆月印]生效，使用强化半月弯刀有40%机率出现350%双伤害。
+
+
+
+#if
+CHECKITEMW 铭文[强化の麻痹印] 1
+#act
+SkillShow 204 1 35 3
+SendMsg 6 铭文[强化の麻痹印]生效，使用强化半月弯刀有35%机率触发麻痹Buff.持续时间为3秒 。
+
+#if
+CHECKITEMW 铭文[强伤印] 1
+#act
+SkillShow 201 11 70 400
+SendMsg 6 铭文[强伤印]生效，使用强化烈火剑法有70%机率出现400%双伤害。
+
+
+
+#if
+EQUAL <$ITEMINFO[$IDX(1)].Value(24)> 50
+#act
+SkillShow 209 7 100 5
+SENDMSG 6 铭文武器BUFF技能替换成功。
+
+
+[@TakeOffItem]
+;----------------------VIP勋章-----------------------------
+#if
+Equal S0 VIP1青铜赞助
+Equal N0 4
+#act
+sethumicon 0 0 0 0
+break
+
+#if
+Equal S0 VIP2白银赞助
+Equal N0 4
+#act
+sethumicon 0 0 0 0
+break
+
+#if
+Equal S0 VIP3黄金赞助
+Equal N0 4
+#act
+sethumicon 0 0 0 0
+break
+
+#if
+Equal S0 VIP4白金赞助
+Equal N0 4
+#act
+sethumicon 0 0 0 0
+break
+
+#if
+Equal S0 VIP5钻石赞助
+Equal N0 4
+#act
+sethumicon 0 0 0 0
+break
+
+#if
+Equal S0 VIP6王者赞助
+Equal N0 4
+#act
+sethumicon 0 0 0 0
+break
+
+#IF
+EQUAL N0 9
+#ACT
+DELSKILL 裂神符
+DELSKILL 三绝杀
+SkillShow 25 0 0 0
+SkillShow 27 0 0 0
+SkillShow 26 0 0 0
+SkillShow 23 0 0 0
+SkillShow 22 0 0 0
+SkillShow 10 0 0 0
+SkillShow 24 0 0 0
+SkillShow 202 0 0 0
+SkillShow 203 0 0 0
+SkillShow 204 0 0 0
+SkillShow 201 0 0 0
+SET [500] 0
+SET [502] 0
+SET [503] 0
+set [504] 0
+
+#IF
+EQUAL N0 0
+#ACT
+
+DELSKILL 三绝杀
+SkillShow 25 0 0 0
+SkillShow 27 0 0 0
+SkillShow 26 0 0 0
+SkillShow 23 0 0 0
+SkillShow 22 0 0 0
+SkillShow 10 0 0 0
+SkillShow 24 0 0 0
+SkillShow 202 0 0 0
+SkillShow 203 0 0 0
+SkillShow 204 0 0 0
+SkillShow 201 0 0 0
+SET [500] 0
+SET [502] 0
+SET [503] 0
+set [504] 0
+
+#IF
+EQUAL N0 9
+CHECKJOB Taoist
+#ACT
+KillSlave 铭文①灵兽
+KillSlave 铭文②火焰兽
+KillSlave 铭文③血神兽
+KillSlave 铭文①骷髅护卫
+KillSlave 铭文②骷髅战神
+KillSlave 铭文③骷髅君王
+KillSlave 铭文①强化护卫
+KillSlave 铭文②强化护卫
+KillSlave 铭文③强化护卫
+KillSlave 铭文④强化护卫
+KillSlave 铭文⑤强化护卫
+KillSlave 铭文⑥强化护卫
+KillSlave 铭文⑦强化护卫
+KillSlave 铭文⑧强化护卫
+KillSlave 铭文⑨强化护卫
+KillSlave 铭文①强化君王
+KillSlave 铭文②强化君王
+KillSlave 铭文③强化君王
+KillSlave 铭文④强化君王
+KillSlave 铭文⑤强化君王
+KillSlave 铭文⑥强化君王
+KillSlave 铭文⑦强化君王
+KillSlave 铭文⑧强化君王
+KillSlave 铭文⑨强化君王
+KillSlave 铭文①强化血兽
+KillSlave 铭文②强化血兽
+KillSlave 铭文③强化血兽
+KillSlave 铭文④强化血兽
+KillSlave 铭文⑤强化血兽
+KillSlave 铭文⑥强化血兽
+KillSlave 铭文⑦强化血兽
+KillSlave 铭文⑧强化血兽
+KillSlave 铭文⑨强化血兽
+KillSlave 铭文①强战神兽
+KillSlave 铭文②强战神兽
+KillSlave 铭文③强战神兽
+KillSlave 铭文④强战神兽
+KillSlave 铭文⑤强战神兽
+KillSlave 铭文⑥强战神兽
+KillSlave 铭文⑦强战神兽
+KillSlave 铭文⑧强战神兽
+KillSlave 铭文⑨强战神兽
+
+#IF
+EQUAL N0 0
+CHECKJOB Taoist
+#ACT
+KillSlave 铭文①灵兽
+KillSlave 铭文②火焰兽
+KillSlave 铭文③血神兽
+KillSlave 铭文①骷髅护卫
+KillSlave 铭文②骷髅战神
+KillSlave 铭文③骷髅君王
+KillSlave 铭文①强化护卫
+KillSlave 铭文②强化护卫
+KillSlave 铭文③强化护卫
+KillSlave 铭文④强化护卫
+KillSlave 铭文⑤强化护卫
+KillSlave 铭文⑥强化护卫
+KillSlave 铭文⑦强化护卫
+KillSlave 铭文⑧强化护卫
+KillSlave 铭文⑨强化护卫
+KillSlave 铭文①强化君王
+KillSlave 铭文②强化君王
+KillSlave 铭文③强化君王
+KillSlave 铭文④强化君王
+KillSlave 铭文⑤强化君王
+KillSlave 铭文⑥强化君王
+KillSlave 铭文⑦强化君王
+KillSlave 铭文⑧强化君王
+KillSlave 铭文⑨强化君王
+KillSlave 铭文①强化血兽
+KillSlave 铭文②强化血兽
+KillSlave 铭文③强化血兽
+KillSlave 铭文④强化血兽
+KillSlave 铭文⑤强化血兽
+KillSlave 铭文⑥强化血兽
+KillSlave 铭文⑦强化血兽
+KillSlave 铭文⑧强化血兽
+KillSlave 铭文⑨强化血兽
+KillSlave 铭文①强战神兽
+KillSlave 铭文②强战神兽
+KillSlave 铭文③强战神兽
+KillSlave 铭文④强战神兽
+KillSlave 铭文⑤强战神兽
+KillSlave 铭文⑥强战神兽
+KillSlave 铭文⑦强战神兽
+KillSlave 铭文⑧强战神兽
+KillSlave 铭文⑨强战神兽
+
+
+
+
+
+;#IF
+;EQUAL N0 1
+;CHECKJOB Wizard
+;CHECKSLAVECOUNT ? 1
+;#ACT
+;KillSlave <$BBINFO[1].Name>
+
+;#IF
+;EQUAL N0 1
+;CHECKJOB Wizard
+;CHECKSLAVECOUNT ? 2
+;#ACT
+;KillSlave <$BBINFO[2].Name>
+
+
+;#IF
+;EQUAL N0 1
+;CHECKJOB Wizard
+;CHECKSLAVECOUNT ? 3
+;#ACT
+;KillSlave <$BBINFO[3].Name>
+
+
+;#IF
+;EQUAL N0 1
+;CHECKJOB Wizard
+;CHECKSLAVECOUNT ? 4
+;#ACT
+;KillSlave <$BBINFO[4].Name>
+
+;#IF
+;EQUAL N0 1
+;CHECKJOB Wizard
+;CHECKSLAVECOUNT ? 5
+;#ACT
+;KillSlave <$BBINFO[5].Name>
+
+;#IF
+;EQUAL N0 1
+;CHECKJOB Wizard
+;CHECKSLAVECOUNT ? 6
+;#ACT
+;KillSlave <$BBINFO[6].Name>
+
+
+
+[@StdModeFunc62]
+#ACT
+CALCVAR HUMAN 赞助币 + 5
+SAVEVAR HUMAN 赞助币 ..\Questdiary\jgr\赞助币.txt
+SENDMSG 5 赞助币数量增加5个、目前赞助币数:<$HUMAN(赞助币)>个。
+[@StdModeFunc63]
+#ACT
+CALCVAR HUMAN 赞助币 + 100
+SAVEVAR HUMAN 赞助币 ..\Questdiary\jgr\赞助币.txt
+SENDMSG 5 赞助币数量增加100个、目前赞助币数:<$HUMAN(赞助币)>个。
+
+
+
+
+
+
+
+
+
+
+;铭文技能触发BUFF
+
+[@MagSelfFunc2]
+#if
+Random 2
+CHECKITEMW 铭文[治愈印] 1
+#act
+HUMANHP + 300
+SendMsg 6 铭文[治愈印]生效，使用治愈术回复额外+300HP。
+
+
+[@MagSelfFunc7]
+#if
+Random 3
+CHECKITEMW 铭文[攻杀印] 1
+#act
+ChangeHumAbility 21 = 150 2 
+SendMsg 6 铭文[攻杀印]生效，攻杀伤害提高150%！
+
+
+
+[@MagSelfFunc202]
+#if
+Random 3
+CHECKITEMW 铭文[强化の攻杀印] 1
+#act
+ChangeHumAbility 21 = 250 2 
+SendMsg 6 铭文[强化の攻杀印]生效，攻杀伤害提高250%！
+
+
+
+[@MagSelfFunc12]
+#if
+Random 8
+CHECKITEMW 铭文[主宰印] 1
+#act
+MakeHurt 2 100 0 0 火焰冰
+SendMsg 6 铭文[主宰印]生效，触发2x2范围100%溅射伤害。
+
+[@MagSelfFunc203]
+#if
+Random 8
+CHECKITEMW 铭文[强化の主宰印] 1
+#act
+MakeHurt 3 150 0 0 火焰冰
+SendMsg 6 铭文[强化の主宰印]生效，触发3x3范围150%溅射伤害。
+
+
+
+[@MagSelfFunc27]
+#IF
+Random 3
+CHECKITEMW 铭文[野蛮印] 1
+CheckPoseLevel < <$LEVEL>
+#ACT
+<$POSENAME>.GMexecute TestStatus 5 2 0
+SendMsg 6 铭文[野蛮印]生效,你对[<$POSENAME>]使用了野蛮冲撞,将其麻痹2秒。
+Break
+
+
+
+
+
+
+[@MagSelfFunc23]
+#IF
+Random 8
+EQUAL <$ITEMINFO[$IDX(1)].Value(24)> 11
+#ACT
+HUMANHP + 100
+SendMsg 6 铭文【回复印】生效，使用爆裂火焰回复100HP。
+
+#IF
+Random 8
+EQUAL <$ITEMINFO[$IDX(0)].Value(24)> 11
+#ACT
+HUMANHP + 100
+SendMsg 6 铭文【回复印】生效，使用爆裂火焰回复100HP。
+
+[@MagSelfFunc8]
+#if
+CHECKITEMADDVALUE 1 75 = 16
+#act
+MakeHurt 2 10 0 1 火焰冰
+
+
+
+[@MagSelfFunc2]
+#if
+Random 8
+CHECKITEMADDVALUE 1 75 = 25
+#act
+HUMANHP + 50
+
+
+
+
+[@MagSelfFunc20]
+#if
+CHECKITEMADDVALUE 1 75 = 17
+CHECKSLAVECOUNT  = 5
+#act
+MOBSLAVE <$BBINFO[5].Name> 3   1
+SendMsg 6 铭文血契印生效，满5只宝宝自动送你一只！
+
+
+#if
+CHECKITEMADDVALUE 1 75 = 18
+#act
+SetOnTimer 1 1
+
+
+
+
+[@MagSelfFunc31]
+#if
+Random 5
+CHECKITEMW 铭文[防御印] 1
+#act
+ChangeHumAbility 1 + 200 10
+ChangeHumAbility 3 + 200 10
+SendMsg 6 铭文[防御印]生效，防御、魔御增加200点持续10秒！
+DelayGoto 10 @伤害失效1
+
+
+
+#if
+Random 5
+CHECKITEMW 铭文[伤害印] 1
+#act
+ChangeHumAbility 21 + 30 10
+SendMsg 6 铭文[伤害印]生效，伤害加成增加30%持续10秒！
+DelayGoto 10 @伤害失效
+
+
+
+[@伤害失效]
+#if
+#act
+SendMsg 6 铭文[伤害印]失效，伤害恢复正常！
+
+[@伤害失效1]
+#if
+#act
+SendMsg 6 铭文[防御印]失效，防御、魔御恢复正常！
+
+
+[@MagSelfFunc18]
+#if
+Random 5
+CHECKITEMW 铭文[隐身印] 1
+#act
+ChangeHumAbility 21 + 30 10
+SendMsg 6 铭文[隐身印]生效，伤害增加30%持续10秒！
+DelayGoto 10 @隐身失效
+
+
+
+[@隐身失效]
+#if
+#act
+SendMsg 6 铭文[隐身印]失效，伤害恢复正常！
+
+
+[@MagSelfFunc19]
+#if
+Random 2
+CHECKITEMW 铭文[替身印] 1
+NOT CHECKSLAVENAME 替身
+#act
+RecallMob 替身 1 1
+DelayGoto 30 @替身
+SendMsg 6 铭文[替身印]生效，成功召唤【替身】持续30秒！
+
+
+[@替身]
+#if
+#act
+KillSlave 替身
+SENDMSG 6 铭文[替身印]失效，替身已消失。
+
+
+[@MagSelfFunc204]
+#if
+Random 6
+SMALL N99 1
+CHECKITEMW 铭文[灼烧印] 1
+#act
+MOV N99 20
+goto @灼烧印
+SendMsg 6 铭文[灼烧印]生效，使用强化半月弯刀有20%机率触发灼烧Buff,怪物每秒-HP300,持续时间为20秒#7(由于引擎功能限制，怪物灼烧掉血会不显示飘血数字，但怪物会真实掉血)#7 。
+
+[@灼烧印]
+#if
+Large N99 1
+#ACT
+Dec N99 1
+SkillShow 204 3 100 1
+Mon.humanhp - 300
+delaygoto 1 @灼烧印
+break
+#ELSEACT
+MOV N99 0
+SENDMSG 6 铭文[灼烧印]时间到了，灼烧Buff效果消失！
+
+
+
+
+[@StdmodeFunc152]
+#IF
+CheckGuildFlourishPoint  > 99
+#ACT
+GUILDSTABILITYPOINT + 20
+GUILDFLOURISHPOINT - 100
+give 行会安定号角 1
+MESSAGEBOX 行会安定值增加20点，<$GUILDSTABILITYPOINT>点繁荣值<$GUILDFLOURISHPOINT>点繁荣值
+#ELSEACT
+MESSAGEBOX 对不起！你行会的繁荣值不足100点。
+
+[@StdmodeFunc153]
+#IF
+#ACT
+HookItem 4
+HookItem 12
+HookItem 22
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 8
+MESSAGEBOX 绑定成功！
+
+[@StdModeFunc500]
+#IF
+#act
+give 金币 1000000
+SENDMSG 6 [系统]：金币+1000000！
+break
+
+
+
+[@StdModeFunc171]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 藏经法老
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+break
+
+[@StdModeFunc172]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 触龙神
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+break
+
+[@StdModeFunc173]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 巨型多角虫
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc181]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 祖玛卫士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc182]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 沃玛战士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc183]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 沃玛勇士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc184]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 沃玛战将
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc185]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 火焰沃玛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc186]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 沃玛卫士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc187]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 沃玛教主
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc188]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暗黑战士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc189]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 粪虫
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc190]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 尸王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc191]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 祖玛教皇
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc192]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 蜈蚣
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc193]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 黑色恶蛆
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc194]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 邪恶钳虫
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc195]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 跳跳蜂
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc196]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 巨型蠕虫
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc197]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 红野猪
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc198]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 黑野猪
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc199]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 白野猪
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc200]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 蝎蛇
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc201]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 邪恶毒蛇
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc202]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 大老鼠
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc203]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 祖玛弓箭
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc204]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 祖玛雕像
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc205]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 祖玛教主
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc206]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 月魔蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc207]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暴牙蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc208]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 钢牙蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc209]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 天狼蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc210]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 黑锷蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc211]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 花吻蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc212]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 血巨人
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc213]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 邪恶巨人
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc214]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 双头血魔
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc215]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 双头金刚
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc216]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暗之金刚
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc217]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 赤月恶魔
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc218]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 千年树妖
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc219]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 虹魔蝎卫
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc220]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 虹魔猪卫
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc221]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 虹魔教主
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc222]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 剧毒蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc223]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 多钩猫王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc224]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 钉耙猫王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc225]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 恶灵尸王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc226]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 黄泉教主
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc227]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暗之黄泉
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc228]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 牛头魔
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc229]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 牛魔斗士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc230]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 牛魔战士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc231]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 牛魔将军
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+
+[@StdModeFunc232]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 牛魔法师
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc233]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 牛魔祭司
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc234]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 牛魔王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc235]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暗之牛魔
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc236]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暗之虹魔
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc237]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暗之血魔
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc238]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 暗之沃玛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc239]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 火龙神
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc240]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 骨翼蝠王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc241]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 绿泥怪
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc242]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 龙骨鬼
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc243]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 刺脊冰狼
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc244]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 刺脊火狼
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc245]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 长毛猛犸
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc246]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 黑刺领斑
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc247]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 白刺领斑
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc248]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 红鬃熊狸
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc249]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 雷炎蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc250]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 绿魔蜘蛛
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc251]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 圣地卫士
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc252]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 小鸡巴
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+[@StdModeFunc501]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 灭世神★圣龙王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+[@StdModeFunc502]
+#if
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 灭世神★魔龙王
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+
+
+
+[@StdModeFunc350]
+#if
+#ACT
+PowerRate 150 3600 1
+SendMsg 6 [系统]：恭喜你获得1.5倍爆率,持续60分钟
+Break
+
+
+
+
+
+
+
+[@StdModeFunc300]
+#if
+EQUAL C16 400
+#ACT
+give 内丹【攻】上限+1 1
+SendMsg 6  魔宠累计上限攻击养成已到极限，不能再增加！
+#ELSEACT
+INC C16 1
+SendMsg 6   魔宠上限攻击增加【1】，当前魔宠累计攻击上限养成【<$STR(C16)>】！
+
+[@StdModeFunc301]
+#if
+EQUAL C16 400
+#ACT
+give 内丹【攻】上限+5 1
+SendMsg 6  魔宠累计上限攻击养成已到极限，不能再增加！
+#ELSEACT
+INC C16 5
+SendMsg 6   魔宠上限攻击增加【5】，当前魔宠累计攻击上限养成【<$STR(C16)>】！
+
+
+
+[@StdModeFunc302]
+#if
+EQUAL C17 400
+#ACT
+give 内丹【攻】下限+1 1
+SendMsg 6  魔宠累计下限攻击养成已到极限，不能再增加！
+#ELSEACT
+INC C17 1
+SendMsg 6   魔宠下限攻击增加【1】，当前魔宠累计攻击下限养成【<$STR(C17)>】！
+break
+
+[@StdModeFunc303]
+#if
+EQUAL C17 400
+#ACT
+give 内丹【攻】下限+5 1
+SendMsg 6  魔宠累计下限攻击养成已到极限，不能再增加！
+#ELSEACT
+INC C17 5
+SendMsg 6   魔宠下限攻击增加【5】，当前魔宠累计攻击下限养成【<$STR(C17)>】！
+break
+
+[@StdModeFunc304]
+#if
+EQUAL C19 300
+#ACT
+give 内丹【物防】下限+1 1
+SendMsg 6  魔宠累计下限防御养成已到极限，不能再增加！
+#ELSEACT
+INC C19 1
+SendMsg 6   魔宠下限防御增加【1】，当前魔宠累计防御下限养成【<$STR(C19)>】！
+break
+
+[@StdModeFunc305]
+#if
+EQUAL C19 300
+#ACT
+give 内丹【物防】下限+5 1
+SendMsg 6  魔宠累计下限防御养成已到极限，不能再增加！
+#ELSEACT
+INC C19 5
+SendMsg 6   魔宠下限防御增加【5】，当前魔宠累计防御下限养成【<$STR(C19)>】！
+break
+
+
+
+
+[@StdModeFunc306]
+#if
+EQUAL C18 300
+#ACT
+SendMsg 6  魔宠累计上限防御养成已到极限，不能再增加！
+give 内丹【物防】上限+1 1
+#ELSEACT
+INC C18 1
+SendMsg 6   魔宠上限防御增加【1】，当前魔宠累计防御上限养成【<$STR(C18)>】！
+
+[@StdModeFunc307]
+#if
+EQUAL C18 300
+#ACT
+SendMsg 6  魔宠累计上限防御养成已到极限，不能再增加！
+give 内丹【物防】上限+5 1
+#ELSEACT
+INC C18 5
+SendMsg 6   魔宠上限防御增加【5】，当前魔宠累计防御上限养成【<$STR(C18)>】！
+
+
+
+[@StdModeFunc308]
+#if
+EQUAL C20 300
+#ACT
+SendMsg 6  魔宠累计魔防上限养成已到极限，不能再增加！
+give 内丹【魔防】上限+1 1
+#ELSEACT
+INC C20 1
+SendMsg 6   魔宠魔防上限增加【1】，当前魔宠累计魔防上限养成【<$STR(C20)>】！
+break
+
+
+[@StdModeFunc309]
+#if
+EQUAL C20 300
+#ACT
+SendMsg 6  魔宠累计魔防上限养成已到极限，不能再增加！
+give 内丹【魔防】上限+5 1
+#ELSEACT
+INC C20 5
+SendMsg 6   魔宠上限魔防增加【5】，当前魔宠累计魔防上限养成【<$STR(C20)>】！
+break
+
+[@StdModeFunc310]
+#if
+EQUAL C21 300
+#ACT
+SendMsg 6  魔宠累计魔防下限养成已到极限，不能再增加！
+give 内丹【魔防】下限+1 1
+#ELSEACT
+INC C21 1
+SendMsg 6   魔宠魔防下限增加【1】，当前魔宠累计魔防下限养成【<$STR(C21)>】！
+break
+
+[@StdModeFunc311]
+#if
+EQUAL C21 300
+#ACT
+SendMsg 6  魔宠累计魔防下限养成已到极限，不能再增加！
+give 内丹【魔防】下限+5 1
+#ELSEACT
+INC C21 5
+SendMsg 6   魔宠魔防下限增加【5】，当前魔宠累计魔防下限养成【<$STR(C21)>】！
+break
+
+
+
+
+[@StdModeFunc312]
+#if
+LARGE C23 10000
+#ACT
+SendMsg 6  魔宠累计生命上限养成已到极限，不能再增加！
+give 内丹【生命】上限+20 1
+#ELSEACT
+INC C23 20
+SendMsg 6   魔宠生命上限增加【20】，当前魔宠累计生命上限养成【<$STR(C23)>】！
+break
+
+[@StdModeFunc313]
+#if
+LARGE C23 10000
+#ACT
+SendMsg 6  魔宠累计生命上限养成已到极限，不能再增加！
+give 内丹【生命】上限+50 1
+#ELSEACT
+INC C23 50
+SendMsg 6   魔宠生命上限增加【50】，当前魔宠累计生命上限养成【<$STR(C23)>】！
+break
+
+
+
+
+[@StdModeFunc252]
+#if
+#ACT
+INC C17 200
+INC C16 200
+INC C23 1000
+SendMsg 6  宠物攻击+200生命+1000！
+break
+
+
+
+[@MagSelfFunc218]
+#if
+#act
+#CALLX [\\会员系统\强化骷髅.txt] @强化骷髅
+
+
+
+
+[@MagSelfFunc219]
+#if
+#act
+#CALLX [\\会员系统\召唤神兽.txt] @召唤神兽
+
+
+
+
+[@MagSelfFunc30]
+#if
+#act
+#CALLX [\\会员系统\道士神兽.txt] @道士神兽
+
+
+
+[@MagSelfFunc17]
+#if
+#act
+#CALLX [\\会员系统\道士宝宝.txt] @召唤骷髅
+
+
+
+[@杀死强化神兽三重]
+#if
+#act
+KillSlave 强化神兽三重
+
+
+[@MagSelfFunc218]
+#if
+#act
+MOV N79 1
+
+[@MagSelfFunc219]
+#if
+#act
+MOV N78 1
+
+
+[@MagSelfFunc188]
+#act
+#CALLX [\\会员系统\宝宝系统.txt] @宝宝系统
+;#CALLX [\\游戏配置\灵宠配置\灵宠界面1.txt] @灵宠界面
+
+[@StdModeFunc503]
+#if
+#ACT
+GetRandomName ../QuestDiary/押镖奖励/星级卷礼包.txt S18
+Give <$STR(S18)> 1
+SENDMSG 6 恭喜你打开星级卷礼包成功，随机获得#7<$STR(S18)>#71个。
+Break
+
+[@StdModeFunc504]
+#if
+#ACT
+GetRandomName ../QuestDiary/押镖奖励/强化卷礼包.txt S18
+Give <$STR(S18)> 1
+SENDMSG 6 恭喜你打开强化卷礼包成功，随机获得#7<$STR(S18)>#71个。
+Break
+
+;-----50元赞助礼包
+
+[@StdModeFunc505]
+#if
+#act
+#CALLX [\\会员系统\50元赞助礼包.txt] @50元赞助礼包
+
+[@StdModeFunc506]
+#if
+#act
+#CALLX [\\会员系统\50元赞助礼包.txt] @100元赞助礼包
+
+[@StdModeFunc507]
+#if
+#act
+#CALLX [\\会员系统\50元赞助礼包.txt] @300元赞助礼包
+
+[@StdModeFunc508]
+#if
+#act
+#CALLX [\\会员系统\50元赞助礼包.txt] @500元赞助礼包
+
+[@StdModeFunc509]
+#if
+#act
+#CALLX [\\会员系统\50元赞助礼包.txt] @700元赞助礼包
+
+[@StdModeFunc510]
+#if
+#act
+#CALLX [\\会员系统\50元赞助礼包.txt] @1000元赞助礼包
+
+
+[@weiwei]
+#IF
+CHECKITEMW 砍猪印(首冲奖励) 1
+#ACT
+GOTO @砍猪印
+break
+#ELSEACT
+
+#IF
+CheckHitMonName 红☆经验猪
+#ACT
+ChangeExp + 500
+
+
+
+#IF
+CheckHitMonName 白☆经验猪
+#ACT
+ChangeExp + 1000
+
+
+[@砍猪印]
+#IF
+CheckHitMonName 红☆经验猪
+#ACT
+ChangeExp + 700
+
+
+#IF
+CheckHitMonName 白☆经验猪
+#ACT
+ChangeExp + 1500
+
+
+;=====================传送卷
+[@StdModeFunc511]
+#if
+#act
+mapmove D717
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[石墓七层]#7打宝。
+
+[@StdModeFunc512]
+#if
+#act
+mapmove D024
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[沃玛三层]#7打宝。
+
+
+[@StdModeFunc513]
+#if
+#act
+mapmove D2013
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[封 魔 殿]#7打宝。
+
+[@StdModeFunc514]
+#if
+#act
+mapmove D2079
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[牛魔大厅]#7打宝。
+
+[@StdModeFunc515]
+#if
+#act
+mapmove H010
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[幻境十层]#7打宝。
+
+[@StdModeFunc516]
+#if
+#act
+mapmove D606
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[死亡棺材]#7打宝。
+
+[@StdModeFunc517]
+#if
+#act
+mapmove D2052
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[尸魔三层]#7打宝。
+
+[@StdModeFunc518]
+#if
+#act
+mapmove Q004
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[尸 王 殿]#7打宝。
+
+[@StdModeFunc519]
+#if
+#act
+mapmove yanwang
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[阎王殿]#7打宝。
+
+[@StdModeFunc520]
+#if
+#act
+mapmove D10052 139 25
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[赤月魔穴]#7打宝。
+
+[@StdModeFunc521]
+#if
+#act
+mapmove D10051 180 55
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[恶魔祭坛]#7打宝。
+
+[@StdModeFunc522]
+#if
+#act
+mapmove D515
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[祖玛之家]#7打宝。
+
+[@StdModeFunc523]
+#if
+#act
+mapmove D2067
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[骨魔五层]#7打宝。
+
+[@StdModeFunc524]
+#if
+#act
+mapmove E701
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[圣者天堂]#7打宝。
+
+[@StdModeFunc525]
+#if
+#act
+mapmove REDCAVE01
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[洞天福地]#7打宝。
+
+[@StdModeFunc526]
+#if
+#act
+mapmove D2082
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[火龙洞穴]#7打宝。
+
+[@StdModeFunc527]
+#if
+#act
+mapmove hl002
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[雷炎洞穴]#7打宝。
+
+[@StdModeFunc528]
+#if
+#act
+mapmove JZ006
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[静之雪域]#7打宝。
+
+[@StdModeFunc529]
+#if
+#act
+mapmove 18gdt 20 8
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[祖玛十八阁]#7打宝。
+
+[@StdModeFunc530]
+#if
+#act
+mapmove SJG
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[海底龙宫]#7打宝。
+
+[@StdModeFunc531]
+#if
+#act
+mapmove RYMY
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[轮回海]#7打宝。
+
+[@StdModeFunc532]
+#if
+#act
+mapmove HDD
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[荒古禁地]#7打宝。
+
+[@StdModeFunc533]
+#if
+#act
+mapmove TZT
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[天之颠]#7打宝。
+
+
+[@StdModeFunc534]
+#if
+CheckBagSize 13
+#act
+GIVE 石墓七层传送卷 1
+GIVE 沃玛三层传送卷 1
+GIVE 封魔殿传送卷 1
+GIVE 牛魔大厅传送卷 1
+GIVE 幻境十层传送卷 1
+GIVE 死亡棺材传送卷 1
+GIVE 尸魔三层传送卷 1
+GIVE 尸王殿传送卷 1
+GIVE 阎王殿传送卷 1
+GIVE 赤月魔穴传送卷 1
+GIVE 恶魔祭坛传送卷 1
+GIVE 祖玛之家传送卷 1
+GIVE 骨魔五层传送卷 1
+MESSAGEBOX 成功开启礼包\获得各中级传送卷共13张。
+#ELSEACT
+GIVE 中级传送卷礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于13格！
+Break
+
+[@StdModeFunc535]
+#if
+CheckBagSize 6
+#act
+GIVE 圣者天堂传送卷 1
+GIVE 洞天福地传送卷 1
+GIVE 火龙洞穴传送卷 1
+GIVE 静之雪域传送卷 1
+GIVE 雷炎洞穴传送卷 1
+GIVE 祖玛18阁传送卷 1
+MESSAGEBOX 成功开启礼包\获得各高级传送卷共6张。
+#ELSEACT
+GIVE 高级传送卷礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于6格！
+Break
+
+[@StdModeFunc536]
+#if
+CheckBagSize 4
+#act
+GIVE 海底龙宫传送卷 1
+GIVE 轮回海传送卷 1
+GIVE 荒古禁地传送卷 1
+GIVE 天之颠传送卷 1
+MESSAGEBOX 成功开启礼包\获得各终极传送卷共4张。
+#ELSEACT
+GIVE 终极传送卷礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于4格！
+Break
+
+;========================
+[@StdModeFunc537]
+#IF
+#ACT
+CALCVAR HUMAN 赞助币 + 1
+SAVEVAR HUMAN 赞助币 ..\QuestDiary\充值排行榜\赞助币.txt
+SendMsg 6 恭喜你获得赞助币1个，您当前的元宝为:<$HUMAN(赞助币)>个。
+break
+
+[@StdModeFunc538]
+#IF
+#ACT
+CALCVAR HUMAN 赞助币 + 5
+SAVEVAR HUMAN 赞助币 ..\QuestDiary\充值排行榜\赞助币.txt
+SendMsg 6 恭喜你获得赞助币5个，您当前的元宝为:<$HUMAN(赞助币)>个。
+break
+
+[@StdModeFunc539]
+#IF
+NOT CheckSlaveName 新手宝宝
+checklevelex < 70
+#ACT
+MOBSLAVE 新手宝宝 3 1
+MOBSLAVE 新手宝宝 3 1
+GIVE 新手宝宝召唤卷 1
+SendMsg 6 恭喜你成功召唤2个新手宝宝！70以上使用无效。
+#ELSEACT
+GIVE 新手宝宝召唤卷 1
+MESSAGEBOX 对不起，1.你等级大于69级。\2.或者你已经召唤了新手宝宝。
+break
+
+[@StdModeFunc600]
+#IF
+#ACT
+Give 金砖 2
+SENDMSG 6 [系统]:恭喜您打开金盒获得金砖2块!
+break
+
+
+[@StdModeFunc601]
+#IF
+#ACT
+Give 金条 5
+SENDMSG 6 [系统]:恭喜您打开金砖获得金条5根!
+break
+
+[@StdModeFunc605]
+#IF
+CheckItemAddValue 1 20 < 7
+#ACT
+HookItem 1
+ChangeGiveItem 7 20 +1
+ChangeGiveItem 8
+#ELSEACT
+MESSAGEBOX 你的武器附加了7点幸运值~不可以在加了!!\
+BREAK
+
+[@StdModeFunc610]
+#if
+#act
+mapmove SFZ
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[十方阵]#7打宝!
+break
+
+[@StdModeFunc611]
+#if
+#act
+mapmove YMH
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[幽冥海]#7打宝!
+break
+
+[@StdModeFunc612]
+#if
+#act
+mapmove DY
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[地狱]#7打宝!
+break
+
+[@StdModeFunc613]
+#if
+#act
+mapmove YMLD
+GIVE 回城卷 1
+SENDMSG 0 #7[系统]：#7<$USERNAME>使用传送卷闯进#7[遗迹]#7打宝!
+break
+
+[@StdModeFunc614]
+#if
+CheckBagSize 4
+#act
+GIVE 十方阵传送卷 1
+GIVE 幽冥海传送卷 1
+GIVE 地狱传送卷 1
+GIVE 遗迹传送卷 1
+MESSAGEBOX 成功开启礼包\获得各龙神传送卷共4张。
+#ELSEACT
+GIVE 龙神传送卷礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于4格!
+Break

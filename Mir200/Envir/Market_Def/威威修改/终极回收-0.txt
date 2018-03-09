@@ -1,0 +1,1545 @@
+[@main](2393,300,540,3)
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=23}\
+　{请点清背包的重要物品，误回收了一概不=FCO=23}\
+　{负责！=FCO=23}\
+　{[飞仙者]套,每件1000元宝+100W经验=FCO=254}\
+　{[强仙者]套,每件2500元宝+250W经验=FCO=254}\
+　{[成仙者]套,每件5000元宝+500W经验=FCO=254}\
+　{[灭世神]套,每件10000元宝+1000W经验=FCO=254}\
+　{[初级斗笠],每件100元宝+100W经验=FCO=254}\
+　\
+　\
+　　　　　　<{[一键回收飞仙者套]=FCO=70}|点击回收/@飞仙者> \  
+　　　　　　<{[一键回收强仙者套]=FCO=70}|点击回收/@强仙者> \  
+　　　　　　<{[一键回收成仙者套]=FCO=70}|点击回收/@成仙者> \  
+　　　　　　<{[一键回收灭世神套]=FCO=70}|点击回收/@灭世神> \  
+　　　　　　<{[一键回收斗笠装备]=FCO=70}|点击回收初级斗笠/@斗笠>\ \ \
+<{[结束对话]=FCO=249}/@exit>\
+
+[@飞仙者](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @飞仙者提示
+#IF
+CHECKITEM 飞仙者★战刀 1
+#ACT
+TAKE 飞仙者★战刀 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★道剑 1
+#ACT
+TAKE 飞仙者★道剑 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★魔刃 1
+#ACT
+TAKE 飞仙者★魔刃 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★男战袍 1
+#ACT
+TAKE 飞仙者★男战袍 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★女战袍 1
+#ACT
+TAKE 飞仙者★女战袍 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+#IF
+CHECKITEM 飞仙者★男道袍 1
+#ACT
+TAKE 飞仙者★男道袍 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+#IF
+CHECKITEM 飞仙者★女道袍 1
+#ACT
+TAKE 飞仙者★女道袍 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★男魔袍 1
+#ACT
+TAKE 飞仙者★男魔袍 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★女魔袍 1
+#ACT
+TAKE 飞仙者★女魔袍 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★战链 1
+#ACT
+TAKE 飞仙者★战链 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★道链 1
+#ACT
+TAKE 飞仙者★道链 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★魔链 1
+#ACT
+TAKE 飞仙者★魔链 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★战盔 1
+#ACT
+TAKE 飞仙者★战盔 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★道盔 1
+#ACT
+TAKE 飞仙者★道盔 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+#IF
+CHECKITEM 飞仙者★魔盔 1
+#ACT
+TAKE 飞仙者★魔盔 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★战戒 1
+#ACT
+TAKE 飞仙者★战戒 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+#IF
+CHECKITEM 飞仙者★道戒 1
+#ACT
+TAKE 飞仙者★道戒 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+#IF
+CHECKITEM 飞仙者★魔戒 1
+#ACT
+TAKE 飞仙者★魔戒 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+
+
+#IF
+CHECKITEM 飞仙者★战镯 1
+#ACT
+TAKE 飞仙者★战镯 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+
+#IF
+CHECKITEM 飞仙者★道镯 1
+#ACT
+TAKE 飞仙者★道镯 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+
+#IF
+CHECKITEM 飞仙者★魔镯 1
+#ACT
+TAKE 飞仙者★魔镯 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★战带 1
+#ACT
+TAKE 飞仙者★战带 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★道带 1
+#ACT
+TAKE 飞仙者★道带 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★魔带 1
+#ACT
+TAKE 飞仙者★魔带 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★战靴 1
+#ACT
+TAKE 飞仙者★战靴 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★道靴 1
+#ACT
+TAKE 飞仙者★道靴 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+#IF
+CHECKITEM 飞仙者★魔靴 1
+#ACT
+TAKE 飞仙者★魔靴 1
+GAMEGOLD + 1000
+ChangeExp + 1000000
+INC M0 1000
+INC M99 1000000
+DELAYGOTO 0  @飞仙者
+break
+
+
+
+[@飞仙者提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[飞仙者]套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[飞仙者]套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @main
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=23}\
+　{请点清背包的重要物品，误回收了一概不=FCO=23}\
+　{负责！=FCO=23}\
+　{[飞仙者]套,每件1000元宝+100W经验=FCO=254}\
+　{[强仙者]套,每件2500元宝+250W经验=FCO=254}\
+　{[成仙者]套,每件5000元宝+500W经验=FCO=254}\
+　{[灭世神]套,每件10000元宝+1000W经验=FCO=254}\
+　\
+　\
+　　　　　　<{[一键回收飞仙者套]=FCO=70}|点击回收/@飞仙者> \  
+　　　　　　<{[一键回收强仙者套]=FCO=70}|点击回收/@强仙者> \  
+　　　　　　<{[一键回收成仙者套]=FCO=70}|点击回收/@成仙者> \  
+　　　　　　<{[一键回收灭世神套]=FCO=70}|点击回收/@灭世神> \  
+
+　\
+　\　\
+<{[结束对话]=FCO=249}/@exit>\
+
+
+[@强仙者](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @强仙者提示
+#IF
+CHECKITEM 强仙者★圣刀 1
+#ACT
+TAKE 强仙者★圣刀 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★圣扇 1
+#ACT
+TAKE 强仙者★圣扇 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★圣杖 1
+#ACT
+TAKE 强仙者★圣杖 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★男战袍 1
+#ACT
+TAKE 强仙者★男战袍 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★女战袍 1
+#ACT
+TAKE 强仙者★女战袍 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+#IF
+CHECKITEM 强仙者★男道袍 1
+#ACT
+TAKE 强仙者★男道袍 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+#IF
+CHECKITEM 强仙者★女道袍 1
+#ACT
+TAKE 强仙者★女道袍 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★男魔袍 1
+#ACT
+TAKE 强仙者★男魔袍 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★女魔袍 1
+#ACT
+TAKE 强仙者★女魔袍 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★战链 1
+#ACT
+TAKE 强仙者★战链 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★道链 1
+#ACT
+TAKE 强仙者★道链 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★魔链 1
+#ACT
+TAKE 强仙者★魔链 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★战盔 1
+#ACT
+TAKE 强仙者★战盔 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★道盔 1
+#ACT
+TAKE 强仙者★道盔 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+#IF
+CHECKITEM 强仙者★魔盔 1
+#ACT
+TAKE 强仙者★魔盔 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★战戒 1
+#ACT
+TAKE 强仙者★战戒 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+#IF
+CHECKITEM 强仙者★道戒 1
+#ACT
+TAKE 强仙者★道戒 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+#IF
+CHECKITEM 强仙者★魔戒 1
+#ACT
+TAKE 强仙者★魔戒 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+
+
+#IF
+CHECKITEM 强仙者★战镯 1
+#ACT
+TAKE 强仙者★战镯 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+
+#IF
+CHECKITEM 强仙者★道镯 1
+#ACT
+TAKE 强仙者★道镯 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+
+#IF
+CHECKITEM 强仙者★魔镯 1
+#ACT
+TAKE 强仙者★魔镯 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★战带 1
+#ACT
+TAKE 强仙者★战带 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★道带 1
+#ACT
+TAKE 强仙者★道带 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★魔带 1
+#ACT
+TAKE 强仙者★魔带 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★战靴 1
+#ACT
+TAKE 强仙者★战靴 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★道靴 1
+#ACT
+TAKE 强仙者★道靴 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+#IF
+CHECKITEM 强仙者★魔靴 1
+#ACT
+TAKE 强仙者★魔靴 1
+GAMEGOLD + 2500
+ChangeExp + 2500000
+INC M0 2500
+INC M99 1000000
+DELAYGOTO 0  @强仙者
+break
+
+
+
+[@强仙者提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[强仙者]套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[强仙者]套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @main
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=23}\
+　{请点清背包的重要物品，误回收了一概不=FCO=23}\
+　{负责！=FCO=23}\
+　{[飞仙者]套,每件1000元宝+100W经验=FCO=254}\
+　{[强仙者]套,每件2500元宝+250W经验=FCO=254}\
+　{[成仙者]套,每件5000元宝+500W经验=FCO=254}\
+　{[灭世神]套,每件10000元宝+1000W经验=FCO=254}\
+　\
+　\
+　　　　　　<{[一键回收飞仙者套]=FCO=70}|点击回收/@飞仙者> \  
+　　　　　　<{[一键回收强仙者套]=FCO=70}|点击回收/@强仙者> \  
+　　　　　　<{[一键回收成仙者套]=FCO=70}|点击回收/@成仙者> \  
+　　　　　　<{[一键回收灭世神套]=FCO=70}|点击回收/@灭世神> \  
+
+　\
+　\　\
+<{[结束对话]=FCO=249}/@exit>\
+
+[@成仙者](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @成仙者提示
+#IF
+CHECKITEM 成仙者★仙刀 1
+#ACT
+TAKE 成仙者★仙刀 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★仙扇 1
+#ACT
+TAKE 成仙者★仙扇 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★仙杖 1
+#ACT
+TAKE 成仙者★仙杖 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★男战袍 1
+#ACT
+TAKE 成仙者★男战袍 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★女战袍 1
+#ACT
+TAKE 成仙者★女战袍 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+#IF
+CHECKITEM 成仙者★男道袍 1
+#ACT
+TAKE 成仙者★男道袍 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+#IF
+CHECKITEM 成仙者★女道袍 1
+#ACT
+TAKE 成仙者★女道袍 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★男魔袍 1
+#ACT
+TAKE 成仙者★男魔袍 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★女魔袍 1
+#ACT
+TAKE 成仙者★女魔袍 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★战链 1
+#ACT
+TAKE 成仙者★战链 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★道链 1
+#ACT
+TAKE 成仙者★道链 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★魔链 1
+#ACT
+TAKE 成仙者★魔链 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★战盔 1
+#ACT
+TAKE 成仙者★战盔 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★道盔 1
+#ACT
+TAKE 成仙者★道盔 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+#IF
+CHECKITEM 成仙者★魔盔 1
+#ACT
+TAKE 成仙者★魔盔 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★战戒 1
+#ACT
+TAKE 成仙者★战戒 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+#IF
+CHECKITEM 成仙者★道戒 1
+#ACT
+TAKE 成仙者★道戒 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+#IF
+CHECKITEM 成仙者★魔戒 1
+#ACT
+TAKE 成仙者★魔戒 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+
+
+#IF
+CHECKITEM 成仙者★战镯 1
+#ACT
+TAKE 成仙者★战镯 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+
+#IF
+CHECKITEM 成仙者★道镯 1
+#ACT
+TAKE 成仙者★道镯 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+
+#IF
+CHECKITEM 成仙者★魔镯 1
+#ACT
+TAKE 成仙者★魔镯 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★战带 1
+#ACT
+TAKE 成仙者★战带 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★道带 1
+#ACT
+TAKE 成仙者★道带 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★魔带 1
+#ACT
+TAKE 成仙者★魔带 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★战靴 1
+#ACT
+TAKE 成仙者★战靴 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★道靴 1
+#ACT
+TAKE 成仙者★道靴 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+#IF
+CHECKITEM 成仙者★魔靴 1
+#ACT
+TAKE 成仙者★魔靴 1
+GAMEGOLD + 5000
+ChangeExp + 5000000
+INC M0 5000
+INC M99 5000000
+DELAYGOTO 0  @成仙者
+break
+
+
+
+[@成仙者提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[成仙者]套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[成仙者]套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @main
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=23}\
+　{请点清背包的重要物品，误回收了一概不=FCO=23}\
+　{负责！=FCO=23}\
+　{[飞仙者]套,每件1000元宝+100W经验=FCO=254}\
+　{[强仙者]套,每件2500元宝+250W经验=FCO=254}\
+　{[成仙者]套,每件5000元宝+500W经验=FCO=254}\
+　{[灭世神]套,每件10000元宝+1000W经验=FCO=254}\
+　\
+　\
+　　　　　　<{[一键回收飞仙者套]=FCO=70}|点击回收/@飞仙者> \  
+　　　　　　<{[一键回收强仙者套]=FCO=70}|点击回收/@强仙者> \  
+　　　　　　<{[一键回收成仙者套]=FCO=70}|点击回收/@成仙者> \  
+　　　　　　<{[一键回收灭世神套]=FCO=70}|点击回收/@灭世神> \  
+
+　\
+　\　\
+<{[结束对话]=FCO=249}/@exit>\
+
+[@灭世神](2393,300,540,3)
+#IF
+#SAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @灭世神提示
+#IF
+CHECKITEM 灭世神★斩战 1
+#ACT
+TAKE 灭世神★斩战 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★抹道 1
+#ACT
+TAKE 灭世神★抹道 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★灭魔 1
+#ACT
+TAKE 灭世神★灭魔 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★男战袍 1
+#ACT
+TAKE 灭世神★男战袍 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★女战袍 1
+#ACT
+TAKE 灭世神★女战袍 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+#IF
+CHECKITEM 灭世神★男道袍 1
+#ACT
+TAKE 灭世神★男道袍 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+#IF
+CHECKITEM 灭世神★女道袍 1
+#ACT
+TAKE 灭世神★女道袍 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★男魔袍 1
+#ACT
+TAKE 灭世神★男魔袍 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★女魔袍 1
+#ACT
+TAKE 灭世神★女魔袍 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★战链 1
+#ACT
+TAKE 灭世神★战链 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★道链 1
+#ACT
+TAKE 灭世神★道链 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★魔链 1
+#ACT
+TAKE 灭世神★魔链 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★战盔 1
+#ACT
+TAKE 灭世神★战盔 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★道盔 1
+#ACT
+TAKE 灭世神★道盔 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+#IF
+CHECKITEM 灭世神★魔盔 1
+#ACT
+TAKE 灭世神★魔盔 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★战戒 1
+#ACT
+TAKE 灭世神★战戒 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+#IF
+CHECKITEM 灭世神★道戒 1
+#ACT
+TAKE 灭世神★道戒 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+#IF
+CHECKITEM 灭世神★魔戒 1
+#ACT
+TAKE 灭世神★魔戒 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+
+
+#IF
+CHECKITEM 灭世神★战镯 1
+#ACT
+TAKE 灭世神★战镯 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+
+#IF
+CHECKITEM 灭世神★道镯 1
+#ACT
+TAKE 灭世神★道镯 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+
+#IF
+CHECKITEM 灭世神★魔镯 1
+#ACT
+TAKE 灭世神★魔镯 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★战带 1
+#ACT
+TAKE 灭世神★战带 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★道带 1
+#ACT
+TAKE 灭世神★道带 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★魔带 1
+#ACT
+TAKE 灭世神★魔带 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★战靴 1
+#ACT
+TAKE 灭世神★战靴 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★道靴 1
+#ACT
+TAKE 灭世神★道靴 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+#IF
+CHECKITEM 灭世神★魔靴 1
+#ACT
+TAKE 灭世神★魔靴 1
+GAMEGOLD + 10000
+ChangeExp + 10000000
+INC M0 10000
+INC M99 10000000
+DELAYGOTO 0  @灭世神
+break
+
+
+[@斗笠]
+#IF
+CHECKITEM 初级斗笠 1
+#ACT
+TAKE 初级斗笠 1
+GAMEGOLD + 100
+ChangeExp + 1000000
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@灭世神提示](2393,300,540,3)
+#IF
+LARGE M0 0
+#ACT
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[灭世神]套#5赚取了<$STR(M0)>元宝。
+SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]一键回收了#6FFFF/8#6[灭世神]套#5赚取了<$STR(M99)>经验。
+Mov M0 0
+Mov M99 0
+Goto @main
+#ELSESAY
+　\　\
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{温-馨-提-醒:注意贵重物品,避免误回收。=FCO=23}\
+　{请点清背包的重要物品，误回收了一概不=FCO=23}\
+　{负责！=FCO=23}\
+　{[飞仙者]套,每件1000元宝+100W经验=FCO=254}\
+　{[强仙者]套,每件2500元宝+250W经验=FCO=254}\
+　{[成仙者]套,每件5000元宝+500W经验=FCO=254}\
+　{[灭世神]套,每件10000元宝+1000W经验=FCO=254}\
+　{[初级斗笠],每件100元宝+100W经验=FCO=254}\
+　\
+　\
+　　　　　　<{[一键回收飞仙者套]=FCO=70}|点击回收/@飞仙者> \  
+　　　　　　<{[一键回收强仙者套]=FCO=70}|点击回收/@强仙者> \  
+　　　　　　<{[一键回收成仙者套]=FCO=70}|点击回收/@成仙者> \  
+　　　　　　<{[一键回收灭世神套]=FCO=70}|点击回收/@灭世神> \
+　　　　　　<{[一键回收初级斗笠]=FCO=70}|点击回收/@斗笠> \    
+
+　\
+　\　\
+<{[结束对话]=FCO=249}/@exit>\
+
+

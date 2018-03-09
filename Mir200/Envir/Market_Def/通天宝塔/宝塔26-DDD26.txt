@@ -1,0 +1,94 @@
+[@main](2250,300,540,3)
+
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\　\　\　\
+　{当前第26层，需要清理完全部怪物才可以下层！=FCO=250}\
+　{下层收费：=FCO=23}{1400元宝=FCO=254} \
+　{本层通关：=FCO=23}{奖励2600W经验+随机魔龙装备1件=FCO=254}\
+　{本层通关：=FCO=23}{或随机强仙装备1件=FCO=254}\
+　\　\　\　\　\
+　<{[领取奖励-挑战下层]=FCO=70}|[下层收费1400元宝=FCO=00FF7F]/@下一层>\
+　<{[领取奖励-返回土城]=FCO=70}/@返回土城>\
+
+[@下一层]
+#IF
+CheckMapMonCount DDD26 < 1
+CheckGameGold ? 1400
+#ACT
+GetRandomName ../QuestDiary/押镖奖励/强仙套.txt S18
+give <$Str(S18)>
+ChangeExp + 26000000
+GameGold - 1400
+mapmove DDD27
+MISSION DDD27 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 禁地荒奴1
+
+MISSION DDD27 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 禁地荒奴2
+
+MISSION DDD27 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 禁地荒奴3
+
+MISSION DDD27 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 禁地荒奴4
+
+MISSION DDD27 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 禁地荒奴5
+
+MISSION DDD27 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 禁地荒奴6
+
+
+INC G100 1400
+CALCVAR HUMAN 消费积分 + 1400
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[1400]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #6FFFF/8#6[系统]#5:恭喜玩家#7[<$USERNAME>]#7成功通关通天宝塔第26层，获得#7<$Str(S18)>#7装备+2600W经验奖励！
+#elseact
+messagebox  失败：\1、你没有1400元宝！2、本层怪物没清理干净
+
+
+[@返回土城]
+#IF
+CheckMapMonCount DDD26 < 1
+#ACT
+GetRandomName ../QuestDiary/押镖奖励/强仙套.txt S18
+give <$Str(S18)>
+ChangeExp + 26000000
+mapmove 3 330 330
+SENDMSG 0 #6FFFF/8#6[系统]#5:恭喜玩家#7[<$USERNAME>]#7成功通关通天宝塔第26层，获得#7<$Str(S18)>#7装备+2600W经验奖励！
+#elseact
+messagebox  失败：\1、本层怪物没清理干净

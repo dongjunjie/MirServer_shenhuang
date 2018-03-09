@@ -1,0 +1,1162 @@
+[@main](2566,300,540,3)
+　\
+　　　　　　　　　　　　 {你今天宣传了吗？=FCO=250}\
+　　　　　　　　　　　　 {听说宣传奖励很丰富哦。=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+ 　{去帮我收集一些材料来，我可以帮你打造=FCO=254}\
+ 　{一些失传多年的斗笠.斗笠也可以打怪爆出!=FCO=254}\
+ 　{初级斗笠打怪爆出!低级斗笠可以合成高级!=FCO=249}\
+ 　1.{i.1842,c.0=item}        2.{i.1843,c.0=item}　　　　3.{i.1844,c.0=item}        4.{i.1845,c.0=item}\  \  \
+　     5.{i.1846,c.0=item}        6.{i.1847,c.0=item}　　　　7.{i.1848,c.0=item}\ \ \ \
+ 　{注意:=FCO=249}{斗笠打造为30%几率成功!并非100%哟!=FCO=254}\
+ 　{打造失败将不会有任何提示!且扣除相应材料!=FCO=254}\ \
+　　　 <{[白银斗笠]=FCO=70}|[打造需求：=FCO=00FF00]
+^[元宝1000,初级斗笠X3,钻石X3=FCO=7280FA]/@白银斗笠>
+　　　 <{[黄金斗笠]=FCO=70}|[打造需求：=FCO=00FF00]
+^[元宝2000,白银斗笠X3,钻石X5=FCO=7280FA]/@黄金斗笠>\ \
+　　　 <{[钻石斗笠]=FCO=70}|[打造需求：=FCO=00FF00]
+^[元宝3000,黄金斗笠X3,钻石X7=FCO=7280FA]/@钻石斗笠>
+　　   <{[王者斗笠]=FCO=70}|[打造需求：=FCO=00FF00]
+^[元宝4000,钻石斗笠X3,钻石X9=FCO=7280FA]/@王者斗笠>\ \
+　　　 <{[至尊斗笠]=FCO=70}|[打造需求：=FCO=00FF00]
+^[元宝5000,王者斗笠X3,钻石X12=FCO=7280FA]/@至尊斗笠>
+　　　 <{[神皇斗笠]=FCO=70}|[打造需求：=FCO=00FF00]
+^[元宝6000,至尊斗笠X3,钻石X15=FCO=7280FA]/@神皇斗笠>\ \
+
+;------------------------------------------------------------------------------------------------------
+;------------------------------------------------------------------------------------------------------
+[@白银斗笠]
+#if
+CheckItemCount 初级斗笠 ? 3
+CheckItemCount 钻石 ? 3
+CheckGameGold ? 1000
+#ACT
+TakeCount 初级斗笠 3
+TakeCount 钻石 3
+GameGold - 1000
+INC G100 1000
+CALCVAR HUMAN 消费积分 + 1000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+GOTO @白银斗笠X
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@白银斗笠X]
+#IF
+Random 10
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆白银斗笠
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆白银斗笠
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆白银斗笠
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆白银斗笠
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆白银斗笠
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆白银斗笠
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆白银斗笠
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆白银斗笠
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆白银斗笠
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆白银斗笠
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆白银斗笠
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 白银斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆白银斗笠
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[白银斗笠]#7!!!
+break
+
+;------------------------------------------------------------------------------------------------------
+
+[@黄金斗笠]
+#if
+CheckItemCount 白银斗笠 ? 3
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+TakeCount 白银斗笠 3
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+GOTO @黄金斗笠X
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@黄金斗笠X]
+#IF
+Random 10
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆黄金斗笠
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆黄金斗笠
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆黄金斗笠
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆黄金斗笠
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆黄金斗笠
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆黄金斗笠
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆黄金斗笠
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆黄金斗笠
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆黄金斗笠
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆黄金斗笠
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆黄金斗笠
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 黄金斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆黄金斗笠
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[黄金斗笠]#7!!!
+break
+
+;------------------------------------------------------------------------------------------------------
+
+[@钻石斗笠]
+#if
+CheckItemCount 黄金斗笠 ? 3
+CheckItemCount 钻石 ? 7
+CheckGameGold ? 3000
+#ACT
+TakeCount 黄金斗笠 3
+TakeCount 钻石 7
+GameGold - 3000
+INC G100 3000
+CALCVAR HUMAN 消费积分 + 3000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+GOTO @钻石斗笠X
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@钻石斗笠X]
+#IF
+Random 10
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆钻石斗笠
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆钻石斗笠
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆钻石斗笠
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆钻石斗笠
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆钻石斗笠
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆钻石斗笠
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆钻石斗笠
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆钻石斗笠
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆钻石斗笠
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆钻石斗笠
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆钻石斗笠
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 钻石斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆钻石斗笠
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[钻石斗笠]#7!!!
+break
+
+;------------------------------------------------------------------------------------------------------
+
+[@王者斗笠]
+#if
+CheckItemCount 钻石斗笠 ? 3
+CheckItemCount 钻石 ? 9
+CheckGameGold ? 4000
+#ACT
+TakeCount 钻石斗笠 3
+TakeCount 钻石 9
+GameGold - 4000
+INC G100 4000
+CALCVAR HUMAN 消费积分 + 4000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+GOTO @王者斗笠X
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@王者斗笠X]
+#IF
+Random 10
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆王者斗笠
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆王者斗笠
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆王者斗笠
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆王者斗笠
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆王者斗笠
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆王者斗笠
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆王者斗笠
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆王者斗笠
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆王者斗笠
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆王者斗笠
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆王者斗笠
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 王者斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆王者斗笠
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[王者斗笠]#7!!!
+break
+
+;------------------------------------------------------------------------------------------------------
+
+[@至尊斗笠]
+#if
+CheckItemCount 王者斗笠 ? 3
+CheckItemCount 钻石 ? 12
+CheckGameGold ? 5000
+#ACT
+TakeCount 王者斗笠 3
+TakeCount 钻石 12
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+GOTO @至尊斗笠X
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@至尊斗笠X]
+#IF
+Random 10
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆至尊斗笠
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆至尊斗笠
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆至尊斗笠
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆至尊斗笠
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆至尊斗笠
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆至尊斗笠
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆至尊斗笠
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆至尊斗笠
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆至尊斗笠
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆至尊斗笠
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆至尊斗笠
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 至尊斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆至尊斗笠
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[至尊斗笠]#7!!!
+break
+
+;------------------------------------------------------------------------------------------------------
+
+[@神皇斗笠]
+#if
+CheckItemCount 至尊斗笠 ? 3
+CheckItemCount 钻石 ? 15
+CheckGameGold ? 2000
+#ACT
+TakeCount 至尊斗笠 3
+TakeCount 钻石 15
+GameGold - 6000
+INC G100 6000
+CALCVAR HUMAN 消费积分 + 6000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+GOTO @神皇斗笠X
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@神皇斗笠X]
+#IF
+Random 10
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 生命☆神皇斗笠
+ChangeGiveItem 7 10 +255
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 攻击☆神皇斗笠
+ChangeGiveItem 7 2 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔法☆神皇斗笠
+ChangeGiveItem 7 3 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 道术☆神皇斗笠
+ChangeGiveItem 7 4 +50
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 50
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 防御☆神皇斗笠
+ChangeGiveItem 7 0 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 60
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 魔御☆神皇斗笠
+ChangeGiveItem 7 1 +100
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 70
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 精准☆神皇斗笠
+ChangeGiveItem 7 12 +6
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 80
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 幸运☆神皇斗笠
+ChangeGiveItem 7 20 +7
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 10
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 伤害☆神皇斗笠
+ChangeGiveItem 7 22 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 20
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 吸收☆神皇斗笠
+ChangeGiveItem 7 23 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 30
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 致命☆神皇斗笠
+ChangeGiveItem 7 26 +5
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+#IF
+Random 40
+#ACT
+DynamicGive 神皇斗笠 1
+ChangeGiveItem 7 75 249
+ChangeGiveItem 15 经验☆神皇斗笠
+ChangeGiveItem 7 62 +30
+ChangeGiveItem 7 14 +1
+ChangeGiveItem 14 14
+ChangeGiveItem 8
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[64000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #7┃#7恭喜#7[<$USERNAME>]#7成功打造极品#7[神皇斗笠]#7!!!
+break
+
+;------------------------------------------------------------------------------------------------------

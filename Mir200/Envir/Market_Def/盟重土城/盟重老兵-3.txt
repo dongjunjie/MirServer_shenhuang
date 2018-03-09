@@ -1,0 +1,930 @@
+[@main](2388,300,540,3)
+　\
+　　　　　　　　　　　　 　{哎哟，帅哥！=FCO=254}\
+　　　　　　　　　　　　 　{宣传一下本服嘛！=FCO=254}\
+　　　　　　　　　　　　 　{么么哒！=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　　<{[比奇大城]=FCO=250}/@比奇>  <{[封魔城堡]=FCO=250}/@封魔>  <{[白日天门]=FCO=250}/@白日>\
+　　<{[苍月海岛]=FCO=250}/@苍月>  <{[盟重土城]=FCO=250}/@土城>  <{[去 商 店]=FCO=250}/@商店> \ 
+　　<{[一键满血]=FCO=253}|收费5元宝一次！/@满血>
+;　<{[安全泡点]=FCO=253}|收费10元宝一次！在盟重省安全区范围内，每3秒+500经验/@安全区泡点>
+;　<{[险恶泡点]=FCO=253}|收费10元宝一次！野外每3秒+250经验/@危险区泡点> \
+　\　\
+　{伊春传奇：=FCO=254}\
+　{独家制作版本，市面绝无二家！每天宣传15群，=FCO=254}\
+　{轻松领50元人民币等额元宝+赞助礼包！=FCO=254}\
+　\
+<&{[初级传送]=FCO=70}{(1-40级)=FCO=249}|[爆各种商店套，沃玛,祖玛，强化技能=FCO=00FF7F]^[建议新人前期先打完一套强化技能书。=FCO=07280FA]/@初级传送> \
+<&{[中级传送]=FCO=70}{(41-60级)=FCO=249}|[爆各种沃玛,祖玛，赤月，强化技能，=FCO=00FF7F]
+^[建议穿齐一套极品沃玛套或祖玛套再挑战。=FCO=07280FA]
+^[请勿盲目越级挑战，效率低！=FCO=07280FA]/@中级传送> \
+<&{[高级传送]=FCO=70}{(61级+)=FCO=249}|[爆各种祖玛，赤月，魔龙，以及各种级别武器=FCO=00FF7F]
+^[建议穿齐一套极品祖玛套或赤月套再挑战。=FCO=07280FA]
+^[请勿盲目越级挑战，效率低！=FCO=07280FA]/@高级传送> \
+<&{[挑战副本]=FCO=70}{(强烈建议挑战)=FCO=249}|[(渡劫)装备爆率高,=FCO=00FF7F]
+^[每天免费进入一次，=FCO=07280FA]
+^[时间限制30分钟。=FCO=07280FA]
+^[可单人，可组队。=FCO=07280FA]/@进入副本> \
+<&{[宝宝之家]=FCO=70}{(法师专属诱惑宝宝)=FCO=249}|[20级可诱惑：巨型多角，防御30-30，血量3000，攻击20-50=FCO=00FF7F]
+^[40级可诱惑：兽人战神，防御50-50，血量5000，攻击30-100=FCO=00FF7F]
+^[60级可诱惑：地牢锤手，防御70-70，血量7000，攻击60-150=FCO=00FF7F]
+^[80级可诱惑：圣地卫士，防御90-90，血量9000，攻击100-200=FCO=00FF7F]
+^[100级可诱惑：修仙虎卫，防御110-110，血量11000，攻击150-250=FCO=00FF7F]
+^[提示：1.地图每小时刷新各种宝宝10个=FCO=07280FA]
+^[提示：2.法师最多只能诱惑5个宝宝，请诱惑好宝宝再招契约宝宝=FCO=07280FA]/@宝宝之家> \
+<&{[关闭]=FCO=249}/@exit>
+
+
+[@宝宝之家]
+#if
+#act
+mapmove bbzj
+GIVE 回城卷 1
+
+
+
+
+[@进入副本]
+#if
+#act
+mapmove fbdt
+GIVE 回城卷 1
+;----------------------------------------------------------------------
+[@高级传送](2388,300,540,3)
+　\
+　　　　　　　　　　　　 　{哎哟，帅哥！=FCO=254}\
+　　　　　　　　　　　　 　{宣传一下本服嘛！=FCO=254}\
+　　　　　　　　　　　　 　{么么哒！=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{伊春传奇：=FCO=254}\
+　{独家制作版本，市面绝无二家！每天宣传15群，=FCO=254}\
+　{轻松领50元人民币等额元宝+赞助礼包！=FCO=254}\
+　{为了优化服务器资源，=FCO=23}\
+　{部分低级地图均采取智能刷怪模式！=FCO=23}\
+　{当地图有人时才开始刷怪.无人时停止 ，=FCO=23}\
+　{服务器刷怪延迟1分钟左右，请耐心等待。=FCO=23}\
+　\　\　\
+　　<{[祖玛十八阁]=FCO=70}|[收费：500元宝,等级45，限时90分钟=FCO=00FF7F]
+^[怪物：精英祖玛怪，祖玛教皇=FCO=07280FA]
+^[刷新：小怪30分钟，BOSS100分钟=FCO=07280FA]/@祖玛十八阁1>
+　　<{[静之雪域]=FCO=70}|[收费：1000元宝,等级50，限时90分钟=FCO=00FF7F]
+^[怪物：各种雪域小怪，雪域魔王=FCO=07280FA]
+^[刷新：小怪30分钟，BOSS100分钟=FCO=07280FA]/@静之雪域1>\　\
+　　<{[雷炎洞穴]=FCO=70}|[收费：1500元宝,等级55，限时90分钟=FCO=00FF7F]
+^[怪物：各种雷炎小怪，雷炎蛛王=FCO=07280FA]
+^[刷新：小怪30分钟，BOSS100分钟=FCO=07280FA]
+^[提示：坐标78.158处进入二层=FCO=07280FA]/@雷炎洞穴1>
+　　　<{[火龙洞穴]=FCO=70}|[收费：2000元宝,等级60，限时90分钟=FCO=00FF7F]
+^[怪物：各种火龙小怪，火龙神=FCO=07280FA]
+^[刷新：小怪30分钟，BOSS100分钟=FCO=07280FA]/@火龙洞穴1>\　\
+　　<{[洞天福地]=FCO=70}|[收费：2500元宝,等级65，限时90分钟=FCO=00FF7F]
+^[怪物：各种小怪，骨翼蝠王=FCO=07280FA]
+^[刷新：小怪30分钟，BOSS100分钟=FCO=07280FA]/@洞天福地1>
+　　　<{[圣者天堂]=FCO=70}|[收费：3000元宝,等级70，限时90分钟=FCO=00FF7F]
+^[怪物：各种圣者小怪，圣者天魔，天霸圣主=FCO=07280FA]
+^[刷新：小怪30分钟，BOSS100分钟=FCO=07280FA]/@圣者天堂1>\　\
+　  <{[返回主页]=FCO=249}/@main> 
+
+[@圣者天堂1]
+#if
+CheckGameGold ? 3000
+CHECKLEVELEX ? 70
+#act
+GameGold - 3000
+TimeRecall 90
+mapmove E701
+GIVE 回城卷 1
+INC G100 3000
+CALCVAR HUMAN 消费积分 + 3000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[3000]#7元宝，获得#7[3000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7【<$USERNAME>】#7花费3000元宝进入了#7【圣者天堂】#7，#790分钟#7后自动退出此地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有3000元宝。或者你还没70级以上！
+
+
+[@洞天福地1]
+#if
+CheckGameGold ? 2500
+CHECKLEVELEX ? 65
+#act
+GameGold - 2500
+TimeRecall 90
+mapmove REDCAVE01
+GIVE 回城卷 1
+INC G100 2500
+CALCVAR HUMAN 消费积分 + 2500
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[2500]#7元宝，获得#7[2500]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7【<$USERNAME>】#7花费2500元宝进入了#7【洞天福地】#7，#790分钟#7后自动退出此地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有2500元宝。或者你还没65级以上！
+
+
+[@火龙洞穴1]
+#if
+CheckGameGold ? 2000
+CHECKLEVELEX ? 60
+#act
+GameGold - 2000
+TimeRecall 90
+mapmove D2082
+GIVE 回城卷 1
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[2000]#7元宝，获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7【<$USERNAME>】#7花费2000元宝进入了#7【火龙洞穴】#7，#790分钟#7后自动退出此地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有2000元宝。或者你还没60级以上！
+
+[@雷炎洞穴1]
+#if
+CheckGameGold ? 1500
+CHECKLEVELEX ? 55
+#act
+GameGold - 1500
+TimeRecall 90
+mapmove hl002
+GIVE 回城卷 1
+INC G100 1500
+CALCVAR HUMAN 消费积分 + 1500
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[1500]#7元宝，获得#7[1500]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7【<$USERNAME>】#7花费1500元宝进入了#7【雷炎洞穴】#7，#790分钟#7后自动退出此地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有1500元宝。或者你还没55级以上！
+
+
+
+[@静之雪域1]
+#if
+CheckGameGold ? 1000
+CHECKLEVELEX ? 50
+#act
+GameGold - 1000
+TimeRecall 90
+mapmove JZ006
+GIVE 回城卷 1
+INC G100 1000
+CALCVAR HUMAN 消费积分 + 1000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[1000]#7元宝，获得#7[1000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7【<$USERNAME>】#7花费1000元宝进入了#7【静之雪域】#7，#790分钟#7后自动退出此地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有1000元宝。或者你还没50级以上！
+
+[@祖玛十八阁1]
+#if
+CheckGameGold ? 500
+CHECKLEVELEX ? 45
+#act
+GameGold - 500
+TimeRecall 90
+mapmove 18gdt 20 8
+GIVE 回城卷 1
+INC G100 500
+CALCVAR HUMAN 消费积分 + 500
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[500]#7元宝，获得#7[500]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SendMsg 0 勇士#7【<$USERNAME>】#7花费500元宝进入了#7【祖玛十八阁】#7，#790分钟#7后自动退出此地图。
+#ELSEACT
+MESSAGEBOX 对不起：\1.你没有500元宝。或者你还没45级以上！
+
+
+
+
+
+
+
+
+
+
+
+;----------------------------------------------------------------------
+[@中级传送](2388,300,540,3)
+　\
+　　　　　　　　　　　　 　{哎哟，帅哥！=FCO=254}\
+　　　　　　　　　　　　 　{宣传一下本服嘛！=FCO=254}\
+　　　　　　　　　　　　 　{么么哒！=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{伊春传奇：=FCO=254}\
+　{独家制作版本，市面绝无二家！每天宣传15群，=FCO=254}\
+　{轻松领50元人民币等额元宝+赞助礼包！=FCO=254}\
+　{为了优化服务器资源，=FCO=23}\
+　{部分低级地图均采取智能刷怪模式！=FCO=23}\
+　{当地图有人时才开始刷怪.无人时停止 ，=FCO=23}\
+　{服务器刷怪延迟1分钟左右，请耐心等待。=FCO=23}\
+　\　\
+　【<石墓五层|[收费:50元宝=FCO=00FF7F]^[提示：本地图为(智能刷怪模式)=FCO=07280FA]/@石墓五层1>】
+-【<石墓七层|[收费:80元宝=FCO=00FF7F]/@石墓七层1>】
+-【<沃玛三层||[收费:80元宝=FCO=00FF7F]/@沃玛三层1>】\
+　【<霸者大厅||[收费:50元宝=FCO=00FF7F]^[提示：本地图为(智能刷怪模式)=FCO=07280FA]/@霸者大厅1>】
+-【<封 魔 殿|[收费:100元宝=FCO=00FF7F]/@封 魔 殿1>】
+-【<牛魔五层|[收费:50元宝=FCO=00FF7F]/@牛魔五层1>】\
+　【<牛魔大厅|[收费:100元宝=FCO=00FF7F]/@牛魔大厅1>】
+-【<幻境三层|[收费:50元宝=FCO=00FF7F]/@幻境三层1>】
+-【<幻境七层|[收费:80元宝=FCO=00FF7F]/@幻境七层1>】\
+　【<幻境八层|[收费:100元宝=FCO=00FF7F]/@幻境八层1>】
+-【<幻境十层|[收费:150元宝=FCO=00FF7F]^[刷新各种怪和各大终极BOSS=FCO=07280FA]/@幻境十层1>】
+-【<死亡棺材|[收费:50元宝=FCO=00FF7F]/@死亡棺材1>】\
+　【<尸魔三层|[收费:50元宝=FCO=00FF7F]/@尸魔三层1>】
+-【<一 线 天|[收费:50元宝=FCO=00FF7F]/@一 线 天1>】
+-【<尸 王 殿|[收费:80元宝=FCO=00FF7F]^[爆强化技能最高的地图=FCO=07280FA]/@尸 王 殿1>】\
+　【<抉择之地|[收费:50元宝=FCO=00FF7F]^[提示：本地图为(智能刷怪模式)=FCO=07280FA]/@抉择之地1>】
+-【<赤月魔穴|[收费:100元宝=FCO=00FF7F]/@赤月魔穴1>】
+-【<恶魔祭坛|[收费:100元宝=FCO=00FF7F]/@恶魔祭坛1>】\
+　【<地下大厅|[收费:80元宝=FCO=00FF7F]/@沃玛地下大厅1>】
+-【<阎 王 殿|[收费:150元宝=FCO=00FF7F]^[爆强化技能最高的地图=FCO=07280FA]/@阎王殿1>】
+-【<骨魔五层|[收费:80元宝=FCO=00FF7F]/@骨魔五层1>】\
+　【<祖玛五层|[收费:50元宝=FCO=00FF7F]^[提示：本地图为(智能刷怪模式)=FCO=07280FA]/@祖玛五层1>】
+-【<祖玛七层|[收费:50元宝=FCO=00FF7F]/@祖玛七层1>】
+-【<祖玛之家|[收费:150元宝=FCO=00FF7F]/@祖玛之家1>】\
+　 <{[返回主页]=FCO=249}/@main> \
+
+[@石墓五层1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D715 88 82
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@石墓七层1]
+#if
+CheckGameGold ? 80
+#act
+GameGold - 80
+mapmove D717
+GIVE 回城卷 1
+INC G100 80
+CALCVAR HUMAN 消费积分 + 80
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[80]#7元宝，获得#7[80]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送80元宝。没钱就从一层慢慢跑！
+
+[@沃玛三层1]
+#if
+CheckGameGold ? 80
+#act
+GameGold - 80
+mapmove D024
+GIVE 回城卷 1
+INC G100 80
+CALCVAR HUMAN 消费积分 + 80
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[80]#7元宝，获得#7[80]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送80元宝。没钱就从一层慢慢跑！
+
+
+[@沃玛地下大厅1]
+#if
+CheckGameGold ? 80
+#act
+GameGold - 80
+mapmove F013
+GIVE 回城卷 1
+INC G100 80
+CALCVAR HUMAN 消费积分 + 80
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[80]#7元宝，获得#7[80]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送80元宝。没钱就从一层慢慢跑！
+
+[@霸者大厅1]
+#if
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D2008
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@封 魔 殿1]
+#if
+CheckGameGold ? 100
+#act
+GameGold - 100
+mapmove D2013
+GIVE 回城卷 1
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[100]#7元宝，获得#7[100]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送100元宝。没钱就从一层慢慢跑！
+
+[@牛魔五层1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D2076
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@牛魔大厅1]
+#if
+CheckGameGold ? 100
+#act
+GameGold - 100
+mapmove D2079
+GIVE 回城卷 1
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[100]#7元宝，获得#7[100]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送100元宝。没钱就从一层慢慢跑！
+
+[@幻境三层1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove H003
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+
+[@幻境七层1]
+#if
+CheckGameGold ? 80
+#act
+GameGold - 80
+mapmove H007
+GIVE 回城卷 1
+INC G100 80
+CALCVAR HUMAN 消费积分 + 80
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[80]#7元宝，获得#7[80]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送80元宝。没钱就从一层慢慢跑！
+
+[@幻境八层1]
+#if
+CheckGameGold ? 100
+#act
+GameGold - 100
+mapmove H008
+GIVE 回城卷 1
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[100]#7元宝，获得#7[100]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送100元宝。没钱就从一层慢慢跑！
+
+[@幻境十层1]
+#if
+CheckGameGold ? 150
+#act
+GameGold - 150
+mapmove H010
+GIVE 回城卷 1
+INC G100 150
+CALCVAR HUMAN 消费积分 + 150
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[150]#7元宝，获得#7[150]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送150元宝。没钱就从一层慢慢跑！
+
+[@一 线 天1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D618
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@死亡棺材1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D606
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@尸魔三层1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D2052
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@尸 王 殿1]
+#if
+CheckGameGold ? 80
+#act
+GameGold - 80
+mapmove Q004
+GIVE 回城卷 1
+INC G100 80
+CALCVAR HUMAN 消费积分 + 80
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[80]#7元宝，获得#7[80]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送80元宝。没钱就从一层慢慢跑！
+
+
+[@阎王殿1]
+#if
+CheckGameGold ? 150
+#act
+GameGold - 150
+mapmove yanwang
+GIVE 回城卷 1
+INC G100 150
+CALCVAR HUMAN 消费积分 + 150
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[150]#7元宝，获得#7[150]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送150元宝。没钱就从一层慢慢跑！
+
+[@抉择之地1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D1004 
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@赤月魔穴1]
+#if
+CheckGameGold ? 100
+#act
+GameGold - 100
+mapmove D10052 139 25
+GIVE 回城卷 1
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[100]#7元宝，获得#7[100]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送100元宝。没钱就从一层慢慢跑！
+
+[@恶魔祭坛1]
+#if
+CheckGameGold ? 100
+#act
+GameGold - 100
+mapmove D10051 180 55
+GIVE 回城卷 1
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[100]#7元宝，获得#7[100]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送100元宝。没钱就从一层慢慢跑！
+
+[@祖玛五层1]
+#if
+CheckGameGold ? 50
+#act
+GameGold - 50
+mapmove D505
+GIVE 回城卷 1
+INC G100 50
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[50]#7元宝，获得#7[50]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@祖玛七层1]
+#if
+CheckGameGold ? 100
+#act
+GameGold - 100
+mapmove D5072 7 53
+GIVE 回城卷 1
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[100]#7元宝，获得#7[100]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送50元宝。没钱就从一层慢慢跑！
+
+[@祖玛之家1]
+#if
+CheckGameGold ? 150
+#act
+GameGold - 150
+mapmove D515
+GIVE 回城卷 1
+INC G100 150
+CALCVAR HUMAN 消费积分 + 150
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[150]#7元宝，获得#7[150]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送150元宝。没钱就从一层慢慢跑！
+
+
+[@骨魔五层1]
+#if
+CheckGameGold ? 80
+#act
+GameGold - 80
+mapmove D2067
+GIVE 回城卷 1
+INC G100 80
+CALCVAR HUMAN 消费积分 + 80
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你使用传送功能消费了#7[80]#7元宝，获得#7[80]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送80元宝。没钱就从一层慢慢跑
+
+
+;----------------------------------------------------------------------
+;----------------------------------------------------------------------
+[@初级传送](2388,300,540,3)
+　\
+　　　　　　　　　　　　 　{哎哟，帅哥！=FCO=254}\
+　　　　　　　　　　　　 　{宣传一下本服嘛！=FCO=254}\
+　　　　　　　　　　　　 　{么么哒！=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{伊春传奇：=FCO=254}\
+　{独家制作版本，市面绝无二家！每天宣传15群，=FCO=254}\
+　{轻松领50元人民币等额元宝+赞助礼包！=FCO=254}\
+　{为了优化服务器资源，=FCO=23}\
+　{部分低级地图均采取智能刷怪模式！=FCO=23}\
+　{当地图有人时才开始刷怪.无人时停止 ，=FCO=23}\
+　{服务器刷怪延迟1分钟左右，请耐心等待。=FCO=23}\
+　\　\　\
+　【<比奇野外|[收费:0金币=FCO=00FF7F]/@比奇野外1>】
+-【<毒蛇矿区|[收费:0金币=FCO=00FF7F]^[提示：本地图除为(智能刷怪模式)=FCO=07280FA]/@毒蛇矿区1>】
+-【<毒蛇山谷|[收费:0金币=FCO=00FF7F]^[提示：本地图为(智能刷怪模式)=FCO=07280FA]/@毒蛇山谷1>】\
+　【<兽人古墓|[收费:0金币=FCO=00FF7F]^[提示：本地图为(智能刷怪模式)=FCO=07280FA]/@兽人古墓1>】
+-【<骷髅山洞|[收费:0金币=FCO=00FF7F]^[提示：本地图为(智能刷怪模式)=FCO=07280FA]/@骷髅山洞1>】
+-【<比奇矿区|[收费:0金币=FCO=00FF7F]^[提示：本地图除了尸王殿、阎王殿，其他均为(智能刷怪模式)=FCO=07280FA]/@比奇矿区1>】\
+　【<沃玛寺庙|[收费:5W金币=FCO=00FF7F]^[提示：本地图1-2层为(智能刷怪模式)=FCO=07280FA]/@沃玛寺庙1>】
+-【<蜈蚣洞口|[收费:5W金币=FCO=00FF7F]^[提示：本地图除了死亡棺材，其他均为(智能刷怪模式)=FCO=07280FA]/@蜈蚣洞口1>】
+-【<牛魔洞口|[收费:5W金币=FCO=00FF7F]^[提示：本地图1-4层为(智能刷怪模式)=FCO=07280FA]/@牛魔洞口1>】\
+　【<尸魔洞口|[收费:5W金币=FCO=00FF7F]/@尸魔洞口1>】
+-【<封魔矿区|[收费:5W金币=FCO=00FF7F]^[提示：本地图除了封魔殿，其他均为(智能刷怪模式)=FCO=07280FA]/@封魔矿区1>】
+-【<骨魔洞口|[收费:5W金币=FCO=00FF7F]^[提示：本地图1-4层为(智能刷怪模式)=FCO=07280FA]/@骨魔洞口1>】\
+　【<祖玛寺庙|[收费:5W金币=FCO=00FF7F]^[提示：本地图1-6层为(智能刷怪模式)=FCO=07280FA]/@祖玛寺庙1>】
+-【<猪洞洞口|[收费:5W金币=FCO=00FF7F]^[提示：本地图1-6层为(智能刷怪模式)=FCO=07280FA]/@猪洞洞口1>】
+-【<赤月峡谷|[收费:5W金币=FCO=00FF7F]^[提示：本地图除了赤月魔穴、恶魔祭坛，其他均为(智能刷怪模式)=FCO=07280FA]/@赤月峡谷1>】\
+
+　 <{[返回主页]=FCO=249}/@main> \
+[@赤月峡谷1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D10011
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+
+
+[@猪洞洞口1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D711
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+
+
+[@祖玛寺庙1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D501
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+
+[@骨魔洞口1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D2061
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+
+[@封魔矿区1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D2001
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+[@尸魔洞口1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D2051
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+
+[@牛魔洞口1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D2071
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+[@蜈蚣洞口1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D601
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+[@沃玛寺庙1]
+#if
+CHECKGOLD 50000
+#act
+mapmove D023
+TAKE 金币 50000
+GIVE 回城卷 1
+#ELSEACT
+MESSAGEBOX 对不起：\1.每次传送5W金币
+
+[@比奇野外1]
+#if
+#act
+mapmove 0
+GIVE 回城卷 1
+
+[@沃玛深林1]
+#if
+#act
+mapmove 1
+GIVE 回城卷 1
+
+[@毒蛇山谷1]
+#if
+#act
+mapmove 2
+GIVE 回城卷 1
+
+[@兽人古墓1]
+#if
+#act
+mapmove D001
+GIVE 回城卷 1
+
+[@骷髅山洞1]
+#if
+#act
+mapmove D011
+GIVE 回城卷 1
+
+[@比奇矿区1]
+#if
+#act
+mapmove D401
+GIVE 回城卷 1
+
+[@毒蛇矿区1]
+#act
+mapmove D421
+GIVE 回城卷 1
+
+
+;----------------------------------------------------------------------
+[@满血]
+#IF
+CheckGameGold ? 5
+#ACT
+GameGold - 5
+GOTO @满血1
+Break
+#ELSEACT
+MESSAGEBOX 对不起！你没有5元宝！
+
+[@满血1]
+#IF
+#ACT
+HumanHP = <$MAXHP>
+HumanMP = <$MAXMP>
+SendMsg 6 [系统]：信春哥，得永生！恭喜你已回复满状态。
+
+[@安全区泡点]
+#IF
+CheckGameGold ? 10
+#ACT
+GameGold - 10
+SetAutoGetExp 3 500 1 3
+MESSAGEBOX 【系统】：恭喜你成功开启安全区泡点！在盟重省安全区内每3秒增加500经验！
+Break
+#ELSEACT
+MESSAGEBOX 对不起！你没有10元宝！
+
+[@危险区泡点]
+#IF
+CheckGameGold ? 10
+#ACT
+GameGold - 10
+SetAutoGetExp 3 250 0
+MESSAGEBOX 【系统】：恭喜你成功开启任何区域泡点！每3秒增加250经验！
+Break
+#ELSEACT
+MESSAGEBOX 对不起！你没有10元宝！
+
+
+[@封魔]
+#IF
+#ACT
+MAPMOVE 4 240 196
+break
+
+[@苍月]
+#IF
+#ACT
+MAPMOVE 5 141 335
+break
+
+[@白日]
+#IF
+#ACT
+MAPMOVE 11 183 326
+break
+
+
+[@比奇]
+#IF
+#ACT
+mapmove 0 330 270
+break
+
+[@土城]
+#IF
+#ACT
+MAPMOVE 3 330 330
+break
+
+
+
+
+[@商店](2388,300,540,3)
+　\
+　　　　　　　　　　　　 　{哎哟，帅哥！=FCO=254}\
+　　　　　　　　　　　　 　{宣传一下本服嘛！=FCO=254}\
+　　　　　　　　　　　　 　{么么哒！=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　　<{[比奇大城]=FCO=250}/@比奇>  <{[封魔城堡]=FCO=250}/@封魔>  <{[白日天门]=FCO=250}/@白日>\
+　　<{[苍月海岛]=FCO=250}/@苍月>  <{[盟重土城]=FCO=250}/@土城>  <{[去 商 店]=FCO=250}/@商店> \ 
+　　<{[一键满血]=FCO=253}|收费5元宝一次！/@满血>
+;　<{[安全泡点]=FCO=253}|收费10元宝一次！在盟重省安全区范围内，每3秒+500经验/@安全区泡点>
+;　<{[险恶泡点]=FCO=253}|收费10元宝一次！野外每3秒+250经验/@危险区泡点> \
+　\
+　{伊春传奇：=FCO=254}\
+　{独家制作版本，市面绝无二家！每天宣传15群，=FCO=254}\
+　{轻松领50元人民币等额元宝+赞助礼包！=FCO=254}\
+　\
+　\
+　\
+　　<{[铁匠铺]=FCO=70}/@Gwe>  <{[布料店]=FCO=70}/@Gpo>  <{[首饰店]=FCO=70}/@首饰店>\　\
+　　<{[客栈]=FCO=70}/@Gwh>  　<{[书店]=FCO=70}/@Gbo>  \
+　\
+
+　　<{[返回主页]=FCO=249}/@main> \
+
+[@Gwe]
+#IF
+#ACT
+map 0159
+ 
+[@Gpo]
+#IF
+#ACT
+map 0149
+ 
+[@Gza]
+#IF
+#ACT
+map 0158
+ 
+[@Gwh]
+#IF
+#ACT
+map 0145
+ 
+[@Gbo]
+#IF
+#ACT
+map 0161
+
+
+
+

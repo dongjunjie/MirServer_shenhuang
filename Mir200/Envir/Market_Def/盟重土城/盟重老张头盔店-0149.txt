@@ -1,0 +1,2 @@
+(@buy @sell @repair @s_repair )
+#CALLX [\游戏配置\商店NPC\头盔店.txt] @头盔店脚本头

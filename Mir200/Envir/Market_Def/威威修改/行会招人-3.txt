@@ -1,0 +1,70 @@
+(@selloff @@InPutString @@InPutInteger @@useitemname) 
+[@main]
+{当前竞得行会=FCO=254}：[<$STR(A30)>]\ 
+{当前竞价元宝=FCO=254}：[<$STR(G30)>]\  
+{直接点击加入行会，系统将自动把您加入=FCO=254}\ 
+【<$STR(A30)>】{这个行会！=FCO=254}\ 
+{您只需支付比目前竞价多50元宝，=FCO=254}\ 
+{即可让你建的行会成为[天下第一行会]=FCO=254}\ 
+<{[加入天下第一行会]=FCO=70}/@jrxh>\ 
+<{[竞价天下第一行会]=FCO=70}/@cyjj>\ 
+<{[结束对话]=FCO=249}/@exit>\
+
+
+
+
+
+
+
+[@cyjj] 
+#IF 
+HAVEGUILD 
+ISGUILDMASTER 
+CHECKGOLD > <$STR(G30)> 
+#ACT 
+INC G30 50
+GameGold - <$STR(G30)> 
+mov A30 <$GUILDNAME> 
+Messagebox [成功]：您在行会竞价板上花了【<$STR(G30)>】个元宝竞得。 
+SENDMSG 0 【<$USERNAME>】在行会竞价板为行会【<$STR(A30)>】竞得，大家赶快来加入这个有实力的行会吧! 
+GOTO @main 
+BREAK 
+#ELSEACT 
+Messagebox [失败]：您的元宝不足或者您没有行会 
+
+[@jrxh] 
+#IF 
+ISGUILDMASTER 
+#ACT 
+Messagebox [失败]：您现在是行会掌门不能在加入其他行会！！ 
+break 
+
+#IF 
+equal A30 <$GUILDNAME> 
+#ACT 
+Messagebox [失败]：您现在已经是【<$STR(A30)>】的行会成员了！！ 
+break 
+#ELSEACT 
+goto @jrxh3 
+
+[@jrxh3] 
+#IF 
+HAVEGUILD 
+#ACT 
+Gmexecute 退出门派 
+DELAYGOTO 3 @jrxh4 
+#ELSEACT 
+goto @jrxh4 
+
+[@jrxh4] 
+#IF 
+equal A30 
+#ACT 
+Messagebox [失败]：现在还没行会竟价格!
+#ELSEACT
+ADDGUILDMEMBER  <$STR(A30)> <$username>
+SENDMSG 0 恭喜【<$USERNAME>】通过【天下第一行会】NPC加入了行会#7【<$STR(A30)>】#7
+SENDMSG 0 恭喜【<$USERNAME>】通过【天下第一行会】NPC加入了行会#7【<$STR(A30)>】#7
+SENDMSG 0 恭喜【<$USERNAME>】通过【天下第一行会】NPC加入了行会#7【<$STR(A30)>】#7
+CLOSE
+BREAK

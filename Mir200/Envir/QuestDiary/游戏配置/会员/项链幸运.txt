@@ -1,0 +1,268 @@
+[@main]
+#SAY
+　{[增加运2项链爆出几率，散人不花钱也有机会运9]=FCO=147}\
+<&【1000元宝】100%幸运+1/@运+1>\
+<&【2000元宝】 50%幸运+2/@运+2>\
+<&【3000元宝】 30%幸运+3/@运+3>\
+　只有:{记忆、灯笼、虎齿以及雷霆系列项链]=FCO=250}才可以升级\
+　运9为50%发挥上限+暴击率1%+攻魔道提高5点\
+  运10为70%发挥上限+暴击率3%+攻魔道提高10点\
+
+[@运+1]
+#IF
+CheckGameGold ? 1000
+CheckItemW 记忆项链 1
+CHECKITEMADDVALUE 3 20 < 1
+#ACT
+GameGold - 1000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+1
+BREAK
+#IF
+CheckGameGold ? 1000
+CheckItemW 白色虎齿项链 1
+CHECKITEMADDVALUE 3 20 < 1
+#ACT
+GameGold - 1000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+1
+BREAK
+#IF
+CheckGameGold ? 1000
+CheckItemW 灯笼项链 1
+CHECKITEMADDVALUE 3 20 < 1
+#ACT
+GameGold - 1000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+1
+BREAK
+#IF
+CheckGameGold ? 1000
+CheckItemW 雷霆项链 1
+CHECKITEMADDVALUE 3 20 < 1
+#ACT
+GameGold - 1000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+1
+BREAK
+#IF
+CheckGameGold ? 1000
+CheckItemW 光芒项链 1
+CHECKITEMADDVALUE 3 20 < 1
+#ACT
+GameGold - 1000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+1
+BREAK
+#IF
+CheckGameGold ? 1000
+CheckItemW 烈焰项链 1
+CHECKITEMADDVALUE 3 20 < 1
+#ACT
+GameGold - 1000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+1
+BREAK
+[@运+2]
+#IF
+Random 2
+CheckGameGold ? 2000
+CheckItemW 记忆项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 0
+#ACT
+GameGold - 2000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+2
+BREAK
+#IF
+Random 2
+CheckGameGold ? 2000
+CheckItemW 白色虎齿项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 0
+#ACT
+GameGold - 2000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+2
+BREAK
+#IF
+Random 2
+CheckGameGold ? 2000
+CheckItemW 灯笼项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 0
+#ACT
+GameGold - 2000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+2
+BREAK
+#IF
+Random 2
+CheckGameGold ? 2000
+CheckItemW 雷霆项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 0
+#ACT
+GameGold - 2000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+2
+BREAK
+#IF
+Random 2
+CheckGameGold ? 2000
+CheckItemW 光芒项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 0
+#ACT
+GameGold - 2000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+2
+BREAK
+#IF
+Random 2
+CheckGameGold ? 2000
+CheckItemW 烈焰项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 0
+#ACT
+GameGold - 2000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+2
+BREAK
+#IF
+CheckGameGold ? 3000
+#ACT
+GameGold - 3000
+HookItem 3
+SENDMSG 5 骚瑞！你的项链幸运升级失败
+BREAK
+[@运+3]
+#IF
+Random 3
+CheckGameGold ? 3000
+CheckItemW 记忆项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 1
+#ACT
+GameGold - 3000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+3
+BREAK
+#IF
+Random 3
+CheckGameGold ? 3000
+CheckItemW 白色虎齿项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 1
+#ACT
+GameGold - 3000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+3
+BREAK
+#IF
+Random 3
+CheckGameGold ? 3000
+CheckItemW 灯笼项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 1
+#ACT
+GameGold - 3000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+3
+BREAK
+#IF
+Random 3
+CheckGameGold ? 3000
+CheckItemW 雷霆项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 1
+#ACT
+GameGold - 3000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+3
+BREAK
+#IF
+Random 3
+CheckGameGold ? 3000
+CheckItemW 烈焰项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 1
+#ACT
+GameGold - 3000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+3
+BREAK
+#IF
+Random 3
+CheckGameGold ? 3000
+CheckItemW 光芒项链 1
+CHECKITEMADDVALUE 3 20 < 3
+CHECKITEMADDVALUE 3 20 > 1
+#ACT
+GameGold - 3000
+GETRANDOMNAME ../QuestDiary/游戏配置/会员/项链+1.txt S0
+HookItem 3
+CHANGEGIVEITEM 7 20 <$STR(S0)>
+CHANGEGIVEITEM 8
+SENDMSG 5 恭喜！你的项链幸运+3
+BREAK
+#IF
+CheckGameGold ? 3000
+#ACT
+GameGold - 3000
+HookItem 3
+SENDMSG 5 骚瑞！你的项链幸运升级失败
+BREAK
+

@@ -1,0 +1,69 @@
+[@铭文宝宝]
+{
+#IF
+#ACT
+RecallMob 铭文印★霸王 10 1 
+Goto @霸王1
+DelayGoto 30 @杀死霸王
+Break
+
+
+[@霸王1]
+#if
+EQUAL <$BBINFO[1].name> 铭文印★霸王
+#act
+goto @霸王2
+
+
+
+[@霸王2]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+
+;攻击
+MOV N201 60
+MOV N202 <$MAXDC>
+INC N202 150
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[霸王印]生效，成功召唤#7【铭文印★霸王】#7降临(限时30秒),[获得人物攻击加成#7100%#7]
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+
+
+
+
+
+[@杀死霸王]
+#if
+#ACT
+KillSlave 铭文印★霸王
+SENDMSG 6 铭文[霸王印]失效，#7【铭文印★霸王】#7已消失。 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

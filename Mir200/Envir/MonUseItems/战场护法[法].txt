@@ -1,0 +1,46 @@
+;此文件放在 D:\Mirserver\Mir200\Envir\MonUseItems
+
+;=============================人形宝宝配制文件=======================
+[BaseInfo]
+;职业
+Job = 1
+;性别
+Gender = 0
+;头发
+Hair = 5
+;使用魔法
+Magic = 灭天火,冰咆哮,抗拒火环,火墙,魔法盾
+
+;出生时背包中的物品
+BagItem = 
+;==============================身上装备============================
+[UseItems]
+;衣服
+DRESSNAME = 法神披风
+;武器
+WEAPONNAME = 嗜魂法杖
+;照明物
+RIGHTHANDNAME = 王者勋章
+;项链
+NECKLACENAME = 法神项链
+;头盔
+HELMETNAME = 法神头盔
+;左手镯
+ARMRINGLNAME = 法神手镯
+;右手镯
+ARMRINGRNAME = 法神手镯
+;左戒指
+RINGLNAME = 法神戒指
+;右戒指
+RINGRNAME = 法神戒指
+;物品
+BUJUKNAME = 疯狂面具[限时]
+;腰带
+BELTNAME = 法神魔带
+;鞋子
+BOOTSNAME = 法神魔靴
+;宝石
+CHARMNAME = 王者宝石
+;死亡掉装备几率 数字越小掉装备几率越高
+DieDropUseItemRate = 100
+

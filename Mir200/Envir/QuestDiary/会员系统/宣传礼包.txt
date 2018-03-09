@@ -1,0 +1,97 @@
+(@@InPutString @@InputInteger)
+[@宣传礼包]
+{
+#IF
+#ACT
+GOTO @宣传礼包1
+Break
+
+[@宣传礼包1](2250,300,540,3)
+　　　　　　　　　　　　 {本服主打群服，所=FCO=254}\
+　　　　　　　　　　　　 {以群宣传奖励十分好，=FCO=254}\
+　　　　　　　　　　　　 {散人玩家想要起步快，=FCO=254}\
+　　　　　　　　　　　　 {最好宣传一下。=FCO=254}\
+
+　\
+　\
+　\
+　\
+　\
+　\
+　\　\
+　{本服暂时只设置一种宣传奖励制度：=FCO=254}\
+　{首次宣传15群即可获得：5000元宝+以下物品=FCO=254} \
+　{并且加入VIP1青铜赞助。=FCO=254} \
+1,{i.1017,c.1=item}        2,{i.1707,c.1=item}        3,{i.1395,c.1=item}        4,{i.1117,c.100=item} \  \
+　  　  \ 
+5,{i.1735,c.1=item}        6,{i.1736,c.1=item}        7,{i.1021,c.1=item}        8,{i.1123,c.1=item} \  \
+　  　  \ 
+　\
+{提示：超出15群，每群多送2元平台充值，可累计=FCO=23}\
+{充值积分，每人每日限宣传100群封顶，不接受群=FCO=23}\
+{发器，新老区每天均可宣传。=FCO=23}\
+{宣传赞助请加管理QQ2264841338好友，不然管理收=FCO=250}\ 
+{到不消息。=FCO=250}\ 
+　<[{兑换宣传奖励]=FCO=70}|[多次宣传15个群可获得：=FCO=00FF7F]
+^[铭文洗练石x50，中级+高级传送礼包，=FCO=00FF7F]
+^[星级+强化卷礼包。=FCO=00FF7F]
+^[提示：请分清首次宣传和多次宣传。=FCO=7280FA]/@@InPutString11|请输入管理发放的[宣传激活码]>\ 
+　<{[关闭页面]=FCO=249}/@exit>\
+
+[@@InPutString11]
+
+
+#if
+CheckBagSize 8
+NOT CHECKNAMELIST ../QuestDiary/首次宣传领取名单.txt
+CheckTextList <$STR(S11)> ../QuestDiary/激活码/宣传15群.txt
+#act
+DelTextList <$STR(S11)> ../QuestDiary/激活码/宣传15群.txt
+AddNameList ../QuestDiary/青铜赞助.txt
+DynamicGive 伊春传奇会员 1
+DynamicGive 星级卷礼包 1
+DynamicGive 强化卷礼包 1
+DynamicGive 兽蛋(千年树妖) 1
+DynamicGive 铭文洗练石 100
+DynamicGive 中级传送卷礼包 1
+DynamicGive 高级传送卷礼包 1
+DynamicGive 100元赞助礼包 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+GAMEGOLD + 5000
+ADDNAMELIST ../QuestDiary/首次宣传领取名单.txt
+messagebox  恭喜你成功领取首次宣传15群奖励
+goto @MAIN
+SENDMSG 0 [系统]:玩家#7[<$USERNAME>]#7成功领取首次宣传15群奖励.您的宣传就是对我们最大的支持奖励！
+Break
+
+
+
+#if
+CheckBagSize 5
+CheckTextList <$STR(S11)> ../QuestDiary/激活码/宣传15群.txt
+#act
+DelTextList <$STR(S11)> ../QuestDiary/激活码/宣传15群.txt
+DynamicGive 铭文洗练石 50
+DynamicGive 中级传送卷礼包 1
+DynamicGive 高级传送卷礼包 1
+DynamicGive 星级卷礼包 1
+DynamicGive 强化卷礼包 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+GAMEGOLD + 5000
+messagebox  恭喜你成功领取多次宣传15群奖励
+goto @MAIN
+SENDMSG 0 [系统]:玩家#7[<$USERNAME>]#7成功领取多次宣传15群奖励.您的宣传就是对我们最大的支持奖励！
+Break
+#ELSEACT
+MESSAGEBOX 领取失败\1.输入的激活码无效。\2.你的包裹里的空位小于8格！
+
+
+}

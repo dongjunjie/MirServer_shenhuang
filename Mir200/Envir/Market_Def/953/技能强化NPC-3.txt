@@ -1,0 +1,148 @@
+[@main]
+  {我掌握一种技能可以把你的技能提升到极致=FCO=253}\
+     {但是得需要一些材料还有人工费=FCO=253}\
+{技能效果=FCO=253}:{每层加伤害5%（1-8）8重到9重（20%）=FCO=254}\
+{强化要求=FCO=253}:{被强化的技能需要已经8重=FCO=254}\
+{需要物品=FCO=253}:{金刚石+金条=FCO=254}\
+
+   <战士技能/@zs>    <法师技能/@fs>   <道士技能/@ds>
+[@zs]
+<强化烈火剑法/@lhjf>      <强化刺杀剑术/@csjs>     <强化基本剑法/@jbjf>\
+     ↓                ↓               ↓\
+金刚石100个         金刚石50个      金刚石20个\
+ 5根金条             2根金条         1根金条\
+[@fs]
+<强化冰咆哮/@bpx>        <强化疾光电影/@jgdy>     <强化雷电术/@lds>\
+     ↓                ↓               ↓\
+金刚石100个         金刚石50个      金刚石20个\
+ 5根金条             2根金条         1根金条\
+[@ds]
+<强化召唤神兽/@zhss>        <强化召唤骷髅/@zhkl>    <强化火符术/@hfs>\
+     ↓                ↓               ↓\
+金刚石100个         金刚石100个      金刚石20个\
+ 5根金条             5根金条         1根金条\
+[@hfs]
+#if
+CHECKSKILL 强化灵魂火符 = 8
+CHECKITEMCOUNT 金条 ? 1
+CheckItemCount 金刚石 ? 20
+#act
+TakeCount 金刚石 20
+TakeCount 金条 1
+SKILLLEVEL 强化灵魂火符 = 9
+SENDMSG 5 你的强化灵魂火符技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化灵魂火符技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石20颗\3.金条1根
+
+[@lds]
+#if
+CHECKSKILL 强化雷电术 = 8
+CHECKITEMCOUNT 金条 ? 1
+CheckItemCount 金刚石 ? 20
+#act
+TakeCount 金刚石 20
+TakeCount 金条 1
+SKILLLEVEL 强化雷电术 = 9
+SENDMSG 5 你的强化雷电术技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化雷电术技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石20颗\3.金条1根
+
+[@zhkl]
+#if
+CHECKSKILL 强化召唤骷髅 = 8
+CHECKITEMCOUNT 金条 ? 5
+CheckItemCount 金刚石 ? 100
+#act
+TakeCount 金刚石 100
+TakeCount 金条 5
+SKILLLEVEL 强化召唤骷髅 = 9
+SENDMSG 5 你的强化召唤骷髅技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化召唤骷髅技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石100颗\3.金条5根
+
+[@jgdy]
+#if
+CHECKSKILL 强化疾光电影 = 8
+CHECKITEMCOUNT 金条 ? 2
+CheckItemCount 金刚石 ? 50
+#act
+TakeCount 金刚石 50
+TakeCount 金条 2
+SKILLLEVEL 强化疾光电影 = 9
+SENDMSG 5 你的强化疾光电影技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化疾光电影技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石50颗\3.金条2根
+
+[@zhss]
+#if
+CHECKSKILL 强化召唤神兽 = 8
+CHECKITEMCOUNT 金条 ? 5
+CheckItemCount 金刚石 ? 100
+#act
+TakeCount 金刚石 100
+TakeCount 金条 5
+SKILLLEVEL 强化召唤神兽 = 9
+SENDMSG 5 你的强化召唤神兽技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化召唤神兽技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石100颗\3.金条5根
+
+[@bpx]
+#if
+CHECKSKILL 强化冰咆哮 = 8
+CHECKITEMCOUNT 金条 ? 5
+CheckItemCount 金刚石 ? 100
+#act
+TakeCount 金刚石 100
+TakeCount 金条 5
+SKILLLEVEL 强化冰咆哮 = 9
+SENDMSG 5 你的强化冰咆哮技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化冰咆哮技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石100颗\3.金条5根
+
+[@jbjf]
+#if
+CHECKSKILL 强化基本剑术 = 8
+CHECKITEMCOUNT 金条 ? 1
+CheckItemCount 金刚石 ? 20
+#act
+TakeCount 金刚石 20
+TakeCount 金条 1
+SKILLLEVEL 强化基本剑术 = 9
+SENDMSG 5 你的强化基本剑术技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化基本剑术技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石20颗\3.金条1根
+
+[@csjs]
+#if
+CHECKSKILL 强化刺杀剑术 = 8
+CHECKITEMCOUNT 金条 ? 2
+CheckItemCount 金刚石 ? 50
+#act
+TakeCount 金刚石 50
+TakeCount 金条 2
+SKILLLEVEL 强化刺杀剑术 = 9
+SENDMSG 5 你的强化刺杀剑术技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化刺杀剑术技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石50颗\3.金条2根
+
+[@lhjf]
+#if
+CHECKSKILL 强化烈火剑法 = 8
+CHECKITEMCOUNT 金条 ? 5
+CheckItemCount 金刚石 ? 100
+#act
+TakeCount 金刚石 100
+TakeCount 金条 5
+SKILLLEVEL 强化烈火剑法 = 9
+SENDMSG 5 你的强化烈火剑法技能变为了9级
+SENDMSG 8 恭喜[%s]玩家把强化烈火剑法技能修炼到极致.从此成为一名高手.
+#ELSEACT
+MESSAGEBOX 对不起：\1.对应技能到达8级\2.金刚石100颗\3.金条5根

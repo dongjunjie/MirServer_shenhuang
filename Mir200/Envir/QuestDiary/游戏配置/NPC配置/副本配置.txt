@@ -1,0 +1,245 @@
+[@祖玛副本]
+{
+[@main]
+#CALLX [\\游戏配置\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\游戏配置\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+　你好，我是祖玛副本服务员。有什么需\
+要我帮忙的？\ \
+<&副本信息{【必读】=FCO=251}/@祖玛副本_副本信息>\
+<&进入副本{【需要金币[$祖玛副本_进入需要金币]】=FCO=251}/@祖玛副本_进入副本>\ \
+<&结束对话/@exit>
+
+[@祖玛副本_副本信息]
+#CALLX [\\游戏配置\NPC配置\帮助系统\副本.txt] @祖玛副本内容
+<&返回上一页/@系统_标准NPC头_返回>\
+<&结束对话/@Exit>\
+
+[@祖玛副本_进入副本]
+#IF
+NOT CheckLevelEx 45
+#ACT
+MESSAGEBOX 进入该副本至少需要等级达到45级以上(包括45级)！
+BREAK
+
+#IF
+NOT CHECKGOLD [$祖玛副本_进入需要金币]
+#ACT
+MESSAGEBOX 进入副本需要金币[$祖玛副本_进入需要金币]，你的金币不够！
+BREAK
+
+#IF
+CANMOVEECTYPE 祖玛副本
+#ACT
+TAKE 金币 [$祖玛副本_进入需要金币]
+MOVEECTYPE 祖玛副本 78 81
+BREAK
+
+#IF
+NOT ISGROUPMASTER
+#ACT
+MESSAGEBOX 只有队长才能创建副本地图！
+BREAK
+
+#IF
+CHECKGROUPJOBCOUNT 0 ? 1 ? 45
+CHECKGROUPJOBCOUNT 1 ? 1 ? 45
+CHECKGROUPJOBCOUNT 2 ? 1 ? 45
+#ACT
+CREATEECTYPE 祖玛副本 40
+#ELSEACT
+MESSAGEBOX 创建祖玛副本必需组队，且每种职业都必需有一员，等级必需达到45级或以上！
+
+;副本创建成功
+[@CreateEctype_OK]
+#if
+#act
+CLEARMACHINERYEVENT FBMAP
+CLEARECTYPEMON FBMAP 
+TAKE 金币 [$祖玛副本_进入需要金币]
+MOVEECTYPE 祖玛副本 78 81
+
+;副本创建失败
+[@CreateEctype_Fail]
+#IF
+#ACT
+MESSAGEBOX 创建副本失败，副本人数已满，请稍候再试！
+}
+
+[@魔龙副本]
+{
+[@main]
+#CALLX [\\游戏配置\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\游戏配置\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+　你好，我是魔龙副本服务员。有什么需\
+要我帮忙的？\ \
+<&副本信息{【必读】=FCO=251}/@魔龙副本_副本信息>\
+<&进入副本{【需要金币[$魔龙副本_进入需要金币]】=FCO=251}/@魔龙副本_进入副本>\ \
+<&结束对话/@exit>
+
+[@魔龙副本_副本信息]
+#CALLX [\\游戏配置\NPC配置\帮助系统\副本.txt] @魔龙副本内容
+<&返回上一页/@系统_标准NPC头_返回>\
+<&结束对话/@Exit>\
+
+[@魔龙副本_进入副本]
+#IF
+NOT CheckLevelEx 45
+#ACT
+MESSAGEBOX 进入该副本至少需要等级达到45级以上(包括45级)！
+BREAK
+
+#IF
+NOT CHECKGOLD [$魔龙副本_进入需要金币]
+#ACT
+MESSAGEBOX 进入副本需要金币[$魔龙副本_进入需要金币]，你的金币不够！
+BREAK
+
+#IF 
+CANMOVEECTYPE 魔龙副本
+#ACT
+TAKE 金币 [$魔龙副本_进入需要金币]
+MOVEECTYPE 魔龙副本 81 15
+BREAK
+
+#IF
+NOT ISGROUPMASTER
+#ACT
+MESSAGEBOX 只有队长才能创建副本地图！
+BREAK
+
+#IF
+CHECKGROUPJOBCOUNT 0 ? 1 ? 45
+CHECKGROUPJOBCOUNT 1 ? 1 ? 45
+CHECKGROUPJOBCOUNT 2 ? 1 ? 45
+#ACT
+CREATEECTYPE 魔龙副本 80
+#ELSEACT
+MESSAGEBOX 创建魔龙副本必需组队，且每种职业都必需有一员，等级必需达到55级或以上！
+
+
+
+;副本创建成功
+[@CreateEctype_OK]
+#if
+#act
+CLEARMACHINERYEVENT FBMAP
+CLEARECTYPEMON FBMAP 
+TAKE 金币 [$魔龙副本_进入需要金币]
+MOVEECTYPE 魔龙副本 81 15
+
+;副本创建失败
+[@CreateEctype_Fail]
+#IF
+#ACT
+MESSAGEBOX 创建副本失败，副本人数已满，请稍候再试！
+}
+
+[@火龙副本]
+{
+[@main]
+#CALLX [\\游戏配置\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\游戏配置\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+　你好，我是火龙副本服务员。有什么需\
+要我帮忙的？\ \
+<&副本信息{【必读】=FCO=251}/@火龙副本_副本信息>\
+<&进入副本{【需要金币[$火龙副本_进入需要金币]】=FCO=251}/@火龙副本_进入副本>\ \
+<&结束对话/@exit>
+
+[@火龙副本_副本信息]
+#CALLX [\\游戏配置\NPC配置\帮助系统\副本.txt] @火龙副本内容
+<&返回上一页/@系统_标准NPC头_返回>\
+<&结束对话/@Exit>\
+
+[@火龙副本_进入副本]
+#IF
+#ACT
+MOV P0 [$60_70级地图开放时间_年]
+MOV P1 [$60_70级地图开放时间_月]
+MOV P2 [$60_70级地图开放时间_日]
+DEC P2 1
+MUL P0 1000000
+MUL P1 10000
+MUL P2 100
+INC P0 <$STR(P1)>
+INC P0 <$STR(P2)>
+
+MOV P4 <$YEAR>
+MOV P1 <$MONTH>
+MOV P2 <$DAY>
+MUL P4 1000000
+MUL P1 10000
+MUL P2 100
+INC P4 <$STR(P1)>
+INC P4 <$STR(P2)>
+
+#IF
+LARGE P4 <$STR(P0)>
+#ACT
+GOTO @火龙副本_进入副本_检测
+#ELSEACT
+MESSAGEBOX 在[$60_70级地图开放时间_年]年[$60_70级地图开放时间_月]月[$60_70级地图开放时间_日]日之前不允许进入\现在时间：<$DATETIME>
+
+[@火龙副本_进入副本_检测]
+#IF
+NOT CheckLevelEx 45
+#ACT
+MESSAGEBOX 进入该副本至少需要等级达到45级以上(包括45级)！
+BREAK
+
+#IF
+NOT CHECKGOLD [$火龙副本_进入需要金币]
+#ACT
+MESSAGEBOX 进入副本需要金币[$火龙副本_进入需要金币]，你的金币不够！
+BREAK
+
+#IF
+CANMOVEECTYPE 火龙副本
+#ACT
+TAKE 金币 [$火龙副本_进入需要金币]
+MOVEECTYPE 火龙副本 39 90
+BREAK
+
+#IF
+NOT ISGROUPMASTER
+#ACT
+MESSAGEBOX 只有队长才能创建副本地图！
+BREAK
+
+#IF
+CHECKGROUPJOBCOUNT 0 ? 1 ? 45
+CHECKGROUPJOBCOUNT 1 ? 1 ? 45
+CHECKGROUPJOBCOUNT 2 ? 1 ? 45
+#ACT
+CREATEECTYPE 火龙副本 120
+#ELSEACT
+MESSAGEBOX 创建火龙副本必需组队，且每种职业都必需有一员，等级必需达到65级或以上！
+
+
+
+;副本创建成功
+[@CreateEctype_OK]
+#if
+#act
+CLEARMACHINERYEVENT FBMAP
+CLEARECTYPEMON FBMAP 
+TAKE 金币 [$火龙副本_进入需要金币]
+MOVEECTYPE 火龙副本 39 90
+
+;副本创建失败
+[@CreateEctype_Fail]
+#IF
+#ACT
+MESSAGEBOX 创建副本失败，副本人数已满，请稍候再试！
+}

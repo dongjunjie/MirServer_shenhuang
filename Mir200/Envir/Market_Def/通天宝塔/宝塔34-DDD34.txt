@@ -1,0 +1,101 @@
+[@main](2250,300,540,3)
+
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\　\　\　\
+　{当前第34层，需要清理完全部怪物才可以下层！=FCO=250}\
+　{下层收费：=FCO=23}{1800元宝=FCO=254} \
+　{本层通关：=FCO=23}{奖励3400W经验+随机魔龙装备1件=FCO=254}\
+　{本层通关：=FCO=23}{或随机成仙装备1件=FCO=254}\
+　\　\　\　\　\
+　<{[领取奖励-挑战下层]=FCO=70}|[下层收费1800元宝=FCO=00FF7F]/@下一层>\
+　<{[领取奖励-返回土城]=FCO=70}/@返回土城>\
+
+[@下一层]
+#IF
+CheckMapMonCount DDD34 < 1
+CheckGameGold ? 1800
+#ACT
+GetRandomName ../QuestDiary/押镖奖励/成仙套.txt S18
+give <$Str(S18)>
+ChangeExp + 34000000
+GameGold - 1800
+mapmove DDD35
+MISSION DDD35 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 炼狱亡魂1
+
+MISSION DDD35 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 炼狱亡魂2
+
+MISSION DDD35 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 炼狱亡魂3
+
+MISSION DDD35 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 炼狱亡魂4
+
+MISSION DDD35 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE 炼狱亡魂5
+
+MISSION DDD35 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 炼狱亡魂6
+
+MISSION DDD35 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE BOSS★亡魂魔王
+
+
+INC G100 1800
+CALCVAR HUMAN 消费积分 + 1800
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[1800]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+SENDMSG 0 #6FFFF/8#6[系统]#5:恭喜玩家#7[<$USERNAME>]#7成功通关通天宝塔第34层，获得#7<$Str(S18)>#7装备+3400W经验奖励！
+#elseact
+messagebox  失败：\1、你没有1800元宝！2、本层怪物没清理干净
+
+
+[@返回土城]
+#IF
+CheckMapMonCount DDD34 < 1
+#ACT
+GetRandomName ../QuestDiary/押镖奖励/成仙套.txt S18
+give <$Str(S18)>
+ChangeExp + 34000000
+mapmove 3 330 330
+SENDMSG 0 #6FFFF/8#6[系统]#5:恭喜玩家#7[<$USERNAME>]#7成功通关通天宝塔第34层，获得#7<$Str(S18)>#7装备+3400W经验奖励！
+#elseact
+messagebox  失败：\1、本层怪物没清理干净

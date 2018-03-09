@@ -1,0 +1,129 @@
+{
+[@杀怪触发]
+
+
+#if
+random 12
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物2.txt
+#ACT
+MOV S888 [渡劫]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+#if
+random 4
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物2.txt
+#ACT
+MOV S888 [筑基]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+
+#if
+random 6
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物2.txt
+#ACT
+MOV S888 [金丹]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+#if
+random 8
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物2.txt
+#ACT
+MOV S888 [元婴]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+
+#if
+random 48
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物1.txt
+#ACT
+MOV S888 [渡劫]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+#if
+random 12
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物1.txt
+#ACT
+MOV S888 [筑基]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+
+#if
+random 24
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物1.txt
+#ACT
+MOV S888 [金丹]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+#if
+random 36
+CheckTextList <$STR(S0)> ../QuestDiary/游戏配置/怪物1.txt
+#ACT
+MOV S888 [元婴]
+INC S888 <$STR(S0)>
+param1 <$MAP>
+param2 <$X>
+param3 <$Y>
+MonGen <$STR(S888)> 1 0
+SendMsg 0  【广播】:幸运玩家<$USERNAME>在<$MAPNAME>杀死怪物<$STR(S0)>,竟意外触发强化怪物<$STR(S888)>! 146 252 
+Break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

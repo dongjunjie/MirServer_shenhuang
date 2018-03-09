@@ -1,0 +1,317 @@
+[@main](2156,600,400,3)
+ 　                                      {超 级 宝 石=FCO=253}\ \
+ 　    {去帮我收集一些材料来，我可以帮你打造一些失传多年的宝石.宝石也可以打怪爆出!=FCO=249}\ \
+   　 1.{i.1850,c.0=item}        2.{i.1851,c.0=item}　　　　3.{i.1852,c.0=item}        4.{i.1853,c.0=item}        5.{i.1854,c.0=item}        6.{i.1855,c.0=item}　　　　7.{i.1856,c.0=item}        8.{i.1857,c.0=item}\  \  \
+ 　 9.{i.1858,c.0=item}       10.{i.1859,c.0=item}　　　 11.{i.1860,c.0=item}       12.{i.1861,c.0=item}       13.{i.1862,c.0=item}       14.{i.1863,c.0=item}　　 　15.{i.1864,c.0=item}       16.{i.1865,c.0=item}\  \  \
+　 {--------------------------------------------------------------------------------=FCO=254}\ \
+　　　   <{[隐身之宝石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@隐身之宝石>
+　　　 <{[传送之宝石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@传送之宝石>
+　　　 <{[麻痹之宝石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@麻痹之宝石>
+　　   <{[复活之宝石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@复活之宝石>\ \
+　　　   <{[护身之宝石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@护身之宝石>
+　　　 <{[防麻之宝石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@防麻之宝石>
+　　　 <{[经验之宝石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@经验之宝石>
+　　   <{[破护身之石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@破护身之石>\ \
+　　　   <{[破复活之石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 2000,黑铁矿石 X 20,钻石 X 5=FCO=7280FA]/@破复活之石>
+　　　 <{[麻痹护身石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 5000,黑铁矿石 X 30,钻石 X 10=FCO=7280FA]/@麻痹护身石>
+　　　 <{[麻痹传送石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 5000,黑铁矿石 X 30,钻石 X 10=FCO=7280FA]/@麻痹传送石>
+　　   <{[麻痹复活石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 5000,黑铁矿石 X 30,钻石 X 10=FCO=7280FA]/@麻痹复活石>\ \
+　　　   <{[装备保险石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 5000,黑铁矿石 X 30,钻石 X 30=FCO=7280FA]/@不掉身上石>
+　　　 <{[背包保险石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 5000,黑铁矿石 X 30,钻石 X 30=FCO=7280FA]/@不掉背包石>
+　　　 <{[护身复活石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 5000,黑铁矿石 X 30,钻石 X 10=FCO=7280FA]/@护身复活石>
+　　   <{[护身防御石]=FCO=70}|[打造需求：=FCO=00FF00]^[元宝 5000,黑铁矿石 X 30,钻石 X 10=FCO=7280FA]/@护身防御石>\ \
+　 {--------------------------------------------------------------------------------=FCO=254}\ \
+　　　 　　　                                                      <{[关闭对话]=FCO=249}/@exit>\
+
+;------------------------------------------------------------------------------------------------------
+
+
+
+[@隐身之宝石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 隐身之宝石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@传送之宝石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 传送之宝石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@麻痹之宝石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 麻痹之宝石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@复活之宝石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 复活之宝石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@护身之宝石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 护身之宝石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@防麻之宝石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 防麻之宝石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@经验之宝石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 经验之宝石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@破护身之石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 破护身之石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@破复活之石]
+#if
+CheckItemCount 黑铁矿石 ? 20
+CheckItemCount 钻石 ? 5
+CheckGameGold ? 2000
+#ACT
+Give 破复活之石 1
+TakeCount 黑铁矿石 20
+TakeCount 钻石 5
+GameGold - 2000
+INC G100 2000
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[2000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@麻痹护身石]
+#if
+CheckItemCount 黑铁矿石 ? 30
+CheckItemCount 钻石 ? 10
+CheckGameGold ? 5000
+#ACT
+Give 麻痹护身石 1
+TakeCount 黑铁矿石 30
+TakeCount 钻石 10
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@麻痹传送石]
+#if
+CheckItemCount 黑铁矿石 ? 30
+CheckItemCount 钻石 ? 10
+CheckGameGold ? 5000
+#ACT
+Give 麻痹传送石 1
+TakeCount 黑铁矿石 30
+TakeCount 钻石 10
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@麻痹复活石]
+#if
+CheckItemCount 黑铁矿石 ? 30
+CheckItemCount 钻石 ? 10
+CheckGameGold ? 5000
+#ACT
+Give 麻痹复活石 1
+TakeCount 黑铁矿石 30
+TakeCount 钻石 10
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@不掉身上石]
+#if
+CheckItemCount 黑铁矿石 ? 30
+CheckItemCount 钻石 ? 30
+CheckGameGold ? 5000
+#ACT
+Give 装备保险石 1
+TakeCount 黑铁矿石 30
+TakeCount 钻石 30
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@不掉背包石]
+#if
+CheckItemCount 黑铁矿石 ? 30
+CheckItemCount 钻石 ? 30
+CheckGameGold ? 5000
+#ACT
+Give 背包保险石 1
+TakeCount 黑铁矿石 30
+TakeCount 钻石 30
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@护身复活石]
+#if
+CheckItemCount 黑铁矿石 ? 30
+CheckItemCount 钻石 ? 10
+CheckGameGold ? 5000
+#ACT
+Give 护身复活石 1
+TakeCount 黑铁矿石 30
+TakeCount 钻石 10
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+
+[@护身防御石]
+#if
+CheckItemCount 黑铁矿石 ? 30
+CheckItemCount 钻石 ? 10
+CheckGameGold ? 5000
+#ACT
+Give 护身防御石 1
+TakeCount 黑铁矿石 30
+TakeCount 钻石 10
+GameGold - 5000
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 打造失败。\请检查你的材料和元宝是否足够？
+break
+

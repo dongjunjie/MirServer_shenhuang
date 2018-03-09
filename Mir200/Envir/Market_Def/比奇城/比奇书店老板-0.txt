@@ -1,0 +1,2 @@
+(@buy @sell @BindBuy)
+#CALLX [\游戏配置\商店NPC\书店.txt] @书店脚本头

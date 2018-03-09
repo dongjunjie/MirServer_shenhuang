@@ -1,0 +1,1713 @@
+[@灵宠界面]
+{
+
+#IF
+NOT CHECKTEXTLIST <$ITEMINFO[$IDX(14)].NAME> ../QuestDiary/游戏配置/灵宠配置/灵宠列表.txt
+#ACT
+Messagebox 暂未获得宠物，请装备宠物。
+BREAK
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+Goto @宠物初始化
+#ELSEACT
+Messagebox 宠物未鉴定。
+BREAK
+
+[@宠物初始化]
+;检测进度条
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].WeaponLv> 0
+#ACT
+MOV P50 0
+GOTO @宠物面板检测
+#ELSEACT
+Percent P50 <$ITEMINFO[$IDX(14)].WeaponExp> <$ITEMINFO[$IDX(14)].WeaponMaxExp>
+MUL P50 184
+DIV P50 100
+GOTO @宠物面板检测
+
+
+[@宠物面板检测]
+#IF
+LARGE P50 184
+#ACT
+MOV P50 184
+
+
+#IF
+#ACT
+MOV S100 暂未开通
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 绿袍
+#ACT
+MOV S120 <{f.3,i.3410,x.23,y.376,b.0=img}|技能名称：绿袍(已习得)^高级状态类技能^宠物攻击时有10%时目标中绿毒/@宠物面板UI>
+#ELSEACT
+MOV S120 <{f.3,i.3411,x.23,y.376,b.0=img}|技能名称：绿袍(未习得)^高级状态类技能^宠物攻击时有10%时目标中绿毒/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 咒甲
+#ACT
+MOV S121 <{f.3,i.3412,x.72,y.376,b.0=img}|技能名称：咒甲(已习得)^高级状态类技能^宠物攻击时有10%时目标中红毒/@宠物面板UI>
+#ELSEACT
+MOV S121 <{f.3,i.3413,x.72,y.376,b.0=img}|技能名称：咒甲(未习得)^高级状态类技能^宠物攻击时有10%时目标中红毒/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 鬼眼
+#ACT
+MOV S122 <{f.3,i.3420,x.121,y.376,b.0=img}|技能名称：鬼眼(已习得)^增益技能^增加宠物50点准确值/@宠物面板UI>
+#ELSEACT
+MOV S122 <{f.3,i.3421,x.121,y.376,b.0=img}|技能名称：鬼眼(未习得)^增益技能^增加宠物50点准确值/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 猎豹
+#ACT
+MOV S123 <{f.3,i.3424,x.170,y.376,b.0=img}|技能名称：猎豹(已习得)^增益技能^增加宠物50点敏捷值/@宠物面板UI>
+#ELSEACT
+MOV S123 <{f.3,i.3425,x.170,y.376,b.0=img}|技能名称：猎豹(未习得)^增益技能^增加宠物50点敏捷值/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 狂放
+#ACT
+MOV S124 <{f.3,i.3422,x.219,y.376,b.0=img}|技能名称：狂放(已习得)^增益技能^增加宠物30%血量/@宠物面板UI>
+#ELSEACT
+MOV S124 <{f.3,i.3423,x.219,y.376,b.0=img}|技能名称：狂放(未习得)^增益技能^增加宠物30%血量/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 魔神
+#ACT
+MOV S125 <{f.3,i.3426,x.268,y.376,b.0=img}|技能名称：魔神(已习得)^增益技能^增加宠物10%攻击力/@宠物面板UI>
+#ELSEACT
+MOV S125 <{f.3,i.3427,x.268,y.376,b.0=img}|技能名称：魔神(未习得)^增益技能^增加宠物10%攻击力/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 下凡
+#ACT
+MOV S126 <{f.3,i.3430,x.317,y.376,b.0=img}|技能名称：下凡(已习得)^增益技能^增加宠物15%物理防御/@宠物面板UI>
+#ELSEACT
+MOV S126 <{f.3,i.3431,x.317,y.376,b.0=img}|技能名称：下凡(未习得)^增益技能^增加宠物15%物理防御/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 漠视
+#ACT
+MOV S127 <{f.3,i.3428,x.23,y.426,b.0=img}|技能名称：漠视(已习得)^增益技能^增加宠物20%魔法防御/@宠物面板UI>
+#ELSEACT
+MOV S127 <{f.3,i.3429,x.23,y.426,b.0=img}|技能名称：漠视(未习得)^增益技能^增加宠物20%魔法防御/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 鹰眼
+#ACT
+MOV S128 <{f.3,i.3432,x.72,y.426,b.0=img}|技能名称：鹰眼(已习得)^增益技能^增加宠物20%致命一击/@宠物面板UI>
+#ELSEACT
+MOV S128 <{f.3,i.3433,x.72,y.426,b.0=img}|技能名称：鹰眼(未习得)^增益技能^增加宠物20%致命一击/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 胜天
+#ACT
+MOV S129 <{f.3,i.3454,x.121,y.426,b.0=img}|技能名称：胜天(已习得)^高级增益技能^增加人物20%攻击力/@宠物面板UI>
+#ELSEACT
+MOV S129 <{f.3,i.3455,x.121,y.426,b.0=img}|技能名称：胜天(未习得)^高级增益技能^增加人物20%攻击力/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 阴阳
+#ACT
+MOV S130 <{f.3,i.3460,x.170,y.426,b.0=img}|技能名称：阴阳(已习得)^高级增益技能^增加人物20%道术力/@宠物面板UI>
+#ELSEACT
+MOV S130 <{f.3,i.3461,x.170,y.426,b.0=img}|技能名称：阴阳(未习得)^高级增益技能^增加人物20%道术力/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 智慧
+#ACT
+MOV S131 <{f.3,i.3462,x.219,y.426,b.0=img}|技能名称：智慧(已习得)^高级增益技能^增加人物20%魔法力/@宠物面板UI>
+#ELSEACT
+MOV S131 <{f.3,i.3463,x.219,y.426,b.0=img}|技能名称：智慧(未习得)^高级增益技能^增加人物20%魔法力/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 契约
+#ACT
+MOV S132 <{f.3,i.3452,x.268,y.426,b.0=img}|技能名称：契约(已习得)^高级增益技能^增加人物60%生命值/@宠物面板UI>
+#ELSEACT
+MOV S132 <{f.3,i.3453,x.268,y.426,b.0=img}|技能名称：契约(未习得)^高级增益技能^增加人物60%生命值/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 骨甲
+#ACT
+MOV S133 <{f.3,i.3442,x.317,y.426,b.0=img}|技能名称：骨甲(已习得)^高级增益技能^增加人物30%防御值/@宠物面板UI>
+#ELSEACT
+MOV S133 <{f.3,i.3443,x.317,y.426,b.0=img}|技能名称：骨甲(未习得)^高级增益技能^增加人物30%防御值/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 涅槃
+#ACT
+MOV S134 <{f.3,i.3450,x.23,y.474,b.0=img}|技能名称：涅槃(已习得)^高级增益技能^增加人物30%魔御值/@宠物面板UI>
+#ELSEACT
+MOV S134 <{f.3,i.3451,x.23,y.474,b.0=img}|技能名称：涅槃(未习得)^高级增益技能^增加人物30%魔御值/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 护体
+#ACT
+MOV S135 <{f.3,i.3444,x.72,y.474,b.0=img}|技能名称：护体(已习得)^高级增益技能^增加人物物理伤害减免10%/@宠物面板UI>
+#ELSEACT
+MOV S135 <{f.3,i.3445,x.72,y.474,b.0=img}|技能名称：护体(未习得)^高级增益技能^增加人物物理伤害减免10%/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 洗礼
+#ACT
+MOV S136 <{f.3,i.3458,x.121,y.474,b.0=img}|技能名称：洗礼(已习得)^高级增益技能^增加人物魔法伤害减免15%/@宠物面板UI>
+#ELSEACT
+MOV S136 <{f.3,i.3459,x.121,y.474,b.0=img}|技能名称：洗礼(未习得)^高级增益技能^增加人物魔法伤害减免15%/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 嘲讽
+#ACT
+MOV S137 <{f.3,i.3440,x.170,y.474,b.0=img}|技能名称：嘲讽(已习得)^高级增益技能^增加人物伤害反射10%/@宠物面板UI>
+#ELSEACT
+MOV S137 <{f.3,i.3441,x.170,y.474,b.0=img}|技能名称：嘲讽(未习得)^高级增益技能^增加人物伤害反射10%/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 会心
+#ACT
+MOV S138 <{f.3,i.3446,x.219,y.474,b.0=img}|技能名称：会心(已习得)^高级增益技能^增加人物致命一击10%/@宠物面板UI>
+#ELSEACT
+MOV S138 <{f.3,i.3447,x.219,y.474,b.0=img}|技能名称：会心(未习得)^高级增益技能^增加人物致命一击10%/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 坚韧
+#ACT
+MOV S139 <{f.3,i.3448,x.268,y.474,b.0=img}|技能名称：坚韧(已习得)^高级增益技能^增加人物伤害吸收10%/@宠物面板UI>
+#ELSEACT
+MOV S139 <{f.3,i.3449,x.268,y.474,b.0=img}|技能名称：坚韧(未习得)^高级增益技能^增加人物伤害吸收10%/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 兽瞳
+#ACT
+MOV S140 <{f.3,i.3456,x.317,y.474,b.0=img}|技能名称：兽瞳(已习得)^高级增益技能^增加人物忽视目标防御10%/@宠物面板UI>
+#ELSEACT
+MOV S140 <{f.3,i.3457,x.317,y.474,b.0=img}|技能名称：兽瞳(未习得)^高级增益技能^增加人物忽视目标防御10%/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 十字斩
+#ACT
+MOV S141 <{f.3,i.3480,x.285,y.164,b.0=img}|技能名称：十字斩(已习得)^高级攻击类技能^宠物攻击时有3%的几率释放十字斩^十字斩技能为2*2群攻AOE技能/@宠物面板UI>
+#ELSEACT
+MOV S141 <{f.3,i.3481,x.285,y.164,b.0=img}|技能名称：十字斩(未习得)^高级攻击类技能^宠物攻击时有3%的几率释放十字斩^十字斩技能为2*2群攻AOE技能/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 风裂波
+#ACT
+MOV S142 <{f.3,i.3474,x.334,y.164,b.0=img}|技能名称：风裂波(已习得)^高级攻击类技能^宠物攻击时有3%的几率释放风裂波^风裂波技能为2*2群攻AOE技能/@宠物面板UI>
+#ELSEACT
+MOV S142 <{f.3,i.3475,x.334,y.164,b.0=img}|技能名称：风裂波(未习得)^高级攻击类技能^宠物攻击时有3%的几率释放风裂波^风裂波技能为2*2群攻AOE技能/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 圣光术
+#ACT
+MOV S143 <{f.3,i.3478,x.285,y.213,b.0=img}|技能名称：圣光术(已习得)^高级恢复类技能^宠物攻击时有5%的几率释放圣光术^圣光术技能为8*8群体恢复技能/@宠物面板UI>
+#ELSEACT
+MOV S143 <{f.3,i.3479,x.285,y.213,b.0=img}|技能名称：圣光术(未习得)^高级恢复类技能^宠物攻击时有5%的几率释放圣光术^圣光术技能为8*8群体恢复技能/@宠物面板UI>
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 暗咒术
+#ACT
+MOV S144 <{f.3,i.3470,x.334,y.213,b.0=img}|技能名称：暗咒术(已习得)^高级状态类技能^宠物攻击时有10%的几率释放暗咒术^暗咒术技能为单体嘲讽技能(仅对怪物有效)/@宠物面板UI>
+#ELSEACT
+MOV S144 <{f.3,i.3471,x.334,y.213,b.0=img}|技能名称：暗咒术(未习得)^高级状态类技能^宠物攻击时有10%的几率释放暗咒术^暗咒术技能为单体嘲讽技能(仅对怪物有效)/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 荡八荒
+#ACT
+MOV S145 <{f.3,i.3472,x.285,y.262,b.0=img}|技能名称：荡八荒(已习得)^高级状态类技能^宠物攻击时有2%的几率释放荡八荒^荡八荒技能为4*4群攻AOE技能/@宠物面板UI>
+#ELSEACT
+MOV S145 <{f.3,i.3473,x.285,y.262,b.0=img}|技能名称：荡八荒(未习得)^高级状态类技能^宠物攻击时有2%的几率释放荡八荒^荡八荒技能为4*4群攻AOE技能/@宠物面板UI>
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 龙虎破
+#ACT
+MOV S146 <{f.3,i.3476,x.334,y.262,b.0=img}|技能名称：龙虎破(已习得)^高级攻击类技能^宠物攻击时有5%的几率释放龙虎破^龙虎破技能为最强单机攻击技能/@宠物面板UI>
+#ELSEACT
+MOV S146 <{f.3,i.3477,x.334,y.262,b.0=img}|技能名称：龙虎破(未习得)^高级攻击类技能^宠物攻击时有5%的几率释放龙虎破^龙虎破技能为最强单机攻击技能/@宠物面板UI>
+
+
+
+
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 5
+#ACT
+MOV N169 5
+MOV S169 <{初窥门径=FCO=247}|附体可获得宠物5%的属性/@宠物初始化>
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 10
+#ACT
+MOV N169 10
+MOV S169 <{驾轻就熟=FCO=218}|附体可获得宠物10%的属性/@宠物初始化>
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 15
+#ACT
+MOV N169 15
+MOV S169 <{豁然贯通=FCO=250}|附体可获得宠物15%的属性/@宠物初始化>
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 20
+#ACT
+MOV N169 20
+MOV S169 <{出神入化=FCO=243}|附体可获得宠物20%的属性/@宠物初始化>
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 25
+#ACT
+MOV N169 25
+MOV S169 <{傲视群雄=FCO=251}|附体可获得宠物25%的属性/@宠物初始化>
+
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 30
+#ACT
+MOV N169 30
+MOV S169 <{登峰造极=FCO=254}|附体可获得宠物30%的属性/@宠物初始化>
+
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 35
+#ACT
+MOV N169 35
+MOV S169 <{惊世骇俗=FCO=254}|附体可获得宠物35%的属性/@宠物初始化>
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 40
+#ACT
+MOV N169 40
+MOV S169 <{震古烁今=FCO=249}|附体可获得宠物40%的属性/@宠物初始化>
+
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 45
+#ACT
+MOV N169 45
+MOV S169 <{超凡入圣=FCO=249}|附体可获得宠物45%的属性/@宠物初始化>
+
+
+
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Beizhu(1)> 50
+#ACT
+MOV N169 50
+MOV S169 <{随心所欲=FCO=255}|附体可获得宠物50%的属性/@宠物初始化>
+
+#IF
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+
+#IF
+#ACT
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt S174
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt S175
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt S176
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt S177
+
+MOV N174 <$STR(S174)>
+MOV N175 <$STR(S175)>
+MOV N176 <$STR(S176)>
+MOV N177 <$STR(S177)>
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+#ACT
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠图像/<$ITEMINFO[$IDX(14)].NAME>.txt S181
+
+;//生命值
+MOV N185 <$ITEMINFO[$IDX(14)].Value(10)>
+MUL N185 255
+INC N185 <$ITEMINFO[$IDX(14)].Value(11)>
+
+;//攻击力
+MOV N186 <$ITEMINFO[$IDX(14)].Value(2)>
+MUL N186 255
+INC N186 <$ITEMINFO[$IDX(14)].Value(7)>
+
+;//防御力
+MOV N187 <$ITEMINFO[$IDX(14)].Value(0)>
+MUL N187 255
+INC N187 <$ITEMINFO[$IDX(14)].Value(5)>
+
+;//魔御力
+MOV N188 <$ITEMINFO[$IDX(14)].Value(1)>
+MUL N188 255
+INC N188 <$ITEMINFO[$IDX(14)].Value(6)>
+
+
+#IF
+#ACT
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt S178
+MOV N178 <$STR(S178)>
+INC N169 <$STR(N178)>
+
+MOV N170 <$ITEMINFO[$IDX(14)].Hp>
+INC N170 <$STR(N185)>
+MUL N170 <$STR(N169)>
+DIV N170 100
+
+
+
+MOV N171 <$ITEMINFO[$IDX(14)].Dc2>
+INC N171 <$STR(N186)>
+MUL N171 <$STR(N169)>
+DIV N171 100
+
+
+
+MOV N172 <$ITEMINFO[$IDX(14)].Ac2>
+INC N172 <$STR(N187)>
+MUL N172 <$STR(N169)>
+DIV N172 100
+
+
+
+MOV N173 <$ITEMINFO[$IDX(14)].Mac2>
+INC N173 <$STR(N188)>
+MUL N173 <$STR(N169)>
+DIV N173 100
+
+
+GOTO @宠物面板UI
+
+
+
+[@宠物面板UI](3400,1000,800,3,0,1,0)
+
+#SAY
+{100=x}{50=y}{宠物、宠物经验丹、宠物技能书可在召唤师峡谷或各大BOSS获得，宠物可交易。=FCO=250}\
+{155=x}{17=y}{宠物名称：<$ITEMINFO[$IDX(14)].Name>=FCO=253}\
+{70=x}{5=y}{宠物等级：LV.<$ITEMINFO[$IDX(14)].WeaponLv>=FCO=250}\
+{450=x}{-4=y}<$STR(S169)>\
+{450=x}{9=y}{<$ITEMINFO[$IDX(14)].Beizhu(0)>=FCO=255}\
+{450=x}{8=y}<$STR(S100)>\
+<$STR(S181)>\
+{450=x}{50=y}{<$ITEMINFO[$IDX(14)].Hp>=FCO=255} + {<$STR(N185)>=FCO=250}\
+{450=x}{7=y}{<$ITEMINFO[$IDX(14)].Dc> - <$ITEMINFO[$IDX(14)].Dc2> + =FCO=255}{<$STR(N186)>=FCO=250}\
+{450=x}{7=y}{<$ITEMINFO[$IDX(14)].Ac2> - <$ITEMINFO[$IDX(14)].Ac2> + =FCO=255}{<$STR(N187)>=FCO=250}\
+{450=x}{7=y}{<$ITEMINFO[$IDX(14)].Mac2> - <$ITEMINFO[$IDX(14)].Mac2> + =FCO=255}{<$STR(N188)>=FCO=250}\
+{450=x}{7=y}{<$ITEMINFO[$IDX(14)].SpeedPoint> + =FCO=255}{<$ITEMINFO[$IDX(14)].Value(13)>=FCO=250}\
+{450=x}{7=y}{<$ITEMINFO[$IDX(14)].HitPoint> + =FCO=255}{<$ITEMINFO[$IDX(14)].Value(12)>=FCO=250}\
+{44=x}{-58=y}<出战|使宠物出战帮助自己战斗/@宠物出战>{68=x}<重生|宠物所有一切清0^有几率获得更高的品质/@宠物重生>{68=x}<学习|消耗技能书学习主动或被动技能/@宠物学习>{68=x}<附体|使宠物附身在体内^从而获得强大的肉体能力/@宠物附体>\
+{150=x}{20=y}{被动技能(限9个)=FCO=253}\
+
+;属性点增加
+
+<{f.3,i.3403,x.676,y.150,b.0=img}|增加一级力量属性^根据攻击资质增加宠物攻击力/@宠物加点力量>\
+<{f.3,i.3404,x.596,y.220,b.0=img}|增加一级敏捷属性^根据敏捷资质增加宠物防御力/@宠物加点敏捷>\
+<{f.3,i.3405,x.625,y.309,b.0=img}|增加一级智力属性^根据魔御资质增加宠物魔御力/@宠物加点智力>\
+<{f.3,i.3406,x.725,y.309,b.0=img}|增加一级洞察属性^增加敏捷准确8点/@宠物加点洞察>\
+<{f.3,i.3407,x.755,y.220,b.0=img}|增加一级体质属性^根据体质资质增加宠物生命值/@宠物加点体质>\
+{676=x}{-78=y}{经验值=FCO=253}\
+{f.3,i.3401,x.596,y.391,b.0,r.0+0+<$STR(P50)>+14=img}\
+{670=x}{15=y}{宠物须知=FCO=249}\
+{580=x}{宠物属性介绍：根据成长值,每点属性点=FCO=251}\
+{580=x}{将获得不同的收益效果,力量属性对应攻=FCO=251}\
+{580=x}{击力,敏捷对应防御力,智慧对应魔御力.=FCO=251}\
+{580=x}{洞察对应准确和敏捷,体质对应血量值,=FCO=251}\
+{580=x}{灵域属性每级增加1%附体效果(初始1级)=FCO=251}\
+<{f.3,i.3402,x.646,y.208,b.0=img}|增加一级灵域属性^增加契合度1%/@宠物加点灵域>\
+{450=x}{-122=y}{<$STR(N170)>=FCO=254}(附体属性)\
+{450=x}{7=y}{<$STR(N171)>=FCO=254}(附体属性)\
+{450=x}{7=y}{<$STR(N172)>=FCO=254}(附体属性)\
+{450=x}{7=y}{<$STR(N173)>=FCO=254}(附体属性)\
+　\
+;技能排版
+
+<$STR(S120)><$STR(S121)><$STR(S122)><$STR(S123)><$STR(S124)><$STR(S125)><$STR(S126)><$STR(S127)><$STR(S128)><$STR(S129)><$STR(S130)><$STR(S131)><$STR(S132)><$STR(S133)><$STR(S134)><$STR(S135)><$STR(S136)><$STR(S137)><$STR(S138)><$STR(S139)><$STR(S140)><$STR(S141)><$STR(S142)><$STR(S143)><$STR(S144)><$STR(S145)><$STR(S146)>\
+{660=x}{-136=y}{<$ITEMINFO[$IDX(14)].WeaponExp>/<$ITEMINFO[$IDX(14)].WeaponMaxExp>=FCO=255}\
+{420=x}{-224=y}{攻：<$STR(N174)>=FCO=255} {防：<$STR(N175)>=FCO=255}\
+{450=x}\
+{420=x}{-14=y}{御：<$STR(N176)>=FCO=255} {体：<$STR(N177)>=FCO=255}\
+{450=x}\
+{676=x}{121=y}{剩余属性点：<$STR(N179)>=FCO=254}\
+{415=x}{125=y}{当前灵域等级：<$STR(N178)>=FCO=254}\
+{580=x}{-391=y}{加点附加属性最高为65535，加点时请注意。=FCO=249}\
+<{f.3,i.3408,x.547,y.10,b.0=img}/@关闭宠物面板>\
+{285=x}{-26=y}{攻击技能(限3个)=FCO=253}\
+
+
+
+
+
+
+
+#ELSEACT
+Messagebox 请携带好宠物。
+BREAK
+
+
+
+
+[@宠物重生]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+Goto @宠物初始化
+#ELSEACT
+Messagebox 宠物未鉴定。
+BREAK
+
+#IF
+CHECKGAMEGOLD ? [$灵宠重生消耗元宝]
+#ACT
+Messagebox 是否对宠物进行重生？这个命令执行过后，宠物一切清0！ @确定宠物重生 @取消宠物重生
+#ELSEACT
+Messagebox 宠物重生需要[$灵宠重生消耗元宝]元宝。
+
+
+[@取消宠物重生]
+#ACT
+Messagebox 这个动作很危险，下次别点错啦！
+BREAK
+
+[@确定宠物重生]
+#IF
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GAMEGOLD - [$灵宠重生消耗元宝]
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt S174
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt S175
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt S176
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt S177
+
+MOV N174 <$STR(S174)>
+MOV N175 <$STR(S175)>
+MOV N176 <$STR(S176)>
+MOV N177 <$STR(S177)>
+
+DELTEXTLIST <$STR(N174)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+DELTEXTLIST <$STR(N175)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+DELTEXTLIST <$STR(N176)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+DELTEXTLIST <$STR(N177)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt S178
+MOV N178 <$STR(S178)>
+DELTEXTLIST <$STR(N178)> ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+DELTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+
+HOOKITEM 14
+CHANGEGIVEITEM 7 0 =0
+CHANGEGIVEITEM 7 5 =0
+CHANGEGIVEITEM 7 1 =0
+CHANGEGIVEITEM 7 6 =0
+CHANGEGIVEITEM 7 2 =0
+CHANGEGIVEITEM 7 7 =0
+CHANGEGIVEITEM 7 10 =0
+CHANGEGIVEITEM 7 11 =0
+CHANGEGIVEITEM 7 12 =0
+CHANGEGIVEITEM 7 13 =0
+CHANGEGIVEITEM 10 =0
+CHANGEGIVEITEM 11 =0
+ChangeGiveItem 24 
+ChangeGiveItem 25 
+CHANGEGIVEITEM 8
+MOV N888 <$IDX(14)>
+MOV S888 <$ITEMINFO[$IDX(14)].Name>
+Goto @宠物拾取鉴定
+CLOSE
+
+#IF
+CheckSlaveName <$ITEMINFO[$IDX(14)].NAME>
+#ACT
+MobSlave 灵兽系统 1 10
+
+
+
+[@关闭宠物面板]
+#ACT
+CLOSE
+BREAK
+
+[@LSLEVELUP]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#act
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+DelTextList <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+INC N179 1
+ADDTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+SendMsg 7 您的战宠【<$ITEMINFO[$IDX(14)].Name>】升级了,当前等级为:【<$ITEMINFO[$IDX(14)].WeaponLv>】
+;//加力量
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N174)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠升级加属性基数]
+MOD N182 [$灵宠升级加属性基数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+
+;//赋值当前极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(7)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 7 =0
+CHANGEGIVEITEM 7 2 +<$STR(N184)>
+CHANGEGIVEITEM 7 7 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 7 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+#IF
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N175)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠升级加属性基数]
+MOD N182 [$灵宠升级加属性基数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+;//赋值当前极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(5)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 5 =0
+CHANGEGIVEITEM 7 0 +<$STR(N184)>
+CHANGEGIVEITEM 7 5 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 5 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+
+#IF
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N176)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠升级加属性基数]
+MOD N182 [$灵宠升级加属性基数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+;//赋值极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(6)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 6 =0
+CHANGEGIVEITEM 7 1 +<$STR(N184)>
+CHANGEGIVEITEM 7 6 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 6 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+
+#IF
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N177)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠加点加属性基数]
+MOD N182 [$灵宠加点加属性基数]
+MUL N180 [$灵宠体质加点倍数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+;//赋值极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(11)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 11 =0
+CHANGEGIVEITEM 7 10 +<$STR(N184)>
+CHANGEGIVEITEM 7 11 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 11 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+
+#IF
+#ACT
+BREAK 
+
+
+
+
+
+
+[@宠物加点力量]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+
+#IF
+EQUAL N179 0
+#ACT
+Messagebox 没有属性点了！无法添加属性。
+BREAK
+
+#ELSEACT
+DelTextList <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+DEC N179 1
+ADDTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N174)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠加点加属性基数]
+MOD N182 [$灵宠加点加属性基数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+
+;//赋值当前极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(7)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 7 =0
+CHANGEGIVEITEM 7 2 +<$STR(N184)>
+CHANGEGIVEITEM 7 7 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 7 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+#IF
+#ACT
+DelayGoto 1 @宠物初始化
+SENDMSG 7 您的战宠【<$ITEMINFO[$IDX(14)].Name>】成功增加力量1点，增加附加攻击力为:【<$STR(N180)>】
+BREAK
+
+
+[@宠物加点敏捷]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+
+#IF
+EQUAL N179 0
+#ACT
+Messagebox 没有属性点了！无法添加属性。
+BREAK
+
+#ELSEACT
+DelTextList <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+DEC N179 1
+ADDTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N175)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠加点加属性基数]
+MOD N182 [$灵宠加点加属性基数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+;//赋值当前极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(5)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 5 =0
+CHANGEGIVEITEM 7 0 +<$STR(N184)>
+CHANGEGIVEITEM 7 5 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 5 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+#IF
+#ACT
+DelayGoto 1 @宠物初始化
+SENDMSG 7 您的战宠【<$ITEMINFO[$IDX(14)].Name>】成功增加敏捷1点，增加附加防御力为:【<$STR(N180)>】
+BREAK
+
+
+
+[@宠物加点智力]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+
+#IF
+EQUAL N179 0
+#ACT
+Messagebox 没有属性点了！无法添加属性。
+BREAK
+
+#ELSEACT
+DelTextList <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+DEC N179 1
+ADDTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N176)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠加点加属性基数]
+MOD N182 [$灵宠加点加属性基数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+;//赋值极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(6)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 6 =0
+CHANGEGIVEITEM 7 1 +<$STR(N184)>
+CHANGEGIVEITEM 7 6 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 6 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+#IF
+#ACT
+DelayGoto 1 @宠物初始化
+SENDMSG 7 您的战宠【<$ITEMINFO[$IDX(14)].Name>】成功增加智力1点，增加附加魔御力为:【<$STR(N180)>】
+BREAK
+
+
+[@宠物加点洞察]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt  S179
+MOV N179 <$STR(S179)>
+
+#IF
+EQUAL N179 0
+#ACT
+Messagebox 没有属性点了！无法添加属性。
+BREAK
+
+#ELSEACT
+DelTextList <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+DEC N179 1
+ADDTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+HOOKITEM 14
+CHANGEGIVEITEM 7 13 +8
+CHANGEGIVEITEM 7 12 +8
+CHANGEGIVEITEM 8
+
+#IF
+#ACT
+DelayGoto 1 @宠物初始化
+SENDMSG 7 您的战宠【<$ITEMINFO[$IDX(14)].Name>】成功增加洞察1点，当前附加准确为:【<$ITEMINFO[$IDX(14)].Value(12)>】，附加敏捷为【<$ITEMINFO[$IDX(14)].Value(13)>】。
+BREAK
+
+
+[@宠物加点体质]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+
+#IF
+EQUAL N179 0
+#ACT
+Messagebox 没有属性点了！无法添加属性。
+BREAK
+
+#ELSEACT
+DelTextList <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+DEC N179 1
+ADDTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt S180
+MOV N180 <$STR(S180)>
+DELTEXTLIST <$STR(N180)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+MOV N181 <$STR(N177)>
+INC N180 <$STR(N181)>
+MOV N182 <$STR(N180)>
+DIV N180 [$灵宠加点加属性基数]
+MOD N182 [$灵宠加点加属性基数]
+MUL N180 [$灵宠体质加点倍数]
+ADDTEXTLIST <$STR(N182)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+;//赋值极品值
+MOV N183 <$ITEMINFO[$IDX(14)].Value(11)>
+INC N183 <$STR(N180)>
+
+#IF
+LARGE N183 255
+#ACT
+MOV N184 <$STR(N183)>
+DIV N184 255
+MOV N185 <$STR(N184)>
+MUL N185 255
+DEC N183 <$STR(N185)>
+HOOKITEM 14
+CHANGEGIVEITEM 7 11 =0
+CHANGEGIVEITEM 7 10 +<$STR(N184)>
+CHANGEGIVEITEM 7 11 +<$STR(N183)>
+CHANGEGIVEITEM 8
+#ELSEACT
+HOOKITEM 14
+CHANGEGIVEITEM 7 11 +<$STR(N180)>
+CHANGEGIVEITEM 8
+
+#IF
+#ACT
+DelayGoto 1 @宠物初始化
+SENDMSG 7 您的战宠【<$ITEMINFO[$IDX(14)].Name>】成功增加体质1点，当前附加生命值为:【<$STR(N180)>】。
+BREAK
+
+
+[@宠物加点灵域]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#ACT
+MOV N889 <$ITEMINFO[$IDX(14)].Beizhu(2)>
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt S179
+MOV N179 <$STR(S179)>
+
+#IF
+EQUAL N179 0
+#ACT
+Messagebox 没有属性点了！无法添加属性。
+BREAK
+
+#ELSEACT
+
+DelTextList <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+DEC N179 1
+ADDTEXTLIST <$STR(N179)> ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+
+GetRandomName ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt S178
+MOV N178 <$STR(S178)>
+DelTextList <$STR(N178)> ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+INC N178 1
+ADDTextList <$STR(N178)> ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+DelayGoto 1 @宠物初始化
+SENDMSG 7 您的战宠【<$ITEMINFO[$IDX(14)].Name>】成功增加灵域1点，当前灵域等级【<$STR(N178)>】，可在附体时额外获得<$STR(N178)>%属性！
+BREAK
+
+
+
+
+
+
+
+
+[@宠物附体]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#IF
+CheckSlaveName <$ITEMINFO[$IDX(14)].NAME>
+#ACT
+MobSlave 灵兽系统 1 10
+MOV S666 未出战
+
+#IF
+EQUAL S170 已附体
+#ACT
+SENDMSG 7 你已取消附体。
+ChangeHumAbility 11 - <$STR(N170)>
+ChangeHumAbility 5 - <$STR(N171)>
+ChangeHumAbility 7 - <$STR(N171)>
+ChangeHumAbility 9 - <$STR(N171)>
+ChangeHumAbility 1 - <$STR(N172)>
+ChangeHumAbility 3 - <$STR(N173)>
+ClearDelayGoto 附体结束
+MOV S170 未附体
+BREAK
+
+#IF
+NOT EQUAL S170 已附体
+#ACT
+ChangeHumAbility 11 + <$STR(N170)>
+ChangeHumAbility 5 + <$STR(N171)>
+ChangeHumAbility 7 + <$STR(N171)>
+ChangeHumAbility 9 + <$STR(N171)>
+ChangeHumAbility 1 + <$STR(N172)>
+ChangeHumAbility 3 + <$STR(N173)>
+MOV S170 已附体
+SENDMSG 7 宠物已成功附体。
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+[@宠物学习]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#IF
+NOT CheckTextList <$ITEMINFO[$IDX(14)].Name> ../QuestDiary/游戏配置/灵宠配置/灵宠列表.txt
+#ACT
+Messagebox 你并没有携带宠物，无法学习。
+#ELSEACT
+ShowItemBox 放入宠物技能书： @检测宠物书
+
+
+[@检测宠物书]
+#IF
+NOT CheckTextList <$ITEMINFO[$IDX(14)].Name> ../QuestDiary/游戏配置/灵宠配置/灵宠列表.txt
+#ACT
+Messagebox 学习失败！原因可能如下：\你把宠物拿下来了？
+BREAK
+
+#IF
+NOT CheckTextList <$ItemInfo[$STR(N888)].Name> ../QuestDiary/游戏配置/灵宠配置/灵宠技能清单.txt
+NOT CheckTextList <$ItemInfo[$STR(N888)].Name> ../QuestDiary/游戏配置/灵宠配置/灵宠主动技能清单.txt
+#ACT
+Messagebox 学习失败！原因可能如下：\你放入的并不是宠物技能书。
+break
+
+
+
+#IF
+CheckContainsText <$ItemInfo[$STR(N888)].Name> <$ITEMINFO[$IDX(14)].TeShu>
+#ACT
+Messagebox 学习失败！原因可能如下：\你的宠物已经学习过《<$ItemInfo[$STR(N888)].Name>》。
+BREAK
+
+#IF
+CheckContainsText <$ItemInfo[$STR(N888)].Name> <$ITEMINFO[$IDX(14)].DiaoLuo>
+#ACT
+Messagebox 学习失败！原因可能如下：\你的宠物已经学习过《<$ItemInfo[$STR(N888)].Name>》。
+BREAK
+
+#IF
+CheckTextList <$ItemInfo[$STR(N888)].Name> ../QuestDiary/游戏配置/灵宠配置/灵宠技能清单.txt
+#ACT
+GOTO @宠物被动技能学习
+BREAK
+
+#IF
+CheckTextList <$ItemInfo[$STR(N888)].Name> ../QuestDiary/游戏配置/灵宠配置/灵宠主动技能清单.txt
+#ACT
+GOTO @宠物主动技能学习
+BREAK
+
+
+[@宠物主动技能学习]
+#IF
+#ACT
+MOV S150
+MOV N150 0
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 暗咒术
+#ACT
+INC S150 暗咒术,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 荡八荒
+#ACT
+INC S150 荡八荒,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 风裂波
+#ACT
+INC S150 风裂波,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 龙虎破
+#ACT
+INC S150 龙虎破,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 圣光术
+#ACT
+INC S150 圣光术,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].TeShu> 十字斩
+#ACT
+INC S150 十字斩,
+INC N150 1
+
+#IF
+LARGE N150 2
+#ACT
+Messagebox 你的宠物已经学习了过多的技能！\无法再领悟更多的技能了。
+BREAK
+
+#IF
+#ACT
+INC S150 <$ItemInfo[$STR(N888)].Name>
+HOOKITEM 14
+ChangeGiveItem 24 <$STR(S150)>
+ChangeGiveItem 8
+Messagebox  学习成功！你的宠物成功学习了《<$ItemInfo[$STR(N888)].Name>》。
+TakeIdx <$STR(N888)>
+GOTO @宠物面板检测
+
+
+
+[@宠物被动技能学习]
+#IF
+#ACT
+MOV S150
+MOV N150 0
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 嘲讽
+#ACT
+INC S150 嘲讽,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 骨甲
+#ACT
+INC S150 骨甲,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 鬼眼
+#ACT
+INC S150 鬼眼,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 护体
+#ACT
+INC S150 护体,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 会心
+#ACT
+INC S150 会心,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 坚韧
+#ACT
+INC S150 坚韧,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 狂放
+#ACT
+INC S150 狂放,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 猎豹
+#ACT
+INC S150 猎豹,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 绿袍
+#ACT
+INC S150 绿袍,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 魔神
+#ACT
+INC S150 魔神,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 漠视
+#ACT
+INC S150 漠视,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 涅槃
+#ACT
+INC S150 涅槃,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 契约
+#ACT
+INC S150 契约,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 胜天
+#ACT
+INC S150 胜天,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 兽瞳
+#ACT
+INC S150 兽瞳,
+INC N150 1
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 洗礼
+#ACT
+INC S150 洗礼,
+INC N150 1
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 下凡
+#ACT
+INC S150 下凡,
+INC N150 1
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 阴阳
+#ACT
+INC S150 阴阳,
+INC N150 1
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 鹰眼
+#ACT
+INC S150 鹰眼,
+INC N150 1
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 智慧
+#ACT
+INC S150 智慧,
+INC N150 1
+
+
+#IF
+CheckContainsText <$ITEMINFO[$IDX(14)].DiaoLuo> 咒甲
+#ACT
+INC S150 咒甲,
+INC N150 1
+
+#IF
+LARGE N150 8
+#ACT
+Messagebox 你的宠物已经学习了过多的技能！\无法再领悟更多的技能了。
+BREAK
+
+#IF
+#ACT
+INC S150 <$ItemInfo[$STR(N888)].Name>
+HOOKITEM 14
+ChangeGiveItem 25 <$STR(S150)>
+ChangeGiveItem 8
+Messagebox  学习成功！你的宠物成功学习了《<$ItemInfo[$STR(N888)].Name>》。
+TakeIdx <$STR(N888)>
+GOTO @宠物面板检测
+
+
+
+
+
+
+
+[@LSGOHOME]
+#act
+SendMsg 7 战宠已收回!!
+
+
+
+
+
+[@宠物出战]
+#IF
+EQUAL <$ITEMINFO[$IDX(14)].Color> 253
+#ACT
+#ELSEACT
+BREAK
+
+#if
+NOT EQUAL S170 已附体
+#act
+MobSlave 灵兽系统 1 10
+MOV S666 已出战
+Goto @宠物初始化
+#ELSEACT
+SendMsg 7 宠物已附体，无法出战，请取消附体后再来。
+
+
+[@TakeOffItem]
+#IF
+EQUAL N0 14
+#ACT
+CLOSE
+#ELSEACT
+BREAK
+
+#IF
+CHECKTEXTLIST <$STR(S0)> ../QuestDiary/游戏配置/灵宠配置/灵宠列表.txt
+EQUAL N0 14
+CheckSlaveName <$STR(S0)>
+#ACT
+MobSlave 灵兽系统 1 10
+MOV S666 未出战
+
+#IF
+EQUAL S170 已附体
+#ACT
+SENDMSG 7 你已取消附体。
+ChangeHumAbility 11 - <$STR(N170)>
+ChangeHumAbility 5 - <$STR(N171)>
+ChangeHumAbility 7 - <$STR(N171)>
+ChangeHumAbility 9 - <$STR(N171)>
+ChangeHumAbility 1 - <$STR(N172)>
+ChangeHumAbility 3 - <$STR(N173)>
+MOV S170 未附体
+BREAK
+
+
+[@PickUpItems]
+#if
+CHECKTEXTLIST <$str(S0)> ../QuestDiary/游戏配置/灵宠配置/灵宠列表.txt
+#act
+MOV S888 <$str(S0)>
+MOV N888 <$STR(N0)>
+MOV N799 <$ItemInfo[$STR(N888)].Color>
+
+
+#IF
+CHECKTEXTLIST <$str(S0)> ../QuestDiary/游戏配置/灵宠配置/灵宠列表.txt
+NOT EQUAL N799 253
+#ACT
+MOV N889 [$灵宠身份铭牌基数]
+INC N889 <$STR(G889)>
+INC G889 1
+HookItemIdx <$STR(N888)>
+ChangeGiveItem 18 2 =<$STR(N889)>
+ChangeGiveItem 8
+ADDTEXTLIST 玩家：<$USERNAME>，灵宠名字：<$STR(S888)>，编号：<$STR(N889)> ../QuestDiary/游戏配置/灵宠配置/灵宠归属档案/<$STR(N889)>.txt
+goto @宠物拾取鉴定
+
+
+
+
+
+
+[@宠物拾取鉴定]
+#IF
+CHECKTEXTLIST <$str(S888)> ../QuestDiary/游戏配置/灵宠配置/灵宠成长值一档.txt
+#ACT
+GOTO @成长值一档
+BREAK
+
+#IF
+CHECKTEXTLIST <$str(S888)> ../QuestDiary/游戏配置/灵宠配置/灵宠成长值二档.txt
+#ACT
+GOTO @成长值二档
+BREAK
+
+#IF
+CHECKTEXTLIST <$str(S888)> ../QuestDiary/游戏配置/灵宠配置/灵宠成长值三档.txt
+#ACT
+GOTO @成长值三档
+BREAK
+
+#IF
+CHECKTEXTLIST <$str(S888)> ../QuestDiary/游戏配置/灵宠配置/灵宠成长值四档.txt
+#ACT
+GOTO @成长值四档
+BREAK
+
+#IF
+CHECKTEXTLIST <$str(S888)> ../QuestDiary/游戏配置/灵宠配置/灵宠成长值五档.txt
+#ACT
+GOTO @成长值五档
+BREAK
+
+
+#IF
+CHECKTEXTLIST <$str(S888)> ../QuestDiary/游戏配置/灵宠配置/灵宠成长值六档.txt
+#ACT
+GOTO @成长值六档
+BREAK
+
+#IF
+CHECKTEXTLIST <$str(S888)> ../QuestDiary/游戏配置/灵宠配置/灵宠成长值七档.txt
+#ACT
+GOTO @成长值七档
+BREAK
+
+
+
+[@成长值七档]
+;//死神档次
+#ACT
+MOVR N800 [$七档灵宠最低资质] [$七档灵宠最高资质]
+MOVR N801 [$七档灵宠最低资质] [$七档灵宠最高资质]
+MOVR N802 [$七档灵宠最低资质] [$七档灵宠最高资质]
+MOVR N803 [$七档灵宠最低资质] [$七档灵宠最高资质]
+ADDTEXTLIST <$STR(N800)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N801)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N802)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N803)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+ADDTEXTLIST 1 ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+INC N800 <$STR(N801)>
+INC N800 <$STR(N802)>
+INC N800 <$STR(N803)>
+DIV N800 4
+HookItemIdx <$STR(N888)>
+CHANGEGIVEITEM 18 0 =<$STR(N800)>
+CHANGEGIVEITEM 18 1 =5
+ChangeGiveItem 7 75 253
+ChangeGiveItem 8
+
+
+
+[@成长值六档]
+#ACT
+MOVR N800 [$六档灵宠最低资质] [$六档灵宠最高资质]
+MOVR N801 [$六档灵宠最低资质] [$六档灵宠最高资质]
+MOVR N802 [$六档灵宠最低资质] [$六档灵宠最高资质]
+MOVR N803 [$六档灵宠最低资质] [$六档灵宠最高资质]
+ADDTEXTLIST <$STR(N800)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N801)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N802)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N803)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+ADDTEXTLIST 1 ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+INC N800 <$STR(N801)>
+INC N800 <$STR(N802)>
+INC N800 <$STR(N803)>
+DIV N800 4
+HookItemIdx <$STR(N888)>
+CHANGEGIVEITEM 18 0 =<$STR(N800)>
+CHANGEGIVEITEM 18 1 =5
+ChangeGiveItem 7 75 253
+ChangeGiveItem 8
+
+
+
+[@成长值五档]
+#ACT
+MOVR N800 [$五档灵宠最低资质] [$五档灵宠最高资质]
+MOVR N801 [$五档灵宠最低资质] [$五档灵宠最高资质]
+MOVR N802 [$五档灵宠最低资质] [$五档灵宠最高资质]
+MOVR N803 [$五档灵宠最低资质] [$五档灵宠最高资质]
+ADDTEXTLIST <$STR(N800)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N801)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N802)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N803)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+ADDTEXTLIST 1 ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+INC N800 <$STR(N801)>
+INC N800 <$STR(N802)>
+INC N800 <$STR(N803)>
+DIV N800 4
+HookItemIdx <$STR(N888)>
+CHANGEGIVEITEM 18 0 =<$STR(N800)>
+CHANGEGIVEITEM 18 1 =5
+ChangeGiveItem 7 75 253
+ChangeGiveItem 8
+
+
+
+[@成长值四档]
+#ACT
+MOVR N800 [$四档灵宠最低资质] [$四档灵宠最高资质]
+MOVR N801 [$四档灵宠最低资质] [$四档灵宠最高资质]
+MOVR N802 [$四档灵宠最低资质] [$四档灵宠最高资质]
+MOVR N803 [$四档灵宠最低资质] [$四档灵宠最高资质]
+ADDTEXTLIST <$STR(N800)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N801)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N802)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N803)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+ADDTEXTLIST 1 ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+INC N800 <$STR(N801)>
+INC N800 <$STR(N802)>
+INC N800 <$STR(N803)>
+DIV N800 4
+HookItemIdx <$STR(N888)>
+CHANGEGIVEITEM 18 0 =<$STR(N800)>
+CHANGEGIVEITEM 18 1 =5
+ChangeGiveItem 7 75 253
+ChangeGiveItem 8
+
+
+
+[@成长值三档]
+#ACT
+MOVR N800 [$三档灵宠最低资质] [$三档灵宠最高资质]
+MOVR N801 [$三档灵宠最低资质] [$三档灵宠最高资质]
+MOVR N802 [$三档灵宠最低资质] [$三档灵宠最高资质]
+MOVR N803 [$三档灵宠最低资质] [$三档灵宠最高资质]
+ADDTEXTLIST <$STR(N800)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N801)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N802)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N803)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+ADDTEXTLIST 1 ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+INC N800 <$STR(N801)>
+INC N800 <$STR(N802)>
+INC N800 <$STR(N803)>
+DIV N800 4
+HookItemIdx <$STR(N888)>
+CHANGEGIVEITEM 18 0 =<$STR(N800)>
+CHANGEGIVEITEM 18 1 =5
+ChangeGiveItem 7 75 253
+ChangeGiveItem 8
+
+
+
+[@成长值二档]
+#ACT
+MOVR N800 [$二档灵宠最低资质] [$二档灵宠最高资质]
+MOVR N801 [$二档灵宠最低资质] [$二档灵宠最高资质]
+MOVR N802 [$二档灵宠最低资质] [$二档灵宠最高资质]
+MOVR N803 [$二档灵宠最低资质] [$二档灵宠最高资质]
+ADDTEXTLIST <$STR(N800)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N801)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N802)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N803)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+ADDTEXTLIST 1 ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+INC N800 <$STR(N801)>
+INC N800 <$STR(N802)>
+INC N800 <$STR(N803)>
+DIV N800 4
+HookItemIdx <$STR(N888)>
+CHANGEGIVEITEM 18 0 =<$STR(N800)>
+CHANGEGIVEITEM 18 1 =5
+ChangeGiveItem 7 75 253
+ChangeGiveItem 8
+
+
+
+[@成长值一档]
+#ACT
+MOVR N800 [$一档灵宠最低资质] [$一档灵宠最高资质]
+MOVR N801 [$一档灵宠最低资质] [$一档灵宠最高资质]
+MOVR N802 [$一档灵宠最低资质] [$一档灵宠最高资质]
+MOVR N803 [$一档灵宠最低资质] [$一档灵宠最高资质]
+ADDTEXTLIST <$STR(N800)> ../QuestDiary/游戏配置/灵宠配置/灵宠攻击资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N801)> ../QuestDiary/游戏配置/灵宠配置/灵宠防御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N802)> ../QuestDiary/游戏配置/灵宠配置/灵宠魔御资质/<$STR(N889)>.txt
+ADDTEXTLIST <$STR(N803)> ../QuestDiary/游戏配置/灵宠配置/灵宠体质资质/<$STR(N889)>.txt
+ADDTEXTLIST 1 ../QuestDiary/游戏配置/灵宠配置/灵宠灵域等级/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠属性点/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠攻击属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠防御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠魔御属性点余数/<$STR(N889)>.txt
+ADDTEXTLIST 0 ../QuestDiary/游戏配置/灵宠配置/灵宠体质属性点余数/<$STR(N889)>.txt
+INC N800 <$STR(N801)>
+INC N800 <$STR(N802)>
+INC N800 <$STR(N803)>
+DIV N800 4
+HookItemIdx <$STR(N888)>
+CHANGEGIVEITEM 18 0 =<$STR(N800)>
+CHANGEGIVEITEM 18 1 =5
+ChangeGiveItem 7 75 253
+ChangeGiveItem 8
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+}

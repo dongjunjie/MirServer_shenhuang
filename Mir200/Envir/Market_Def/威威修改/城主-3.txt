@@ -1,0 +1,371 @@
+(@@InPutString @@InputInteger)
+[@MAIN](2396,550,367,3)
+　\　\　\　\
+　　{首任城主奖励1000元平台充值+城主专属称号和时装武器衣服+微章。=FCO=254}\
+　　{老区奖励每次200元元平台充值+城主专属称号和时装武器衣服+微章。=FCO=254}\
+　　{攻沙奖励领取时间为:22:00-22:20,=FCO=23}\
+　　{请获胜行会掌门主动联系管理QQ=FCO=254}{2264841338=FCO=23}{获取奖励激活码。=FCO=254}\
+　　{逾期未领取系统默认自动放弃=FCO=254}\ 
+　　<{[领取攻沙奖励]=FCO=70}|系统会自动分析首次攻城和普通攻城/@@InPutString11|请输入管理给的激活码> \
+　　<{[城主雕像申请]=FCO=70}/@申请>\ 
+　　{城主专属时装武器，专属称号可以到成就称号NPC处开启。=FCO=250}\
+　　　1,{i.1705,c.1=item}        2,{i.1685,c.1=item}        3,{i.1682,c.1=item}        4,{i.1683,c.1=item}\  \
+　  　  \
+{-----------------------------------------------------------------------------=FCO=254}\
+　　{提示：沙城皇宫禁止召唤契约宝宝作战，禁止火墙。=FCO=23}\
+　　<[沙城武器店]/@YF01>
+　　<[沙城首饰店]/@YF02>
+　　<[沙城正大门]/@YF03>
+　　<[沙城复活点]/@YF04>\
+　　{攻城传送：每传送一次需要10元宝的过路费=FCO=254}\
+　　<{[关闭]=FCO=249}/@exit>\
+
+
+
+
+
+
+[@newman1]
+察看关于最近的攻城战役纪录\ \ 
+下一次战役记录在 <$CASTLEWARDATE> , 8:00开始。\ \ 
+
+沙巴克是在 <$OWNERGUILD> 的管理下。并且受约束于 <$LORD>\ 
+
+
+[@@InPutString11]
+#if
+GENDER MAN
+CheckTextList <$STR(S11)> ../QuestDiary/激活码/首任城主.txt
+#act
+DelTextList <$STR(S11)> ../QuestDiary/激活码/首任城主.txt
+DynamicGive 城主荣耀战刀 1
+DynamicGive 城主荣耀战袍 1
+DynamicGive 城主荣耀 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+messagebox  恭喜你成功领取城主奖励！
+goto @MAIN
+SENDMSG 0 〖#6FFFF/8#6沙巴克#5〗:恭喜伟大的首任城主#6FFFF/8#6<$USERNAME>#5成功领取“#6FFFF/8#6城主奖励#5”奖励！
+Break
+#ELSEACT
+
+
+#if
+CheckTextList <$STR(S11)> ../QuestDiary/激活码/首任城主.txt
+#act
+DelTextList <$STR(S11)> ../QuestDiary/激活码/首任城主.txt
+DynamicGive 城主荣耀战刀 1
+DynamicGive 城主荣耀战衣 1
+DynamicGive 城主荣耀 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+messagebox  恭喜你成功领取城主奖励！
+goto @MAIN
+SENDMSG 0 〖#6FFFF/8#6沙巴克#5〗:恭喜伟大的首任城主#6FFFF/8#6<$USERNAME>#5成功领取“#6FFFF/8#6城主奖励#5”奖励！
+Break
+#ELSEACT
+messagebox  你输入的激活码无效！
+
+
+
+[@newman]
+#IF
+Equal G490 3
+#ACT
+#SAY
+{攻沙奖励领取时间为:22:00-22:30,逾期未领取系统默认自动放弃=FCO=254}\
+{════════════════════════════=FCO=151}\ \ \
+{→=FCO=224} {→=FCO=224} {→=FCO=224} {→=FCO=224} {→=FCO=224} <领取奖励/@mancallmony>\ \ \　
+{攻沙奖励=FCO=228}  {→=FCO=224}  {100万金币=FCO=254}\
+{════════════════════════════=FCO=151}\
+<$SERVERNAME>{祝大家游戏愉快!=FCO=224}\
+#elsesay
+{攻沙奖励领取时间为:22:00-22:30,逾期未领取系统默认自动放弃=FCO=254}\
+{════════════════════════════=FCO=151}\ \ \
+{→=FCO=224} {→=FCO=224} {→=FCO=224} {→=FCO=224} {→=FCO=224} <领取奖励/@mancallmony>\ \ \　
+{攻沙奖励=FCO=228}  {→=FCO=224}  {500万金币=FCO=254}\
+{════════════════════════════=FCO=151}\
+<$SERVERNAME>{祝大家游戏愉快!!=FCO=224}\
+
+
+[@mancallmony]
+#IF
+ISCASTLEMASTER
+EQUAL G492 1
+EQUAL G493 0
+#act
+goto @1
+#ELSESAY
+你不是沙城老大，或已经领取过奖励了！请在晚上22点-23点之间领取！
+
+[@1]
+#if
+SMALL G490 4
+#ACT
+goto @11
+#ELSEACT
+GOTO @111
+
+[@11]
+#IF
+EQUAL G493 0
+#ACT
+give 金砖 1
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取首届沙城奖励500万金币！ 151 181
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取首届沙城奖励500万金币！ 151 181
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取首届沙城奖励500万金币！ 151 181
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取首届沙城奖励500万金币！ 151 181
+MOV G493 1
+#ELSEACT
+messagebox 已经领取过了，无法再领取！
+
+[@111]
+#IF
+EQUAL G493 0
+#ACT
+give 金条 1
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取本届沙城奖励100万金币！ 151 181
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取本届沙城奖励100万金币！ 151 181
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取本届沙城奖励100万金币！ 151 181
+SendMsg 9   沙城主[#7<$LORD>#7],已经成功领取本届沙城奖励100万金币！ 151 181
+MOV G493 1
+#ELSEACT
+messagebox 已经领取过了,无法再领取！
+
+
+
+
+
+
+[@传1]
+#IF
+checkgold 2000
+#ACT
+take 金币 2000
+mapmove  3 675 333
+#ELSEACT
+SENDMSG 7 提示：你金币不够!!!!
+
+[@传2]
+#IF
+checkgold 5000
+#ACT
+take 金币 5000
+mapmove  3 647 291 
+#ELSEACT
+SENDMSG 7 提示：你金币不够!!!!
+[@传3]
+#IF
+checkgold 10000
+#ACT
+take 金币 10000
+mapmove  3 631 275
+#ELSEACT
+SENDMSG 7 提示：你金币不够!!!!
+
+
+
+
+
+
+
+
+
+
+[@申请]
+#IF
+#SAY
+　想为自己树立一尊雕像吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　{申请成功后，可以在雕像上扬名天下=FCO=250}\
+{完全为你量身打造！=FCO=250}\ \ 
+{当前城主=FCO=243}\
+　人物名称：{<$STR(A39)>=FCO=242}  \ \
+<我要申请/@天下第一_我要申请>    <申请条件/@天下第一_申请规则>     <关闭/@exit>\
+
+
+[@天下第一_申请规则]
+{申请城主形象条件：=FCO=243}\ \
+　必须是沙巴克掌门身份。\
+<返回/@申请>\
+
+[@天下第一_我要申请]
+#IF
+EQUAL A39 <$USERNAME>
+#ACT
+MESSAGEBOX 你已经成功留名雕像了，不必重复申请。
+break
+#ELSEACT
+
+
+#IF
+ISCASTLEMASTER
+#ACT
+GOTO @申请2
+#ELSEACT
+MESSAGEBOX 申请失败，该雕像只有沙巴克老大才能申请！
+
+[@申请2]
+#IF
+#SAY
+　{恭喜你，申请成功！=FCO=250}\ \
+　你现在可以对雕像进行维护和管理。雕\
+像的造形是可以自由设定的。\
+　{另外，雕像每72个小时之内必需进行维=FCO=243}\
+{护一次，不然雕像将破碎，破碎后形象外=FCO=243}\
+{观将被系统收回，需要重新申请。=FCO=243}\ \
+<返回/@申请>\
+#ACT
+MOV A39 <$USERNAME>
+MOV G36 <$EFFIGYSTATE>
+MOV G37 <$LEVEL>
+MOV G38 <$MAXDC>
+MOV G39 0
+MOV G40 40
+MOV G41 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G6)> 40
+SENDMSG 0 [#6FFFF/8#6公告#5]：恭喜[#7<$LORD>#7]成功申请了#6FFFF/8#6本界沙巴克掌门形象大使#5
+SENDMSG 0 [#6FFFF/8#6公告#5]：恭喜[#7<$LORD>#7]成功申请了#6FFFF/8#6本界沙巴克掌门形象大使#5
+SENDMSG 0 [#6FFFF/8#6公告#5]：恭喜[#7<$LORD>#7]成功申请了#6FFFF/8#6本界沙巴克掌门形象大使#5
+SENDMSG 0 [#6FFFF/8#6公告#5]：恭喜[#7<$LORD>#7]成功申请了#6FFFF/8#6本界沙巴克掌门形象大使#5
+SENDMSG 0 [#6FFFF/8#6公告#5]：恭喜[#7<$LORD>#7]成功申请了#6FFFF/8#6本界沙巴克掌门形象大使#5
+
+[@天下第一_更换形像]
+
+　雕像的样子是跟据人物当前的着装来显\
+示。雕像的衣服、武器和发型是跟据你当\
+前的穿着来显示，人物的造形你可以进行\
+选择。请选择你要雕刻的造形！\ \
+<站立造形/@天下第一_更换形像_确定更新(40)>\
+<走路造形/@天下第一_更换形像_确定更新(107)>\
+<跑步造形/@天下第一_更换形像_确定更新(173)>\
+<攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<返回/@申请>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G36 <$EFFIGYSTATE>
+MOV G40 <$STR(T0)>
+SETEFFIGYSTATE <$STR(36)> <$STR(G40)>
+MESSAGEBOX 恭喜你，雕像打造成功！
+
+
+[@天下第一_雕像维护]
+　{上次维护时间=FCO=243}：{<$STR(G39)>小时之前=FCO=242}\ \
+　雕像每72小时之内必需维护一次，不然\
+雕像将破碎。城主形象也将被系统收回，\
+需要重新申请。\ \
+<确认维护/@天下第一_雕像维护_确定更新>\
+<返回/@申请>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G39 1
+#ACT
+MESSAGEBOX 雕像目前不需要进行维护！
+BREAK
+
+#IF
+EQUAL A39 <$LORD>
+#ACT
+MOV G39 0
+MESSAGEBOX 恭喜你，雕像已成功维护，下次最迟维护时间72小时之内！
+GOTO @天下第一_雕像维护
+
+
+[@天下第一_时间统计]
+;当计录等级大于0才计算持续时间
+#IF
+SMALL G37 1
+#ACT
+BREAK
+
+#IF
+LARGE G39 70
+#ACT
+SENDMSG 0 [#6FFFF/8#6公告#5]：沙巴克城主[#7<$STR(A39)>#7]由于长时间没有对雕像进行管理，雕像已经破碎！
+MOV A39 (虚位以待)
+MOV G36 -1
+MOV G37 0
+MOV G38 0
+MOV G39 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G39 1
+INC G41 1
+DELAYGOTO 3600 @天下第一_时间统计 时间统计
+
+[~Initialize]
+;如果计录等级小于1则表示没有人申请
+#IF
+SMALL G37 1
+#ACT
+MOV A39 (虚位以待)
+MOV G36 -1
+MOV G37 0
+MOV G38 0
+MOV G39 0
+MOV G40 0
+MOV G41 0
+DELAYGOTO 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G6)> <$STR(G10)>
+DELAYGOTO 3600 @天下第一_时间统计 时间统计
+
+
+[@YF01]
+#IF
+CHECKGAMEGOLD > 9
+#ACT
+MAPMOVE 3 638 309
+GAMEGOLD - 10
+BREAK
+#ELSEACT
+MESSAGEBOX 您的元宝不足，无法进入！
+BREAK
+
+[@YF02]
+#IF
+CHECKGAMEGOLD > 9
+#ACT
+MAPMOVE 3 663 286
+GAMEGOLD - 10
+BREAK
+#ELSEACT
+MESSAGEBOX 您的元宝不足，无法进入！
+BREAK
+
+[@YF03]
+#IF
+CHECKGAMEGOLD > 9
+#ACT
+MAPMOVE 3 674 332
+GAMEGOLD - 10
+BREAK
+#ELSEACT
+MESSAGEBOX 您的元宝不足，无法进入！
+BREAK
+
+[@YF04]
+#IF
+CHECKGAMEGOLD > 9
+#ACT
+MAPMOVE 3 649 293
+GAMEGOLD - 10
+BREAK
+#ELSEACT
+MESSAGEBOX 您的元宝不足，无法进入！
+BREAK

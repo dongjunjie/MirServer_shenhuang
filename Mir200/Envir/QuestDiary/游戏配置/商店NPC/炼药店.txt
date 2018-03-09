@@ -1,0 +1,198 @@
+[@炼药店脚本头]
+{
+(@buy )
+%100
++0
++42
+[@main]
+#CALLX [\游戏配置\所有NPC调用头.txt] @所有NPC调用头
+
+[@所有NPC调用头_返回]
+{<$SELFNAME>=FCO=251}：\
+　这地方是做药品买卖的，你需要点什么？当然，如果你要的是可\
+卡因或其他之类精神药品的话，我们可不卖。\ \
+　<购买药品/@buy>\
+　<炼/@炼药>药\
+　<打　听/@helps>药品的解释\ \
+　<关　闭/@exit>
+
+[@helps]
+{<$SELFNAME>=FCO=251}：\
+　这里我们可以卖2种药品。\ \
+　<灰色药粉/@helpdrug1>的效果\
+　<黄色药粉/@helpdrug2>的效果\ \
+　<返　回/@Main>
+[@helpdrug1]
+{<$SELFNAME>=FCO=251}：\
+　道士在运用施毒术的时候可以使用灰色药粉。\
+如果中了毒，对手的体力值将会下降。\ \
+　<返　回/@helps>
+[@helpdrug2]
+{<$SELFNAME>=FCO=251}：\
+　道士在运用施毒术的时候可以使用黄色药粉。\
+如果中了毒，对手的防御力将会下降。\ \
+　<返　回/@helps>
+
+[@炼药]
+{<$SELFNAME>=FCO=251}：\
+　我这里可以制作以下几种药品：\
+　制作<灰色药粉(少量)/@灰色药粉_少量>\
+　制作<黄色药粉(少量)/@黄色药粉_少量>\
+　制作<灰色药粉(中量)/@灰色药粉_中量>\
+　制作<黄色药粉(中量)/@黄色药粉_中量>\
+　制作<灰色药粉(大量)/@灰色药粉_大量>\
+　制作<黄色药粉(大量)/@黄色药粉_大量>\ \
+　<返回上一页/@main>
+
+[@灰色药粉_少量]
+{<$SELFNAME>=FCO=251}：\
+　制作灰色药粉(少量)，需要\
+　1个食人花的果实\
+　2颗毒蜘蛛牙齿\
+　4片食人花叶\ \
+　<开始制作/@制作灰色药粉_少量>
+
+[@黄色药粉_少量]
+{<$SELFNAME>=FCO=251}：\
+　制作黄色药粉(少量)，需要\
+　1粒蛆卵\
+　1个蝎子尾巴\
+　4片食人花叶\ \
+　<开始制作/@制作黄色药粉_少量>
+
+[@灰色药粉_中量]
+{<$SELFNAME>=FCO=251}：\
+　制作灰色药粉(中量)，需要\
+　2个食人花的果实\
+　4颗毒蜘蛛牙齿\
+　8片食人花叶\ \
+　<开始制作/@制作灰色药粉_中量>
+
+[@黄色药粉_中量]
+{<$SELFNAME>=FCO=251}：\
+　制作黄色药粉(中量)，需要\
+　2粒蛆卵\
+　2个蝎子尾巴\
+　8片食人花叶\ \
+　<开始制作/@制作黄色药粉_中量>
+
+[@灰色药粉_大量]
+{<$SELFNAME>=FCO=251}：\
+　制作灰色药粉(大量)，需要\
+　3个食人花的果实\
+　6颗毒蜘蛛牙齿\
+　12片食人花叶\ \
+　<开始制作/@制作灰色药粉_大量>
+
+[@黄色药粉_大量]
+{<$SELFNAME>=FCO=251}：\
+　制作黄色药粉(大量)，需要\
+　3粒蛆卵\
+　3个蝎子尾巴\
+　12片食人花叶\ \
+　<开始制作/@制作黄色药粉_大量>
+
+[@制作灰色药粉_少量]
+#IF
+CHECKITEMCOUNT 食人花的果实 ? 1
+CHECKITEMCOUNT 毒蜘蛛牙齿 ? 2
+CHECKITEMCOUNT 食人花叶 ? 4
+#ACT
+TAKECOUNT 食人花的果实 1
+TAKECOUNT 毒蜘蛛牙齿 2
+TAKECOUNT 食人花叶 4
+GIVE 灰色药粉(少量) 1
+SENDMSG 5 制作药品成功，获得了[灰色药粉(少量)]
+GOTO @炼药
+#ELSEACT
+SENDMSG 5 缺少制作[灰色药粉(少量)]的材料！
+GOTO @炼药
+
+[@制作黄色药粉_少量]
+#IF
+CHECKITEMCOUNT 蛆卵 ? 1
+CHECKITEMCOUNT 蝎子尾巴 ? 1
+CHECKITEMCOUNT 食人花叶 ? 4
+#ACT
+TAKECOUNT 蛆卵 1
+TAKECOUNT 蝎子尾巴 1
+TAKECOUNT 食人花叶 4
+GIVE 黄色药粉(少量) 1
+SENDMSG 5 制作药品成功，获得了[黄色药粉(少量)]
+GOTO @炼药
+#ELSEACT
+SENDMSG 5 缺少制作[黄色药粉(少量)]的材料！
+GOTO @炼药
+
+[@制作灰色药粉_中量]
+#IF
+CHECKITEMCOUNT 食人花的果实 ? 2
+CHECKITEMCOUNT 毒蜘蛛牙齿 ? 4
+CHECKITEMCOUNT 食人花叶 ? 8
+#ACT
+TAKECOUNT 食人花的果实 2
+TAKECOUNT 毒蜘蛛牙齿 4
+TAKECOUNT 食人花叶 8
+GIVE 灰色药粉(中量) 1
+SENDMSG 5 制作药品成功，获得了[灰色药粉(中量)]
+GOTO @炼药
+#ELSEACT
+SENDMSG 5 缺少制作[灰色药粉(中量)]的材料！
+GOTO @炼药
+
+[@制作黄色药粉_中量]
+#IF
+CHECKITEMCOUNT 蛆卵 ? 2
+CHECKITEMCOUNT 蝎子尾巴 ? 2
+CHECKITEMCOUNT 食人花叶 ? 8
+#ACT
+TAKECOUNT 蛆卵 2
+TAKECOUNT 蝎子尾巴 2
+TAKECOUNT 食人花叶 8
+GIVE 黄色药粉(中量) 1
+SENDMSG 5 制作药品成功，获得了[黄色药粉(中量)]
+GOTO @炼药
+#ELSEACT
+SENDMSG 5 缺少制作[黄色药粉(中量)]的材料！
+GOTO @炼药
+
+[@制作灰色药粉_大量]
+#IF
+CHECKITEMCOUNT 食人花的果实 ? 3
+CHECKITEMCOUNT 毒蜘蛛牙齿 ? 6
+CHECKITEMCOUNT 食人花叶 ? 12
+#ACT
+TAKECOUNT 食人花的果实 3
+TAKECOUNT 毒蜘蛛牙齿 6
+TAKECOUNT 食人花叶 12
+GIVE 灰色药粉(大量) 1
+SENDMSG 5 制作药品成功，获得了[灰色药粉(大量)]
+GOTO @炼药
+#ELSEACT
+SENDMSG 5 缺少制作[灰色药粉(大量)]的材料！
+GOTO @炼药
+
+[@制作黄色药粉_大量]
+#IF
+CHECKITEMCOUNT 蛆卵 ? 3
+CHECKITEMCOUNT 蝎子尾巴 ? 3
+CHECKITEMCOUNT 食人花叶 ? 12
+#ACT
+TAKECOUNT 蛆卵 3
+TAKECOUNT 蝎子尾巴 3
+TAKECOUNT 食人花叶 12
+GIVE 黄色药粉(大量) 1
+SENDMSG 5 制作药品成功，获得了[黄色药粉(大量)]
+GOTO @炼药
+#ELSEACT
+SENDMSG 5 缺少制作[黄色药粉(大量)]的材料！
+GOTO @炼药
+
+[goods]
+灰色药粉(少量)     100     3       0
+黄色药粉(少量)     100     3       1
+灰色药粉(中量)     100     3       2
+黄色药粉(中量)     100     3       3
+黄色药粉(大量)  100     3       4
+灰色药粉(大量)  100     3       5
+}

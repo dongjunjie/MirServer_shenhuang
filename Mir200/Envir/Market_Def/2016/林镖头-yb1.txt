@@ -1,0 +1,291 @@
+[@main](2305,300,344,3)
+#if
+NOT CHECKNAMELIST ../QuestDiary/2016押镖名单.txt
+#act
+ADDNAMELIST ../QuestDiary/2016押镖名单.txt
+MOV C199 3
+#if
+#SAY
+　\　\
+ {每天19:10-21:00是活动时间=FCO=254}\
+{每天可领取3次镖车任务-=FCO=254}{[剩余<$STR(C199)>次]=FCO=249}\
+{成功后退还全部押金+相应奖励=FCO=254}\
+{押镖中被坏人劫镖，损失所有押金！=FCO=254}\
+{请击保护好你的镖车，注意安全!=FCO=254}\
+　\
+<&{[领取经验镖车]=FCO=70}|每次需要100元宝。成功押送镖车奖励500w-1500w经验/@领经验>\
+<&{[领取元宝镖车]=FCO=70}|每次需要300元宝。成功押送镖车奖励600-1200元宝/@领英雄>\
+;<&{[领取金刚石镖车]=FCO=70}|每次需要100金刚石。成功押送镖车奖励100-300金刚石/@领金刚> \ 
+<&{[结束对话]=FCO=249}/@exit>\
+{完成任何押镖均可额外随机获得极品道具一个！=FCO=23}\
+
+;=========================元宝镖车================================================
+[@领金刚]
+#if
+Equal G953 0
+#ACT
+MESSAGEBOX 当前不是活动时间。
+BREAK
+#IF
+CHECKSLAVENAME 经验镖车[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 经验镖车[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 经验镖车[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+NOT CheckItemCount 金刚石 ? 100
+#ACT
+MESSAGEBOX 你的金刚石不足100，不能接镖。
+BREAK
+#if
+SMALL C199 1
+#ACT
+MESSAGEBOX 今日次数已用完，不能接镖。
+BREAK
+#if
+Random 3
+#act
+DEC C199 1
+TakeCount 金刚石 100
+MOBSLAVE 金刚石镖[豪华] 1 1
+MESSAGEBOX 成功接到金刚石镖[豪华]，赶紧押往目的的吧。
+BREAK
+#if
+Random 3
+#act
+DEC C199 1
+TakeCount 金刚石 100
+MOBSLAVE 金刚石镖[精致] 1 1
+MESSAGEBOX 成功接到金刚石镖[精致]，赶紧押往目的的吧。
+BREAK
+#if
+#act
+DEC C199 1
+TakeCount 金刚石 100
+MOBSLAVE 金刚石镖[普通] 1 1
+MESSAGEBOX 成功接到金刚石镖[普通]，赶紧押往目的的吧。
+BREAK
+;=========================元宝镖车================================================
+[@领英雄]
+#IF
+CHECKSLAVENAME 经验镖车[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 经验镖车[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 经验镖车[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+
+#if
+SMALL C199 1
+#ACT
+MESSAGEBOX 今日次数已用完，不能接镖。
+BREAK
+#if
+CheckGameGold ? 300
+Random 3
+#act
+DEC C199 1
+GameGold - 300
+MOBSLAVE 元宝镖[豪华] 1 1
+MESSAGEBOX 成功接到元宝镖[豪华]，赶紧押往目的的吧。
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[300]#7元宝，获得#7[300]#7个消费积分，今日累计消费积分#7[<$HUMAN(消费积分)>]#7。
+BREAK
+#if
+CheckGameGold ? 300
+Random 3
+#act
+DEC C199 1
+GameGold - 300
+MOBSLAVE 元宝镖[精致] 1 1
+MESSAGEBOX 成功接到元宝镖[精致]，赶紧押往目的的吧。
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[300]#7元宝，获得#7[300]#7个消费积分，今日累计消费积分#7[<$HUMAN(消费积分)>]#7。
+BREAK
+#if
+CheckGameGold ? 300
+#act
+DEC C199 1
+GameGold - 300
+MOBSLAVE 元宝镖[普通] 1 1
+MESSAGEBOX 成功接到元宝镖[普通]，赶紧押往目的的吧。
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[300]#7元宝，获得#7[300]#7个消费积分，今日累计消费积分#7[<$HUMAN(消费积分)>]#7。
+BREAK
+#ELSEACT
+MESSAGEBOX 你的元宝不足300，不能接镖。
+;=========================经验镖车================================================
+[@领经验]
+#IF
+CHECKSLAVENAME 经验镖车[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 经验镖车[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 经验镖车[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 元宝镖[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[普通]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[豪华]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#IF
+CHECKSLAVENAME 金刚石镖[精致]
+#ACT
+MESSAGEBOX 你已经有一辆镖车了。
+BREAK
+#if
+SMALL C199 1
+#ACT
+MESSAGEBOX 今日次数已用完，不能接镖。
+BREAK
+#if
+CheckGameGold ? 100
+Random 3
+#act
+DEC C199 1
+GameGold - 100
+MOBSLAVE 经验镖车[豪华] 1 1
+MESSAGEBOX 成功接到经验镖车[豪华]，赶紧押往目的的吧。
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[100]#7元宝，获得#7[100]#7个消费积分，今日累计消费积分#7[<$HUMAN(消费积分)>]#7。
+BREAK
+#if
+CheckGameGold ? 100
+Random 3
+#act
+DEC C199 1
+GameGold - 100
+MOBSLAVE 经验镖车[精致] 1 1
+MESSAGEBOX 成功接到经验镖车[精致]，赶紧押往目的的吧。
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[100]#7元宝，获得#7[100]#7个消费积分，今日累计消费积分#7[<$HUMAN(消费积分)>]#7。
+BREAK
+#if
+CheckGameGold ? 100
+#act
+DEC C199 1
+GameGold - 100
+MOBSLAVE 经验镖车[普通] 1 1
+MESSAGEBOX 成功接到经验镖车[普通]，赶紧押往目的的吧。
+INC G100 100
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[100]#7元宝，获得#7[100]#7个消费积分，今日累计消费积分#7[<$HUMAN(消费积分)>]#7。
+BREAK
+#ELSEACT
+MESSAGEBOX 你的元宝不足100，不能接镖。

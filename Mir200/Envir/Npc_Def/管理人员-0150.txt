@@ -1,0 +1,393 @@
+[@MAIN]
+
+#IF
+#ACT
+MOV <$STR(P0)> <$STR(G30)>
+DEC <$STR(P0)> <$STR(G31)>
+#SAY
+
+　　沙城行会：{<$OWNERGUILD>=FCO=250}\
+　　沙城城主：{<$LORD>=FCO=250}\
+　　城堡资金：{<$CASTLEGOLD> 金币=FCO=250}\
+　　今天收入：{<$TODAYINCOME> 金币=FCO=250}\
+　　已守天数：{<$STR(P0)> 天=FCO=250}\ \
+
+<{城堡控制选项=FCO=251}/@城主_选项>\
+<{领取攻城奖励=FCO=251}/@城主_领取奖励>\
+<{连续守城奖励=FCO=251} {(新)=FCO=249}/@城主_领取奖励BAK>\ \
+
+
+[@城主_选项]
+#IF
+ISCASTLEMASTER
+#SAY
+城堡基本信息：\ \
+　　------------------------------\
+　　城堡资金：{<$CASTLEGOLD> 金币=FCO=250}\ \
+　　今天收入：{<$TODAYINCOME> 金币=FCO=250}\ \
+　　已守天数：{<$STR(P0)> 天=FCO=250}\
+　　------------------------------\ \
+<取回资金/@@withdrawal>\
+<存储资金/@@receipts>\
+<防御方式/@防御方式>\
+<城堡维护/@城堡维护>\
+<返回/@系统_标准NPC头_返回>\
+#ELSEACT
+MESSAGEBOX 你没有权利使用.
+
+[@城主_领取奖励]
+#IF
+EQUAL <$STR(A10)>
+#SAY
+首次攻城战役：\ \
+　　-------------------------------\
+　　战役时间：{[$沙巴克首次攻城时间_月]=FCO=250}月{[$沙巴克首次攻城时间_日]=FCO=250}日，现在是{<$MONTH>=FCO=250}月{<$DAY>=FCO=250}日\ \
+　　首沙奖励：{[$首沙元宝奖励数量]=FCO=250}元宝，{[$首沙金币奖励数量]=FCO=250}金币\ \
+　　领取时间：{[$沙巴克首次攻城时间_月]=FCO=250}月{[$沙巴克首次攻城时间_日]=FCO=250}日{22:01=FCO=250}~{22:59=FCO=250}之间\
+　　-------------------------------\ \
+<{领取首次攻城战奖励=FCO=251}/@首沙_时间检测>\
+<关闭/@exit>\
+#ELSESAY
+普通攻城战役：\ \
+　　-------------------------------\
+　　战役时间：{<$MONTH>=FCO=250}月{<$DAY>=FCO=250}日，现在是{<$MONTH>=FCO=250}月{<$DAY>=FCO=250}日\ \
+　　普沙奖励：{[$历届元宝奖励数量]=FCO=250}元宝，{[$历届金币奖励数量]=FCO=250}金币\ \
+　　领取时间：{<$MONTH>=FCO=250}月{<$DAY>=FCO=250}日{22:01=FCO=250}~{22:59=FCO=250}之间\
+　　-------------------------------\ \
+<领取普通攻城战奖励=FCO=251}/@普沙_时间检测>\
+<关闭/@exit>\
+
+[@首沙_时间检测]
+#IF
+ISCASTLEMASTER
+HOUR 22 22
+#ACT
+Goto @首沙_领取检测
+#ELSESAY
+　该攻城奖励，需在{[$沙巴克首次攻城时间_月]=FCO=249}月{[$沙巴克首次攻城时间_日]=FCO=249}日{22=FCO=249}~{23=FCO=249}点之间，\
+由城主大人亲自领取！\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+[@首沙_领取检测]
+#IF
+EQUAL <$STR(A10)>
+#ACT
+MOV <$STR(A10)> 游戏管理客服
+MOV <$STR(A12)> <$USERNAME>
+GAMEGOLD + [$首沙元宝奖励数量]
+GIVE 金币 [$首沙金币奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成为了首任沙巴克城主，已领取了#6FFFF/8#6([$首沙元宝奖励数量])#5元宝，#6FFFF/8#6([$首沙金币奖励数量])#5金币的奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：恭喜#6FFFF/8#6[<$USERNAME>]#5成为了首任沙巴克城主，已领取了#6FFFF/8#6([$首沙元宝奖励数量])#5元宝，#6FFFF/8#6([$首沙金币奖励数量])#5金币的奖励！
+#SAY
+　恭喜，获得了{[$首沙元宝奖励数量]=FCO=249}元宝、{[$首沙金币奖励数量]=FCO=249}金币奖励，\
+请务必合理发放奖励！\ \
+　{提示：按Ｗ键打开行会面板可以将金币=FCO=250}\
+{平均发放给在线成员。=FCO=250}\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+#ELSESAY
+　奖励已经发放过了，请等待明天的战役。\
+祝您游戏愉快！\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+
+[@普沙_时间检测]
+#IF
+ISCASTLEMASTER
+HOUR 22 22
+#ACT
+Goto @普沙_领取检测
+#ELSESAY
+　该攻城奖励，需在{<$MONTH>=FCO=249}月{<$DAY>=FCO=249}日{22=FCO=249}~{23=FCO=249}点之间，\
+由城主大人亲自领取！\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+[@普沙_领取检测]
+#IF
+EQUAL <$STR(A12)>
+#ACT
+MOV <$STR(A12)> <$USERNAME>
+GAMEGOLD + [$历届元宝奖励数量]
+GIVE 金币 [$历届金币奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成为了今日攻城战获胜方，已领取了#6FFFF/8#6([$历届元宝奖励数量])#5元宝，#6FFFF/8#6([$历届金币奖励数量])#5金币的奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：恭喜#6FFFF/8#6[<$USERNAME>]#5成为了今日攻城战获胜方，已领取了#6FFFF/8#6([$历届元宝奖励数量])#5元宝，#6FFFF/8#6([$历届金币奖励数量])#5金币的奖励！
+#SAY
+　恭喜，获得了{[$历届元宝奖励数量]=FCO=249}元宝、{[$历届金币奖励数量]=FCO=249}金币奖励，\ \
+请务必合理发放奖励！\ \
+　{提示：按Ｗ键打开行会面板可以将金币=FCO=250}\
+{平均发放给在线成员。=FCO=250}\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+#ELSESAY
+　奖励已经发放过了，请等待明天的战役。\
+祝您游戏愉快！\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+[@城主_领取奖励BAK]
+#if
+#ACT
+MOV <$STR(P0)> <$STR(G30)>
+DEC <$STR(P0)> <$STR(G31)>
+#SAY
+　为了鼓励大家积极参与{守城活动=FCO=250}，我们\
+{额外=FCO=250}设置了{连续守城奖励=FCO=250}。\ \
+　-------------------------------\
+　{连续守城天数　奖励元宝 奖励金币=FCO=242}\
+　{ 1天　　　100　　　1000000=FCO=242}\
+　{ 2天　　　300　　　3000000=FCO=242}\
+　{ 3天　　　500　　　5000000=FCO=242}\
+　{请在22:02—22:59之间领取该奖励=FCO=242}\
+　-------------------------------\ \
+　注意:服务器{合区=FCO=250}后该天数将初始化为{0=FCO=250}，\
+请在GM发布合区公告之后{及时=FCO=250}领取。\ \
+<{领取连续守城奖励=FCO=251}/@领取奖励_守城奖励_领取>\
+<关闭/@exit>\
+
+[@领取奖励_守城奖励_领取]
+#IF
+HOUR 22 22
+MIN 10 59
+ISCASTLEMASTER
+#ACT
+Goto @领取奖励_守城奖励_领取_时间确认
+#ELSESAY
+　该奖励只能在每天的{22:10=FCO=249}~{22:59=FCO=249}之间，\
+由城主大人亲自领取！\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+[@领取奖励_守城奖励_领取_时间确认]
+#if
+#ACT
+MOV <$STR(P0)> <$STR(G30)>
+DEC <$STR(P0)> <$STR(G31)>
+
+#IF
+LARGE <$STR(P0)> 2
+#ACT
+INC <$STR(G31)> <$STR(P0)>
+GAMEGOLD + 500
+GIVE 金币 5000000
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]守城达到了#6FFFF/8#6(3)#5天，获得了#6FFFF/8#6(500)#5元宝，#6FFFF/8#6(5000000)#5金币的奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：恭喜[<$USERNAME>]守城达到了#6FFFF/8#6(3)#5天，获得了#6FFFF/8#6(500)#5元宝，#6FFFF/8#6(5000000)#5金币的奖励！
+#SAY
+　恭喜，获得了{500=FCO=249}元宝、{5000000=FCO=249}金币奖励！\
+请务必合理发放奖励！\ \
+　{提示：按Ｗ键打开行会面板可以将金币=FCO=250}\
+{平均发放给在线成员。=FCO=250}\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+#IF
+EQUAL <$STR(P0)> 2
+#ACT
+INC <$STR(G31)> <$STR(P0)>
+GAMEGOLD + 300
+GIVE 金币 3000000
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]守城达到了#6FFFF/8#6(2)#5天，获得了#6FFFF/8#6(300)#5元宝，#6FFFF/8#6(3000000)#5金币的奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：恭喜[<$USERNAME>]守城达到了#6FFFF/8#6(2)#5天，获得了#6FFFF/8#6(300)#5元宝，#6FFFF/8#6(3000000)#5金币的奖励！
+#SAY
+　恭喜，获得了{300=FCO=249}元宝、{3000000=FCO=249}金币奖励！\
+请务必合理发放奖励！\ \
+　{提示：按Ｗ键打开行会面板可以将金币=FCO=250}\
+{平均发放给在线成员。=FCO=250}\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+#IF
+EQUAL <$STR(P0)> 1
+#ACT
+INC <$STR(G31)> <$STR(P0)>
+GAMEGOLD + 100
+GIVE 金币 1000000
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]守城达到了#6FFFF/8#6(1)#5天，获得了#6FFFF/8#6(100)#5元宝，#6FFFF/8#6(1000000)#5金币的奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：恭喜[<$USERNAME>]守城达到了#6FFFF/8#6(1)#5天，获得了#6FFFF/8#6(100)#5元宝，#6FFFF/8#6(1000000)#5金币的奖励！
+#SAY
+　恭喜，获得了{100=FCO=249}元宝、{1000000=FCO=249}金币奖励！\
+请务必合理发放奖励！\ \
+　{提示：按Ｗ键打开行会面板可以将金币=FCO=250}\
+{平均发放给在线成员。=FCO=250}\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+#ELSESAY
+　至少要连续守城{1=FCO=249}天才能领取额外奖励，\
+领取失败，守城天数不足！\ \
+<返回主菜单/@系统_标准NPC头_返回>\
+<关闭/@exit>\
+
+
+[@防御方式]
+\ \
+　当前防御状态为: {<$GUARDRULE>=FCO=251}\
+<正常防守/@guardrule_normalnow>\
+<进攻PK者/@guardrule_pkattack>\ \ \
+　城门当前状态为: {<$CASTLEDOORSTATE>状态=FCO=251}\
+<打开城门/@openmaindoor>\
+<关闭城门/@closemaindoor>\ \
+<返回主菜单/@城主_选项>\
+<关闭/@exit>\
+
+
+[@城堡维护]
+#if
+CHECKCASTLESTATE DOOR
+#act
+MOV <$STR(S0)> {正常=FCO=250}
+#elseact
+MOV <$STR(S0)> <修复/@repairdoornow>
+
+#if
+CHECKCASTLESTATE WALL 1
+#act
+MOV <$STR(S1)> {正常=FCO=250}
+#elseact
+MOV <$STR(S1)> <修复/@repairwallnow1>
+
+#if
+CHECKCASTLESTATE WALL 2
+#act
+MOV <$STR(S2)> {正常=FCO=250}
+#elseact
+MOV <$STR(S2)> <修复/@repairwallnow2>
+
+#if
+CHECKCASTLESTATE WALL 3
+#act
+MOV <$STR(S3)> {正常=FCO=250}
+#elseact
+MOV <$STR(S3)> <修复/@repairwallnow3>
+
+#if
+CHECKCASTLESTATE ARCHER 0
+#act
+MOV <$STR(S4)> {正常=FCO=250}
+#elseact
+MOV <$STR(S4)> <聘用/@hirearchernow1>
+
+#if
+CHECKCASTLESTATE ARCHER 1
+#act
+MOV <$STR(S5)> {正常=FCO=250}
+#elseact
+MOV <$STR(S5)> <聘用/@hirearchernow2>
+
+#if
+CHECKCASTLESTATE ARCHER 2
+#act
+MOV <$STR(S6)> {正常=FCO=250}
+#elseact
+MOV <$STR(S6)> <聘用/@hirearchernow3>
+
+#if
+CHECKCASTLESTATE ARCHER 3
+#act
+MOV <$STR(S7)> {正常=FCO=250}
+#elseact
+MOV <$STR(S7)> <聘用/@hirearchernow4>
+
+#if
+CHECKCASTLESTATE ARCHER 4
+#act
+MOV <$STR(S8)> {正常=FCO=250}
+#elseact
+MOV <$STR(S8)> <聘用/@hirearchernow5>
+
+#if
+CHECKCASTLESTATE ARCHER 5
+#act
+MOV <$STR(S9)> {正常=FCO=250}
+#elseact
+MOV <$STR(S9)> <聘用/@hirearchernow6>
+
+#if
+CHECKCASTLESTATE ARCHER 6
+#act
+MOV <$STR(S10)> {正常=FCO=250}
+#elseact
+MOV <$STR(S10)> <聘用/@hirearchernow7>
+
+#if
+CHECKCASTLESTATE ARCHER 7
+#act
+MOV <$STR(S11)> {正常=FCO=250}
+#elseact
+MOV <$STR(S11)> <聘用/@hirearchernow8>
+
+#if
+CHECKCASTLESTATE ARCHER 8
+#act
+MOV <$STR(S12)> {正常=FCO=250}
+#elseact
+MOV <$STR(S12)> <聘用/@hirearchernow9>
+
+#if
+CHECKCASTLESTATE ARCHER 9
+#act
+MOV <$STR(S13)> {正常=FCO=250}
+#elseact
+MOV <$STR(S13)> <聘用/@hirearchernow10>
+
+#if
+CHECKCASTLESTATE ARCHER 10
+#act
+MOV <$STR(S14)> {正常=FCO=250}
+#elseact
+MOV <$STR(S14)> <聘用/@hirearchernow11>
+
+#if
+CHECKCASTLESTATE ARCHER 11
+#act
+MOV <$STR(S15)> {正常=FCO=250}
+#elseact
+MOV <$STR(S15)> <聘用/@hirearchernow12>
+
+#if
+CHECKCASTLESTATE GUARD 0
+#act
+MOV <$STR(S16)> {正常=FCO=250}
+#elseact
+MOV <$STR(S16)> <聘用/@hireguardnow1>
+
+#if
+CHECKCASTLESTATE GUARD 1
+#act
+MOV <$STR(S17)> {正常=FCO=250}
+#elseact
+MOV <$STR(S17)> <聘用/@hireguardnow2>
+
+#if
+CHECKCASTLESTATE GUARD 2
+#act
+MOV <$STR(S18)> {正常=FCO=250}
+#elseact
+MOV <$STR(S18)> <聘用/@hireguardnow3>
+
+#if
+CHECKCASTLESTATE GUARD 3
+#act
+MOV <$STR(S19)> {正常=FCO=250}
+#elseact
+MOV <$STR(S19)> <聘用/@hireguardnow4>
+
+#if
+#say
+$RESETLABEL
+\ \
+　沙城堡当前总可用资金：　{<$CASTLEGOLD>金币=FCO=251}\ \
+　城门状态（<$REPAIRDOORGOLD>金币）\
+　1号：<$STR(S0)>\ \
+　城墙状态（<$REPAIRWALLGOLD>金币）\
+　1号：<$STR(S1)> 2号：<$STR(S2)> 1号：<$STR(S3)>\ \
+　弓手状态（<$ARCHERFEE>金币）\
+　1号：<$STR(S4)> 2号：<$STR(S5)> 3号：<$STR(S6)>\
+　4号：<$STR(S7)> 5号：<$STR(S8)> 6号：<$STR(S9)>\
+　7号：<$STR(S10)> 8号：<$STR(S11)> 9号：<$STR(S12)>\
+　A号：<$STR(S13)> B号：<$STR(S14)> C号：<$STR(S15)>\ \
+<返回主菜单/@城主_选项>\
+<关闭/@exit>\
+
+

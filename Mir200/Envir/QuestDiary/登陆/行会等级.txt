@@ -1,0 +1,6 @@
+[@行会等级]
+IF
+ISGUILDMASTER
+CHECKGUILDLEVEL = 5
+#act
+ADDGUILDLIST ..\QuestDiary\行会等级\5级.txt

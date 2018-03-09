@@ -1,0 +1,64 @@
+[@main](2305,300,344,3)
+　\
+　\
+　\
+　　{当前服务器杀怪总量：[<$STR(G110)>],\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+　　<{+11111]=FCO=249}/@1111>\
+
+
+[@1111]
+#IF
+#ACT
+Inc G110 100000
+GOTO @main
+
+
+
+[@个人杀怪]
+#if
+#act
+CALCVAR HUMAN 个人杀怪 + 400
+SAVEVAR HUMAN 个人杀怪 ..\QuestDiary\充值排行榜\个人杀怪.txt
+
+[@清空个人杀怪]
+#if
+#act
+CLEARNAMELIST ..\QuestDiary\充值排行榜\个人杀怪.txt
+CALCVAR HUMAN 个人杀怪 = 0
+
+
+[@清空消费积分]
+#if
+#act
+CLEARNAMELIST ..\QuestDiary\充值排行榜\消费积分.txt
+CALCVAR HUMAN 消费积分 = 0
+
+
+[@消费积分]
+#if
+#act
+CALCVAR HUMAN 消费积分 + 3000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+
+[@转生]
+#IF
+#ACT
+
+SENDMSG 8 你已成功完成一次转生
+
+
+[@轮回海]
+#if
+#act
+DelSkill 开天斩
+
+GIVE 回城卷 1
+
+[@荒古禁地]
+#if
+#act
+mapmove HDD
+GIVE 回城卷 1

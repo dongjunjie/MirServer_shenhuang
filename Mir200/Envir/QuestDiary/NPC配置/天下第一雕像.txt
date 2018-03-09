@@ -1,0 +1,2171 @@
+[@天下第一练级男]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A1 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A1)>=FCO=242}\
+　申请人物等级：{<$STR(G1)>=FCO=242}\
+　申请人物经验：{<$STR(G2)>=FCO=242}\
+　保持纪录时间：{<$STR(G5)>小时=FCO=242}\
+　上次维护时间：{<$STR(G3)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@练级男_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A1)>=FCO=242}\
+　申请人物等级：{<$STR(G1)>=FCO=242}\
+　申请人物经验：{<$STR(G2)>=FCO=242}\
+　保持纪录时间：{<$STR(G5)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一练级狂（男）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一练级狂（男）=FCO=251}/@练级男_领奖脚本>\
+<&关闭/@exit>\
+
+
+[@练级男_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @练级男_领奖检测
+Break
+
+[@练级男_领奖检测]
+#IF
+EQUAL A5 <$USERNAME>
+#ACT
+MOV A5 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一练级狂(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一练级狂(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一练级狂(男)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+[@天下第一_我要申请]
+#IF
+equal A13 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一练级狂(女)了，不能再申请！！
+Break
+
+#IF
+GENDER MAN
+CheckLevelEx> <$STR(G1)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+GENDER MAN
+CheckLevelEx = <$STR(G1)>
+CHECKEXP > <$STR(G2)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 申请失败，你的等级还没有超过他！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A1 <$USERNAME>
+MOV G0 <$EFFIGYSTATE>
+MOV G1 <$LEVEL>
+MOV G2 <$EXP>
+MOV G3 0
+MOV G4 40
+MOV G5 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G0)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一练级狂(男)#5，申请时等级#6FFFF/8#6(<$STR(G1)>)#5，经验#6FFFF/8#6(<$STR(G2)>)#5。
+Break
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G0 <$EFFIGYSTATE>
+MOV G4 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G0)> <$STR(G4)>
+MESSAGEBOX 恭喜，雕像打造成功！
+Break
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像等级:{<$STR(G1)>=FCO=242}　雕像经验:{<$STR(G2)>=FCO=242}\ \
+{当前人物信息=FCO=243}\
+　人物等级:{<$LEVEL>=FCO=242}　人物经验:{<$EXP>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的等级、经验大于或等于雕像的\
+等级、经验，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CheckLevelEx> <$STR(G1)>
+#ACT
+MOV G1 <$LEVEL>
+MOV G2 <$EXP>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一练级狂[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G1)>)#5，经验#6FFFF/8#6(<$STR(G2)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CheckLevelEx = <$STR(G1)>
+CHECKEXP > <$STR(G2)>
+#ACT
+MOV G1 <$LEVEL>
+MOV G2 <$EXP>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一练级狂[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G1)>)#5，经验#6FFFF/8#6(<$STR(G2)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 失败，目前不需更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G3)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G3 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A1 <$USERNAME>
+#ACT
+MOV G3 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+Break
+
+[@天下第一_时间统计]
+#IF
+SMALL G1 1
+#ACT
+Break
+
+#IF
+LARGE G3 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一练级狂[#7<$STR(A1)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一练级狂吧！
+MOV A1 (虚位以待)
+MOV G0 -1
+MOV G1 0
+MOV G2 0
+MOV G3 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G3 1
+INC G5 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+;如果计录等级小于1则表示没有人申请
+#IF
+SMALL G1 1
+#ACT
+MOV A1 (虚位以待)
+MOV G0 -1
+MOV G1 0
+MOV G2 0
+MOV G3 0
+MOV G4 0
+MOV G5 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G0)> <$STR(G4)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}
+
+
+
+
+
+[@天下第一练级女]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A13 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A13)>=FCO=242}\
+　申请人物等级：{<$STR(G36)>=FCO=242}\
+　申请人物经验：{<$STR(G37)>=FCO=242}\
+　保持纪录时间：{<$STR(G40)>小时=FCO=242}\
+　上次维护时间：{<$STR(G38)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@练级女_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A13)>=FCO=242}\
+　申请人物等级：{<$STR(G36)>=FCO=242}\
+　申请人物经验：{<$STR(G37)>=FCO=242}\
+　保持纪录时间：{<$STR(G40)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一练级狂（女）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一练级狂（女）=FCO=251}/@练级女_领奖脚本>\
+<&关闭/@exit>\
+
+[@练级女_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @练级女_领奖检测
+Break
+
+[@练级女_领奖检测]
+#IF
+EQUAL A17 <$USERNAME>
+#ACT
+MOV A17 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一练级狂(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一练级狂(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一练级狂(女)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+[@天下第一_我要申请]
+#IF
+equal A1 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一练级狂(男)了，不能再申请！！
+Break
+
+#IF
+GENDER WOMAN
+CheckLevelEx> <$STR(G36)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+GENDER WOMAN
+CheckLevelEx = <$STR(G36)>
+CHECKEXP > <$STR(G37)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 申请失败，你的等级还没有超过她！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A13 <$USERNAME>
+MOV G41 <$EFFIGYSTATE>
+MOV G36 <$LEVEL>
+MOV G37 <$EXP>
+MOV G38 0
+MOV G39 40
+MOV G40 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G41)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一练级狂(女)#5，申请时等级#6FFFF/8#6(<$STR(G36)>)#5，经验#6FFFF/8#6(<$STR(G37)>)#5。
+Break
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G41 <$EFFIGYSTATE>
+MOV G39 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G41)> <$STR(G39)>
+MESSAGEBOX 恭喜，雕像打造成功！
+Break
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像等级:{<$STR(G36)>=FCO=242}　雕像经验:{<$STR(G37)>=FCO=242}\ \
+{你当前人物信息=FCO=243}\
+　人物等级:{<$LEVEL>=FCO=242}　人物经验:{<$EXP>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的等级、经验大于或等于雕像的\
+等级、经验，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CheckLevelEx> <$STR(G36)>
+#ACT
+MOV G36 <$LEVEL>
+MOV G37 <$EXP>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一练级狂[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G36)>)#5，经验#6FFFF/8#6(<$STR(G37)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CheckLevelEx = <$STR(G36)>
+CHECKEXP > <$STR(G387)>
+#ACT
+MOV G36 <$LEVEL>
+MOV G37 <$EXP>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一练级狂[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G36)>)#5，经验#6FFFF/8#6(<$STR(G37)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 你目前的信息不需要进行更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G38)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G38 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A13 <$USERNAME>
+#ACT
+MOV G38 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+Break
+
+[@天下第一_时间统计]
+#IF
+SMALL G36 1
+#ACT
+Break
+
+#IF
+LARGE G38 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一练级狂[#7<$STR(A13)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一练级狂吧！
+MOV A13 (虚位以待)
+MOV G41 -1
+MOV G36 0
+MOV G37 0
+MOV G38 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G38 1
+INC G40 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+;如果计录等级小于1则表示没有人申请
+#IF
+SMALL G386 1
+#ACT
+MOV A13 (虚位以待)
+MOV G41 -1
+MOV G36 0
+MOV G37 0
+MOV G38 0
+MOV G39 0
+MOV G40 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G0)> <$STR(G39)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}
+
+
+
+
+
+[@天下第一战圣男]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A2 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A2)>=FCO=242}\
+　申请人物等级：{<$STR(G7)>=FCO=242}\
+　申请人物攻击：{<$STR(G8)>=FCO=242}\
+　保持纪录时间：{<$STR(G11)>小时=FCO=242}\
+　上次维护时间：{<$STR(G9)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@战圣男_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A2)>=FCO=242}\
+　申请人物等级：{<$STR(G7)>=FCO=242}\
+　申请人物攻击：{<$STR(G8)>=FCO=242}\
+　保持纪录时间：{<$STR(G11)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一战圣（男）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一战圣（男）=FCO=251}/@战圣男_领奖脚本>\
+<&关闭/@exit>\
+
+[@战圣男_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @战圣男_领奖检测
+Break
+
+[@战圣男_领奖检测]
+#IF
+EQUAL A6 <$USERNAME>
+#ACT
+MOV A6 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一战圣(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一战圣(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一战圣(男)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+[@天下第一_我要申请]
+#IF
+equal A3 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(男)了，不能再申请！！
+Break
+
+#IF
+equal A4 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(男)了，不能再申请！！
+Break
+
+#IF
+equal A14 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(女)了，不能再申请！！
+Break
+
+#IF
+equal A15 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(女)了，不能再申请！！
+Break
+
+#IF
+equal A16 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(女)了，不能再申请！！
+Break
+
+#IF
+CHECKJOB Warrior
+GENDER MAN
+#ACT
+Goto @申请检测
+#ELSEACT
+MESSAGEBOX 失败，只有男战士才能申请！
+Break
+
+
+[@申请检测]
+#IF
+CHECKDC ? 0 > <$STR(G8)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+CHECKDC ? 0 = <$STR(G8)>
+CheckLevelEx> <$STR(G7)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 申请失败，你的攻击力还没有超过他！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A2 <$USERNAME>
+MOV G6 <$EFFIGYSTATE>
+MOV G7 <$LEVEL>
+MOV G8 <$MAXDC>
+MOV G9 0
+MOV G10 40
+MOV G11 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G6)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一战圣(男)#5，申请时等级#6FFFF/8#6(<$STR(G7)>)#5，攻击力#6FFFF/8#6(<$STR(G8)>)#5。
+Break
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G6 <$EFFIGYSTATE>
+MOV G10 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G6)> <$STR(G10)>
+MESSAGEBOX 恭喜，雕像打造成功！
+Break
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像人物等级:{<$STR(G7)>=FCO=242} 雕像人物攻击:{<$STR(G8)>=FCO=242}\ \
+{当前人物信息=FCO=243}\
+　人物当前等级:{<$LEVEL>=FCO=242} 人物当前攻击:{<$MAXDC>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的攻击、等级大于或等于雕像的\
+攻击、等级，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CHECKDC ? 0 > <$STR(G8)>
+#ACT
+MOV G7 <$LEVEL>
+MOV G8 <$MAXDC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一战圣男[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G7)>)#5，攻击力#6FFFF/8#6(<$STR(G8)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CHECKDC ? 0 = <$STR(G8)>
+CheckLevelEx> <$STR(G7)>
+#ACT
+MOV G7 <$LEVEL>
+MOV G8 <$MAXDC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一战圣男[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G7)>)#5，攻击力#6FFFF/8#6(<$STR(G8)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 失败，目前不需更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G9)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G9 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A2 <$USERNAME>
+#ACT
+MOV G9 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+Break
+
+[@天下第一_时间统计]
+#IF
+SMALL G7 1
+#ACT
+Break
+
+#IF
+LARGE G9 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一战圣[#7<$STR(A2)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一战圣吧！
+MOV A2 (虚位以待)
+MOV G6 -1
+MOV G7 0
+MOV G8 0
+MOV G9 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G9 1
+INC G11 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+;如果计录等级小于1则表示没有人申请
+#IF
+SMALL G7 1
+#ACT
+MOV A2 (虚位以待)
+MOV G6 -1
+MOV G7 0
+MOV G8 0
+MOV G9 0
+MOV G10 0
+MOV G11 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G6)> <$STR(G10)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}
+
+
+
+
+[@天下第一战圣女]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A14 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A14)>=FCO=242}\
+　申请人物等级：{<$STR(G43)>=FCO=242}\
+　申请人物攻击：{<$STR(G44)>=FCO=242}\
+　保持纪录时间：{<$STR(G47)>小时=FCO=242}\
+　上次维护时间：{<$STR(G45)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@战圣女_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A14)>=FCO=242}\
+　申请人物等级：{<$STR(G43)>=FCO=242}\
+　申请人物攻击：{<$STR(G44)>=FCO=242}\
+　保持纪录时间：{<$STR(G47)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一战圣（女）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一战圣（女）=FCO=251}/@战圣女_领奖脚本>\
+<&关闭/@exit>\
+
+[@战圣女_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @战圣女_领奖检测
+Break
+
+[@战圣女_领奖检测]
+#IF
+EQUAL A18 <$USERNAME>
+#ACT
+MOV A18 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一战圣(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一战圣(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一战圣(女)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+
+[@天下第一_我要申请]
+#IF
+equal A2 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(男)了，不能再申请！！
+Break
+
+#IF
+equal A3 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(男)了，不能再申请！！
+Break
+
+#IF
+equal A4 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(男)了，不能再申请！！
+Break
+
+#IF
+equal A15 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(女)了，不能再申请！！
+Break
+
+#IF
+equal A16 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(女)了，不能再申请！！
+Break
+
+#IF
+CHECKJOB Warrior
+GENDER WOMAN
+#ACT
+Goto @申请检测
+#ELSEACT
+MESSAGEBOX 失败，只有女战士才能申请！
+Break
+
+
+[@申请检测]
+#IF
+CHECKDC ? 0 > <$STR(G44)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+CHECKDC ? 0 = <$STR(G44)>
+CheckLevelEx> <$STR(G43)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 申请失败，你的攻击力还没有超过她！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A14 <$USERNAME>
+MOV G42 <$EFFIGYSTATE>
+MOV G43 <$LEVEL>
+MOV G44 <$MAXDC>
+MOV G45 0
+MOV G46 40
+MOV G47 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G42)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一战圣(女)#5，申请时等级#6FFFF/8#6(<$STR(G43)>)#5，攻击力#6FFFF/8#6(<$STR(G44)>)#5！
+Break
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G42 <$EFFIGYSTATE>
+MOV G46 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G42)> <$STR(G46)>
+MESSAGEBOX 恭喜，雕像打造成功！
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像人物等级:{<$STR(G43)>=FCO=242} 雕像人物攻击:{<$STR(G44)>=FCO=242}\ \
+{当前人物信息=FCO=243}\
+　人物当前等级:{<$LEVEL>=FCO=242} 人物当前攻击:{<$MAXDC>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的攻击、等级大于或等于雕像的\
+攻击、等级，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CHECKDC ? 0 > <$STR(G44)>
+#ACT
+MOV G43 <$LEVEL>
+MOV G44 <$MAXDC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一战圣女[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G43)>)#5，攻击力#6FFFF/8#6(<$STR(G44)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CHECKDC ? 0 = <$STR(G44)>
+CheckLevelEx> <$STR(G43)>
+#ACT
+MOV G43 <$LEVEL>
+MOV G44 <$MAXDC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一战圣女[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G43)>)#5，攻击力#6FFFF/8#6(<$STR(G44)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 失败，目前不需更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G45)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G45 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A14 <$USERNAME>
+#ACT
+MOV G45 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+Break
+
+[@天下第一_时间统计]
+#IF
+SMALL G43 1
+#ACT
+Break
+
+#IF
+LARGE G45 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一战圣[#7<$STR(A14)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一战圣吧！
+MOV A14 (虚位以待)
+MOV G42 -1
+MOV G43 0
+MOV G44 0
+MOV G45 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G45 1
+INC G47 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+#IF
+SMALL G43 1
+#ACT
+MOV A14 (虚位以待)
+MOV G42 -1
+MOV G43 0
+MOV G44 0
+MOV G45 0
+MOV G46 0
+MOV G47 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G42)> <$STR(G46)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}
+
+
+
+
+[@天下第一法神男]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A3 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A3)>=FCO=242}\
+　申请人物等级：{<$STR(G13)>=FCO=242}\
+　申请人物魔法：{<$STR(G14)>=FCO=242}\
+　保持纪录时间：{<$STR(G17)>小时=FCO=242}\
+　上次维护时间：{<$STR(G15)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@法神男_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A3)>=FCO=242}\
+　申请人物等级：{<$STR(G13)>=FCO=242}\
+　申请人物魔法：{<$STR(G14)>=FCO=242}\
+　保持纪录时间：{<$STR(G17)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一法神（男）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一法神（男）=FCO=251}/@法神男_领奖脚本>\
+<&关闭/@exit>\
+
+[@法神男_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @法神男_领奖检测
+Break
+
+[@法神男_领奖检测]
+#IF
+EQUAL A7 <$USERNAME>
+#ACT
+MOV A7 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一法神(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一法神(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一法神(男)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+
+[@天下第一_我要申请]
+#IF
+equal A2 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(男)了，不能再申请！！
+Break
+
+#IF
+equal A4 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(男)了，不能再申请！！
+Break
+
+#IF
+equal A14 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(女)了，不能再申请！！
+Break
+
+#IF
+equal A15 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(女)了，不能再申请！！
+Break
+
+#IF
+equal A16 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(女)了，不能再申请！！
+Break
+
+#IF
+CHECKJOB WIZARD
+GENDER MAN
+#ACT
+Goto @申请检测
+#ELSEACT
+MESSAGEBOX 失败，只有男法师才能申请！
+Break
+
+
+[@申请检测]
+#IF
+CHECKMC ? 0 > <$STR(G14)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+CHECKMC ? 0 = <$STR(G14)>
+CheckLevelEx> <$STR(G13)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 申请失败，你的魔法力还没有超过他！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A3 <$USERNAME>
+MOV G12 <$EFFIGYSTATE>
+MOV G13 <$LEVEL>
+MOV G14 <$MAXMC>
+MOV G15 0
+MOV G16 40
+MOV G17 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G12)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一法神(男)#5，申请时等级#6FFFF/8#6(<$STR(G13)>)#5，魔法力#6FFFF/8#6(<$STR(G14)>)#5。
+Break
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G12 <$EFFIGYSTATE>
+MOV G16 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G12)> <$STR(G16)>
+MESSAGEBOX 恭喜，雕像打造成功！
+Break
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像人物等级:{<$STR(G13)>=FCO=242} 雕像人物魔法:{<$STR(G14)>=FCO=242}\ \
+{当前人物信息=FCO=243}\
+　人物当前等级:{<$LEVEL>=FCO=242} 人物当前魔法:{<$MAXMC>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的魔法、等级大于或等于雕像的\
+魔法、等级，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CHECKMC ? 0 > <$STR(G14)>
+#ACT
+MOV G13 <$LEVEL>
+MOV G14 <$MAXMC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一法神[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G13)>)#5，魔法力#6FFFF/8#6(<$STR(G14)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CHECKMC ? 0 = <$STR(G14)>
+CheckLevelEx> <$STR(G13)>
+#ACT
+MOV G13 <$LEVEL>
+MOV G14 <$MAXMC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一法神[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G13)>)#5，魔法力#6FFFF/8#6(<$STR(G14)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 失败，目前不需更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G15)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G15 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A3 <$USERNAME>
+#ACT
+MOV G15 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+Break
+
+[@天下第一_时间统计]
+#IF
+SMALL G13 1
+#ACT
+Break
+
+#IF
+LARGE G15 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一法神[#7<$STR(A3)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一法神吧！
+MOV A3 (虚位以待)
+MOV G12 -1
+MOV G13 0
+MOV G14 0
+MOV G15 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G15 1
+INC G17 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+#IF
+SMALL G13 1
+#ACT
+MOV A3 (虚位以待)
+MOV G12 -1
+MOV G13 0
+MOV G14 0
+MOV G15 0
+MOV G16 0
+MOV G17 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G12)> <$STR(G16)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}
+
+
+
+
+[@天下第一法神女]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A15 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A15)>=FCO=242}\
+　申请人物等级：{<$STR(G49)>=FCO=242}\
+　申请人物魔法：{<$STR(G50)>=FCO=242}\
+　保持纪录时间：{<$STR(G53)>小时=FCO=242}\
+　上次维护时间：{<$STR(G51)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@法神女_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A15)>=FCO=242}\
+　申请人物等级：{<$STR(G49)>=FCO=242}\
+　申请人物魔法：{<$STR(G50)>=FCO=242}\
+　保持纪录时间：{<$STR(G53)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一法神（女）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一法神（女）=FCO=251}/@法神女_领奖脚本>\
+<&关闭/@exit>\
+
+[@法神女_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @法神女_领奖检测
+Break
+
+[@法神女_领奖检测]
+#IF
+EQUAL A19 <$USERNAME>
+#ACT
+MOV A19 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一法神(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一法神(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一法神(女)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+
+[@天下第一_我要申请]
+#IF
+equal A2 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(男)了，不能再申请！！
+Break
+
+#IF
+equal A3 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(男)了，不能再申请！！
+Break
+
+#IF
+equal A4 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(男)了，不能再申请！！
+Break
+
+#IF
+equal A14 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(女)了，不能再申请！！
+Break
+
+#IF
+equal A16 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(女)了，不能再申请！！
+Break
+
+#IF
+CHECKJOB WIZARD
+GENDER WOMAN
+#ACT
+Goto @申请检测
+#ELSEACT
+MESSAGEBOX 失败，只有女法师才能申请！
+Break
+
+
+[@申请检测]
+#IF
+CHECKMC ? 0 > <$STR(G50)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+CHECKMC ? 0 = <$STR(G50)>
+CheckLevelEx> <$STR(G49)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 申请失败，你的魔法力还没有超过她！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A15 <$USERNAME>
+MOV G48 <$EFFIGYSTATE>
+MOV G49 <$LEVEL>
+MOV G50 <$MAXMC>
+MOV G51 0
+MOV G52 40
+MOV G53 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G48)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一法神(女)#5，申请时等级#6FFFF/8#6(<$STR(G49)>)#5，魔法力#6FFFF/8#6(<$STR(G50)>)#5！
+Break
+
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G48 <$EFFIGYSTATE>
+MOV G52 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G48)> <$STR(G52)>
+MESSAGEBOX 恭喜，雕像打造成功！
+Break
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像人物等级:{<$STR(G49)>=FCO=242} 雕像人物魔法:{<$STR(G50)>=FCO=242}\ \
+{你当前人物信息=FCO=243}\
+　人物当前等级:{<$LEVEL>=FCO=242} 人物当前魔法:{<$MAXMC>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的魔法、等级大于或等于雕像的\
+魔法、等级，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CHECKMC ? 0 > <$STR(G50)>
+#ACT
+MOV G49 <$LEVEL>
+MOV G50 <$MAXMC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一法神[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G49)>)#5，魔法力#6FFFF/8#6(<$STR(G50)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CHECKMC ? 0 = <$STR(G50)>
+CheckLevelEx> <$STR(G49)>
+#ACT
+MOV G49 <$LEVEL>
+MOV G50 <$MAXMC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一法神[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G49)>)#5，魔法力#6FFFF/8#6(<$STR(G50)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 失败，目前不需更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G51)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G51 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A15 <$USERNAME>
+#ACT
+MOV G51 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+
+
+[@天下第一_时间统计]
+#IF
+SMALL G49 1
+#ACT
+Break
+
+#IF
+LARGE G51 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一法神[#7<$STR(A15)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一法神吧！
+MOV A15 (虚位以待)
+MOV G48 -1
+MOV G49 0
+MOV G50 0
+MOV G51 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G51 1
+INC G53 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+#IF
+SMALL G49 1
+#ACT
+MOV A15 (虚位以待)
+MOV G48 -1
+MOV G49 0
+MOV G50 0
+MOV G51 0
+MOV G52 0
+MOV G53 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G48)> <$STR(G52)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}
+
+
+
+
+[@天下第一道尊男]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A4 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A4)>=FCO=242}\
+　申请人物等级：{<$STR(G19)>=FCO=242}\
+　申请人物道术：{<$STR(G20)>=FCO=242}\
+　保持纪录时间：{<$STR(G23)>小时=FCO=242}\
+　上次维护时间：{<$STR(G21)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@道尊男_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A4)>=FCO=242}\
+　申请人物等级：{<$STR(G19)>=FCO=242}\
+　申请人物道术：{<$STR(G20)>=FCO=242}\
+　保持纪录时间：{<$STR(G23)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一道尊（男）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一道尊（男）=FCO=251}/@道尊男_领奖脚本>\
+<&关闭/@exit>\
+
+[@道尊男_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @道尊男_领奖检测
+Break
+
+[@道尊男_领奖检测]
+#IF
+EQUAL A8 <$USERNAME>
+#ACT
+MOV A8 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一道尊(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一道尊(男)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一道尊(男)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+
+
+[@天下第一_我要申请]
+#IF
+equal A2 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(男)了，不能再申请！！
+Break
+
+#IF
+equal A3 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(男)了，不能再申请！！
+Break
+
+#IF
+equal A14 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(女)了，不能再申请！！
+Break
+
+#IF
+equal A15 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(女)了，不能再申请！！
+Break
+
+#IF
+equal A16 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(女)了，不能再申请！！
+Break
+
+#IF
+CHECKJOB TAOIST
+GENDER MAN
+#ACT
+Goto @申请检测
+#ELSEACT
+MESSAGEBOX 失败，只有男道士才能申请！
+Break
+
+[@申请检测]
+#IF
+CHECKSC ? 0 > <$STR(G20)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+CHECKSC ? 0 = <$STR(G20)>
+CheckLevelEx> <$STR(G19)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 失败，你的道术力还没有超过他！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A4 <$USERNAME>
+MOV G18 <$EFFIGYSTATE>
+MOV G19 <$LEVEL>
+MOV G20 <$MAXSC>
+MOV G21 0
+MOV G22 40
+MOV G23 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G18)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一道尊(男)#5，申请时等级#6FFFF/8#6(<$STR(G19)>)#5，道术力#6FFFF/8#6(<$STR(G20)>)#5。
+Break
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G18 <$EFFIGYSTATE>
+MOV G22 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G18)> <$STR(G22)>
+MESSAGEBOX 恭喜，雕像打造成功！
+Break
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像人物等级:{<$STR(G19)>=FCO=242} 雕像人物道术:{<$STR(G20)>=FCO=242}\ \
+{当前人物信息=FCO=243}\
+　人物当前等级:{<$LEVEL>=FCO=242} 人物当前道术:{<$MAXSC>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的道术、等级大于或等于雕像的\
+道术、等级，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CHECKSC ? 0 > <$STR(G20)>
+#ACT
+MOV G19 <$LEVEL>
+MOV G20 <$MAXSC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一道尊[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G19)>)#5，道术力#6FFFF/8#6(<$STR(G20)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CHECKSC ? 0 = <$STR(G20)>
+CheckLevelEx> <$STR(G19)>
+#ACT
+MOV G19 <$LEVEL>
+MOV G20 <$MAXSC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一道尊[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G19)>)#5，道术力#6FFFF/8#6(<$STR(G20)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 失败，目前不需更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G21)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G21 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A4 <$USERNAME>
+#ACT
+MOV G21 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+Break
+
+[@天下第一_时间统计]
+#IF
+SMALL G19 1
+#ACT
+Break
+
+#IF
+LARGE G21 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一道尊[#7<$STR(A4)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一道尊吧！
+MOV A4 (虚位以待)
+MOV G18 -1
+MOV G19 0
+MOV G20 0
+MOV G21 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G21 1
+INC G23 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+#IF
+SMALL G19 1
+#ACT
+MOV A4 (虚位以待)
+MOV G18 -1
+MOV G19 0
+MOV G20 0
+MOV G21 0
+MOV G22 0
+MOV G23 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G18)> <$STR(G22)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}
+
+
+
+
+[@天下第一道尊女]
+{
+[@MAIN]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_所有NPC头内容
+
+[@系统_所有NPC头_返回]
+#CALLX [\\NPC配置\所有NPC调用头内容.txt] @系统_标准NPC头内容
+
+[@系统_标准NPC头_返回]
+#IF
+EQUAL A16 <$USERNAME>
+#SAY
+　请问你需要进行什么操作？\ \
+{你申请时的信息=FCO=243}\
+　申请人物名称：{<$STR(A16)>=FCO=242}\
+　申请人物等级：{<$STR(G55)>=FCO=242}\
+　申请人物道术：{<$STR(G56)>=FCO=242}\
+　保持纪录时间：{<$STR(G59)>小时=FCO=242}\
+　上次维护时间：{<$STR(G57)>小时之前=FCO=242}\ \
+<&更新信息/@天下第一_数据更新>\
+<&维护雕像/@天下第一_雕像维护>\
+<&更换形像/@天下第一_更换形像>\
+<&{领取奖励=FCO=251}/@道尊女_领奖脚本>\
+<&关闭/@exit>\
+#ELSESAY
+　想为自己树立一尊{雕像=FCO=250}吗？从此扬名天\
+下！现在机会来了，赶快申请吧！\
+　申请成功后，可以{自由设定=FCO=250}雕像的样子\
+完全为你量身打造！还能拿奖励！\
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+　--------------------------------\
+　申请人物名称：{<$STR(A16)>=FCO=242}\
+　申请人物等级：{<$STR(G55)>=FCO=242}\
+　申请人物道术：{<$STR(G56)>=FCO=242}\
+　保持纪录时间：{<$STR(G59)>小时=FCO=242}\
+　--------------------------------\ \
+<&{我要申请天下第一道尊（女）=FCO=251}/@天下第一_我要申请>\
+<&{领取奖励天下第一道尊（女）=FCO=251}/@道尊女_领奖脚本>\
+<&关闭/@exit>\
+
+[@道尊女_领奖脚本]
+#IF
+EQUAL A10 游戏管理客服
+#SAY
+　本轮冲级赛已经{结束=FCO=249}！请等待下次活动。\ \
+<&关闭/@exit>\
+#ELSEACT
+Goto @道尊女_领奖检测
+Break
+
+[@道尊女_领奖检测]
+#IF
+EQUAL A20 <$USERNAME>
+#ACT
+MOV A20 <$USERNAME>#已领#
+GAMEGOLD + [$天下第一元宝奖励数量]
+SENDMSG 0 【#6FFFF/8#6公告#5】：[#7<$USERNAME>#7]夺得本次#6FFFF/8#6天下第一道尊(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+SENDMSG 8 【#6FFFF/8#6公告#5】：#6FFFF/8#6[<$USERNAME>]#5夺得本次#6FFFF/8#6天下第一道尊(女)#5大奖，获得#6FFFF/8#6([$天下第一元宝奖励数量])#5元宝奖励！
+close
+MESSAGEBOX 恭喜您，夺得了天下第一道尊(女)大奖，获得[$天下第一元宝奖励数量]元宝奖励！
+#ELSESAY
+　本轮冲级赛正在{进行=FCO=249}！请您务必在首次\
+攻城战结束当晚之前争夺活动奖励。\ \
+
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&关闭/@exit>\
+
+
+
+
+[@天下第一_我要申请]
+#IF
+equal A2 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(男)了，不能再申请！！
+Break
+
+#IF
+equal A3 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(男)了，不能再申请！！
+Break
+
+#IF
+equal A4 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一道尊(男)了，不能再申请！！
+Break
+
+#IF
+equal A14 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一战圣(女)了，不能再申请！！
+Break
+
+#IF
+equal A15 <$USERNAME>
+#act
+MESSAGEBOX 你已经是天下第一法神(女)了，不能再申请！！
+Break
+
+#IF
+CHECKJOB TAOIST
+GENDER WOMAN
+#ACT
+Goto @申请检测
+#ELSEACT
+MESSAGEBOX 失败，只有女道士才能申请！
+Break
+
+
+[@申请检测]
+#IF
+CHECKSC ? 0 > <$STR(G56)>
+#ACT
+Goto @天下第一_申请成功
+Break
+
+#IF
+CHECKSC ? 0 = <$STR(G56)>
+CheckLevelEx> <$STR(G55)>
+#ACT
+Goto @天下第一_申请成功
+#ELSEACT
+MESSAGEBOX 失败，你还不是天下第一！
+Break
+
+[@天下第一_申请成功]
+#IF
+#SAY
+　恭喜你，{申请成功=FCO=250}！你现在可以对雕像\
+进行{维护=FCO=250}、{管理=FCO=250}，以及{设定造形=FCO=250}。\ \
+　另外，雕像每{36=FCO=250}个小时之内必须进行{维=FCO=250}\
+{护=FCO=250}一次，不然雕像将{破碎=FCO=250}，破碎后天下第\
+一将被系统收回，需要{重新申请=FCO=250}。\ \
+保持纪录者可获得{[$天下第一元宝奖励数量]=FCO=250}元宝的奖励！\ \
+<&返回进行操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+#ACT
+MOV A16 <$USERNAME>
+MOV G54 <$EFFIGYSTATE>
+MOV G55 <$LEVEL>
+MOV G56 <$MAXSC>
+MOV G57 0
+MOV G58 40
+MOV G59 0
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G54)> 40
+SENDMSG 0 【#6FFFF/8#6公告#5】：恭喜[#7<$USERNAME>#7]成功申请了#6FFFF/8#6天下第一道尊(女)#5，申请时等级#6FFFF/8#6(<$STR(G55)>)#5，道术力#6FFFF/8#6(<$STR(G56)>)#5。！
+Break
+
+[@天下第一_更换形像]
+　雕像的形象是根据人物当前的信息实时\
+显示的。雕像的衣服、武器和发型是根据\
+你当前的装备情况来显示。\ \
+　此外，你还可以自由把雕像设定为三种\
+攻击姿势。请打造雕像吧：\ \
+<&攻击造形一/@天下第一_更换形像_确定更新(240)>\
+<&攻击造形二/@天下第一_更换形像_确定更新(436)>\
+<&攻击造形三/@天下第一_更换形像_确定更新(514)>\
+<&站立造形/@天下第一_更换形像_确定更新(40)>\
+<&走路造形/@天下第一_更换形像_确定更新(107)>\
+<&跑步造形/@天下第一_更换形像_确定更新(173)>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_更换形像_确定更新]
+#IF
+#ACT
+MOV G54 <$EFFIGYSTATE>
+MOV G58 <$STR(T0)>
+SETEFFIGYSTATE <$STR(G54)> <$STR(G58)>
+MESSAGEBOX 恭喜，雕像打造成功！
+Break
+
+[@天下第一_数据更新]
+{当前雕像信息=FCO=243}\
+　雕像人物等级:{<$STR(G55)>=FCO=242} 雕像人物道术:{<$STR(G56)>=FCO=242}\ \
+{你当前人物信息=FCO=243}\
+　人物当前等级:{<$LEVEL>=FCO=242} 人物当前道术:{<$MAXSC>=FCO=242}\ \
+{数据更新要求=FCO=243}\
+　需人物的道术、等级大于或等于雕像的\
+道术、等级，才能进行数据更新。\ \
+<&确认更新/@天下第一_数据更新_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_数据更新_确定更新]
+#IF
+CHECKSC ? 0 > <$STR(G56)>
+#ACT
+MOV G55 <$LEVEL>
+MOV G56 <$MAXSC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一道尊[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G55)>)#5，道术力#6FFFF/8#6(<$STR(G56)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+Break
+
+#IF
+CHECKSC ? 0 = <$STR(G56)>
+CheckLevelEx> <$STR(G55)>
+#ACT
+MOV G55 <$LEVEL>
+MOV G56 <$MAXSC>
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一道尊[#7<$USERNAME>#7]更新了雕像资料，最新等级#6FFFF/8#6(<$STR(G55)>)#5，道术力#6FFFF/8#6(<$STR(G56)>)#5。
+MESSAGEBOX 恭喜，数据更新成功！
+Goto @天下第一_数据更新
+#ELSEACT
+MESSAGEBOX 失败，目前不需更新！
+Break
+
+[@天下第一_雕像维护]
+　雕像每{36=FCO=249}小时之内必须维护一次，不然\
+雕像将{破碎=FCO=249}。天下第一也将会被系统{收回=FCO=249}，\
+需要{重新申请=FCO=249}。\ \
+　（上次维护时间：{<$STR(G57)>=FCO=249}小时之前）\ \
+<&确认维护/@天下第一_雕像维护_确定更新>\
+<&返回其它操作/@系统_标准NPC头_返回>\
+<&关闭/@exit>\
+
+[@天下第一_雕像维护_确定更新]
+#IF
+SMALL G57 1
+#ACT
+MESSAGEBOX 失败，目前不需维护！
+Break
+
+#IF
+EQUAL A16 <$USERNAME>
+#ACT
+MOV G57 0
+MESSAGEBOX 恭喜，雕像维护成功！
+Goto @天下第一_雕像维护
+Break
+
+[@天下第一_时间统计]
+#IF
+SMALL G55 1
+#ACT
+Break
+
+#IF
+LARGE G57 35
+#ACT
+SENDMSG 0 【#6FFFF/8#6公告#5】：天下第一道尊[#7<$STR(A16)>#7]由于长时间没有对雕像进行管理，雕像已经破碎。大家赶快来申请天下第一道尊吧！
+MOV A16 (虚位以待)
+MOV G54 -1
+MOV G55 0
+MOV G56 0
+MOV G57 0
+REFSHOWNAME
+SETEFFIGYSTATE -1 0
+#ELSEACT
+INC G57 1
+INC G59 1
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+[~Initialize]
+#IF
+SMALL G55 1
+#ACT
+MOV A16 (虚位以待)
+MOV G54 -1
+MOV G55 0
+MOV G56 0
+MOV G57 0
+MOV G58 0
+MOV G59 0
+DelayGoto 3600 @天下第一_时间统计 时间统计
+#ELSEACT
+SETEFFIGYSTATE <$STR(G54)> <$STR(G58)>
+DelayGoto 3600 @天下第一_时间统计 时间统计
+Break
+
+}

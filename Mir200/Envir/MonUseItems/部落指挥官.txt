@@ -1,0 +1,45 @@
+;此文件放在 D:\Mirserver\Mir200\Envir\MonUseItems
+
+;=============================人形宝宝配制文件=======================
+[BaseInfo]
+;职业
+Job = 1
+;性别
+Gender = 0
+;头发
+Hair = 5
+;使用魔法
+Magic = 基本剑术,攻杀剑术,刺杀剑术,烈火剑法,半月弯刀
+
+;出生时背包中的物品
+BagItem = 
+;==============================身上装备============================
+[UseItems]
+;衣服
+DRESSNAME = 圣战宝甲
+;武器
+WEAPONNAME = 屠龙
+;照明物
+RIGHTHANDNAME = 王者勋章
+;项链
+NECKLACENAME = 圣战项链
+;头盔
+HELMETNAME = 圣战头盔
+;左手镯
+ARMRINGLNAME = 圣战手镯
+;右手镯
+ARMRINGRNAME = 圣战手镯
+;左戒指
+RINGLNAME = 圣战戒指
+;右戒指
+RINGRNAME = 圣战戒指
+;物品
+BUJUKNAME = 疯狂面具[限时]
+;腰带
+BELTNAME = 圣战战带
+;鞋子
+BOOTSNAME = 圣战战靴
+;宝石
+CHARMNAME = 王者宝石
+;死亡掉装备几率 数字越小掉装备几率越高
+DieDropUseItemRate = 100

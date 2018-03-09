@@ -1,0 +1,1226 @@
+[@装备回收标准配置]
+{
+[@main]
+#CALLX [\游戏配置\所有NPC调用头.txt] @所有NPC调用头
+
+[@所有NPC调用头_返回]
+沃玛套装价格是5W金币+1W经验{-温-馨-提-醒=FCO=249}\
+祖玛套装价格是20W金币+3W经验{-注-意-贵-重-物-品=FCO=249}\
+赤月套装价格是50W金币+8W经验{-避-免-误-回-收=FCO=249}\
+<&金币回收{武器是双倍=FCO=250}{（沃玛套装）[一]=FCO=251}/@沃玛装备兑换一键>\
+<&金币回收{武器是双倍=FCO=250}{（祖玛套装）[键]=FCO=251}/@祖玛装备兑换一键>\
+<&金币回收{武器是双倍=FCO=250}{（赤月套装）[回]=FCO=251}/@赤月装备兑换一键>\
+<&金币回收{5W金币一本=FCO=250}{（强化技能）[收]=FCO=251}/@技能兑换一键>\
+{ *提示*：请点清背包的重要物品，误回收了一概不负责！！！=FCO=253}\
+;__________________________________________________________________________________
+
+
+
+[@沃玛装备兑换一键]
+#IF
+CHECKITEM 幽灵项链 1
+#ACT
+TAKE 幽灵项链 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 幽灵手套 1
+#ACT
+TAKE 幽灵手套 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 龙之戒指 1
+#ACT
+TAKE 龙之戒指 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 生命项链 1
+#ACT
+TAKE 生命项链 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 思贝儿手镯 1
+#ACT
+TAKE 思贝儿手镯 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 红宝石戒指 1
+#ACT
+TAKE 红宝石戒指 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天珠项链 1
+#ACT
+TAKE 天珠项链 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 心灵手镯 1
+#ACT
+TAKE 心灵手镯 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 铂金戒指 1
+#ACT
+TAKE 铂金戒指 1
+give 金币 50000
+ChangeExp + 10000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 炼狱 1
+#ACT
+TAKE 炼狱 1
+give 金币 100000
+ChangeExp + 20000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 魔杖 1
+#ACT
+TAKE 魔杖 1
+give 金币 100000
+ChangeExp + 20000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 银蛇 1
+#ACT
+TAKE 银蛇 1
+give 金币 100000
+ChangeExp + 20000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 井中月 1
+#ACT
+TAKE 井中月 1
+give 金币 100000
+ChangeExp + 20000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 无极棍 1
+#ACT
+TAKE 无极棍 1
+give 金币 100000
+ChangeExp + 20000
+DELAYGOTO 0  @沃玛装备兑换一键 一键回收
+break
+#ELSEACT
+;SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]出售#6FFFF/8#6沃玛装备#5赚取了金币+经验
+ClearDelayGoto 一键回收
+BREAK
+
+;__________________________________________________________________________________
+
+[@技能兑换一键]
+#IF
+CHECKITEM 强化基本剑术 1
+#ACT
+TAKE 强化基本剑术 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化攻杀剑术 1
+#ACT
+TAKE 强化攻杀剑术 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化刺杀剑术 1
+#ACT
+TAKE 强化刺杀剑术 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化半月弯刀 1
+#ACT
+TAKE 强化半月弯刀 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化烈火剑法 1
+#ACT
+TAKE 强化烈火剑法 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化逐日剑法 1
+#ACT
+TAKE 强化逐日剑法 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化疾光电影 1
+#ACT
+TAKE 强化疾光电影 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化雷电术 1
+#ACT
+TAKE 强化雷电术 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化火墙 1
+#ACT
+TAKE 强化火墙 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化爆裂火焰 1
+#ACT
+TAKE 强化爆裂火焰 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化冰咆哮 1
+#ACT
+TAKE 强化冰咆哮 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化灭天火 1
+#ACT
+TAKE 强化灭天火 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化流星火雨 1
+#ACT
+TAKE 强化流星火雨 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化施毒术 1
+#ACT
+TAKE 强化施毒术 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化灵魂火符 1
+#ACT
+TAKE 强化灵魂火符 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化幽灵盾 1
+#ACT
+TAKE 强化幽灵盾 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化神圣战甲术 1
+#ACT
+TAKE 强化神圣战甲术 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化召唤骷髅 1
+#ACT
+TAKE 强化召唤骷髅 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化召唤神兽 1
+#ACT
+TAKE 强化召唤神兽 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#IF
+CHECKITEM 强化噬血术 1
+#ACT
+TAKE 强化噬血术 1
+give 金币 50000
+DELAYGOTO 0  @技能兑换一键 一键回收
+break
+#ELSEACT
+;SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]出售#6FFFF/8#6强化技能#5赚取了金币
+ClearDelayGoto 一键回收
+BREAK
+
+;__________________________________________________________________________________
+
+[@祖玛装备兑换一键]
+#IF
+CHECKITEM 裁决之杖 1
+#ACT
+TAKE 裁决之杖 1
+give 金币 400000
+ChangeExp + 60000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 血饮 1
+#ACT
+TAKE 血饮 1
+give 金币 400000
+ChangeExp + 60000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 骨玉权杖 1
+#ACT
+TAKE 骨玉权杖 1
+give 金币 400000
+ChangeExp + 60000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 龙纹剑 1
+#ACT
+TAKE 龙纹剑 1
+give 金币 400000
+ChangeExp + 60000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 黑铁头盔 1
+#ACT
+TAKE 黑铁头盔 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 绿色项链 1
+#ACT
+TAKE 绿色项链 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 恶魔铃铛 1
+#ACT
+TAKE 恶魔铃铛 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 灵魂项链 1
+#ACT
+TAKE 灵魂项链 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 骑士手镯 1
+#ACT
+TAKE 骑士手镯 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 阎罗手套 1
+#ACT
+TAKE 阎罗手套 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 龙之手镯 1
+#ACT
+TAKE 龙之手镯 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 三眼手镯 1
+#ACT
+TAKE 三眼手镯 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 力量戒指 1
+#ACT
+TAKE 力量戒指 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 紫碧螺 1
+#ACT
+TAKE 紫碧螺 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 泰坦戒指 1
+#ACT
+TAKE 泰坦戒指 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 祖玛道带 1
+#ACT
+TAKE 祖玛道带 1
+give 金币 400000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+
+#IF
+CHECKITEM 祖玛战带 1
+#ACT
+TAKE 祖玛战带 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 祖玛法带 1
+#ACT
+TAKE 祖玛法带 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 祖玛战靴 1
+#ACT
+TAKE 祖玛战靴 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 祖玛魔靴 1
+#ACT
+TAKE 祖玛魔靴 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 祖玛道靴 1
+#ACT
+TAKE 祖玛道靴 1
+give 金币 200000
+ChangeExp + 30000
+DELAYGOTO 0  @祖玛装备兑换一键 一键回收
+break
+#ELSEACT
+;SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]出售#6FFFF/8#6祖玛装备#5赚取了金币+经验
+ClearDelayGoto 一键回收
+BREAK
+;__________________________________________________________________________________
+
+[@赤月装备兑换一键]
+#IF
+CHECKITEM 圣战头盔 1
+#ACT
+TAKE 圣战头盔 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 圣战项链 1
+#ACT
+TAKE 圣战项链 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 圣战手镯 1
+#ACT
+TAKE 圣战手镯 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 圣战戒指 1
+#ACT
+TAKE 圣战戒指 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 法神头盔 1
+#ACT
+TAKE 法神头盔 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 法神项链 1
+#ACT
+TAKE 法神项链 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 法神手镯 1
+#ACT
+TAKE 法神手镯 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 法神戒指 1
+#ACT
+TAKE 法神戒指 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天尊头盔 1
+#ACT
+TAKE 天尊头盔 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天尊项链 1
+#ACT
+TAKE 天尊项链 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天尊手镯 1
+#ACT
+TAKE 天尊手镯 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天尊戒指 1
+#ACT
+TAKE 天尊戒指 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天尊道靴 1
+#ACT
+TAKE 天尊道靴 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 圣战战带 1
+#ACT
+TAKE 圣战战带 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 法神魔带 1
+#ACT
+TAKE 法神魔带 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天尊道带 1
+#ACT
+TAKE 天尊道带 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 圣战战靴 1
+#ACT
+TAKE 圣战战靴 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 法神魔靴 1
+#ACT
+TAKE 法神魔靴 1
+give 金币 500000
+ChangeExp + 80000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+
+
+#IF
+CHECKITEM 龙牙 1
+#ACT
+TAKE 龙牙 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 怒斩 1
+#ACT
+TAKE 怒斩 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 屠龙 1
+#ACT
+TAKE 屠龙 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 嗜魂法杖 1
+#ACT
+TAKE 嗜魂法杖 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 逍遥扇 1
+#ACT
+TAKE 逍遥扇 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天尊道袍 1
+#ACT
+TAKE 天尊道袍 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天师长袍 1
+#ACT
+TAKE 天师长袍 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天魔神甲 1
+#ACT
+TAKE 天魔神甲 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 圣战宝甲 1
+#ACT
+TAKE 圣战宝甲 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 法神披风 1
+#ACT
+TAKE 法神披风 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 霓裳羽衣 1
+#ACT
+TAKE 霓裳羽衣 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#IF
+CHECKITEM 天师长袍 1
+#ACT
+TAKE 天师长袍 1
+give 金币 1000000
+ChangeExp + 160000
+DELAYGOTO 0  @赤月装备兑换一键 一键回收
+break
+#ELSEACT
+;SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]出售#6FFFF/8#6赤月装备#5赚取了金币+经验
+ClearDelayGoto 一键回收
+BREAK
+
+
+
+
+
+
+
+
+#ACT
+TAKE 生命项链 1
+give 金币 50000
+ChangeExp + 10000
+INC M0 5
+#IF
+CHECKITEM 思贝儿手镯 1
+#ACT
+TAKE 思贝儿手镯 1
+give 金币 50000
+ChangeExp + 10000
+INC M0 5
+#IF
+CHECKITEM 红宝石戒指 1
+#ACT
+TAKE 红宝石戒指 1
+give 金币 50000
+ChangeExp + 10000
+INC M0 5
+#IF
+CHECKITEM 天珠项链 1
+#ACT
+TAKE 天珠项链 1
+give 金币 50000
+ChangeExp + 10000
+INC M0 5
+#IF
+CHECKITEM 心灵手镯 1
+#ACT
+TAKE 心灵手镯 1
+give 金币 50000
+ChangeExp + 10000
+INC M0 5
+#IF
+CHECKITEM 铂金戒指 1
+#ACT
+TAKE 铂金戒指 1
+give 金币 50000
+ChangeExp + 10000
+INC M0 5
+#IF
+CHECKITEM 炼狱 1
+#ACT
+TAKE 炼狱 1
+give 金币 100000
+ChangeExp + 20000
+INC M0 5
+#IF
+CHECKITEM 魔杖 1
+#ACT
+TAKE 魔杖 1
+give 金币 100000
+ChangeExp + 20000
+INC M0 5
+#IF
+CHECKITEM 银蛇 1
+#ACT
+TAKE 银蛇 1
+give 金币 100000
+ChangeExp + 20000
+INC M0 5
+#IF
+CHECKITEM 井中月 1
+#ACT
+TAKE 井中月 1
+give 金币 100000
+ChangeExp + 20000
+INC M0 5
+#IF
+CHECKITEM 无极棍 1
+#ACT
+TAKE 无极棍 1
+give 金币 100000
+ChangeExp + 20000
+INC M0 5
+
+[@主宰回收提示]
+#IF
+LARGE M0 0
+#ACT
+;SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]出售#6FFFF/8#6沃玛装备#5赚取了金币+经验
+Goto @系统_标准NPC头_返回
+#ELSESAY
+\ \
+{沃玛套装价格是5W金币+1W经验=FCO=253}\
+{祖玛套装价格是20W金币+3W经验=FCO=253}\
+{赤月套装价格是50W金币+8W经验=FCO=253}\
+<&金币回收{武器是双倍=FCO=250}{（沃玛套装）=FCO=251}/@回收_130>\
+<&金币回收{武器是双倍=FCO=250}{（祖玛套装）=FCO=251}/@回收_140>\
+<&金币回收{武器是双倍=FCO=250}{（赤月套装）=FCO=251}/@回收_150>\ \
+
+
+;__________________________________________________________________________________
+
+[@回收_140]
+#IF
+#SAY
+\ \ \ \ \ \
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @传奇回收提示
+#IF
+CHECKITEM 裁决之杖 1
+#ACT
+TAKE 裁决之杖 1
+give 金币 400000
+ChangeExp + 60000
+INC M0 100
+#IF
+CHECKITEM 血饮 1
+#ACT
+TAKE 血饮 1
+give 金币 400000
+ChangeExp + 60000
+INC M0 100
+#IF
+CHECKITEM 骨玉权杖 1
+#ACT
+TAKE 骨玉权杖 1
+give 金币 400000
+ChangeExp + 60000
+INC M0 100
+#IF
+CHECKITEM 龙纹剑 1
+#ACT
+TAKE 龙纹剑 1
+give 金币 400000
+ChangeExp + 60000
+INC M0 100
+#IF
+CHECKITEM 黑铁头盔 1
+#ACT
+TAKE 黑铁头盔 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 绿色项链 1
+#ACT
+TAKE 绿色项链 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 恶魔铃铛 1
+#ACT
+TAKE 恶魔铃铛 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 灵魂项链 1
+#ACT
+TAKE 灵魂项链 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 骑士手镯 1
+#ACT
+TAKE 骑士手镯 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 阎罗手套 1
+#ACT
+TAKE 阎罗手套 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 龙之手镯 1
+#ACT
+TAKE 龙之手镯 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 三眼手镯 1
+#ACT
+TAKE 三眼手镯 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 力量戒指 1
+#ACT
+TAKE 力量戒指 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 紫碧螺 1
+#ACT
+TAKE 紫碧螺 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 泰坦戒指 1
+#ACT
+TAKE 泰坦戒指 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 祖玛道带 1
+#ACT
+TAKE 祖玛道带 1
+give 金币 400000
+ChangeExp + 30000
+INC M0 50
+
+#IF
+CHECKITEM 祖玛战带 1
+#ACT
+TAKE 祖玛战带 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 祖玛法带 1
+#ACT
+TAKE 祖玛法带 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 祖玛战靴 1
+#ACT
+TAKE 祖玛战靴 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 祖玛法靴 1
+#ACT
+TAKE 祖玛法靴 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+#IF
+CHECKITEM 祖玛道靴 1
+#ACT
+TAKE 祖玛道靴 1
+give 金币 200000
+ChangeExp + 30000
+INC M0 50
+
+[@传奇回收提示]
+#IF
+LARGE M0 0
+#ACT
+;SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]出售#6FFFF/8#6祖玛装备#5赚取了金币+经验
+Goto @系统_标准NPC头_返回
+#ELSESAY
+\ \
+{沃玛套装价格是5W金币+1W经验=FCO=253}\
+{祖玛套装价格是20W金币+3W经验=FCO=253}\
+{赤月套装价格是50W金币+8W经验=FCO=253}\
+<&金币回收{武器是双倍=FCO=250}{（沃玛套装）=FCO=251}/@回收_130>\
+<&金币回收{武器是双倍=FCO=250}{（祖玛套装）=FCO=251}/@回收_140>\
+<&金币回收{武器是双倍=FCO=250}{（赤月套装）=FCO=251}/@回收_150>\ \
+
+
+;__________________________________________________________________________________
+
+[@回收_150]
+#IF
+#SAY
+\ \ \ \ \ \
+　--------------------------------\
+　　{系统正在检测您的背包,请稍等..=FCO=250}\
+　--------------------------------\
+#ACT
+DelayGoto 1 @玉兔回收提示
+#IF
+CHECKITEM 圣战头盔 1
+#ACT
+TAKE 圣战头盔 1
+give 金币 500000
+ChangeExp + 80000
+CALCVAR HUMAN 英雄值 + 10
+SAVEVAR HUMAN 英雄值 ..\Questdiary\jgr\英雄值.txt
+INC M0 100
+#IF
+CHECKITEM 圣战项链 1
+#ACT
+TAKE 圣战项链 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 圣战手镯 1
+#ACT
+TAKE 圣战手镯 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 圣战戒指 1
+#ACT
+TAKE 圣战戒指 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 法神头盔 1
+#ACT
+TAKE 法神头盔 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 法神项链 1
+#ACT
+TAKE 法神项链 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 法神手镯 1
+#ACT
+TAKE 法神手镯 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 法神戒指 1
+#ACT
+TAKE 法神戒指 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 天尊头盔 1
+#ACT
+TAKE 天尊头盔 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 天尊项链 1
+#ACT
+TAKE 天尊项链 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 天尊手镯 1
+#ACT
+TAKE 天尊手镯 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 天尊戒指 1
+#ACT
+TAKE 天尊戒指 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 天尊道靴 1
+#ACT
+TAKE 天尊道靴 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 圣战战带 1
+#ACT
+TAKE 圣战战带 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 法神魔带 1
+#ACT
+TAKE 法神魔带 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 天尊道带 1
+#ACT
+TAKE 天尊道带 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 圣战战靴 1
+#ACT
+TAKE 圣战战靴 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+#IF
+CHECKITEM 法神魔靴 1
+#ACT
+TAKE 法神魔靴 1
+give 金币 500000
+ChangeExp + 80000
+INC M0 100
+
+
+#IF
+CHECKITEM 龙牙 1
+#ACT
+TAKE 龙牙 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 怒斩 1
+#ACT
+TAKE 怒斩 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 屠龙 1
+#ACT
+TAKE 屠龙 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 嗜魂法杖 1
+#ACT
+TAKE 嗜魂法杖 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 逍遥扇 1
+#ACT
+TAKE 逍遥扇 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 天尊道袍 1
+#ACT
+TAKE 天尊道袍 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 天师长袍 1
+#ACT
+TAKE 天师长袍 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 天魔神甲 1
+#ACT
+TAKE 天魔神甲 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 圣战宝甲 1
+#ACT
+TAKE 圣战宝甲 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 法神披风 1
+#ACT
+TAKE 法神披风 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 霓裳羽衣 1
+#ACT
+TAKE 霓裳羽衣 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+#IF
+CHECKITEM 天师长袍 1
+#ACT
+TAKE 天师长袍 1
+give 金币 1000000
+ChangeExp + 160000
+INC M0 100
+[@玉兔回收提示]
+#IF
+LARGE M0 0
+#ACT
+;SENDMSG 0 【#6FFFF/8#6回收#5】：[#7<$USERNAME>#7]出售#6FFFF/8#6赤月装备#5赚取了金币+经验
+Goto @系统_标准NPC头_返回
+#ELSESAY
+\ \
+{沃玛套装价格是5W金币+1W经验=FCO=253}\
+{祖玛套装价格是20W金币+3W经验=FCO=253}\
+{赤月套装价格是50W金币+8W经验=FCO=253}\
+<&金币回收{武器是双倍=FCO=250}{（沃玛套装）=FCO=251}/@回收_130>\
+<&金币回收{武器是双倍=FCO=250}{（祖玛套装）=FCO=251}/@回收_140>\
+<&金币回收{武器是双倍=FCO=250}{（赤月套装）=FCO=251}/@回收_150>\ \
+
+}

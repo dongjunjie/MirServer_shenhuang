@@ -1,0 +1,71 @@
+[@在线元宝]
+　{亲爱的[<$USERNAME>]:=FCO=250}\
+　{你的等级必须大于或等于45级才可计时领取=FCO=254}\
+　{只要您玩,就有机会免费获取元宝!!=FCO=254}\
+　<[温馨提示]:>\
+　{每次只可领取一次,领完后系统将踢下线,时=FCO=254}\
+　{间会重新计算!=FCO=254}\
+　<[在线奖励]:>\
+　<[1小时]:> {可以领取奖(100元宝)=FCO=254} <确定领取/@ling1>\
+　<[2小时]:> {可以领取奖(200元宝)=FCO=254} <确定领取/@ling2>\
+　<[5小时]:> {可以领取奖(500元宝)=FCO=254} <确定领取/@ling3>\
+　<[8小时]:> {可以领取奖(800元宝)=FCO=254} <确定领取/@ling4>\
+　<[10小时]:>{可以领取奖(1000元宝)=FCO=254}<确定领取/@ling5>\
+　<[系统时间]:>{<$LOGINTIME>=FCO=253}  \
+　<[当前在线]:>{<$LOGINLONG>=FCO=253}\
+[@ling5]
+#if
+CHECKLEVELEX > 44
+ONLINELONGMIN > 599
+#ACT
+GAMEGOLD + 1000
+SENDMSG 1 恭喜[%s请]在线时间达到10小时，成功领取1000元宝！如果还没领赶紧去计时奖励去领取
+KICK
+#ELSEACT
+MESSAGEBOX [无法领取]当前累计在线时间不满10小时或等级不够,不能领取!!
+
+[@ling4]
+#if
+CHECKLEVELEX > 44
+ONLINELONGMIN > 479
+#ACT
+GAMEGOLD + 800
+SENDMSG 1 恭喜[%s请]在线时间达到8小时，成功领取800元宝！如果还没领赶紧去计时奖励去领取
+KICK
+#ELSEACT
+MESSAGEBOX [无法领取]当前累计在线时间不满8小时或等级不够,不能领取!!
+
+[@ling3]
+#if
+CHECKLEVELEX > 44
+ONLINELONGMIN > 299
+#ACT
+GAMEGOLD + 500
+SENDMSG 1 恭喜[%s请]在线时间达到5小时，成功领取500元宝！如果还没领赶紧去计时奖励去领取
+KICK
+#ELSEACT
+MESSAGEBOX [无法领取]当前累计在线时间不满5小时或等级不够,不能领取!!
+
+[@ling2]
+#if
+CHECKLEVELEX > 44
+ONLINELONGMIN > 119
+#ACT
+GAMEGOLD + 200
+SENDMSG 1 恭喜[%s请]在线时间达到2小时，成功领取200元宝！如果还没领赶紧去计时奖励去领取
+KICK
+#ELSEACT
+MESSAGEBOX [无法领取]当前累计在线时间不满2小时或等级不够,不能领取!!
+
+[@ling1]
+#if
+CHECKLEVELEX > 44
+ONLINELONGMIN > 59
+#ACT
+GAMEGOLD + 100
+SENDMSG 1 恭喜[%s请]在线时间达到1小时，成功领取100元宝！如果还没领赶紧去计时奖励去领取
+KICK
+#ELSEACT
+MESSAGEBOX [无法领取]当前累计在线时间不满1小时或等级不够,不能领取!!
+
+}

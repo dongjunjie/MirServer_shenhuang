@@ -1,0 +1,664 @@
+[@main](2287,300,540,3)
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{你好！在我这里可以学习各种高级进阶技能。=FCO=254}\
+　{也在转职和变性，当然是有条件的咯!=FCO=254}\
+　{提示：转职会清除所有已学高级技能。=FCO=23}\
+　{已提升境界的，可以在我这里重新学习神技。=FCO=23}\
+　\
+　\
+　\
+　\
+　\
+<&{[ 变  性 ]=FCO=70}|收费500元宝/@ 变  性 > \  
+<&{[ 转  职 ]=FCO=70}|收费5000元宝/@转职> \  
+<&{[补学境界技能]=FCO=70}|免费/@补学> \  
+<&{[结束对话]=FCO=249}/@exit>\
+
+
+[@补学](2287,300,540,3)
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+{你好！在我这里可以学习各种高级进阶技能。=FCO=254}\
+{也在转职和变性，当然是有条件的咯!=FCO=254}\
+{提示：转职会清除所有已学高级技能。=FCO=23}\
+{已提升境界的，可以在我这里重新学习神技。=FCO=23}\
+　\
+　\
+　\
+　\
+　\
+<一重境界:{[开天斩]=FCO=70}/@开天斩> 　　<{[解毒术]=FCO=70}/@解毒术> 　　<{[灭天火]=FCO=70}/@灭天火> \ 
+<二重境界:{[逐日剑法]=FCO=70}/@逐日剑法>   <{[气功波]=FCO=70}/@气功波> 　　<{[火焰冰]=FCO=70}/@火焰冰> \  
+<三重境界:{[强化逐日剑法]=FCO=70}/@强化逐日剑法> <{[诅咒术]=FCO=70}/@诅咒术> 　<{[流星火雨]=FCO=70}/@流星火雨> \  
+<四重境界:{[纵横剑术]=FCO=70}/@纵横剑术>　 <{[无极真气]=FCO=70}/@无极真气>　 <{[金刚护盾]=FCO=70}/@金刚护盾> \  
+<五重境界:{[擒龙手]=FCO=70}/@擒龙手> 　<{[群体施毒术]=FCO=70}/@群体施毒术> 　<{[火龙气焰]=FCO=70}/@火龙气焰> \  
+<六重境界:{[十步一杀]=FCO=70}/@十步一杀> <{[复活术]=FCO=70}/@复活术> 　 <{[群体雷电术]=FCO=70}/@群体雷电术> \  
+<七重境界:{[彻地钉]=FCO=70}/@彻地钉> 　　<{[裂神符]=FCO=70}/@裂神符>  　<{[移形换位]=FCO=70}/@移形换位> \  
+<八重境界:{[护体神盾]=FCO=70}/@护体神盾>\  
+<九重境界:{[倚天辟地]=FCO=70}/@倚天辟地>　 <{[死亡之眼]=FCO=70}/@死亡之眼> <{[冰霜群雨]=FCO=70}/@冰霜群雨> \  
+  
+<{[结束对话]=FCO=249}/@exit>\
+
+[@开天斩]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 1
+NOT CheckSkill 开天斩 ？ 0
+#act
+AddSkill 开天斩 0
+messagebox 恭喜你成功重新学习【开天斩】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【开天斩】\2.你没有一重境界\3.你不是战士
+
+[@解毒术]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 1
+NOT CheckSkill 解毒术 ？ 0
+#act
+AddSkill 解毒术 0
+messagebox 恭喜你成功重新学习【解毒术】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【解毒术】\2.你没有一重境界\3.你不是道士
+
+[@灭天火]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 1
+NOT CheckSkill 灭天火 ？ 0
+#act
+AddSkill 灭天火 0
+messagebox 恭喜你成功重新学习【灭天火】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【灭天火】\2.你没有一重境界\3.你不是法师
+;==============================================================================
+
+[@逐日剑法]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 2
+NOT CheckSkill 逐日剑法 ？ 0
+#act
+AddSkill 逐日剑法 0
+messagebox 恭喜你成功重新学习【逐日剑法】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【逐日剑法】\2.你没有2重境界\3.你不是战士
+
+[@气功波]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 2
+NOT CheckSkill 气功波 ？ 0
+#act
+AddSkill 气功波 0
+messagebox 恭喜你成功重新学习【气功波】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【气功波】\2.你没有2重境界\3.你不是道士
+
+[@火焰冰]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 2
+NOT CheckSkill 火焰冰 ？ 0
+#act
+AddSkill 火焰冰 0
+messagebox 恭喜你成功重新学习【火焰冰】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【火焰冰】\2.你没有2重境界\3.你不是法师
+;==============================================================================
+
+[@强化逐日剑法]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 3
+NOT CheckSkill 强化逐日剑法 ？ 0
+#act
+DelSkill 逐日剑法
+AddSkill 强化逐日剑法 0
+messagebox 恭喜你成功重新学习【强化逐日剑法】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【强化逐日剑法】\2.你没有3重境界\3.你不是战士
+
+[@诅咒术]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 3
+NOT CheckSkill 诅咒术 ？ 0
+#act
+AddSkill 诅咒术 0
+messagebox 恭喜你成功重新学习【诅咒术】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【诅咒术】\2.你没有3重境界\3.你不是道士
+
+[@流星火雨]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 3
+NOT CheckSkill 流星火雨 ？ 0
+#act
+AddSkill 流星火雨 0
+messagebox 恭喜你成功重新学习【流星火雨】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【流星火雨】\2.你没有3重境界\3.你不是法师
+;==============================================================================
+[@纵横剑术]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 4
+NOT CheckSkill 纵横剑术 ？ 0
+#act
+
+AddSkill 纵横剑术 0
+messagebox 恭喜你成功重新学习【纵横剑术】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【纵横剑术】\2.你没有4重境界\3.你不是战士
+
+[@无极真气]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 4
+NOT CheckSkill 无极真气 ？ 0
+#act
+AddSkill 无极真气 0
+messagebox 恭喜你成功重新学习【无极真气】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【无极真气】\2.你没有4重境界\3.你不是道士
+
+[@金刚护盾]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 4
+NOT CheckSkill 金刚护盾 ？ 0
+#act
+AddSkill 金刚护盾 0
+messagebox 恭喜你成功重新学习【金刚护盾】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【金刚护盾】\2.你没有4重境界\3.你不是法师
+;==============================================================================
+[@擒龙手]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 5
+NOT CheckSkill 擒龙手 ？ 0
+#act
+
+AddSkill 擒龙手 0
+messagebox 恭喜你成功重新学习【擒龙手】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【擒龙手】\2.你没有5重境界\3.你不是战士
+
+[@群体施毒术]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 5
+NOT CheckSkill 群体施毒术 ？ 0
+#act
+AddSkill 群体施毒术 0
+messagebox 恭喜你成功重新学习【群体施毒术】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【群体施毒术】\2.你没有5重境界\3.你不是道士
+
+[@火龙气焰]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 5
+NOT CheckSkill 火龙气焰 ？ 0
+#act
+AddSkill 火龙气焰 0
+messagebox 恭喜你成功重新学习【火龙气焰】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【火龙气焰】\2.你没有5重境界\3.你不是法师
+;==============================================================================
+[@十步一杀]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 6
+NOT CheckSkill 十步一杀 ？ 0
+#act
+
+AddSkill 十步一杀 0
+messagebox 恭喜你成功重新学习【十步一杀】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【十步一杀】\2.你没有6重境界\3.你不是战士
+
+[@复活术]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 6
+NOT CheckSkill 复活术 ？ 0
+#act
+AddSkill 复活术 0
+messagebox 恭喜你成功重新学习【复活术】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【复活术】\2.你没有6重境界\3.你不是道士
+
+[@群体雷电术]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 6
+NOT CheckSkill 群体雷电术 ？ 0
+#act
+AddSkill 群体雷电术 0
+messagebox 恭喜你成功重新学习【群体雷电术】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【群体雷电术】\2.你没有6重境界\3.你不是法师
+;==============================================================================
+[@彻地钉]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 7
+NOT CheckSkill 彻地钉 ？ 0
+#act
+
+AddSkill 彻地钉 0
+messagebox 恭喜你成功重新学习【彻地钉】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【彻地钉】\2.你没有7重境界\3.你不是战士
+
+[@裂神符]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 7
+NOT CheckSkill 裂神符 ？ 0
+#act
+AddSkill 裂神符 0
+messagebox 恭喜你成功重新学习【裂神符】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【裂神符】\2.你没有7重境界\3.你不是道士
+
+[@移形换位]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 7
+NOT CheckSkill 移形换位 ？ 0
+#act
+AddSkill 移形换位 0
+messagebox 恭喜你成功重新学习【移形换位】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【移形换位】\2.你没有7重境界\3.你不是法师
+;==============================================================================
+[@护体神盾]
+#if
+
+CheckRenewLevel ？ 8
+NOT CheckSkill 护体神盾 ？ 0
+#act
+
+AddSkill 护体神盾 0
+messagebox 恭喜你成功重新学习【护体神盾】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【护体神盾】\2.你没有8重境界
+
+;==============================================================================
+[@倚天辟地]
+#if
+CheckJob Warrior
+CheckRenewLevel ？ 9
+NOT CheckSkill 倚天辟地 ？ 0
+#act
+
+AddSkill 倚天辟地 0
+messagebox 恭喜你成功重新学习【倚天辟地】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【倚天辟地】\2.你没有9重境界\3.你不是战士
+
+[@死亡之眼]
+#if
+CheckJob Taoist
+CheckRenewLevel ？ 9
+NOT CheckSkill 死亡之眼 ？ 0
+#act
+AddSkill 死亡之眼 0
+messagebox 恭喜你成功重新学习【死亡之眼】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【死亡之眼】\2.你没有9重境界\3.你不是道士
+
+[@冰霜群雨]
+#if
+CheckJob Wizard
+CheckRenewLevel ？ 9
+NOT CheckSkill 冰霜群雨 ？ 0
+#act
+AddSkill 冰霜群雨 0
+messagebox 恭喜你成功重新学习【冰霜群雨】
+#ELSEACT
+MESSAGEBOX 补学失败\1.你已学【冰霜群雨】\2.你没有9重境界\3.你不是法师
+;==============================================================================
+
+
+
+
+[@ 变  性 ](2287,300,540,3)
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+{你需要转换性别吗？其实做妖和做人一样，要=FCO=254}\
+{有一颗仁慈的心.....前些时候前往海外，遇到=FCO=254}\
+{了一个医术超群的医生。学会了这种技术.回来=FCO=254}\
+{为高凉传奇的英雄服务。可不是免费的哦，=FCO=254}\
+{收费500元宝。=FCO=254}\
+　\
+　\
+　\
+　\
+<&{[变成男人]=FCO=70}/@002>\
+<&{[变成女人]=FCO=70}/@001>\
+<&{[结束对话]=FCO=249}/@exit>\
+
+
+
+[@001]
+#IF
+Gender Woman
+#ACT
+MESSAGEBOX 你已是一位淑女了,不能进行此项功能服务..
+#ELSEACT 
+goto @0001
+
+[@002]
+#IF
+Gender Man
+#ACT
+MESSAGEBOX 你已是一位猛男了,不能进行此项功能服务..
+#ELSEACT 
+goto @0002
+
+[@0001]
+#IF
+CheckMarry
+#ACT
+MESSAGEBOX 对不起，你是个有家室的人，凡事请以家庭为重！如果你一定要变性，请先离婚!!\
+#ELSEACT 
+goto @00011 
+
+[@0002]
+#IF
+CheckMarry
+#ACT
+MESSAGEBOX 对不起，你是个有家室的人，凡事请以家庭为重！如果你一定要变性，请先离婚!!\
+#ELSEACT 
+goto @00022
+
+[@00022]
+#IF 
+CHECKGAMEGOLD ? 500
+#ACT 
+GAMEGOLD - 500
+CHANGEGENDER 0 
+sendmsg 0 #6FFFF/8#6【系统】#5玩家#7【<$USERNAME>】#7花费#6FFFF/8#6【500元宝】#5成功变性为男人！
+INC G100 500
+CALCVAR HUMAN 消费积分 + 500
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[500]#7元宝，获得#7[500]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT 
+MESSAGEBOX 钱都没有，想做手术？我这不是慈善机构!!
+
+[@00011]
+#IF 
+CHECKGAMEGOLD ? 500
+#ACT 
+GAMEGOLD - 500
+CHANGEGENDER 1 
+sendmsg 0 #6FFFF/8#6【系统】#5玩家#7【<$USERNAME>】#7花费#6FFFF/8#6【500元宝】#5成功变性为女人！
+INC G100 500
+CALCVAR HUMAN 消费积分 + 500
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[500]#7元宝，获得#7[500]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT 
+MESSAGEBOX 钱都没有，想做手术？我这不是慈善机构!!
+
+;-------------------------------------------------------------------
+
+
+
+[@转职](2287,300,540,3)
+#IF
+checkjob warrior
+#SAY
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{是不是做武士不好玩呀，换换别的试试吧！=FCO=254}\
+　{提示：转职后会清空所有当前职业所有技能=FCO=23}\
+　{收费5000元宝。=FCO=23}\
+　\
+　\
+　\
+　\
+　\
+　\
+　╔┄┄┄┄╗\
+　┆<玩玩法师/@ToWizard>┆\
+　┆<玩玩道士/@Totaos>┆\
+　┆<返回首页/@main>┆\
+　╚┄┄┄┄╝\
+#ACT
+break
+#IF
+checkjob wizard
+#SAY
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{是不是做法师不好玩呀，换换别的试试吧！=FCO=254}\
+　{提示：转职后会清空所有当前职业所有技能=FCO=23}\
+　{收费5000元宝。=FCO=23}\
+　\
+　\
+　\
+　\
+　\
+　\
+　╔┄┄┄┄╗\
+　┆<玩玩武士/@Towarr>┆\
+　┆<玩玩道士/@Totaos>┆\
+　┆<返回首页/@main>┆\
+　╚┄┄┄┄╝\
+#ACT
+break
+#IF
+checkjob taoist
+#SAY
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　{是不是做道士不好玩呀，换换别的试试吧！=FCO=254}\
+　{提示：转职后会清空所有当前职业所有技能=FCO=23}\
+　{收费5000元宝。=FCO=23}\
+　\
+　\
+　\
+　\
+　\
+　\
+　╔┄┄┄┄╗\
+　┆<玩玩武士/@Towarr>┆\
+　┆<玩玩法师/@ToWizard>┆\
+　┆<返回首页/@main>┆\
+　╚┄┄┄┄╝\
+#ACT
+break
+
+[@Towarr]
+#IF
+checklevel 40
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Warrior
+
+ADDSKILL 基本剑术 0
+ADDSKILL 攻杀剑术 0
+ADDSKILL 刺杀剑术 0
+ADDSKILL 野蛮冲撞 0
+ADDSKILL 半月弯刀 0
+SENDMSG 0 玩家【<$USERNAME>】厌倦以前的职业，现在已经转职成为了一名战士。
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[5000]#7元宝，获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+GOTO @转职_下线
+#SAY
+\ \
+\ \
+亲爱的勇士您已经完成了转职，您现在是\
+一位伟大的战士了。\ \ \
+╔┄┄┄┄┬┄┄┄┄╗\
+┆<回 首 页/@main>┆<关闭对话/@exit>┆\
+╚┄┄┄┄┴┄┄┄┄╝\
+#ELSESAY
+\ \
+\ \
+对不起！你没有达到以下条件\
+1.等级40以上。 \
+2.身上没有5000元宝。 \
+╔┄┄┄┄┬┄┄┄┄╗\
+┆<回 首 页/@main>┆<关闭对话/@exit>┆\
+╚┄┄┄┄┴┄┄┄┄╝\
+[@ToWizard]
+#IF
+checklevel 40
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Wizard
+
+ADDSKILL 火球术 0
+ADDSKILL 雷电术 0
+ADDSKILL 抗拒火环 0
+ADDSKILL 诱惑之光 0
+ADDSKILL 爆裂火焰 0
+ADDSKILL 火墙 0
+ADDSKILL 地狱雷光 0
+ADDSKILL 疾光电影 0
+ADDSKILL 瞬息移动 0
+ADDSKILL 魔法盾 0
+ADDSKILL 圣言术 0
+SENDMSG 0 玩家【<$USERNAME>】厌倦以前的职业，现在已经转职成为了一名法师。
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[5000]#7元宝，获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+GOTO @转职_下线
+#SAY
+\ \
+\ \
+亲爱的勇士您已经完成了转职，您现在是\
+一位伟大的魔法师了。\ \ \
+╔┄┄┄┄┬┄┄┄┄╗\
+┆<回 首 页/@main>┆<关闭对话/@exit>┆\
+╚┄┄┄┄┴┄┄┄┄╝\
+#ELSESAY
+\ \
+\ \
+对不起！你没有达到以下条件\
+1.等级40以上。 \
+2.身上没有5000元宝。 \
+╔┄┄┄┄┬┄┄┄┄╗\
+┆<回 首 页/@main>┆<关闭对话/@exit>┆\
+╚┄┄┄┄┴┄┄┄┄╝\
+[@Totaos]
+#IF
+checklevel 40
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Taoist
+
+ADDSKILL 治愈术 0
+ADDSKILL 精神力战法 0
+ADDSKILL 施毒术 0
+ADDSKILL 灵魂火符 0
+ADDSKILL 召唤骷髅 0
+ADDSKILL 隐身术 0
+ADDSKILL 集体隐身术 0
+ADDSKILL 神圣战甲术 0
+ADDSKILL 幽灵盾 0
+ADDSKILL 心灵启示 0
+ADDSKILL 困魔咒 0
+ADDSKILL 群体治疗术 0
+SENDMSG 0 玩家【<$USERNAME>】厌倦以前的职业，现在已经转职成为了一名道士。
+INC G100 5000
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你消费#7[5000]#7元宝，获得#7[5000]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+GOTO @转职_下线
+#SAY
+\ \
+\ \
+亲爱的勇士您已经完成了转职，您现在是\
+一位伟大的道士了。\ \ \
+╔┄┄┄┄┬┄┄┄┄╗\
+┆<回 首 页/@main>┆<关闭对话/@exit>┆\
+╚┄┄┄┄┴┄┄┄┄╝\
+#ELSESAY
+\ \
+\ \
+对不起！你没有达到以下条件\
+1.等级40以上。 \
+2.身上没有5000元宝。 \
+╔┄┄┄┄┬┄┄┄┄╗\
+┆<回 首 页/@main>┆<关闭对话/@exit>┆\
+╚┄┄┄┄┴┄┄┄┄╝\
+
+
+
+[@转职_下线]
+#IF
+#ACT
+MESSAGEBOX 提示：为避免游戏数据出错!请重新登录。
+Kick

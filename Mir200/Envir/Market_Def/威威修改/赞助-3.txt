@@ -1,0 +1,319 @@
+(@@InPutString @@InputInteger)
+[@main](1695,594,789,3)
+#if
+GENDER MAN
+#SAY
+　　   {伊春传奇感谢有你，现在充值送豪礼！绝不影响游戏平衡,请依次领取奖励,否则后果自负!=FCO=249}\
+　　<{点击领取→[VIP1青铜赞助]=FCO=70}|[上线可获得VIP1动态称号=FCO=00FF7F]^[称号属性：爆率1.1倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@青铜赞助1>
+：{累计充值50RMB以上可领取(散人宣传15传奇群即可免费找管理领取)=FCO=254}\
+　　　1,{i.1690,c.1=item}        2,{i.1670,c.1=item}        3,{i.1774,c.1=item}        4,{i.1699,c.1=item}
+　　　　5,{i.1017,c.1=item}        6,{i.1021,c.5=item}        7,{i.1123,c.5=item}        8,{i.1117,c.100=item} \  \
+　  　  \
+　　<{点击领取→[VIP2白银赞助]=FCO=70}|[上线可获得VIP2动态称号=FCO=00FF7F]^[称号属性：爆率1.2倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@白银赞助1>
+：{累计充值100RMB以上可领取=FCO=254}\
+　　　1,{i.1689,c.1=item}        2,{i.1672,c.1=item}        3,{i.1777,c.1=item}        4,{i.1700,c.1=item}
+　　　　5,{i.1735,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.200=item} \  \
+　  　  \
+　　<{点击领取→[VIP3黄金赞助]=FCO=70}|[上线可获得VIP3动态称号=FCO=00FF7F]^[称号属性：爆率1.3倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@黄金赞助1>
+：{累计充值300RMB以上可领取=FCO=254}\
+　　　1,{i.1688,c.1=item}        2,{i.1674,c.1=item}        3,{i.1788,c.1=item}        4,{i.1701,c.1=item}
+　　　　5,{i.1735,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.600=item} \  \
+　  　  \
+　　<{点击领取→[VIP4白金赞助]=FCO=70}|[上线可获得VIP4动态称号=FCO=00FF7F]^[称号属性：爆率1.4倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@白金赞助1>
+：{累计充值500RMB以上可领取=FCO=254}\
+　　　1,{i.1687,c.1=item}        2,{i.1676,c.1=item}        3,{i.1791,c.1=item}        4,{i.1702,c.1=item}
+　　　　5,{i.1736,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.1000=item} \  \
+　  　  \
+　　<{点击领取→[VIP5钻石赞助]=FCO=70}|[上线可获得VIP5动态称号=FCO=00FF7F]^[称号属性：爆率1.5倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@钻石赞助1>
+：{累计充值700RMB以上可领取=FCO=254}\
+　　　1,{i.1686,c.1=item}        2,{i.1678,c.1=item}        3,{i.1794,c.1=item}        4,{i.1703,c.1=item}
+　　　　5,{i.1737,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.1400=item} \  \
+　  　  \
+　　<{点击领取→[VIP6王者赞助]=FCO=70}|[上线可获得VIP6动态称号=FCO=00FF7F]^[称号属性：爆率1.6倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@王者赞助1>
+：{累计充值1000RMB以上可领取=FCO=254}\
+　　　1,{i.1684,c.1=item}        2,{i.1680,c.1=item}        3,{i.1796,c.1=item}        4,{i.1704,c.1=item}
+　　　　5,{i.1737,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.2000=item} \  \
+　  　  \
+　　　{宣传赞助请联系管理=FCO=250}   {QQ：2264841338=FCO=253}   {你当前累计充值积分:[<$STR(C33)>]=FCO=253}\ 
+#ELSESAY 
+　\
+　　   {伊春传奇感谢有你，现在充值送豪礼！绝不影响游戏平衡,请依次领取奖励,否则后果自负!=FCO=249}\
+　　<{点击领取→[VIP1青铜赞助]=FCO=70}|[上线可获得VIP1动态称号=FCO=00FF7F]^[称号属性：爆率1.1倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@青铜赞助1>
+：{累计充值50RMB以上可领取(散人宣传15传奇群即可免费找管理领取)=FCO=254}\
+　　　1,{i.1690,c.1=item}        2,{i.1670,c.1=item}        3,{i.1774,c.1=item}        4,{i.1699,c.1=item}
+　　　　5,{i.1017,c.1=item}        6,{i.1021,c.5=item}        7,{i.1123,c.5=item}        8,{i.1117,c.100=item} \  \
+　  　  \
+　　<{点击领取→[VIP2白银赞助]=FCO=70}|[上线可获得VIP2动态称号=FCO=00FF7F]^[称号属性：爆率1.2倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@白银赞助1>
+：{累计充值100RMB以上可领取=FCO=254}\
+　　　1,{i.1689,c.1=item}        2,{i.1672,c.1=item}        3,{i.1777,c.1=item}        4,{i.1700,c.1=item}
+　　　　5,{i.1735,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.200=item} \  \
+　  　  \
+　　<{点击领取→[VIP3黄金赞助]=FCO=70}|[上线可获得VIP3动态称号=FCO=00FF7F]^[称号属性：爆率1.3倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@黄金赞助1>
+：{累计充值300RMB以上可领取=FCO=254}\
+　　　1,{i.1688,c.1=item}        2,{i.1674,c.1=item}        3,{i.1788,c.1=item}        4,{i.1701,c.1=item}
+　　　　5,{i.1735,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.600=item} \  \
+　  　  \
+　　<{点击领取→[VIP4白金赞助]=FCO=70}|[上线可获得VIP4动态称号=FCO=00FF7F]^[称号属性：爆率1.4倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@白金赞助1>
+：{累计充值500RMB以上可领取=FCO=254}\
+　　　1,{i.1687,c.1=item}        2,{i.1676,c.1=item}        3,{i.1791,c.1=item}        4,{i.1702,c.1=item}
+　　　　5,{i.1736,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.1000=item} \  \
+　  　  \
+　　<{点击领取→[VIP5钻石赞助]=FCO=70}|[上线可获得VIP5动态称号=FCO=00FF7F]^[称号属性：爆率1.5倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@钻石赞助1>
+：{累计充值700RMB以上可领取=FCO=254}\
+　　　1,{i.1686,c.1=item}        2,{i.1678,c.1=item}        3,{i.1794,c.1=item}        4,{i.1703,c.1=item}
+　　　　5,{i.1737,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.1400=item} \  \
+　  　  \
+　　<{点击领取→[VIP6王者赞助]=FCO=70}|[上线可获得VIP6动态称号=FCO=00FF7F]^[称号属性：爆率1.6倍=FCO=00FF7F]
+^[提示：每人只能领取一次。=FCO=7280FA]/@王者赞助1>
+：{累计充值1000RMB以上可领取=FCO=254}\
+　　　1,{i.1684,c.1=item}        2,{i.1680,c.1=item}        3,{i.1796,c.1=item}        4,{i.1704,c.1=item}
+　　　　5,{i.1737,c.5=item}        6,{i.1021,c.10=item}        7,{i.1123,c.10=item}        8,{i.1117,c.2000=item} \  \
+　  　  \
+　　　{宣传赞助请联系管理=FCO=250}   {QQ：2264841338=FCO=253}   {你当前累计充值积分:[<$STR(C33)>]=FCO=253}\ 
+
+
+
+[@青铜赞助1]
+#if
+Large C33 49
+CheckBagSize 14
+Check [201] 0
+Check [220] 0
+#ACT
+Set [201] 1
+Set [202] 0
+Set [203] 0
+Set [204] 0
+Set [205] 0
+Set [206] 0
+Set [220] 1
+GOTO @青铜赞助2
+#ELSEACT
+MESSAGEBOX 领取失败\1.你已领过此礼包。\2.或者累计充值少于50元。\3.你的包裹里的空位小于14格！
+Break
+
+[@青铜赞助2]
+#if
+#act
+DynamicDynamicGive 50元赞助礼包 1
+DynamicDynamicGive 沃玛教主(宠) 1
+DynamicDynamicGive 伊春传奇会员 1
+DynamicGive 星级卷礼包 5
+DynamicGive 强化卷礼包 5
+DynamicGive 铭文洗练石 100
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+messagebox  【恭喜你成功领取50元赞助回馈奖励】
+SENDMSG 0 〖#6FFFF/8#6系统#5〗:恭喜#7<$USERNAME>#7成功领取“#6FFFF/8#650元赞助回馈.感谢您对我们最大的支持#5”
+Break
+;============================================================================================================
+
+
+[@白银赞助1]
+#if
+Large C33 99
+CheckBagSize 28
+Check [202] 0
+Check [221] 0
+#ACT
+Set [201] 0
+Set [202] 1
+Set [203] 0
+Set [204] 0
+Set [205] 0
+Set [206] 0
+Set [221] 1
+GOTO @白银赞助2
+#ELSEACT
+MESSAGEBOX 领取失败\1.你已领过此礼包。\2.或者累计充值少于100元。\3.你的包裹里的空位小于28格！
+
+
+[@白银赞助2]
+#if
+#act
+DynamicGive 100元赞助礼包 1
+DynamicGive 虹魔教主(宠) 1
+DynamicGive 中级传送卷礼包 5
+DynamicGive 星级卷礼包 10
+DynamicGive 强化卷礼包 10
+DynamicGive 铭文洗练石 200
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+messagebox  【恭喜你成功领取100元赞助回馈奖励】
+SENDMSG 0 〖#6FFFF/8#6系统#5〗:恭喜#7<$USERNAME>#7成功领取“#6FFFF/8#6100元赞助回馈.感谢您对我们最大的支持#5”
+Break
+;============================================================================================================
+
+
+[@黄金赞助1]
+#if
+Large C33 299
+CheckBagSize 28
+Check [203] 0
+Check [222] 0
+#ACT
+Set [201] 0
+Set [202] 0
+Set [203] 1
+Set [204] 0
+Set [205] 0
+Set [206] 0
+Set [222] 1
+GOTO @黄金赞助2
+#ELSEACT
+MESSAGEBOX 领取失败\1.你已领过此礼包。\2.或者累计充值少于300元。\3.你的包裹里的空位小于28格！
+
+
+[@黄金赞助2]
+#if
+#act
+DynamicGive 300元赞助礼包 1
+DynamicGive 怨恶(宠) 1
+DynamicGive 中级传送卷礼包 5
+DynamicGive 星级卷礼包 10
+DynamicGive 强化卷礼包 10
+DynamicGive 铭文洗练石 600
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+messagebox  【恭喜你成功领取300元赞助回馈奖励】
+SENDMSG 0 〖#6FFFF/8#6系统#5〗:恭喜#7<$USERNAME>#7成功领取“#6FFFF/8#6300元赞助回馈.感谢您对我们最大的支持#5”
+Break
+;============================================================================================================
+
+
+[@白金赞助1]
+#if
+Large C33 499
+CheckBagSize 28
+Check [204] 0
+Check [223] 0
+#ACT
+Set [201] 0
+Set [202] 0
+Set [203] 0
+Set [204] 1
+Set [205] 0
+Set [206] 0
+Set [223] 1
+GOTO @白金赞助2
+#ELSEACT
+MESSAGEBOX 领取失败\1.你已领过此礼包。\2.或者累计充值少于500元。\3.你的包裹里的空位小于28格！
+
+
+[@白金赞助2]
+#if
+#act
+DynamicGive 500元赞助礼包 1
+DynamicGive 死神(宠) 1
+DynamicGive 高级传送卷礼包 5
+DynamicGive 星级卷礼包 10
+DynamicGive 强化卷礼包 10
+DynamicGive 铭文洗练石 1000
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+messagebox  【恭喜你成功领取500元赞助回馈奖励】
+SENDMSG 0 〖#6FFFF/8#6系统#5〗:恭喜#7<$USERNAME>#7成功领取“#6FFFF/8#6500元赞助回馈.感谢您对我们最大的支持#5”
+Break
+;============================================================================================================
+
+
+
+[@钻石赞助1]
+#if
+Large C33 699
+CheckBagSize 28
+Check [205] 0
+Check [224] 0
+#ACT
+Set [201] 0
+Set [202] 0
+Set [203] 0
+Set [204] 0
+Set [205] 1
+Set [206] 0
+Set [224] 1
+GOTO @钻石赞助2
+#ELSEACT
+MESSAGEBOX 领取失败\1.你已领过此礼包。\2.或者累计充值少于700元。\3.你的包裹里的空位小于28格！
+
+
+[@钻石赞助2]
+#if
+#act
+DynamicGive 700元赞助礼包 1
+DynamicGive 骨翼蝠王(宠) 1
+DynamicGive 终极传送卷礼包 5
+DynamicGive 星级卷礼包 10
+DynamicGive 强化卷礼包 10
+DynamicGive 铭文洗练石 1400
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+messagebox  【恭喜你成功领取700元赞助回馈奖励】
+SENDMSG 0 〖#6FFFF/8#6系统#5〗:恭喜#7<$USERNAME>#7成功领取“#6FFFF/8#6700元赞助回馈.感谢您对我们最大的支持#5”
+Break
+;============================================================================================================
+
+
+[@王者赞助1]
+#if
+Large C33 999
+CheckBagSize 28
+Check [206] 0
+Check [225] 0
+#ACT
+Set [201] 0
+Set [202] 0
+Set [203] 0
+Set [204] 0
+Set [205] 0
+Set [206] 1
+Set [225] 1
+GOTO @王者赞助2
+#ELSEACT
+MESSAGEBOX 领取失败\1.你已领过此礼包。\2.或者累计充值少于1000元。\3.你的包裹里的空位小于28格！
+
+
+[@王者赞助2]
+#if
+#act
+DynamicGive 1000元赞助礼包 1
+DynamicGive 巫妖王(宠) 1
+DynamicGive 终极传送卷礼包 5
+DynamicGive 星级卷礼包 10
+DynamicGive 强化卷礼包 10
+DynamicGive 铭文洗练石 2000
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+messagebox  【恭喜你成功领取1000元赞助回馈奖励】
+SENDMSG 0 〖#6FFFF/8#6系统#5〗:恭喜#7<$USERNAME>#7成功领取“#6FFFF/8#61000元赞助回馈.感谢您对我们最大的支持#5”
+Break
+;============================================================================================================

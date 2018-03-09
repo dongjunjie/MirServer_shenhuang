@@ -1,0 +1,94 @@
+[@main](2300,300,540,3,0,1,442,273,10,1)
+{15=y}
+{149=x}{勇士需要合成法宝???=FCO=254}\
+{149=x}{找我呀!哈哈!哈哈!!!=FCO=254}\
+{113=y}
+{2=x}{我研究多年终于发现法宝通过融合才能不断增强!=FCO=116}\
+{12=x}{每次合成需要大量的稀有材料袍【钻石】!=FCO=250}\
+{12=x}{每次升级收取100元宝作为报酬!祝你成功!!!=FCO=254}\ 
+{12=x}{筑基→金丹→元婴→渡劫,每次需要低一等级=FCO=249}\
+{12=x}{法宝1件,钻石3颗!勇士请注意备好材料哦!=FCO=249}\
+{12=x}{初级筑基级法宝可在惊喜砸蛋和各大BOSS获得!=FCO=249}\ \ \ \
+{7=x}<[金丹]合欢铃/@打造XXX([金丹]合欢铃,[筑基]合欢铃,钻石,@main)>  <[金丹]玲珑塔/@打造XXX([金丹]玲珑塔,[筑基]玲珑塔,钻石,@main)>  <[金丹]七宝莲/@打造XXX([金丹]七宝莲,[筑基]七宝莲,钻石,@main)>\ \
+{7=x}<[元婴]合欢铃/@打造XXX([元婴]合欢铃,[金丹]合欢铃,钻石,@main)>  <[元婴]玲珑塔/@打造XXX([元婴]玲珑塔,[金丹]玲珑塔,钻石,@main)>  <[元婴]七宝莲/@打造XXX([元婴]七宝莲,[金丹]七宝莲,钻石,@main)>\ \
+{7=x}<[渡劫]合欢铃/@打造XXX([渡劫]合欢铃,[元婴]合欢铃,钻石,@main)>  <[渡劫]玲珑塔/@打造XXX([渡劫]玲珑塔,[元婴]玲珑塔,钻石,@main)>  <[渡劫]七宝莲/@打造XXX([渡劫]七宝莲,[元婴]七宝莲,钻石,@main)>\ \
+{35=x}<[金丹]伏龙鼎/@打造XXX([金丹]伏龙鼎,[筑基]伏龙鼎,钻石,@main)>       <[金丹]阴阳令/@打造XXX([金丹]阴阳令,[筑基]阴阳令,钻石,@main)>\ \
+{35=x}<[元婴]伏龙鼎/@打造XXX([元婴]伏龙鼎,[金丹]伏龙鼎,钻石,@main)>       <[元婴]阴阳令/@打造XXX([元婴]阴阳令,[金丹]阴阳令,钻石,@main)>\ \
+{35=x}<[渡劫]伏龙鼎/@打造XXX([渡劫]伏龙鼎,[元婴]伏龙鼎,钻石,@main)>       <[渡劫]阴阳令/@打造XXX([渡劫]阴阳令,[元婴]阴阳令,钻石,@main)>\
+
+
+
+[@打造XXX]
+#IF
+NOT CHECKBAGSIZE 1
+#ACT
+MESSAGEBOX 您身上的背包空间不足，请先清理一下背包！
+BREAK
+
+#IF
+CHECKITEM <$STR(T1)> 1
+#ACT
+#ELSEACT
+MESSAGEBOX 对不起,您的<$STR(T1)>不足1件!请准备足够的<$STR(T1)>再来吧!!!
+BREAK
+
+#IF
+CheckItemCount <$STR(T2)> ? 3
+#ACT
+#ELSEACT
+MESSAGEBOX 对不起,您的<$STR(T2)>不足3件!请准备足够的<$STR(T2)>再来吧!!!
+BREAK
+
+#IF
+CHECKGAMEGOLD ? 100
+#ACT
+GAMEGOLD - 100
+TakeCount <$STR(T1)> 1
+TakeCount <$STR(T2)> 3
+Give <$STR(T0)> 1
+GOTO <$STR(T63)>
+MESSAGEBOX 恭喜您,成功打造<$STR(T0)>！！！
+#ELSEACT
+MESSAGEBOX 对不起，您的元宝不足<$STR(T5)>!打造失败!请准备足够的元宝再来吧!!!
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@购买钻石]
+#if
+Small G300 300
+#act
+#Elseact
+messagebox 对不起您来晚了!商品已经卖光了!
+break
+
+#If
+CheckGameGold ? 2000
+#Act
+GameGold - 2000
+DynamicGive 钻石 1
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 6 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+inc G300 1
+Goto @mainXXX22
+#Elseact
+MESSAGEBOX 对不起您的元宝不足!请准备足够的元宝!
+break
+

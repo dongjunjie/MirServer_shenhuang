@@ -1,0 +1,113 @@
+[@Main](2305,300,344,3)
+　\　\
+{嘿!小伙子，不错哟！=FCO=254}\
+{让我看看你押送的是什么鸡巴镖车?=FCO=254}\
+{经验镖车：退还100元宝奖励500w-1500w经验=FCO=254}\
+{元宝镖  ：退还300元宝奖励600-1200元宝=FCO=254}\
+{注：请将镖车带到距离我5步之内=FCO=23}\
+　\　\
+<&{[完成押镖]=FCO=253}/@完成押镖>\
+<&{[返回土城]=FCO=249}/@111>\
+{完成任何押镖均可额外随机获得极品道具一个！=FCO=23}\
+
+
+
+[@111]
+#IF
+#ACT
+mapmove 3 330 330
+[@完成押镖]
+;================================交金刚================================================
+#IF
+CHECKSLAVENAME 金刚石镖[普通] 5
+#ACT
+KILLSLAVE 金刚石镖[普通]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+give 金刚石 200
+SENDMSG 0 恭喜#7[%S]#7经过千辛万苦终于将#7金刚石镖[普通]#7押送到目的的，得到#7100金刚石#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+
+#IF
+CHECKSLAVENAME 金刚石镖[精致] 5
+#ACT
+KILLSLAVE 金刚石镖[精致]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+give 金刚石 300
+SENDMSG 0 恭喜#7[%S]#7经过千辛万苦终于将#7金刚石镖[精致]#7押送到目的的，得到#7200金刚石#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+
+#IF
+CHECKSLAVENAME 金刚石镖[豪华] 5
+#ACT
+KILLSLAVE 金刚石镖[豪华]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+give 金刚石 400
+SENDMSG 0 恭喜#7[%S]#7经过千辛万苦终于将#7金刚石镖[豪华]#7押送到目的的，得到#7300金刚石#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+;================================交英雄================================================
+#IF
+CHECKSLAVENAME 元宝镖[普通] 5
+#ACT
+KILLSLAVE 元宝镖[普通]
+GameGold + 900
+SENDMSG 0 恭喜#7[%S]#7经过千辛万苦终于将#7元宝镖[普通]#7押送到目的的，得到#7600元宝#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+
+#IF
+CHECKSLAVENAME 元宝镖[精致] 5
+#ACT
+KILLSLAVE 元宝镖[精致]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+GameGold + 1200
+SENDMSG 0 恭喜#7[%S]#7经过千辛万苦终于将#7元宝镖[精致]#7押送到目的的，得到#7900元宝#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+
+#IF
+CHECKSLAVENAME 元宝镖[豪华] 5
+#ACT
+KILLSLAVE 元宝镖[豪华]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+GameGold + 1500
+SENDMSG 0 恭喜#7[%S]经过千辛万苦终于将#7元宝镖[豪华]#7押送到目的的，得到#71200元宝#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+;================================交经验================================================
+#IF
+CHECKSLAVENAME 经验镖车[普通] 5
+#ACT
+KILLSLAVE 经验镖车[普通]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+GameGold + 100
+ChangeExp + 5000000
+SENDMSG 0 恭喜#7[%S]经过千辛万苦终于将#7经验镖车[普通]#7押送到目的的，得到#7500万经验#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+
+#IF
+CHECKSLAVENAME 经验镖车[精致] 5
+#ACT
+KILLSLAVE 经验镖车[精致]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+GameGold + 100
+ChangeExp + 10000000
+SENDMSG 0 恭喜#7[%S]经过千辛万苦终于将#7经验镖车[精致]#7押送到目的的，得到#71000万经验#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+
+#IF
+CHECKSLAVENAME 经验镖车[豪华] 5
+#ACT
+KILLSLAVE 经验镖车[豪华]
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$Str(S18)>
+GameGold + 100
+ChangeExp + 15000000
+SENDMSG 0 恭喜#7[%S]经过千辛万苦终于将#7经验镖车[豪华]#7押送到目的的，得到#71500万经验#7的奖励,并意外获得了#7<$Str(S18)>#7一个！
+Break
+#elseact
+MESSAGEBOX 你的镖车呢？我怎么没看到。
+BREAK

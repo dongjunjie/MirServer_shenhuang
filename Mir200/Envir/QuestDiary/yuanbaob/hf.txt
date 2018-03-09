@@ -1,0 +1,426 @@
+[@领取元宝]
+{
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\01.txt
+#ACT
+GAMEGOLD +  10
+delaccountlist ..\QuestDiary\yuanbaob\01.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值10元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\02.txt
+#ACT
+GAMEGOLD +  20
+delaccountlist ..\QuestDiary\yuanbaob\02.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值20元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\03.txt
+#ACT
+GAMEGOLD +  30
+delaccountlist ..\QuestDiary\yuanbaob\03.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值30元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\04.txt
+#ACT
+GAMEGOLD +  40
+delaccountlist ..\QuestDiary\yuanbaob\04.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\05.txt
+#ACT
+GAMEGOLD +  50
+delaccountlist ..\QuestDiary\yuanbaob\05.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值50元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\06.txt
+#ACT
+GAMEGOLD +  60
+delaccountlist ..\QuestDiary\yuanbaob\06.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\07.txt
+#ACT
+GAMEGOLD +  70
+delaccountlist ..\QuestDiary\yuanbaob\07.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值70元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\08.txt
+#ACT
+GAMEGOLD +  80
+delaccountlist ..\QuestDiary\yuanbaob\08.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值80元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\09.txt
+#ACT
+GAMEGOLD +  90
+delaccountlist ..\QuestDiary\yuanbaob\09.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值90元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\1.txt
+#ACT
+GAMEGOLD +  100
+INC C33 1
+delaccountlist ..\QuestDiary\yuanbaob\1.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\10.txt
+#ACT
+GAMEGOLD +  1000
+INC C33 10
+delaccountlist ..\QuestDiary\yuanbaob\10.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值1000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\100.txt
+#ACT
+GAMEGOLD +  10000
+INC C33 100
+delaccountlist ..\QuestDiary\yuanbaob\100.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值10000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\1000.txt
+#ACT
+GAMEGOLD +  100000
+INC C33 1000
+delaccountlist ..\QuestDiary\yuanbaob\1000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值100000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\2.txt
+#ACT
+GAMEGOLD +  200
+INC C33 2
+delaccountlist ..\QuestDiary\yuanbaob\2.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值200元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\20.txt
+#ACT
+GAMEGOLD +  2000
+INC C33 20
+delaccountlist ..\QuestDiary\yuanbaob\20.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值2000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\200.txt
+#ACT
+GAMEGOLD +  20000
+INC C33 200
+delaccountlist ..\QuestDiary\yuanbaob\200.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值20000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\2000.txt
+#ACT
+GAMEGOLD +  200000
+INC C33 2000
+delaccountlist ..\QuestDiary\yuanbaob\2000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值200000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\3.txt
+#ACT
+GAMEGOLD +  300
+INC C33 3
+delaccountlist ..\QuestDiary\yuanbaob\3.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值300元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\30.txt
+#ACT
+GAMEGOLD +  3000
+INC C33 30
+delaccountlist ..\QuestDiary\yuanbaob\30.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值3000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\300.txt
+#ACT
+GAMEGOLD +  30000
+INC C33 300
+delaccountlist ..\QuestDiary\yuanbaob\300.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值30000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\3000.txt
+#ACT
+GAMEGOLD +  300000
+INC C33 3000
+delaccountlist ..\QuestDiary\yuanbaob\3000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值300000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\4.txt
+#ACT
+GAMEGOLD +  400
+INC C33 4
+delaccountlist ..\QuestDiary\yuanbaob\4.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值400元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\40.txt
+#ACT
+GAMEGOLD +  4000
+INC C33 40
+delaccountlist ..\QuestDiary\yuanbaob\40.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值4000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\400.txt
+#ACT
+GAMEGOLD +  40000
+INC C33 400
+delaccountlist ..\QuestDiary\yuanbaob\400.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值40000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\4000.txt
+#ACT
+GAMEGOLD +  400000
+delaccountlist ..\QuestDiary\yuanbaob\4000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值400000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\5.txt
+#ACT
+GAMEGOLD +  500
+INC C33 5
+delaccountlist ..\QuestDiary\yuanbaob\5.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值500元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\50.txt
+#ACT
+GAMEGOLD +  5000
+INC C33 50
+delaccountlist ..\QuestDiary\yuanbaob\50.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值5000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\500.txt
+#ACT
+GAMEGOLD +  50000
+INC C33 500
+delaccountlist ..\QuestDiary\yuanbaob\500.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值50000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\5000.txt
+#ACT
+GAMEGOLD +  500000
+INC C33 5000
+delaccountlist ..\QuestDiary\yuanbaob\5000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值500000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\6.txt
+#ACT
+GAMEGOLD +  600
+INC C33 6
+delaccountlist ..\QuestDiary\yuanbaob\6.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值600元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\60.txt
+#ACT
+GAMEGOLD +  6000
+INC C33 60
+delaccountlist ..\QuestDiary\yuanbaob\60.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值6000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\600.txt
+#ACT
+GAMEGOLD +  60000
+INC C33 600
+delaccountlist ..\QuestDiary\yuanbaob\600.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值60000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\6000.txt
+#ACT
+GAMEGOLD +  600000
+INC C33 6000
+delaccountlist ..\QuestDiary\yuanbaob\6000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值600000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\7.txt
+#ACT
+GAMEGOLD +  700
+INC C33 7
+delaccountlist ..\QuestDiary\yuanbaob\7.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值700元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\70.txt
+#ACT
+GAMEGOLD +  7000
+INC C33 70
+delaccountlist ..\QuestDiary\yuanbaob\70.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值7000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\700.txt
+#ACT
+GAMEGOLD +  70000
+INC C33 700
+delaccountlist ..\QuestDiary\yuanbaob\700.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值70000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\7000.txt
+#ACT
+GAMEGOLD +  700000
+INC C33 7000
+delaccountlist ..\QuestDiary\yuanbaob\7000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值700000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\8.txt
+#ACT
+GAMEGOLD +  800
+INC C33 8
+delaccountlist ..\QuestDiary\yuanbaob\8.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值800元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\80.txt
+#ACT
+GAMEGOLD +  8000
+INC C33 80
+delaccountlist ..\QuestDiary\yuanbaob\80.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值8000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\800.txt
+#ACT
+GAMEGOLD +  80000
+INC C33 800
+delaccountlist ..\QuestDiary\yuanbaob\800.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值80000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\8000.txt
+#ACT
+GAMEGOLD +  800000
+INC C33 8000
+delaccountlist ..\QuestDiary\yuanbaob\8000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值800000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\9.txt
+#ACT
+GAMEGOLD +  900
+INC C33 9
+delaccountlist ..\QuestDiary\yuanbaob\9.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值900元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\90.txt
+#ACT
+GAMEGOLD +  9000
+INC C33 90
+delaccountlist ..\QuestDiary\yuanbaob\90.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值9000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\900.txt
+#ACT
+GAMEGOLD +  90000
+INC C33 900
+delaccountlist ..\QuestDiary\yuanbaob\900.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值90000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\9000.txt
+#ACT
+GAMEGOLD +  900000
+INC C33 9000
+delaccountlist ..\QuestDiary\yuanbaob\9000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值900000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\10000.txt
+#ACT
+GAMEGOLD +  1000000
+INC C33 10000
+delaccountlist ..\QuestDiary\yuanbaob\10000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值1000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\20000.txt
+#ACT
+GAMEGOLD +  2000000
+INC C33 20000
+delaccountlist ..\QuestDiary\yuanbaob\20000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值2000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\30000.txt
+#ACT
+GAMEGOLD +  3000000
+INC C33 30000
+delaccountlist ..\QuestDiary\yuanbaob\30000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值3000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\40000.txt
+#ACT
+GAMEGOLD +  4000000
+INC C33 40000
+delaccountlist ..\QuestDiary\yuanbaob\40000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值4000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\50000.txt
+#ACT
+GAMEGOLD +  5000000
+INC C33 50000
+delaccountlist ..\QuestDiary\yuanbaob\50000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值5000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\60000.txt
+#ACT
+GAMEGOLD +  6000000
+INC C33 60000
+delaccountlist ..\QuestDiary\yuanbaob\60000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值6000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\70000.txt
+#ACT
+GAMEGOLD +  7000000
+INC C33 70000
+delaccountlist ..\QuestDiary\yuanbaob\70000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值7000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\80000.txt
+#ACT
+GAMEGOLD +  8000000
+INC C33 80000
+delaccountlist ..\QuestDiary\yuanbaob\80000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值8000000元宝，如果您也想获得，请赶快充值吧。
+goto @领取元宝
+#IF
+checkaccountlist ..\QuestDiary\yuanbaob\90000.txt
+#ACT
+GAMEGOLD +  9000000
+INC C33 90000
+delaccountlist ..\QuestDiary\yuanbaob\90000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>成功充值9000000元宝，如果您也想获得，请赶快充值吧。
+#elseact
+messagebox 领取完毕请查收,谢谢您对本服的支持\如需充值,请前往本游戏官网进行充值服务
+}

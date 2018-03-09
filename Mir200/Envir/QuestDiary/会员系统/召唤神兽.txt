@@ -1,0 +1,3448 @@
+[@召唤神兽]
+{
+#if
+CHECKSKILL 强化召唤神兽 < 2
+NOT CheckSlaveName 铭文①强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文①强化血兽 3 10
+Goto @5201314
+
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 2
+NOT CheckSlaveName 铭文②强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文②强化血兽 3 10
+Goto @5201314
+
+
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 3
+NOT CheckSlaveName 铭文③强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文③强化血兽 3 10
+Goto @5201314
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 4
+NOT CheckSlaveName 铭文④强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文④强化血兽 3 10
+Goto @5201314
+
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 5
+NOT CheckSlaveName 铭文⑤强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文⑤强化血兽 3 10
+Goto @5201314
+
+
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 6
+NOT CheckSlaveName 铭文⑥强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文⑥强化血兽 3 10
+Goto @5201314
+
+
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 7
+NOT CheckSlaveName 铭文⑦强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文⑦强化血兽 3 10
+Goto @5201314
+
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 8
+NOT CheckSlaveName 铭文⑧强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文⑧强化血兽 3 10
+Goto @5201314
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 9
+NOT CheckSlaveName 铭文⑨强化血兽
+CHECKITEMW 铭文[强化の血兽印] 1
+#act  
+MOBSLAVE 铭文⑨强化血兽 3 10
+Goto @5201314
+
+
+#if
+CHECKSKILL 强化召唤神兽 < 2
+NOT CheckSlaveName 铭文①强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文①强战神兽 3 10
+Goto @5201314
+
+#if
+CHECKSKILL 强化召唤神兽 = 2
+NOT CheckSlaveName 铭文②强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文②强战神兽 3 10
+Goto @5201314
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 3
+NOT CheckSlaveName 铭文③强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文③强战神兽 3 10
+Goto @5201314
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 4
+NOT CheckSlaveName 铭文④强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文④强战神兽 3 10
+Goto @5201314
+
+#if
+CHECKSKILL 强化召唤神兽 = 5
+NOT CheckSlaveName 铭文⑤强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文⑤强战神兽 3 10
+Goto @5201314
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 6
+NOT CheckSlaveName 铭文⑥强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文⑥强战神兽 3 10
+Goto @5201314
+
+#if
+CHECKSKILL 强化召唤神兽 = 7
+NOT CheckSlaveName 铭文⑦强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文⑦强战神兽 3 10
+Goto @5201314
+
+#if
+CHECKSKILL 强化召唤神兽 = 8
+NOT CheckSlaveName 铭文⑧强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文⑧强战神兽 3 10
+Goto @5201314
+
+
+
+#if
+CHECKSKILL 强化召唤神兽 = 9
+NOT CheckSlaveName 铭文⑨强战神兽
+CHECKITEMW 铭文[强化の战神印] 1
+#act  
+MOBSLAVE 铭文⑨强战神兽 3 10
+Goto @5201314
+
+
+
+
+[@5201314]
+#if
+EQUAL <$BBINFO[1].name> 铭文①强化血兽
+#act
+goto @强化血兽1
+
+#if
+EQUAL <$BBINFO[1].name> 铭文②强化血兽
+#act
+goto @强化血兽2
+
+#if
+EQUAL <$BBINFO[1].name> 铭文③强化血兽
+#act
+goto @强化血兽3
+
+#if
+EQUAL <$BBINFO[1].name> 铭文④强化血兽
+#act
+goto @强化血兽4
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑤强化血兽
+#act
+goto @强化血兽5
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑥强化血兽
+#act
+goto @强化血兽6
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑦强化血兽
+#act
+goto @强化血兽7
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑧强化血兽
+#act
+goto @强化血兽8
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑨强化血兽
+#act
+goto @强化血兽9
+
+
+#if
+EQUAL <$BBINFO[2].name> 铭文①强化血兽
+#act
+goto @强化血兽11
+
+#if
+EQUAL <$BBINFO[2].name> 铭文②强化血兽
+#act
+goto @强化血兽22
+
+#if
+EQUAL <$BBINFO[2].name> 铭文③强化血兽
+#act
+goto @强化血兽33
+
+#if
+EQUAL <$BBINFO[2].name> 铭文④强化血兽
+#act
+goto @强化血兽44
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑤强化血兽
+#act
+goto @强化血兽55
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑥强化血兽
+#act
+goto @强化血兽66
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑦强化血兽
+#act
+goto @强化血兽77
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑧强化血兽
+#act
+goto @强化血兽88
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑨强化血兽
+#act
+goto @强化血兽99
+
+
+#if
+EQUAL <$BBINFO[3].name> 铭文①强化血兽
+#act
+goto @强化血兽111
+
+#if
+EQUAL <$BBINFO[3].name> 铭文②强化血兽
+#act
+goto @强化血兽222
+
+#if
+EQUAL <$BBINFO[3].name> 铭文③强化血兽
+#act
+goto @强化血兽333
+
+#if
+EQUAL <$BBINFO[3].name> 铭文④强化血兽
+#act
+goto @强化血兽444
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑤强化血兽
+#act
+goto @强化血兽555
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑥强化血兽
+#act
+goto @强化血兽666
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑦强化血兽
+#act
+goto @强化血兽777
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑧强化血兽
+#act
+goto @强化血兽888
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑨强化血兽
+#act
+goto @强化血兽999
+
+#if
+EQUAL <$BBINFO[4].name> 铭文①强化血兽
+#act
+goto @强化血兽1111
+
+#if
+EQUAL <$BBINFO[4].name> 铭文②强化血兽
+#act
+goto @强化血兽2222
+
+#if
+EQUAL <$BBINFO[4].name> 铭文③强化血兽
+#act
+goto @强化血兽3333
+
+#if
+EQUAL <$BBINFO[4].name> 铭文④强化血兽
+#act
+goto @强化血兽4444
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑤强化血兽
+#act
+goto @强化血兽5555
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑥强化血兽
+#act
+goto @强化血兽6666
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑦强化血兽
+#act
+goto @强化血兽7777
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑧强化血兽
+#act
+goto @强化血兽8888
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑨强化血兽
+#act
+goto @强化血兽9999
+
+#if
+EQUAL <$BBINFO[5].name> 铭文①强化血兽
+#act
+goto @强化血兽11111
+
+#if
+EQUAL <$BBINFO[5].name> 铭文②强化血兽
+#act
+goto @强化血兽22222
+
+#if
+EQUAL <$BBINFO[5].name> 铭文③强化血兽
+#act
+goto @强化血兽33333
+
+#if
+EQUAL <$BBINFO[5].name> 铭文④强化血兽
+#act
+goto @强化血兽44444
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑤强化血兽
+#act
+goto @强化血兽55555
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑥强化血兽
+#act
+goto @强化血兽66666
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑦强化血兽
+#act
+goto @强化血兽77777
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑧强化血兽
+#act
+goto @强化血兽88888
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑨强化血兽
+#act
+goto @强化血兽99999
+
+#if
+EQUAL <$BBINFO[6].name> 铭文①强化血兽
+#act
+goto @强化血兽111111
+
+#if
+EQUAL <$BBINFO[6].name> 铭文②强化血兽
+#act
+goto @强化血兽222222
+
+#if
+EQUAL <$BBINFO[6].name> 铭文③强化血兽
+#act
+goto @强化血兽333333
+
+#if
+EQUAL <$BBINFO[6].name> 铭文④强化血兽
+#act
+goto @强化血兽444444
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑤强化血兽
+#act
+goto @强化血兽555555
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑥强化血兽
+#act
+goto @强化血兽666666
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑦强化血兽
+#act
+goto @强化血兽777777
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑧强化血兽
+#act
+goto @强化血兽888888
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑨强化血兽
+#act
+goto @强化血兽999999
+
+
+#if
+EQUAL <$BBINFO[1].name> 铭文①强战神兽
+#act
+goto @强战神兽1
+
+#if
+EQUAL <$BBINFO[1].name> 铭文②强战神兽
+#act
+goto @强战神兽2
+
+#if
+EQUAL <$BBINFO[1].name> 铭文③强战神兽
+#act
+goto @强战神兽3
+
+#if
+EQUAL <$BBINFO[1].name> 铭文④强战神兽
+#act
+goto @强战神兽4
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑤强战神兽
+#act
+goto @强战神兽5
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑥强战神兽
+#act
+goto @强战神兽6
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑦强战神兽
+#act
+goto @强战神兽7
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑧强战神兽
+#act
+goto @强战神兽8
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑨强战神兽
+#act
+goto @强战神兽9
+
+
+#if
+EQUAL <$BBINFO[2].name> 铭文①强战神兽
+#act
+goto @强战神兽11
+
+#if
+EQUAL <$BBINFO[2].name> 铭文②强战神兽
+#act
+goto @强战神兽22
+
+#if
+EQUAL <$BBINFO[2].name> 铭文③强战神兽
+#act
+goto @强战神兽33
+
+#if
+EQUAL <$BBINFO[2].name> 铭文④强战神兽
+#act
+goto @强战神兽44
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑤强战神兽
+#act
+goto @强战神兽55
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑥强战神兽
+#act
+goto @强战神兽66
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑦强战神兽
+#act
+goto @强战神兽77
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑧强战神兽
+#act
+goto @强战神兽88
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑨强战神兽
+#act
+goto @强战神兽99
+
+
+#if
+EQUAL <$BBINFO[3].name> 铭文①强战神兽
+#act
+goto @强战神兽111
+
+#if
+EQUAL <$BBINFO[3].name> 铭文②强战神兽
+#act
+goto @强战神兽222
+
+#if
+EQUAL <$BBINFO[3].name> 铭文③强战神兽
+#act
+goto @强战神兽333
+
+#if
+EQUAL <$BBINFO[3].name> 铭文④强战神兽
+#act
+goto @强战神兽444
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑤强战神兽
+#act
+goto @强战神兽555
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑥强战神兽
+#act
+goto @强战神兽666
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑦强战神兽
+#act
+goto @强战神兽777
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑧强战神兽
+#act
+goto @强战神兽888
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑨强战神兽
+#act
+goto @强战神兽999
+
+#if
+EQUAL <$BBINFO[4].name> 铭文①强战神兽
+#act
+goto @强战神兽1111
+
+#if
+EQUAL <$BBINFO[4].name> 铭文②强战神兽
+#act
+goto @强战神兽2222
+
+#if
+EQUAL <$BBINFO[4].name> 铭文③强战神兽
+#act
+goto @强战神兽3333
+
+#if
+EQUAL <$BBINFO[4].name> 铭文④强战神兽
+#act
+goto @强战神兽4444
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑤强战神兽
+#act
+goto @强战神兽5555
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑥强战神兽
+#act
+goto @强战神兽6666
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑦强战神兽
+#act
+goto @强战神兽7777
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑧强战神兽
+#act
+goto @强战神兽8888
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑨强战神兽
+#act
+goto @强战神兽9999
+
+#if
+EQUAL <$BBINFO[5].name> 铭文①强战神兽
+#act
+goto @强战神兽11111
+
+#if
+EQUAL <$BBINFO[5].name> 铭文②强战神兽
+#act
+goto @强战神兽22222
+
+#if
+EQUAL <$BBINFO[5].name> 铭文③强战神兽
+#act
+goto @强战神兽33333
+
+#if
+EQUAL <$BBINFO[5].name> 铭文④强战神兽
+#act
+goto @强战神兽44444
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑤强战神兽
+#act
+goto @强战神兽55555
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑥强战神兽
+#act
+goto @强战神兽66666
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑦强战神兽
+#act
+goto @强战神兽77777
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑧强战神兽
+#act
+goto @强战神兽88888
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑨强战神兽
+#act
+goto @强战神兽99999
+
+#if
+EQUAL <$BBINFO[6].name> 铭文①强战神兽
+#act
+goto @强战神兽111111
+
+#if
+EQUAL <$BBINFO[6].name> 铭文②强战神兽
+#act
+goto @强战神兽222222
+
+#if
+EQUAL <$BBINFO[6].name> 铭文③强战神兽
+#act
+goto @强战神兽333333
+
+#if
+EQUAL <$BBINFO[6].name> 铭文④强战神兽
+#act
+goto @强战神兽444444
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑤强战神兽
+#act
+goto @强战神兽555555
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑥强战神兽
+#act
+goto @强战神兽666666
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑦强战神兽
+#act
+goto @强战神兽777777
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑧强战神兽
+#act
+goto @强战神兽888888
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑨强战神兽
+#act
+goto @强战神兽999999
+
+[@强化血兽1]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 7
+DIV N200 100
+INC N200 6000
+
+;攻击
+MOV N201 115
+MOV N202 <$MAXSC>
+MUL N202 7
+DIV N202 100
+INC N202 115
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文①强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[7%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+
+[@强化血兽2]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 14
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 125
+MOV N202 <$MAXSC>
+MUL N202 14
+DIV N202 100
+INC N202 125
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文②强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[14%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽3]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 21
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 145
+MOV N202 <$MAXSC>
+MUL N202 21
+DIV N202 100
+INC N202 145
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文③强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[21%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽4]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 28
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 28
+DIV N202 100
+INC N202 165
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文④强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[28%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽5]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 175
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 175
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑤强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽6]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 42
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 42
+DIV N202 100
+INC N202 195
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑥强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[42%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽7]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 49
+DIV N200 100
+INC N200 18000
+;攻击
+MOV N201 205
+MOV N202 <$MAXSC>
+MUL N202 49
+DIV N202 100
+INC N202 205
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑦强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[49%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽8]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 56
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 225
+MOV N202 <$MAXSC>
+MUL N202 56
+DIV N202 100
+INC N202 225
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑧强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽9]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 63
+DIV N200 100
+INC N200 22000
+;攻击
+MOV N201 245
+MOV N202 <$MAXSC>
+MUL N202 63
+DIV N202 100
+INC N202 245
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑨强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[63%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强化血兽11]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 7
+DIV N200 100
+INC N200 6000
+
+;攻击
+MOV N201 115
+MOV N202 <$MAXSC>
+MUL N202 7
+DIV N202 100
+INC N202 115
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文①强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[7%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+
+[@强化血兽22]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 14
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 125
+MOV N202 <$MAXSC>
+MUL N202 14
+DIV N202 100
+INC N202 125
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文②强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[14%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽33]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 21
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 145
+MOV N202 <$MAXSC>
+MUL N202 21
+DIV N202 100
+INC N202 145
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文③强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[21%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽44]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 28
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 28
+DIV N202 100
+INC N202 165
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文④强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[28%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽55]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 175
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 175
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑤强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽66]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 42
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 42
+DIV N202 100
+INC N202 195
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑥强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[42%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽77]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 49
+DIV N200 100
+INC N200 18000
+;攻击
+MOV N201 205
+MOV N202 <$MAXSC>
+MUL N202 49
+DIV N202 100
+INC N202 205
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑦强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[49%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽88]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 56
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 225
+MOV N202 <$MAXSC>
+MUL N202 56
+DIV N202 100
+INC N202 225
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑧强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽99]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 63
+DIV N200 100
+INC N200 22000
+;攻击
+MOV N201 245
+MOV N202 <$MAXSC>
+MUL N202 63
+DIV N202 100
+INC N202 245
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑨强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[63%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强化血兽111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 7
+DIV N200 100
+INC N200 6000
+
+;攻击
+MOV N201 115
+MOV N202 <$MAXSC>
+MUL N202 7
+DIV N202 100
+INC N202 115
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文①强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[7%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+
+[@强化血兽222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 14
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 125
+MOV N202 <$MAXSC>
+MUL N202 14
+DIV N202 100
+INC N202 125
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文②强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[14%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 21
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 145
+MOV N202 <$MAXSC>
+MUL N202 21
+DIV N202 100
+INC N202 145
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文③强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[21%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 28
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 28
+DIV N202 100
+INC N202 165
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文④强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[28%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 175
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 175
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑤强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 42
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 42
+DIV N202 100
+INC N202 195
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑥强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[42%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 49
+DIV N200 100
+INC N200 18000
+;攻击
+MOV N201 205
+MOV N202 <$MAXSC>
+MUL N202 49
+DIV N202 100
+INC N202 205
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑦强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[49%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 56
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 225
+MOV N202 <$MAXSC>
+MUL N202 56
+DIV N202 100
+INC N202 225
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑧强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 63
+DIV N200 100
+INC N200 22000
+;攻击
+MOV N201 245
+MOV N202 <$MAXSC>
+MUL N202 63
+DIV N202 100
+INC N202 245
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑨强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[63%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强化血兽1111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 7
+DIV N200 100
+INC N200 6000
+
+;攻击
+MOV N201 115
+MOV N202 <$MAXSC>
+MUL N202 7
+DIV N202 100
+INC N202 115
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文①强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[7%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+
+[@强化血兽2222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 14
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 125
+MOV N202 <$MAXSC>
+MUL N202 14
+DIV N202 100
+INC N202 125
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文②强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[14%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽3333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 21
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 145
+MOV N202 <$MAXSC>
+MUL N202 21
+DIV N202 100
+INC N202 145
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文③强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[21%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽4444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 28
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 28
+DIV N202 100
+INC N202 165
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文④强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[28%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽5555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 175
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 175
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑤强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽6666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 42
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 42
+DIV N202 100
+INC N202 195
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑥强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[42%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽7777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 49
+DIV N200 100
+INC N200 18000
+;攻击
+MOV N201 205
+MOV N202 <$MAXSC>
+MUL N202 49
+DIV N202 100
+INC N202 205
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑦强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[49%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽8888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 56
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 225
+MOV N202 <$MAXSC>
+MUL N202 56
+DIV N202 100
+INC N202 225
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑧强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽9999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 63
+DIV N200 100
+INC N200 22000
+;攻击
+MOV N201 245
+MOV N202 <$MAXSC>
+MUL N202 63
+DIV N202 100
+INC N202 245
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑨强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[63%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强化血兽11111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 7
+DIV N200 100
+INC N200 6000
+
+;攻击
+MOV N201 115
+MOV N202 <$MAXSC>
+MUL N202 7
+DIV N202 100
+INC N202 115
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文①强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[7%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+
+[@强化血兽22222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 14
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 125
+MOV N202 <$MAXSC>
+MUL N202 14
+DIV N202 100
+INC N202 125
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文②强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[14%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽33333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 21
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 145
+MOV N202 <$MAXSC>
+MUL N202 21
+DIV N202 100
+INC N202 145
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文③强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[21%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽44444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 28
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 28
+DIV N202 100
+INC N202 165
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文④强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[28%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽55555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 175
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 175
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑤强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽66666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 42
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 42
+DIV N202 100
+INC N202 195
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑥强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[42%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽77777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 49
+DIV N200 100
+INC N200 18000
+;攻击
+MOV N201 205
+MOV N202 <$MAXSC>
+MUL N202 49
+DIV N202 100
+INC N202 205
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑦强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[49%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽88888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 56
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 225
+MOV N202 <$MAXSC>
+MUL N202 56
+DIV N202 100
+INC N202 225
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑧强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽99999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 63
+DIV N200 100
+INC N200 22000
+;攻击
+MOV N201 245
+MOV N202 <$MAXSC>
+MUL N202 63
+DIV N202 100
+INC N202 245
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑨强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[63%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强化血兽111111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 7
+DIV N200 100
+INC N200 6000
+
+;攻击
+MOV N201 115
+MOV N202 <$MAXSC>
+MUL N202 7
+DIV N202 100
+INC N202 115
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文①强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[7%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+[@强化血兽222222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 14
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 125
+MOV N202 <$MAXSC>
+MUL N202 14
+DIV N202 100
+INC N202 125
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文②强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[14%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强化血兽333333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 21
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 145
+MOV N202 <$MAXSC>
+MUL N202 21
+DIV N202 100
+INC N202 145
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文③强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[21%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强化血兽444444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 28
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 28
+DIV N202 100
+INC N202 165
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文④强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[28%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强化血兽555555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 175
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 175
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑤强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强化血兽666666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 42
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 42
+DIV N202 100
+INC N202 195
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑥强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[42%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强化血兽777777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 49
+DIV N200 100
+INC N200 18000
+;攻击
+MOV N201 205
+MOV N202 <$MAXSC>
+MUL N202 49
+DIV N202 100
+INC N202 205
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑦强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[49%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强化血兽888888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 56
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 225
+MOV N202 <$MAXSC>
+MUL N202 56
+DIV N202 100
+INC N202 225
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑧强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强化血兽999999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 63
+DIV N200 100
+INC N200 22000
+;攻击
+MOV N201 245
+MOV N202 <$MAXSC>
+MUL N202 63
+DIV N202 100
+INC N202 245
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文铭文[强化の血兽印]生效，成功召唤#7[铭文⑨强化血兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[63%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+
+
+[@强战神兽1]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6999
+
+;攻击
+MOV N201 135
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 135
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文①强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+
+[@强战神兽2]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 165
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文②强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽3]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 195
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文③强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽4]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 235
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 235
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文④强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽5]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 50
+DIV N200 100
+INC N200 19000
+;攻击
+MOV N201 255
+MOV N202 <$MAXSC>
+MUL N202 50
+DIV N202 100
+INC N202 255
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑤强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[50%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽6]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 60
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 275
+MOV N202 <$MAXSC>
+MUL N202 60
+DIV N202 100
+INC N202 275
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑥强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[60%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽7]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 70
+DIV N200 100
+INC N200 24000
+;攻击
+MOV N201 295
+MOV N202 <$MAXSC>
+MUL N202 70
+DIV N202 100
+INC N202 295
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑦强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[70%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽8]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 80
+DIV N200 100
+INC N200 26000
+;攻击
+MOV N201 315
+MOV N202 <$MAXSC>
+MUL N202 80
+DIV N202 100
+INC N202 315
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑧强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[80%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽9]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 90
+DIV N200 100
+INC N200 29000
+;攻击
+MOV N201 365
+MOV N202 <$MAXSC>
+MUL N202 90
+DIV N202 100
+INC N202 365
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑨强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[90%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@强战神兽11]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6999
+
+;攻击
+MOV N201 135
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 135
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文①强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+
+[@强战神兽22]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 165
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文②强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽33]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 195
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文③强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽44]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 235
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 235
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文④强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽55]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 50
+DIV N200 100
+INC N200 19000
+;攻击
+MOV N201 255
+MOV N202 <$MAXSC>
+MUL N202 50
+DIV N202 100
+INC N202 255
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑤强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[50%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽66]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 60
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 275
+MOV N202 <$MAXSC>
+MUL N202 60
+DIV N202 100
+INC N202 275
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑥强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[60%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽77]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 70
+DIV N200 100
+INC N200 24000
+;攻击
+MOV N201 295
+MOV N202 <$MAXSC>
+MUL N202 70
+DIV N202 100
+INC N202 295
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑦强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[70%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽88]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 80
+DIV N200 100
+INC N200 26000
+;攻击
+MOV N201 315
+MOV N202 <$MAXSC>
+MUL N202 80
+DIV N202 100
+INC N202 315
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑧强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[80%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽99]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 90
+DIV N200 100
+INC N200 29000
+;攻击
+MOV N201 365
+MOV N202 <$MAXSC>
+MUL N202 90
+DIV N202 100
+INC N202 365
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑨强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[90%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@强战神兽111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6999
+
+;攻击
+MOV N201 135
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 135
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文①强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+
+[@强战神兽222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 165
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文②强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 195
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文③强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 235
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 235
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文④强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 50
+DIV N200 100
+INC N200 19000
+;攻击
+MOV N201 255
+MOV N202 <$MAXSC>
+MUL N202 50
+DIV N202 100
+INC N202 255
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑤强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[50%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 60
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 275
+MOV N202 <$MAXSC>
+MUL N202 60
+DIV N202 100
+INC N202 275
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑥强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[60%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 70
+DIV N200 100
+INC N200 24000
+;攻击
+MOV N201 295
+MOV N202 <$MAXSC>
+MUL N202 70
+DIV N202 100
+INC N202 295
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑦强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[70%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 80
+DIV N200 100
+INC N200 26000
+;攻击
+MOV N201 315
+MOV N202 <$MAXSC>
+MUL N202 80
+DIV N202 100
+INC N202 315
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑧强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[80%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 90
+DIV N200 100
+INC N200 29000
+;攻击
+MOV N201 365
+MOV N202 <$MAXSC>
+MUL N202 90
+DIV N202 100
+INC N202 365
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑨强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[90%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@强战神兽1111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6999
+
+;攻击
+MOV N201 135
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 135
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文①强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+
+[@强战神兽2222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 165
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文②强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽3333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 195
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文③强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽4444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 235
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 235
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文④强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽5555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 50
+DIV N200 100
+INC N200 19000
+;攻击
+MOV N201 255
+MOV N202 <$MAXSC>
+MUL N202 50
+DIV N202 100
+INC N202 255
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑤强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[50%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽6666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 60
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 275
+MOV N202 <$MAXSC>
+MUL N202 60
+DIV N202 100
+INC N202 275
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑥强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[60%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽7777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 70
+DIV N200 100
+INC N200 24000
+;攻击
+MOV N201 295
+MOV N202 <$MAXSC>
+MUL N202 70
+DIV N202 100
+INC N202 295
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑦强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[70%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽8888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 80
+DIV N200 100
+INC N200 26000
+;攻击
+MOV N201 315
+MOV N202 <$MAXSC>
+MUL N202 80
+DIV N202 100
+INC N202 315
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑧强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[80%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽9999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 90
+DIV N200 100
+INC N200 29000
+;攻击
+MOV N201 365
+MOV N202 <$MAXSC>
+MUL N202 90
+DIV N202 100
+INC N202 365
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑨强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[90%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@强战神兽11111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6999
+
+;攻击
+MOV N201 135
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 135
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文①强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+
+[@强战神兽22222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 165
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文②强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽33333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 195
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文③强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽44444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 235
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 235
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文④强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽55555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 50
+DIV N200 100
+INC N200 19000
+;攻击
+MOV N201 255
+MOV N202 <$MAXSC>
+MUL N202 50
+DIV N202 100
+INC N202 255
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑤强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[50%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽66666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 60
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 275
+MOV N202 <$MAXSC>
+MUL N202 60
+DIV N202 100
+INC N202 275
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑥强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[60%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽77777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 70
+DIV N200 100
+INC N200 24000
+;攻击
+MOV N201 295
+MOV N202 <$MAXSC>
+MUL N202 70
+DIV N202 100
+INC N202 295
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑦强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[70%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽88888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 80
+DIV N200 100
+INC N200 26000
+;攻击
+MOV N201 315
+MOV N202 <$MAXSC>
+MUL N202 80
+DIV N202 100
+INC N202 315
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑧强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[80%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽99999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 90
+DIV N200 100
+INC N200 29000
+;攻击
+MOV N201 365
+MOV N202 <$MAXSC>
+MUL N202 90
+DIV N202 100
+INC N202 365
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑨强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[90%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@强战神兽111111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6999
+
+;攻击
+MOV N201 135
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 135
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文①强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能1重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+[@强战神兽222222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 165
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 165
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文②强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能2重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强战神兽333333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 195
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 195
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文③强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能3重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强战神兽444444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 16000
+;攻击
+MOV N201 235
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 235
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文④强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能4重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强战神兽555555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 50
+DIV N200 100
+INC N200 19000
+;攻击
+MOV N201 255
+MOV N202 <$MAXSC>
+MUL N202 50
+DIV N202 100
+INC N202 255
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑤强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能5重，获得道术上限加成#7[50%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强战神兽666666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 60
+DIV N200 100
+INC N200 21000
+;攻击
+MOV N201 275
+MOV N202 <$MAXSC>
+MUL N202 60
+DIV N202 100
+INC N202 275
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑥强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能6重，获得道术上限加成#7[60%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强战神兽777777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 70
+DIV N200 100
+INC N200 24000
+;攻击
+MOV N201 295
+MOV N202 <$MAXSC>
+MUL N202 70
+DIV N202 100
+INC N202 295
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑦强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能7重，获得道术上限加成#7[70%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强战神兽888888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 80
+DIV N200 100
+INC N200 26000
+;攻击
+MOV N201 315
+MOV N202 <$MAXSC>
+MUL N202 80
+DIV N202 100
+INC N202 315
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑧强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能8重，获得道术上限加成#7[80%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@强战神兽999999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 90
+DIV N200 100
+INC N200 29000
+;攻击
+MOV N201 365
+MOV N202 <$MAXSC>
+MUL N202 90
+DIV N202 100
+INC N202 365
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の战神印]生效，成功召唤#7[铭文⑨强战神兽]#7 
+SendMsg 6 当前#7[强化召唤神兽]#7技能9重，获得道术上限加成#7[90%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+
+}

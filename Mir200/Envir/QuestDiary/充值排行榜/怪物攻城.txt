@@ -1,0 +1,2127 @@
+[@怪物攻城]
+{
+#IF
+large G110 99999
+EQUAL G111 0
+#ACT
+GOTO @沃玛攻城
+
+#IF
+large G110 199999
+EQUAL G112 0
+#ACT
+GOTO @祖玛攻城
+
+#IF
+large G110 299999
+EQUAL G113 0
+#ACT
+GOTO @赤月攻城
+
+#IF
+large G110 399999
+EQUAL G114 0
+#ACT
+GOTO @雪域攻城
+
+#IF
+large G110 499999
+EQUAL G115 0
+#ACT
+GOTO @雷炎攻城
+
+#IF
+large G110 599999
+EQUAL G116 0
+#ACT
+GOTO @火龙攻城
+
+#IF
+large G110 699999
+EQUAL G117 0
+#ACT
+GOTO @洞天攻城
+
+#IF
+large G110 799999
+EQUAL G118 0
+#ACT
+GOTO @圣者攻城
+
+#IF
+large G110 899999
+EQUAL G119 0
+#ACT
+GOTO @异族攻城
+
+#IF
+large G110 999999
+EQUAL G120 0
+#ACT
+GOTO @亡魂攻城
+
+#IF
+large G110 1099999
+EQUAL G121 0
+#ACT
+GOTO @禁地攻城
+
+
+#IF
+large G110 1199999
+EQUAL G122 0
+#ACT
+GOTO @太古攻城
+;======================================================================
+
+[@沃玛攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{沃玛教主带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G111 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [渡劫]沃玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [渡劫]沃玛战士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [渡劫]沃玛勇士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [渡劫]沃玛战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [渡劫]沃玛卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [筑基]沃玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [筑基]沃玛战士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [筑基]沃玛勇士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [筑基]沃玛战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [筑基]沃玛卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]沃玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]沃玛战士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]沃玛勇士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]沃玛战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]沃玛卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [元婴]沃玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [元婴]沃玛战士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [元婴]沃玛勇士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [元婴]沃玛战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [元婴]沃玛卫士
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+[@祖玛攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{祖玛教主带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G112 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]祖玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]大老鼠
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]祖玛弓箭
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]祖玛雕像
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]祖玛卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]祖玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]大老鼠
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]祖玛弓箭
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]祖玛雕像
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]祖玛卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]祖玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]大老鼠
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]祖玛弓箭
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]祖玛雕像
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]祖玛卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]祖玛教主
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]大老鼠
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]祖玛弓箭
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]祖玛雕像
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]祖玛卫士
+
+
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+
+[@赤月攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{赤月恶魔带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G113 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]赤月恶魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]双头金刚
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]双头血魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]血僵尸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]血巨人
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]赤月恶魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]双头金刚
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]双头血魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]血僵尸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]血巨人
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]赤月恶魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]双头金刚
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]双头血魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]血僵尸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]血巨人
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]赤月恶魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]双头金刚
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]双头血魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]血僵尸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]血巨人
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]月魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]黑锷蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]花吻蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]钢牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]天狼蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]月魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]黑锷蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]花吻蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]钢牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]天狼蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]月魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]黑锷蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]花吻蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]钢牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]天狼蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]月魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]黑锷蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]花吻蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]钢牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]天狼蜘蛛
+
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+
+[@雪域攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{雪域魔王带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G114 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]雪域魔王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]雪域战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]雪域侍卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]雪域力士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]雪域卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]雪域魔王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]雪域战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]雪域侍卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]雪域力士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]雪域卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]雪域魔王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]雪域战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]雪域侍卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]雪域力士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]雪域卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]雪域魔王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]雪域战将
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]雪域侍卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]雪域力士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]雪域卫士
+
+
+
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+
+[@雷炎攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{雷炎蛛王带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G115 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]雷炎蛛王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]黑牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]雷炎守卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]绿魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]雷炎蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]雷炎蛛王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]黑牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]雷炎守卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]绿魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]雷炎蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]雷炎蛛王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]黑牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]雷炎守卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]绿魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]雷炎蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]雷炎蛛王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]黑牙蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]雷炎守卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]绿魔蜘蛛
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]雷炎蜘蛛
+
+
+
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+
+[@火龙攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{火龙神带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G116 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]火龙神
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]火龙将军
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]火龙护卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]火龙蛇卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]火龙卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]火龙神
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]火龙将军
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]火龙护卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]火龙蛇卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]火龙卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]火龙神
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]火龙将军
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]火龙护卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]火龙蛇卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]火龙卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]火龙神
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]火龙将军
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]火龙护卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]火龙蛇卫
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]火龙卫士
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]火龙蜥蜴
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]火龙蜥蜴
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]火龙蜥蜴
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]火龙蜥蜴
+
+
+
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+[@洞天攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{骨翼蝠王带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G117 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]骨翼蝠王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]红鬃熊狸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]黑刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]白刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]长毛猛犸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]骨翼蝠王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]红鬃熊狸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]黑刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]白刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]长毛猛犸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]骨翼蝠王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]红鬃熊狸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]黑刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]白刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]长毛猛犸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]骨翼蝠王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]红鬃熊狸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]黑刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]白刺领斑
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]长毛猛犸
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]刺脊火狼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]刺脊火狼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]刺脊火狼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]刺脊火狼
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]刺脊冰狼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]刺脊冰狼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]刺脊冰狼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]刺脊冰狼
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]龙骨鬼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]龙骨鬼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]龙骨鬼
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]龙骨鬼
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]绿泥怪
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]绿泥怪
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]绿泥怪
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]绿泥怪
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+
+[@圣者攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{圣者天魔神带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G118 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [渡劫]圣者天魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]圣者刀兵
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]圣者破甲
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]圣者战魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]圣者巨力
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [筑基]圣者天魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]圣者刀兵
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]圣者破甲
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]圣者战魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]圣者巨力
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]圣者天魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]圣者刀兵
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]圣者破甲
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]圣者战魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]圣者巨力
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [元婴]圣者天魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]圣者刀兵
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]圣者破甲
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]圣者战魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]圣者巨力
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]圣者巨魔
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]圣者巨魔
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]圣者巨魔
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]圣者巨魔
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [渡劫]圣者射手
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [筑基]圣者射手
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [金丹]圣者射手
+
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 2 
+PARAM4 20 
+MOBPLACE [元婴]圣者射手
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+
+[@异族攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{异族魔王带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G119 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 异族强者1
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 异族强者2
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 异族强者3
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3
+PARAM4 20 
+MOBPLACE 异族强者4
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 异族强者5
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 异族强者6
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 异族强者7
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE BOSS★异族魔王
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+[@亡魂攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{亡魂魔王带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G120 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 炼狱亡魂1
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 炼狱亡魂2
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 炼狱亡魂3
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3
+PARAM4 20 
+MOBPLACE 炼狱亡魂4
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 炼狱亡魂5
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 炼狱亡魂6
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE BOSS★亡魂魔王
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+[@禁地攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{禁地魔王带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G121 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 禁地荒奴1
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 禁地荒奴2
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 禁地荒奴3
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3
+PARAM4 20 
+MOBPLACE 禁地荒奴4
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 禁地荒奴5
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 禁地荒奴6
+
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE BOSS★禁地魔王
+
+
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+[@太古攻城](2305,300,344,3)
+#IF
+#SAY
+　\
+　\
+　\
+　　{[飞鸽传书]：=FCO=253}\
+　　{江湖救急，高凉传奇大陆发生浩劫。=FCO=250}\
+　　{灭世神带领一众手下，偷袭苍月岛。=FCO=250}\
+　　{比奇国王现下令召集天下群雄速去救援!=FCO=250}\
+　\　\
+　　<{[立即支援]=FCO=70}/@立即支援> \  
+　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+MOV G122 1
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 太古战魂1
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 太古战魂2
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 太古战魂3
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3
+PARAM4 20 
+MOBPLACE 太古战魂4
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 太古战魂5
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 太古战魂6
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE 太古战魂7
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 30 
+MOBPLACE 灭世神★圣龙王
+
+MISSION 5 153 348 
+PARAM1 153 
+PARAM2 348 
+PARAM3 1 
+PARAM4 30 
+MOBPLACE 灭世神★魔龙王
+
+DelayGoto 20 @清空杀怪数量
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+SENDMSG 0 [飞鸽传书]：江湖救急，高凉传奇大陆发生浩劫。比奇国王现下令天下群雄速去苍月岛救援!
+
+;======================================================================
+
+
+[@立即支援]
+#if
+#act
+mapmove 5 139 331
+
+[@清空杀怪数量]
+#if
+#act
+MOV G110 0
+MOV G111 0
+MOV G112 0
+MOV G113 0
+MOV G114 0
+MOV G115 0
+MOV G116 0
+MOV G117 0
+MOV G118 0
+MOV G119 0
+MOV G120 0
+MOV G121 0
+MOV G122 0
+SENDMSG 0 [系统]：全服杀怪数量已清零，自动怪物攻城系统重新计算！
+SENDMSG 0 [系统]：全服杀怪数量已清零，自动怪物攻城系统重新计算！
+SENDMSG 0 [系统]：全服杀怪数量已清零，自动怪物攻城系统重新计算！
+SENDMSG 0 [系统]：全服杀怪数量已清零，自动怪物攻城系统重新计算！
+SENDMSG 0 [系统]：全服杀怪数量已清零，自动怪物攻城系统重新计算！
+SENDMSG 0 [系统]：全服杀怪数量已清零，自动怪物攻城系统重新计算！
+
+}

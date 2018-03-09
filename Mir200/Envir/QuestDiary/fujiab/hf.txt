@@ -1,0 +1,317 @@
+[@领取附加]
+{
+#IF
+CheckAccountList ..\QuestDiary\fujiab\1.txt
+#ACT
+GAMEGIRD + 1
+DelAccountList ..\QuestDiary\fujiab\1.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了1RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\10.txt
+#ACT
+GAMEGIRD + 10
+DelAccountList ..\QuestDiary\fujiab\10.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了10RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\100.txt
+#ACT
+GAMEGIRD + 100
+DelAccountList ..\QuestDiary\fujiab\100.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了100RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\1000.txt
+#ACT
+GAMEGIRD + 1000
+DelAccountList ..\QuestDiary\fujiab\1000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了1000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\2.txt
+#ACT
+GAMEGIRD + 2
+DelAccountList ..\QuestDiary\fujiab\2.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了2RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\20.txt
+#ACT
+GAMEGIRD + 20
+DelAccountList ..\QuestDiary\fujiab\20.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了20RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\200.txt
+#ACT
+GAMEGIRD + 200
+DelAccountList ..\QuestDiary\fujiab\200.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了200RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\2000.txt
+#ACT
+GAMEGIRD + 2000
+DelAccountList ..\QuestDiary\fujiab\2000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了2000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\3.txt
+#ACT
+GAMEGIRD + 3
+DelAccountList ..\QuestDiary\fujiab\3.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了3RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\30.txt
+#ACT
+GAMEGIRD + 30
+DelAccountList ..\QuestDiary\fujiab\30.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了30RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\300.txt
+#ACT
+GAMEGIRD + 300
+DelAccountList ..\QuestDiary\fujiab\300.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了300RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\3000.txt
+#ACT
+GAMEGIRD + 3000
+DelAccountList ..\QuestDiary\fujiab\3000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了3000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\4.txt
+#ACT
+GAMEGIRD + 4
+DelAccountList ..\QuestDiary\fujiab\4.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了4RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\40.txt
+#ACT
+GAMEGIRD + 40
+DelAccountList ..\QuestDiary\fujiab\40.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了40RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\400.txt
+#ACT
+GAMEGIRD + 400
+DelAccountList ..\QuestDiary\fujiab\400.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了400RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\4000.txt
+#ACT
+GAMEGIRD + 4000
+DelAccountList ..\QuestDiary\fujiab\4000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了4000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\5.txt
+#ACT
+GAMEGIRD + 5
+DelAccountList ..\QuestDiary\fujiab\5.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了5RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\50.txt
+#ACT
+GAMEGIRD + 50
+DelAccountList ..\QuestDiary\fujiab\50.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了50RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\500.txt
+#ACT
+GAMEGIRD + 500
+DelAccountList ..\QuestDiary\fujiab\500.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了500RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\5000.txt
+#ACT
+GAMEGIRD + 5000
+DelAccountList ..\QuestDiary\fujiab\5000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了5000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\6.txt
+#ACT
+GAMEGIRD + 6
+DelAccountList ..\QuestDiary\fujiab\6.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了6RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\60.txt
+#ACT
+GAMEGIRD + 60
+DelAccountList ..\QuestDiary\fujiab\60.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了60RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\600.txt
+#ACT
+GAMEGIRD + 600
+DelAccountList ..\QuestDiary\fujiab\600.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了600RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\6000.txt
+#ACT
+GAMEGIRD + 6000
+DelAccountList ..\QuestDiary\fujiab\6000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了6000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\7.txt
+#ACT
+GAMEGIRD + 7
+DelAccountList ..\QuestDiary\fujiab\7.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了7RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\70.txt
+#ACT
+GAMEGIRD + 70
+DelAccountList ..\QuestDiary\fujiab\70.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了70RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\700.txt
+#ACT
+GAMEGIRD + 700
+DelAccountList ..\QuestDiary\fujiab\700.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了700RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\7000.txt
+#ACT
+GAMEGIRD + 7000
+DelAccountList ..\QuestDiary\fujiab\7000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了7000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\8.txt
+#ACT
+GAMEGIRD + 8
+DelAccountList ..\QuestDiary\fujiab\8.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了8RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\80.txt
+#ACT
+GAMEGIRD + 80
+DelAccountList ..\QuestDiary\fujiab\80.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了80RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\800.txt
+#ACT
+GAMEGIRD + 800
+DelAccountList ..\QuestDiary\fujiab\800.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了800RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\8000.txt
+#ACT
+GAMEGIRD + 8000
+DelAccountList ..\QuestDiary\fujiab\8000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了8000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\9.txt
+#ACT
+GAMEGIRD + 9
+DelAccountList ..\QuestDiary\fujiab\9.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了9RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\90.txt
+#ACT
+GAMEGIRD + 90
+DelAccountList ..\QuestDiary\fujiab\90.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了90RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\900.txt
+#ACT
+GAMEGIRD + 900
+DelAccountList ..\QuestDiary\fujiab\900.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了900RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\9000.txt
+#ACT
+GAMEGIRD + 9000
+DelAccountList ..\QuestDiary\fujiab\9000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了9000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\10000.txt
+#ACT
+GAMEGIRD + 10000
+DelAccountList ..\QuestDiary\fujiab\10000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了10000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\20000.txt
+#ACT
+GAMEGIRD + 20000
+DelAccountList ..\QuestDiary\fujiab\20000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了20000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\30000.txt
+#ACT
+GAMEGIRD + 30000
+DelAccountList ..\QuestDiary\fujiab\30000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了30000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\40000.txt
+#ACT
+GAMEGIRD + 40000
+DelAccountList ..\QuestDiary\fujiab\40000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了40000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\50000.txt
+#ACT
+GAMEGIRD + 50000
+DelAccountList ..\QuestDiary\fujiab\50000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了50000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\60000.txt
+#ACT
+GAMEGIRD + 60000
+DelAccountList ..\QuestDiary\fujiab\60000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了60000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\70000.txt
+#ACT
+GAMEGIRD + 70000
+DelAccountList ..\QuestDiary\fujiab\70000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了70000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\80000.txt
+#ACT
+GAMEGIRD + 80000
+DelAccountList ..\QuestDiary\fujiab\80000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了80000RMB。
+goto @领取附加
+#IF
+CheckAccountList ..\QuestDiary\fujiab\90000.txt
+#ACT
+GAMEGIRD + 90000
+DelAccountList ..\QuestDiary\fujiab\90000.txt
+SENDMSG 1  ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了90000RMB。
+}

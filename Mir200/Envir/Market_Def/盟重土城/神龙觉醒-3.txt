@@ -1,0 +1,106 @@
+[@main](2300,300,540,3,0,1,442,273,10,1)
+{15=y}
+{149=x}{勇士需要神龙觉醒???=FCO=254}\
+{149=x}{找我呀!哈哈!哈哈!!!=FCO=254}\
+{112=y}
+当解封武器里沉睡的神龙觉醒,武器即可在平时打\
+怪升级中获得经验增强武器本身的属性,武器经验\
+达到一定等级后,还可修炼出令人惊叹的{刀魂技能=FCO=253}!\
+{10=x}{魂炼石道具=FCO=249}:{全服BOSS均有掉落.商铺道具=FCO=250}!\
+{10=x}{小成期=FCO=253}:{[Lv: 01-30]增加主属性上限1点=FCO=254}!\
+{10=x}{晋升期=FCO=253}:{[Lv: 31-55]增加主属性上限2点=FCO=254}!\
+{10=x}{大成期=FCO=253}:{[Lv: 56-60]较大几率激活=FCO=254}{刀魂技能=FCO=253}!\ \ \ \ \ \
+{15=x}<开启{[战]=FCO=249}龙魂/@1>   {属性说明=FCO=253}： {主属性攻击=FCO=250}\ \
+{15=x}<开启{[法]=FCO=249}龙魂/@2>   {属性说明=FCO=253}： {主属性魔法=FCO=250}\ \
+{15=x}<开启{[道]=FCO=249}龙魂/@3>   {属性说明=FCO=253}： {主属性道术=FCO=250}\ \
+
+[@1](30,300,540,3,0,1,442,260,3,1)
+{55=x}{请确认是否正确佩戴武器=FCO=249}\ \
+{57=x}{需要材料=FCO=253}:    {魂炼石x3=FCO=250}\
+{57=x}{需要费用=FCO=253}:    {5000元宝=FCO=250}\ \
+{57=x}{确认开启=FCO=253}:   <[战圣龙魂]/@44> \
+
+[@2](30,300,540,3,0,1,442,260,3,1)
+{55=x}{请确认是否正确佩戴武器=FCO=249}\ \
+{57=x}{需要材料=FCO=253}:    {魂炼石x3=FCO=250}\
+{57=x}{需要费用=FCO=253}:    {5000元宝=FCO=250}\ \
+{57=x}{确认开启=FCO=253}:   <[法神龙魂]/@55> \
+
+
+[@3](30,300,540,3,0,1,442,260,3,1)
+{55=x}{请确认是否正确佩戴武器=FCO=249}\ \
+{57=x}{需要材料=FCO=253}:    {魂炼石x3=FCO=250}\
+{57=x}{需要费用=FCO=253}:    {5000元宝=FCO=250}\ \
+{57=x}{确认开启=FCO=253}:   <[道尊龙魂]/@66> \
+
+[@44]
+#IF
+CHECKJOB Warrior
+CHECKITEMADDVALUELV 1 28 < 1
+CHECKUSEITEM 1
+#ACT
+GOTO @11
+#ELSEACT
+MESSAGEBOX 你不是战士?你没有佩戴武器?或者武器已经激活神龙之魂了。
+
+[@55]
+#IF
+CHECKJOB Wizard
+CHECKITEMADDVALUELV 1 28 < 1
+CHECKUSEITEM 1
+#ACT
+GOTO @22
+#ELSEACT
+MESSAGEBOX 你不是法师?你没有佩戴武器?或者武器已经激活神龙之魂了。
+
+[@66]
+#IF
+CHECKJOB Taoist
+CHECKITEMADDVALUELV 1 28 < 1
+CHECKUSEITEM 1
+#ACT
+GOTO @33
+#ELSEACT
+MESSAGEBOX 你不是道士?你没有佩戴武器?或者武器已经激活神龙之魂了。
+
+[@11]
+#IF
+CHECKGAMEGOLD > 4999
+CheckItemCount 魂炼石 ? 3
+#ACT
+GAMEGOLD - 5000
+TAKECOUNT 魂炼石 3
+HookItem 1 
+CHANGEGIVEITEM 10 10
+CHANGEGIVEITEM 8
+MESSAGEBOX 恭喜您，武器成功开启魂炼系统！
+#ELSEACT
+MESSAGEBOX 对不起，解封神龙之魂需要：魂炼石3个+200元宝。
+ 
+[@22]
+#IF
+CHECKGAMEGOLD > 4999
+CheckItemCount 魂炼石 ? 3
+#ACT
+GAMEGOLD - 5000
+TAKECOUNT 魂炼石 3
+HookItem 1 
+CHANGEGIVEITEM 10 20
+CHANGEGIVEITEM 8
+MESSAGEBOX 恭喜您，武器成功开启魂炼系统！
+#ELSEACT
+MESSAGEBOX 对不起，解封神龙之魂需要：魂炼石3个+200元宝。
+ 
+[@33]
+#IF
+CHECKGAMEGOLD > 4999
+CheckItemCount 魂炼石 ? 3
+#ACT
+GAMEGOLD - 5000
+TAKECOUNT 魂炼石 3
+HookItem 1 
+CHANGEGIVEITEM 10 30
+CHANGEGIVEITEM 8
+MESSAGEBOX 恭喜您，武器成功开启魂炼系统！
+#ELSEACT
+MESSAGEBOX 对不起，解封神龙之魂需要：魂炼石3个+200元宝。

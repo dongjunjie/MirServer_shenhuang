@@ -1,0 +1,23 @@
+[@戒指店脚本头]
+{
+(@buy @sell @repair @s_repair @BindBuy)
+%100
++22
++23
+[@main]
+#CALLX [\游戏配置\所有NPC调用头.txt] @所有NPC调用头
+
+[@所有NPC调用头_返回]
+{<$SELFNAME>=FCO=251}：\
+　欢迎，我可以帮你什么吗？\ \
+　<购买戒指/@buy>\
+　<出售戒指/@sell>\
+　<修理装备/@repair>\
+　<特修装备/@s_repair>\ \
+　<关　闭/@exit>
+
+[goods]
+牛角戒指        100     3       0
+六角戒指        100     3       1
+玻璃戒指        100     3       2
+}

@@ -1,0 +1,12 @@
+[@时间检测]
+{
+#IF
+CheckNameList ../QuestDiary/数据/时间领取.txt
+#ACT
+SENDMSG 7 你今天的游戏时间已领取！
+#ELSEACT
+AddNameList ../QuestDiary/数据/时间领取.txt
+GameGold + 21600
+SENDMSG 7 恭喜你成功领取今天的游戏时间！
+
+}

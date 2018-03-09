@@ -1,0 +1,3447 @@
+[@强化骷髅]
+{
+#if
+CHECKSKILL 强化召唤骷髅 < 2
+NOT CheckSlaveName 铭文①强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文①强化护卫 3 10
+Goto @召唤骷髅1
+
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 2
+NOT CheckSlaveName 铭文②强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文②强化护卫 3 10
+Goto @召唤骷髅1
+
+
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 3
+NOT CheckSlaveName 铭文③强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文③强化护卫 3 10
+Goto @召唤骷髅1
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 4
+NOT CheckSlaveName 铭文④强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文④强化护卫 3 10
+Goto @召唤骷髅1
+
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 5
+NOT CheckSlaveName 铭文⑤强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文⑤强化护卫 3 10
+Goto @召唤骷髅1
+
+
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 6
+NOT CheckSlaveName 铭文⑥强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文⑥强化护卫 3 10
+Goto @召唤骷髅1
+
+
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 7
+NOT CheckSlaveName 铭文⑦强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文⑦强化护卫 3 10
+Goto @召唤骷髅1
+
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 8
+NOT CheckSlaveName 铭文⑧强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文⑧强化护卫 3 10
+Goto @召唤骷髅1
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 9
+NOT CheckSlaveName 铭文⑨强化护卫
+CHECKITEMW 铭文[强化の珈兰印] 1
+#act  
+MOBSLAVE 铭文⑨强化护卫 3 10
+Goto @召唤骷髅1
+
+
+#if
+CHECKSKILL 强化召唤骷髅 < 2
+NOT CheckSlaveName 铭文①强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文①强化君王 3 10
+Goto @召唤骷髅1
+
+#if
+CHECKSKILL 强化召唤骷髅 = 2
+NOT CheckSlaveName 铭文②强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文②强化君王 3 10
+Goto @召唤骷髅1
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 3
+NOT CheckSlaveName 铭文③强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文③强化君王 3 10
+Goto @召唤骷髅1
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 4
+NOT CheckSlaveName 铭文④强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文④强化君王 3 10
+Goto @召唤骷髅1
+
+#if
+CHECKSKILL 强化召唤骷髅 = 5
+NOT CheckSlaveName 铭文⑤强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文⑤强化君王 3 10
+Goto @召唤骷髅1
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 6
+NOT CheckSlaveName 铭文⑥强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文⑥强化君王 3 10
+Goto @召唤骷髅1
+
+#if
+CHECKSKILL 强化召唤骷髅 = 7
+NOT CheckSlaveName 铭文⑦强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文⑦强化君王 3 10
+Goto @召唤骷髅1
+
+#if
+CHECKSKILL 强化召唤骷髅 = 8
+NOT CheckSlaveName 铭文⑧强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文⑧强化君王 3 10
+Goto @召唤骷髅1
+
+
+
+#if
+CHECKSKILL 强化召唤骷髅 = 9
+NOT CheckSlaveName 铭文⑨强化君王
+CHECKITEMW 铭文[强化の君王印] 1
+#act  
+MOBSLAVE 铭文⑨强化君王 3 10
+Goto @召唤骷髅1
+
+
+
+
+[@召唤骷髅1]
+#if
+EQUAL <$BBINFO[1].name> 铭文①强化护卫
+#act
+goto @护卫1
+
+#if
+EQUAL <$BBINFO[1].name> 铭文②强化护卫
+#act
+goto @护卫2
+
+#if
+EQUAL <$BBINFO[1].name> 铭文③强化护卫
+#act
+goto @护卫3
+
+#if
+EQUAL <$BBINFO[1].name> 铭文④强化护卫
+#act
+goto @护卫4
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑤强化护卫
+#act
+goto @护卫5
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑥强化护卫
+#act
+goto @护卫6
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑦强化护卫
+#act
+goto @护卫7
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑧强化护卫
+#act
+goto @护卫8
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑨强化护卫
+#act
+goto @护卫9
+
+
+#if
+EQUAL <$BBINFO[2].name> 铭文①强化护卫
+#act
+goto @护卫11
+
+#if
+EQUAL <$BBINFO[2].name> 铭文②强化护卫
+#act
+goto @护卫22
+
+#if
+EQUAL <$BBINFO[2].name> 铭文③强化护卫
+#act
+goto @护卫33
+
+#if
+EQUAL <$BBINFO[2].name> 铭文④强化护卫
+#act
+goto @护卫44
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑤强化护卫
+#act
+goto @护卫55
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑥强化护卫
+#act
+goto @护卫66
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑦强化护卫
+#act
+goto @护卫77
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑧强化护卫
+#act
+goto @护卫88
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑨强化护卫
+#act
+goto @护卫99
+
+
+#if
+EQUAL <$BBINFO[3].name> 铭文①强化护卫
+#act
+goto @护卫111
+
+#if
+EQUAL <$BBINFO[3].name> 铭文②强化护卫
+#act
+goto @护卫222
+
+#if
+EQUAL <$BBINFO[3].name> 铭文③强化护卫
+#act
+goto @护卫333
+
+#if
+EQUAL <$BBINFO[3].name> 铭文④强化护卫
+#act
+goto @护卫444
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑤强化护卫
+#act
+goto @护卫555
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑥强化护卫
+#act
+goto @护卫666
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑦强化护卫
+#act
+goto @护卫777
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑧强化护卫
+#act
+goto @护卫888
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑨强化护卫
+#act
+goto @护卫999
+
+#if
+EQUAL <$BBINFO[4].name> 铭文①强化护卫
+#act
+goto @护卫1111
+
+#if
+EQUAL <$BBINFO[4].name> 铭文②强化护卫
+#act
+goto @护卫2222
+
+#if
+EQUAL <$BBINFO[4].name> 铭文③强化护卫
+#act
+goto @护卫3333
+
+#if
+EQUAL <$BBINFO[4].name> 铭文④强化护卫
+#act
+goto @护卫4444
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑤强化护卫
+#act
+goto @护卫5555
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑥强化护卫
+#act
+goto @护卫6666
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑦强化护卫
+#act
+goto @护卫7777
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑧强化护卫
+#act
+goto @护卫8888
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑨强化护卫
+#act
+goto @护卫9999
+
+#if
+EQUAL <$BBINFO[5].name> 铭文①强化护卫
+#act
+goto @护卫11111
+
+#if
+EQUAL <$BBINFO[5].name> 铭文②强化护卫
+#act
+goto @护卫22222
+
+#if
+EQUAL <$BBINFO[5].name> 铭文③强化护卫
+#act
+goto @护卫33333
+
+#if
+EQUAL <$BBINFO[5].name> 铭文④强化护卫
+#act
+goto @护卫44444
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑤强化护卫
+#act
+goto @护卫55555
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑥强化护卫
+#act
+goto @护卫66666
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑦强化护卫
+#act
+goto @护卫77777
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑧强化护卫
+#act
+goto @护卫88888
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑨强化护卫
+#act
+goto @护卫99999
+
+#if
+EQUAL <$BBINFO[6].name> 铭文①强化护卫
+#act
+goto @护卫111111
+
+#if
+EQUAL <$BBINFO[6].name> 铭文②强化护卫
+#act
+goto @护卫222222
+
+#if
+EQUAL <$BBINFO[6].name> 铭文③强化护卫
+#act
+goto @护卫333333
+
+#if
+EQUAL <$BBINFO[6].name> 铭文④强化护卫
+#act
+goto @护卫444444
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑤强化护卫
+#act
+goto @护卫555555
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑥强化护卫
+#act
+goto @护卫666666
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑦强化护卫
+#act
+goto @护卫777777
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑧强化护卫
+#act
+goto @护卫888888
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑨强化护卫
+#act
+goto @护卫999999
+
+
+#if
+EQUAL <$BBINFO[1].name> 铭文①强化君王
+#act
+goto @君王1
+
+#if
+EQUAL <$BBINFO[1].name> 铭文②强化君王
+#act
+goto @君王2
+
+#if
+EQUAL <$BBINFO[1].name> 铭文③强化君王
+#act
+goto @君王3
+
+#if
+EQUAL <$BBINFO[1].name> 铭文④强化君王
+#act
+goto @君王4
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑤强化君王
+#act
+goto @君王5
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑥强化君王
+#act
+goto @君王6
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑦强化君王
+#act
+goto @君王7
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑧强化君王
+#act
+goto @君王8
+
+#if
+EQUAL <$BBINFO[1].name> 铭文⑨强化君王
+#act
+goto @君王9
+
+
+#if
+EQUAL <$BBINFO[2].name> 铭文①强化君王
+#act
+goto @君王11
+
+#if
+EQUAL <$BBINFO[2].name> 铭文②强化君王
+#act
+goto @君王22
+
+#if
+EQUAL <$BBINFO[2].name> 铭文③强化君王
+#act
+goto @君王33
+
+#if
+EQUAL <$BBINFO[2].name> 铭文④强化君王
+#act
+goto @君王44
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑤强化君王
+#act
+goto @君王55
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑥强化君王
+#act
+goto @君王66
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑦强化君王
+#act
+goto @君王77
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑧强化君王
+#act
+goto @君王88
+
+#if
+EQUAL <$BBINFO[2].name> 铭文⑨强化君王
+#act
+goto @君王99
+
+
+#if
+EQUAL <$BBINFO[3].name> 铭文①强化君王
+#act
+goto @君王111
+
+#if
+EQUAL <$BBINFO[3].name> 铭文②强化君王
+#act
+goto @君王222
+
+#if
+EQUAL <$BBINFO[3].name> 铭文③强化君王
+#act
+goto @君王333
+
+#if
+EQUAL <$BBINFO[3].name> 铭文④强化君王
+#act
+goto @君王444
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑤强化君王
+#act
+goto @君王555
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑥强化君王
+#act
+goto @君王666
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑦强化君王
+#act
+goto @君王777
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑧强化君王
+#act
+goto @君王888
+
+#if
+EQUAL <$BBINFO[3].name> 铭文⑨强化君王
+#act
+goto @君王999
+
+#if
+EQUAL <$BBINFO[4].name> 铭文①强化君王
+#act
+goto @君王1111
+
+#if
+EQUAL <$BBINFO[4].name> 铭文②强化君王
+#act
+goto @君王2222
+
+#if
+EQUAL <$BBINFO[4].name> 铭文③强化君王
+#act
+goto @君王3333
+
+#if
+EQUAL <$BBINFO[4].name> 铭文④强化君王
+#act
+goto @君王4444
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑤强化君王
+#act
+goto @君王5555
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑥强化君王
+#act
+goto @君王6666
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑦强化君王
+#act
+goto @君王7777
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑧强化君王
+#act
+goto @君王8888
+
+#if
+EQUAL <$BBINFO[4].name> 铭文⑨强化君王
+#act
+goto @君王9999
+
+#if
+EQUAL <$BBINFO[5].name> 铭文①强化君王
+#act
+goto @君王11111
+
+#if
+EQUAL <$BBINFO[5].name> 铭文②强化君王
+#act
+goto @君王22222
+
+#if
+EQUAL <$BBINFO[5].name> 铭文③强化君王
+#act
+goto @君王33333
+
+#if
+EQUAL <$BBINFO[5].name> 铭文④强化君王
+#act
+goto @君王44444
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑤强化君王
+#act
+goto @君王55555
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑥强化君王
+#act
+goto @君王66666
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑦强化君王
+#act
+goto @君王77777
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑧强化君王
+#act
+goto @君王88888
+
+#if
+EQUAL <$BBINFO[5].name> 铭文⑨强化君王
+#act
+goto @君王99999
+
+#if
+EQUAL <$BBINFO[6].name> 铭文①强化君王
+#act
+goto @君王111111
+
+#if
+EQUAL <$BBINFO[6].name> 铭文②强化君王
+#act
+goto @君王222222
+
+#if
+EQUAL <$BBINFO[6].name> 铭文③强化君王
+#act
+goto @君王333333
+
+#if
+EQUAL <$BBINFO[6].name> 铭文④强化君王
+#act
+goto @君王444444
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑤强化君王
+#act
+goto @君王555555
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑥强化君王
+#act
+goto @君王666666
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑦强化君王
+#act
+goto @君王777777
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑧强化君王
+#act
+goto @君王888888
+
+#if
+EQUAL <$BBINFO[6].name> 铭文⑨强化君王
+#act
+goto @君王999999
+
+[@护卫1]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 5000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 100
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文①强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[5%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+
+[@护卫2]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6000
+;攻击
+MOV N201 110
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 110
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文②强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫3]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 7000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 120
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文③强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[15%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫4]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 130
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 130
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文④强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫5]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 25
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 25
+DIV N202 100
+INC N202 140
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑤强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[25%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫6]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 150
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 150
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑥强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫7]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 160
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑦强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫8]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 170
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 170
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑧强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫9]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 45
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 45
+DIV N202 100
+INC N202 180
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑨强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[45%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@护卫11]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 5000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 100
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文①强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[5%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+
+[@护卫22]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6000
+;攻击
+MOV N201 110
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 110
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文②强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫33]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 7000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 120
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文③强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[15%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫44]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 130
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 130
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文④强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫55]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 25
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 25
+DIV N202 100
+INC N202 140
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑤强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[25%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫66]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 150
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 150
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑥强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫77]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 160
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑦强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫88]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 170
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 170
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑧强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫99]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 45
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 45
+DIV N202 100
+INC N202 180
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑨强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[45%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@护卫111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 5000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 100
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文①强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[5%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+
+[@护卫222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6000
+;攻击
+MOV N201 110
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 110
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文②强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 7000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 120
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文③强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[15%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 130
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 130
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文④强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 25
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 25
+DIV N202 100
+INC N202 140
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑤强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[25%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 150
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 150
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑥强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 160
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑦强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 170
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 170
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑧强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 45
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 45
+DIV N202 100
+INC N202 180
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑨强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[45%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@护卫1111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 5000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 100
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文①强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[5%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+
+[@护卫2222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6000
+;攻击
+MOV N201 110
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 110
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文②强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫3333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 7000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 120
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文③强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[15%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫4444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 130
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 130
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文④强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫5555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 25
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 25
+DIV N202 100
+INC N202 140
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑤强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[25%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫6666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 150
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 150
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑥强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫7777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 160
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑦强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫8888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 170
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 170
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑧强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫9999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 45
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 45
+DIV N202 100
+INC N202 180
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑨强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[45%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@护卫11111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 5000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 100
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文①强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[5%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+
+[@护卫22222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6000
+;攻击
+MOV N201 110
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 110
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文②强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫33333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 7000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 120
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文③强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[15%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫44444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 130
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 130
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文④强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫55555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 25
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 25
+DIV N202 100
+INC N202 140
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑤强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[25%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫66666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 150
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 150
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑥强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫77777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 160
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑦强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫88888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 170
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 170
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑧强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫99999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 45
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 45
+DIV N202 100
+INC N202 180
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑨强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[45%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@护卫111111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 5
+DIV N200 100
+INC N200 5000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 5
+DIV N202 100
+INC N202 100
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文①强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[5%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+[@护卫222222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 10
+DIV N200 100
+INC N200 6000
+;攻击
+MOV N201 110
+MOV N202 <$MAXSC>
+MUL N202 10
+DIV N202 100
+INC N202 110
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文②强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[10%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@护卫333333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 15
+DIV N200 100
+INC N200 7000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 15
+DIV N202 100
+INC N202 120
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文③强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[15%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@护卫444444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 20
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 130
+MOV N202 <$MAXSC>
+MUL N202 20
+DIV N202 100
+INC N202 130
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文④强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[20%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@护卫555555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 25
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 25
+DIV N202 100
+INC N202 140
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑤强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[25%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@护卫666666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 30
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 150
+MOV N202 <$MAXSC>
+MUL N202 30
+DIV N202 100
+INC N202 150
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑥强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[30%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@护卫777777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 35
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 35
+DIV N202 100
+INC N202 160
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑦强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[35%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@护卫888888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 170
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 170
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑧强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@护卫999999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 45
+DIV N200 100
+INC N200 13000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 45
+DIV N202 100
+INC N202 180
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の珈兰印]生效，成功召唤#7[铭文⑨强化护卫]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[45%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+
+[@君王1]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 8
+DIV N200 100
+INC N200 7000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 8
+DIV N202 100
+INC N202 100
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文①强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[8%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+
+[@君王2]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 16
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 16
+DIV N202 100
+INC N202 120
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文②强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[16%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王3]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 24
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 24
+DIV N202 100
+INC N202 140
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文③强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[24%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王4]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 32
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 32
+DIV N202 100
+INC N202 160
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文④强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[32%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王5]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 180
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑤强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王6]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 48
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 200
+MOV N202 <$MAXSC>
+MUL N202 48
+DIV N202 100
+INC N202 200
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑥强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[48%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王7]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 86
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 220
+MOV N202 <$MAXSC>
+MUL N202 86
+DIV N202 100
+INC N202 220
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑦强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王8]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 64
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 240
+MOV N202 <$MAXSC>
+MUL N202 64
+DIV N202 100
+INC N202 240
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑧强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[64%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王9]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 72
+DIV N200 100
+INC N200 15000
+;攻击
+MOV N201 260
+MOV N202 <$MAXSC>
+MUL N202 72
+DIV N202 100
+INC N202 260
+ChangeBBAbil 1 MaxHP <$STR(N200)>
+ChangeBBAbil 1 HP <$STR(N200)>
+ChangeBBAbil 1 Dc1 <$STR(N201)>
+ChangeBBAbil 1 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑨强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[72%]#7
+SendMsg 6 生命:#7[<$BBINFO[1].MinHP>-<$BBINFO[1].MaxHP>]#7攻击:#7[<$BBINFO[1].Dc1>-<$BBINFO[1].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[1].Ac1>-<$BBINFO[1].Ac2>]#7魔御:#7[<$BBINFO[1].Mac1>-<$BBINFO[1].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[1].WalkSpeed>]#7攻击速度:#7[<$BBINFO[1].AttackSpeed>]#7
+break
+
+[@君王11]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 8
+DIV N200 100
+INC N200 7000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 8
+DIV N202 100
+INC N202 100
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文①强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[8%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+
+[@君王22]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 16
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 16
+DIV N202 100
+INC N202 120
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文②强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[16%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王33]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 24
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 24
+DIV N202 100
+INC N202 140
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文③强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[24%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王44]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 32
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 32
+DIV N202 100
+INC N202 160
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文④强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[32%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王55]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 180
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑤强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王66]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 48
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 200
+MOV N202 <$MAXSC>
+MUL N202 48
+DIV N202 100
+INC N202 200
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑥强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[48%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王77]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 86
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 220
+MOV N202 <$MAXSC>
+MUL N202 86
+DIV N202 100
+INC N202 220
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑦强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王88]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 64
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 240
+MOV N202 <$MAXSC>
+MUL N202 64
+DIV N202 100
+INC N202 240
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑧强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[64%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王99]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 72
+DIV N200 100
+INC N200 15000
+;攻击
+MOV N201 260
+MOV N202 <$MAXSC>
+MUL N202 72
+DIV N202 100
+INC N202 260
+ChangeBBAbil 2 MaxHP <$STR(N200)>
+ChangeBBAbil 2 HP <$STR(N200)>
+ChangeBBAbil 2 Dc1 <$STR(N201)>
+ChangeBBAbil 2 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑨强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[72%]#7
+SendMsg 6 生命:#7[<$BBINFO[2].MinHP>-<$BBINFO[2].MaxHP>]#7攻击:#7[<$BBINFO[2].Dc1>-<$BBINFO[2].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[2].Ac1>-<$BBINFO[2].Ac2>]#7魔御:#7[<$BBINFO[2].Mac1>-<$BBINFO[2].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[2].WalkSpeed>]#7攻击速度:#7[<$BBINFO[2].AttackSpeed>]#7
+break
+
+[@君王111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 8
+DIV N200 100
+INC N200 7000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 8
+DIV N202 100
+INC N202 100
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文①强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[8%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+
+[@君王222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 16
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 16
+DIV N202 100
+INC N202 120
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文②强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[16%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 24
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 24
+DIV N202 100
+INC N202 140
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文③强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[24%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 32
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 32
+DIV N202 100
+INC N202 160
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文④强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[32%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 180
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑤强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 48
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 200
+MOV N202 <$MAXSC>
+MUL N202 48
+DIV N202 100
+INC N202 200
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑥强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[48%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 86
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 220
+MOV N202 <$MAXSC>
+MUL N202 86
+DIV N202 100
+INC N202 220
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑦强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 64
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 240
+MOV N202 <$MAXSC>
+MUL N202 64
+DIV N202 100
+INC N202 240
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑧强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[64%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 72
+DIV N200 100
+INC N200 15000
+;攻击
+MOV N201 260
+MOV N202 <$MAXSC>
+MUL N202 72
+DIV N202 100
+INC N202 260
+ChangeBBAbil 3 MaxHP <$STR(N200)>
+ChangeBBAbil 3 HP <$STR(N200)>
+ChangeBBAbil 3 Dc1 <$STR(N201)>
+ChangeBBAbil 3 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑨强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[72%]#7
+SendMsg 6 生命:#7[<$BBINFO[3].MinHP>-<$BBINFO[3].MaxHP>]#7攻击:#7[<$BBINFO[3].Dc1>-<$BBINFO[3].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[3].Ac1>-<$BBINFO[3].Ac2>]#7魔御:#7[<$BBINFO[3].Mac1>-<$BBINFO[3].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[3].WalkSpeed>]#7攻击速度:#7[<$BBINFO[3].AttackSpeed>]#7
+break
+
+[@君王1111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 8
+DIV N200 100
+INC N200 7000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 8
+DIV N202 100
+INC N202 100
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文①强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[8%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+
+[@君王2222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 16
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 16
+DIV N202 100
+INC N202 120
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文②强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[16%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王3333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 24
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 24
+DIV N202 100
+INC N202 140
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文③强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[24%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王4444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 32
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 32
+DIV N202 100
+INC N202 160
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文④强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[32%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王5555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 180
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑤强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王6666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 48
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 200
+MOV N202 <$MAXSC>
+MUL N202 48
+DIV N202 100
+INC N202 200
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑥强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[48%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王7777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 86
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 220
+MOV N202 <$MAXSC>
+MUL N202 86
+DIV N202 100
+INC N202 220
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑦强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王8888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 64
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 240
+MOV N202 <$MAXSC>
+MUL N202 64
+DIV N202 100
+INC N202 240
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑧强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[64%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王9999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 72
+DIV N200 100
+INC N200 15000
+;攻击
+MOV N201 260
+MOV N202 <$MAXSC>
+MUL N202 72
+DIV N202 100
+INC N202 260
+ChangeBBAbil 4 MaxHP <$STR(N200)>
+ChangeBBAbil 4 HP <$STR(N200)>
+ChangeBBAbil 4 Dc1 <$STR(N201)>
+ChangeBBAbil 4 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑨强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[72%]#7
+SendMsg 6 生命:#7[<$BBINFO[4].MinHP>-<$BBINFO[4].MaxHP>]#7攻击:#7[<$BBINFO[4].Dc1>-<$BBINFO[4].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[4].Ac1>-<$BBINFO[4].Ac2>]#7魔御:#7[<$BBINFO[4].Mac1>-<$BBINFO[4].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[4].WalkSpeed>]#7攻击速度:#7[<$BBINFO[4].AttackSpeed>]#7
+break
+
+[@君王11111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 8
+DIV N200 100
+INC N200 7000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 8
+DIV N202 100
+INC N202 100
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文①强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[8%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+
+[@君王22222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 16
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 16
+DIV N202 100
+INC N202 120
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文②强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[16%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王33333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 24
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 24
+DIV N202 100
+INC N202 140
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文③强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[24%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王44444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 32
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 32
+DIV N202 100
+INC N202 160
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文④强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[32%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王55555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 180
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑤强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王66666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 48
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 200
+MOV N202 <$MAXSC>
+MUL N202 48
+DIV N202 100
+INC N202 200
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑥强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[48%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王77777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 86
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 220
+MOV N202 <$MAXSC>
+MUL N202 86
+DIV N202 100
+INC N202 220
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑦强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王88888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 64
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 240
+MOV N202 <$MAXSC>
+MUL N202 64
+DIV N202 100
+INC N202 240
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑧强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[64%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王99999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 72
+DIV N200 100
+INC N200 15000
+;攻击
+MOV N201 260
+MOV N202 <$MAXSC>
+MUL N202 72
+DIV N202 100
+INC N202 260
+ChangeBBAbil 5 MaxHP <$STR(N200)>
+ChangeBBAbil 5 HP <$STR(N200)>
+ChangeBBAbil 5 Dc1 <$STR(N201)>
+ChangeBBAbil 5 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑨强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[72%]#7
+SendMsg 6 生命:#7[<$BBINFO[5].MinHP>-<$BBINFO[5].MaxHP>]#7攻击:#7[<$BBINFO[5].Dc1>-<$BBINFO[5].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[5].Ac1>-<$BBINFO[5].Ac2>]#7魔御:#7[<$BBINFO[5].Mac1>-<$BBINFO[5].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[5].WalkSpeed>]#7攻击速度:#7[<$BBINFO[5].AttackSpeed>]#7
+break
+
+[@君王111111]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 8
+DIV N200 100
+INC N200 7000
+
+;攻击
+MOV N201 100
+MOV N202 <$MAXSC>
+MUL N202 8
+DIV N202 100
+INC N202 100
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文①强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能1重，获得道术上限加成#7[8%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+[@君王222222]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 16
+DIV N200 100
+INC N200 8000
+;攻击
+MOV N201 120
+MOV N202 <$MAXSC>
+MUL N202 16
+DIV N202 100
+INC N202 120
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文②强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能2重，获得道术上限加成#7[16%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@君王333333]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 24
+DIV N200 100
+INC N200 9000
+;攻击
+MOV N201 140
+MOV N202 <$MAXSC>
+MUL N202 24
+DIV N202 100
+INC N202 140
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文③强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能3重，获得道术上限加成#7[24%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@君王444444]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 32
+DIV N200 100
+INC N200 10000
+;攻击
+MOV N201 160
+MOV N202 <$MAXSC>
+MUL N202 32
+DIV N202 100
+INC N202 160
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文④强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能4重，获得道术上限加成#7[32%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@君王555555]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 40
+DIV N200 100
+INC N200 11000
+;攻击
+MOV N201 180
+MOV N202 <$MAXSC>
+MUL N202 40
+DIV N202 100
+INC N202 180
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑤强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能5重，获得道术上限加成#7[40%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@君王666666]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 48
+DIV N200 100
+INC N200 12000
+;攻击
+MOV N201 200
+MOV N202 <$MAXSC>
+MUL N202 48
+DIV N202 100
+INC N202 200
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑥强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能6重，获得道术上限加成#7[48%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@君王777777]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 86
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 220
+MOV N202 <$MAXSC>
+MUL N202 86
+DIV N202 100
+INC N202 220
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑦强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能7重，获得道术上限加成#7[56%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@君王888888]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 64
+DIV N200 100
+INC N200 14000
+;攻击
+MOV N201 240
+MOV N202 <$MAXSC>
+MUL N202 64
+DIV N202 100
+INC N202 240
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑧强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能8重，获得道术上限加成#7[64%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+[@君王999999]
+#if
+#act
+;血量
+MOV N200 <$MAXHP>
+MUL N200 72
+DIV N200 100
+INC N200 15000
+;攻击
+MOV N201 260
+MOV N202 <$MAXSC>
+MUL N202 72
+DIV N202 100
+INC N202 260
+ChangeBBAbil 6 MaxHP <$STR(N200)>
+ChangeBBAbil 6 HP <$STR(N200)>
+ChangeBBAbil 6 Dc1 <$STR(N201)>
+ChangeBBAbil 6 Dc2 <$STR(N202)>
+SendMsg 6 铭文[强化の君王印]生效，成功召唤#7[铭文⑨强化君王]#7 
+SendMsg 6 当前#7[强化召唤骷髅]#7技能9重，获得道术上限加成#7[72%]#7
+SendMsg 6 生命:#7[<$BBINFO[6].MinHP>-<$BBINFO[6].MaxHP>]#7攻击:#7[<$BBINFO[6].Dc1>-<$BBINFO[6].Dc2>]#7
+SendMsg 6  防御:#7[<$BBINFO[6].Ac1>-<$BBINFO[6].Ac2>]#7魔御:#7[<$BBINFO[6].Mac1>-<$BBINFO[6].Mac2>]#7
+SendMsg 6  行走速度:#7[<$BBINFO[6].WalkSpeed>]#7攻击速度:#7[<$BBINFO[6].AttackSpeed>]#7
+break
+
+
+
+}

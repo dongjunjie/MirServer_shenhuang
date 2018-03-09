@@ -1,0 +1,83 @@
+[@main](2305,300,344,3)
+　\
+　{活动时间：20.40-21.00为进入战场时间。=FCO=254}\
+　{进入神秘战场，全部玩家显示为“神秘人”=FCO=254}\
+　{强制全体攻击模式，不能说话。=FCO=254}\
+　{该地图前10分钟每秒增加1000经验+1元宝.=FCO=254}\
+　{奖励：击杀玩家直接获得50W经验+50元宝=FCO=254}\
+　{地图内每秒掉10HP血.尽量多带药品=FCO=23} \
+　{需要30级以上每天只能进3次=FCO=23}\ 
+　\　\
+　<{[进入神秘战场]=FCO=70}/@go> \ \
+　<{[关闭对话]=FCO=249}/@exit>
+[@go]
+#if
+NOT CheckNameList ../QuestDiary/神秘战场次数/1.txt
+CheckLevel 30
+#act
+AddNameList ../QuestDiary/神秘战场次数/1.txt
+goto @jin
+Break
+#if
+NOT CheckNameList ../QuestDiary/神秘战场次数/2.txt
+CheckLevel 30
+#act
+AddNameList ../QuestDiary/神秘战场次数/2.txt
+goto @jin
+Break
+#if
+NOT CheckNameList ../QuestDiary/神秘战场次数/3.txt
+CheckLevel 30
+#act
+AddNameList ../QuestDiary/神秘战场次数/3.txt
+goto @jin
+Break
+#ELSEACT
+Close
+MESSAGEBOX 您今天已经进了3次\或等级不足30级
+Break
+[@jin]
+#IF
+hour 20 20
+min  40 59
+#ACT
+DelayGoto 1 @经验开启19
+MAPMOVE smzc
+;     PLAYEFFECT 8 神秘战场 5.515.515.100 65535
+GMExecute AttackMode 0
+SetRankLevelName 神秘人
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]参加了#6FFFF/8#6神秘战场#5.该活动前10分钟每秒【1000经验+1元宝】，杀一人获得#7【50W经验+50元宝】#7！！
+Break
+#ELSEACT
+Close
+MESSAGEBOX 每天20.40至21.00为活动时间！\现在不是活动时间或活动已经结束！
+Break
+
+[@经验开启19]
+#if
+CheckInMapRange smzc 20 22 100
+hour 20 20
+min  40 50
+#ACT
+GMExecute AttackMode 0
+ChangeExp + 1000
+GameGold + 1
+DelayGoto 1 @经验开启19
+Break
+#if
+CheckInMapRange smzc 20 22 100
+hour 20 20
+min  40 50
+#ACT
+GMExecute AttackMode 0
+DelayGoto 1 @经验开启19
+Break
+#if
+CheckInMapRange smzc 20 22 100
+hour 21 21
+min  00 01
+#ACT
+mapmove 3 333 333
+SetRankLevelName %S
+MESSAGEBOX 活动已结束！
+Break

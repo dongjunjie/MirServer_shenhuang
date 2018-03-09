@@ -1,0 +1,194 @@
+[@Main](2238,300,344,3)
+　\
+　\
+<雪域副本:>\
+{每天免费进入一次【时间限制30分钟】=FCO=253}\
+{-----------------------------------------------=FCO=251}\
+{可单人，可组队,进入副本需要等级60级，=FCO=250}\
+{未达到无法进入副本。副本怪物很厉害的哦，=FCO=250}\
+{进入后要小心哦，进去可别挂了,副本中=FCO=250}\
+{的怪物掉落=FCO=250}<【渡劫】装备的爆率超高的哦>{！=FCO=250}\
+{-----------------------------------------------=FCO=251}\ 
+{挑战副本需要队长包袱里拥有[赤月恶魔的心=FCO=249}\ 
+{脏]一个，可通关赤月副本获取！=FCO=249}\ \ 
+<&{挑战（雪域魔王的试练）=FCO=251}/@FB_3>\
+<&关闭/@exit>\
+
+
+;_____________________________________________________________________________
+
+[@FB_3]
+
+#IF
+checklevelex > 59
+CheckItemCount 赤月恶魔的心脏 ? 1
+#act
+
+goto @fb41
+#ELSEACT
+MESSAGEBOX 对不起，条件不足！\请检查是否达到以下条件：\　\1.队长是否等级到达60以上？\3.队长包里是否有[赤月恶魔的心脏]？
+Break
+
+
+
+[@fb41]
+#if
+CheckNameList ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+MESSAGEBOX 你今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM1>
+CheckTextList <$TEAM1> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM1>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM2>
+CheckTextList <$TEAM2> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM2>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM3>
+CheckTextList <$TEAM3> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM3>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM4>
+CheckTextList <$TEAM4> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM4>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM5>
+CheckTextList <$TEAM5> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM5>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM6>
+CheckTextList <$TEAM6> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM6>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM7>
+CheckTextList <$TEAM7> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM7>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM8>
+CheckTextList <$TEAM8> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM8>今天已经进入过副本了
+break
+#if
+CheckOnLine <$TEAM9>
+CheckTextList <$TEAM9> ../QuestDiary/每日清理/雪域每日副本名单.txt
+#act
+SENDMSG 6   <$TEAM9>今天已经进入过副本了
+break
+#if
+#act
+goto @fb8
+break
+
+
+
+
+
+[@fb8]
+#if
+#ACT
+CREATEECTYPE 雪域副本 30
+#ELSEACT
+Goto @FB_DRUG
+Break
+
+[@CreateEctype_OK]
+#IF
+#ACT
+TAKE 赤月恶魔的心脏 1
+MoveECTYPE 雪域副本 40 89
+ADDNAMELIST ../QuestDiary/每日清理/雪域每日副本名单.txt
+goto @传送
+CLEARMACHINERYEVENT SELF
+CLEARECTYPEMON SELF
+MOBECTYPEMON SELF 57 82 [副本]雪域狼王	15   30 
+MOBECTYPEMON SELF 44 69 [副本]雪域战将  15   30 
+MOBECTYPEMON SELF 55 57 [副本]雪域侍卫	15   30
+MOBECTYPEMON SELF 72 70 [副本]雪域力士	15   30
+MOBECTYPEMON SELF 73 53 [副本]雪域卫士	1   30
+MOBECTYPEMON SELF 79 48 [副本]雪域魔王	1
+ 
+
+SENDMSG 0 【#6FFFF/8#6副本#5】：勇士[#7<$USERNAME>#7]带领队伍闯进了#6FFFF/8#6【雪域副本】#5，
+SENDMSG 8 【#6FFFF/8#6副本#5】：勇士[#7<$USERNAME>#7]带领队伍闯进了#6FFFF/8#6【雪域副本】#5，
+
+
+[@传送]
+#if
+CheckOnLine <$TEAM1>
+#act
+AddTextList <$TEAM1> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM1>
+#if
+CheckOnLine <$TEAM2>
+#act
+AddTextList <$TEAM2> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM2>
+#if
+CheckOnLine <$TEAM3>
+#act
+AddTextList <$TEAM3> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM3>
+#if
+CheckOnLine <$TEAM4>
+#act
+AddTextList <$TEAM4> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM4>
+#if
+CheckOnLine <$TEAM5>
+#act
+AddTextList <$TEAM5> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM5>
+#if
+CheckOnLine <$TEAM6>
+#act
+AddTextList <$TEAM6> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM6>
+#if
+NOT CheckTextList <$TEAM7> ../QuestDiary/每日清理/雪域每日副本名单.txt
+CheckOnLine <$TEAM7>
+#act
+AddTextList <$TEAM7> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM7>
+#if
+NOT CheckTextList <$TEAM8> ../QuestDiary/每日清理/雪域每日副本名单.txt
+CheckOnLine <$TEAM8>
+#act
+AddTextList <$TEAM8> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM8>
+#if
+CheckOnLine <$TEAM9>
+#act
+AddTextList <$TEAM9> ../QuestDiary/每日清理/雪域每日副本名单.txt
+RecallHuman <$TEAM9>
+
+
+
+
+
+
+
+[@CreateEctype_Fail]
+#IF
+#SAY
+　创建副本失败，副本人数已满，请稍候\
+再试或者创建其他副本！\ \
+<&关闭/@exit>\
+
+

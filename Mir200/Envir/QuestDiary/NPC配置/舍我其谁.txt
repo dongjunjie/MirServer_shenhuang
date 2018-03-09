@@ -1,0 +1,766 @@
+[@PKA11标准配置]
+{
+[@MAIN]
+#if
+HOUR 11 11
+MIN 00 20
+#ACT
+Goto @PKA11对话框
+#ELSEACT
+Goto @天下第一_领取奖励
+
+[@PKA11对话框](2236,240,310)
+#IF
+random 5
+#ACT
+SENDMSG 4 比赛现正在进行中，11：20结束…地图刷新了阎殿尸王，或许就藏在你身边！
+SENDMSG 0 ╔═══════════════════╗
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　　　#6FFFF/8#6阎殿尸王出现在天下第一殿#5　　　　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　#6FFFF/8#6天下第一活动正在进行中　11：20结束#5　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ╚═══════════════════╝
+
+#IF
+#SAY
+　天下第一争霸赛正在进行，11：20结束\
+届时场地内最后1人可领取：\ \
+　--------------------------------\
+　{金刚石x1 　金币x500000=FCO=250}\
+　--------------------------------\
+　{比赛20分结束，现在时间是<$MINUTE>分<$SEC>秒=FCO=250}\
+　--------------------------------\ \
+<&发布全服挑战令/@天下第一_挑战全服>\
+<&{领取争霸赛奖励=FCO=251}/@天下第一_领取奖励>\ \
+<&返回土城/@回城>\
+
+
+[@天下第一_领取奖励]
+#if
+HOUR 11 11
+MIN 00 20
+#ACT
+MESSAGEBOX 比赛正在进行中，11：20以后，地图内仅剩1名玩家才能领奖！\
+Break
+
+#IF
+CHECKMAPHUMANCOUNT PKA11 > 9
+#ACT
+SENDMSG 4 当前地图还有10人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA11 > 4
+#ACT
+SENDMSG 4 当前地图还有5人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA11 > 3
+#ACT
+SENDMSG 4 当前地图还有4人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA11 > 2
+#ACT
+SENDMSG 4 当前地图还有3人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA11 > 1
+#ACT
+SENDMSG 4 当前地图还有2人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA11 = 1
+#ACT
+MAPMOVE 3 333 330
+GIVE 金刚石 1
+GIVE 金币 500000
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！！
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！
+MESSAGEBOX 恭喜，您获得了以下奖励，请查收：　\金刚石x1，金币x500000\
+Break
+
+
+[@天下第一_挑战全服](2236,240,310)
+#IF
+CHECKGOLD 10000
+#ACT
+TAKE 金币 10000
+MOV A99 <$USERNAME>
+Gmexecute 开始提问 @天下第一_全服召唤
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]在#6FFFF/8#6天下第一殿#5叫嚣着挑战全服，你有实力去干掉他吗？
+#SAY
+　全服召唤令已放出，请等待您的对手！\ \
+<&关闭/@exit>\
+#ELSESAY
+　您连10000金币都没，拿什么挑战全服呀！\ \
+<&关闭/@exit>\
+
+
+[@回城]
+#IF
+#ACT
+MAPMOVE 3 339 329
+
+}
+
+
+
+
+[@PKA13标准配置]
+{
+[@MAIN]
+#if
+HOUR 13 13
+MIN 00 20
+#ACT
+Goto @PKA13对话框
+#ELSEACT
+Goto @天下第一_领取奖励
+
+[@PKA13对话框](2236,240,310)
+#IF
+random 5
+#ACT
+SENDMSG 4 比赛现正在进行中，13：20结束…地图刷新了阎殿尸王，或许就藏在你身边！
+SENDMSG 0 ╔═══════════════════╗
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　　　#6FFFF/8#6阎殿尸王出现在天下第一殿#5　　　　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　#6FFFF/8#6天下第一活动正在进行中　13：20结束#5　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ╚═══════════════════╝
+
+#IF
+#SAY
+　天下第一争霸赛正在进行，13：20结束\
+届时场地内最后1人可领取：\ \
+　--------------------------------\
+　{金刚石x1 　金币x500000=FCO=250}\
+　--------------------------------\
+　{比赛20分结束，现在时间是<$MINUTE>分<$SEC>秒=FCO=250}\
+　--------------------------------\ \
+<&发布全服挑战令/@天下第一_挑战全服>\
+<&{领取争霸赛奖励=FCO=251}/@天下第一_领取奖励>\ \
+<&返回土城/@回城>\
+
+
+[@天下第一_领取奖励]
+#if
+HOUR 13 13
+MIN 00 20
+#ACT
+MESSAGEBOX 比赛正在进行中，13：20以后，地图内仅剩1名玩家才能领奖！\
+Break
+
+#IF
+CHECKMAPHUMANCOUNT PKA13 > 9
+#ACT
+SENDMSG 4 当前地图还有10人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA13 > 4
+#ACT
+SENDMSG 4 当前地图还有5人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA13 > 3
+#ACT
+SENDMSG 4 当前地图还有4人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA13 > 2
+#ACT
+SENDMSG 4 当前地图还有3人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA13 > 1
+#ACT
+SENDMSG 4 当前地图还有2人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA13 = 1
+#ACT
+MAPMOVE 3 333 330
+GIVE 金刚石 1
+GIVE 金币 500000
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！！
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！
+MESSAGEBOX 恭喜，您获得了以下奖励，请查收：　\金刚石x1，金币x500000\
+Break
+
+
+
+[@天下第一_挑战全服](2236,240,310)
+#IF
+CHECKGOLD 10000
+#ACT
+TAKE 金币 10000
+MOV A99 <$USERNAME>
+Gmexecute 开始提问 @天下第一_全服召唤
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]在#6FFFF/8#6天下第一殿#5叫嚣着挑战全服，你有实力去干掉他吗？
+#SAY
+　全服召唤令已放出，请等待您的对手！\ \
+<&关闭/@exit>\
+#ELSESAY
+　您连10000金币都没，拿什么挑战全服呀！\ \
+<&关闭/@exit>\
+
+
+[@回城]
+#IF
+#ACT
+MAPMOVE 3 339 329
+
+}
+
+
+
+
+[@PKA15标准配置]
+{
+[@MAIN]
+#if
+HOUR 15 15
+MIN 00 20
+#ACT
+Goto @PKA15对话框
+#ELSEACT
+Goto @天下第一_领取奖励
+
+[@PKA15对话框](2236,240,310)
+#IF
+random 5
+#ACT
+SENDMSG 4 比赛现正在进行中，15：20结束…地图刷新了阎殿尸王，或许就藏在你身边！
+SENDMSG 0 ╔═══════════════════╗
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　　　#6FFFF/8#6阎殿尸王出现在天下第一殿#5　　　　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　#6FFFF/8#6天下第一活动正在进行中　15：20结束#5　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ╚═══════════════════╝
+
+#IF
+#SAY
+　天下第一争霸赛正在进行，15：20结束\
+届时场地内最后1人可领取：\ \
+　--------------------------------\
+　{金刚石x1 　金币x500000=FCO=250}\
+　--------------------------------\
+　{比赛20分结束，现在时间是<$MINUTE>分<$SEC>秒=FCO=250}\
+　--------------------------------\ \
+<&发布全服挑战令/@天下第一_挑战全服>\
+<&{领取争霸赛奖励=FCO=251}/@天下第一_领取奖励>\ \
+<&返回土城/@回城>\
+
+
+[@天下第一_领取奖励]
+#if
+HOUR 15 15
+MIN 00 20
+#ACT
+MESSAGEBOX 比赛正在进行中，15：20以后，地图内仅剩1名玩家才能领奖！\
+Break
+
+#IF
+CHECKMAPHUMANCOUNT PKA15 > 9
+#ACT
+SENDMSG 4 当前地图还有10人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA15 > 4
+#ACT
+SENDMSG 4 当前地图还有5人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA15 > 3
+#ACT
+SENDMSG 4 当前地图还有4人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA15 > 2
+#ACT
+SENDMSG 4 当前地图还有3人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA15 > 1
+#ACT
+SENDMSG 4 当前地图还有2人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA15 = 1
+#ACT
+MAPMOVE 3 333 330
+GIVE 金刚石 1
+GIVE 金币 500000
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！！
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！
+MESSAGEBOX 恭喜，您获得了以下奖励，请查收：　\金刚石x1，金币x500000\
+Break
+
+
+
+[@天下第一_挑战全服](2236,240,310)
+#IF
+CHECKGOLD 10000
+#ACT
+TAKE 金币 10000
+MOV A99 <$USERNAME>
+Gmexecute 开始提问 @天下第一_全服召唤
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]在#6FFFF/8#6天下第一殿#5叫嚣着挑战全服，你有实力去干掉他吗？
+#SAY
+　全服召唤令已放出，请等待您的对手！\ \
+<&关闭/@exit>\
+#ELSESAY
+　您连10000金币都没，拿什么挑战全服呀！\ \
+<&关闭/@exit>\
+
+
+[@回城]
+#IF
+#ACT
+MAPMOVE 3 339 329
+
+}
+
+
+
+
+
+[@PKA17标准配置]
+{
+[@MAIN]
+#if
+HOUR 17 17
+MIN 00 20
+#ACT
+Goto @PKA17对话框
+#ELSEACT
+Goto @天下第一_领取奖励
+
+[@PKA17对话框](2236,240,310)
+#IF
+random 5
+#ACT
+SENDMSG 4 比赛现正在进行中，17：20结束…地图刷新了阎殿尸王，或许就藏在你身边！
+SENDMSG 0 ╔═══════════════════╗
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　　　#6FFFF/8#6阎殿尸王出现在天下第一殿#5　　　　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　#6FFFF/8#6天下第一活动正在进行中　17：20结束#5　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ╚═══════════════════╝
+
+#IF
+#SAY
+　天下第一争霸赛正在进行，17：20结束\
+届时场地内最后1人可领取：\ \
+　--------------------------------\
+　{金刚石x1 　金币x500000=FCO=250}\
+　--------------------------------\
+　{比赛20分结束，现在时间是<$MINUTE>分<$SEC>秒=FCO=250}\
+　--------------------------------\ \
+<&发布全服挑战令/@天下第一_挑战全服>\
+<&{领取争霸赛奖励=FCO=251}/@天下第一_领取奖励>\ \
+<&返回土城/@回城>\
+
+
+[@天下第一_领取奖励]
+#if
+HOUR 17 17
+MIN 00 20
+#ACT
+MESSAGEBOX 比赛正在进行中，17：20以后，地图内仅剩1名玩家才能领奖！\
+Break
+
+#IF
+CHECKMAPHUMANCOUNT PKA17 > 9
+#ACT
+SENDMSG 4 当前地图还有10人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA17 > 4
+#ACT
+SENDMSG 4 当前地图还有5人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA17 > 3
+#ACT
+SENDMSG 4 当前地图还有4人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA17 > 2
+#ACT
+SENDMSG 4 当前地图还有3人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA17 > 1
+#ACT
+SENDMSG 4 当前地图还有2人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA17 = 1
+#ACT
+MAPMOVE 3 333 330
+GIVE 金刚石 1
+GIVE 金币 500000
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！！
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！
+MESSAGEBOX 恭喜，您获得了以下奖励，请查收：　\金刚石x1，金币x500000\
+Break
+
+
+
+[@天下第一_挑战全服](2236,240,310)
+#IF
+CHECKGOLD 10000
+#ACT
+TAKE 金币 10000
+MOV A99 <$USERNAME>
+Gmexecute 开始提问 @天下第一_全服召唤
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]在#6FFFF/8#6天下第一殿#5叫嚣着挑战全服，你有实力去干掉他吗？
+#SAY
+　全服召唤令已放出，请等待您的对手！\ \
+<&关闭/@exit>\
+#ELSESAY
+　您连10000金币都没，拿什么挑战全服呀！\ \
+<&关闭/@exit>\
+
+
+[@回城]
+#IF
+#ACT
+MAPMOVE 3 339 329
+
+}
+
+
+
+
+[@PKA19标准配置]
+{
+[@MAIN]
+#if
+HOUR 19 19
+MIN 00 20
+#ACT
+Goto @PKA19对话框
+#ELSEACT
+Goto @天下第一_领取奖励
+
+[@PKA19对话框](2236,240,310)
+#IF
+random 5
+#ACT
+SENDMSG 4 比赛现正在进行中，19：20结束…地图刷新了阎殿尸王，或许就藏在你身边！
+SENDMSG 0 ╔═══════════════════╗
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　　　#6FFFF/8#6阎殿尸王出现在天下第一殿#5　　　　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　#6FFFF/8#6天下第一活动正在进行中　19：20结束#5　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ╚═══════════════════╝
+
+#IF
+#SAY
+　天下第一争霸赛正在进行，19：20结束\
+届时场地内最后1人可领取：\ \
+　--------------------------------\
+　{金刚石x1 　金币x500000=FCO=250}\
+　--------------------------------\
+　{比赛20分结束，现在时间是<$MINUTE>分<$SEC>秒=FCO=250}\
+　--------------------------------\ \
+<&发布全服挑战令/@天下第一_挑战全服>\
+<&{领取争霸赛奖励=FCO=251}/@天下第一_领取奖励>\ \
+<&返回土城/@回城>\
+
+
+[@天下第一_领取奖励]
+#if
+HOUR 19 19
+MIN 00 20
+#ACT
+MESSAGEBOX 比赛正在进行中，19：20以后，地图内仅剩1名玩家才能领奖！\
+Break
+
+#IF
+CHECKMAPHUMANCOUNT PKA19 > 9
+#ACT
+SENDMSG 4 当前地图还有10人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA19 > 4
+#ACT
+SENDMSG 4 当前地图还有5人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA19 > 3
+#ACT
+SENDMSG 4 当前地图还有4人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA19 > 2
+#ACT
+SENDMSG 4 当前地图还有3人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA19 > 1
+#ACT
+SENDMSG 4 当前地图还有2人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA19 = 1
+#ACT
+MAPMOVE 3 333 330
+GIVE 金刚石 1
+GIVE 金币 500000
+
+
+
+[@天下第一_挑战全服](2236,240,310)
+#IF
+CHECKGOLD 10000
+#ACT
+TAKE 金币 10000
+MOV A99 <$USERNAME>
+Gmexecute 开始提问 @天下第一_全服召唤
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]在#6FFFF/8#6天下第一殿#5叫嚣着挑战全服，你有实力去干掉他吗？
+#SAY
+　全服召唤令已放出，请等待您的对手！\ \
+<&关闭/@exit>\
+#ELSESAY
+　您连10000金币都没，拿什么挑战全服呀！\ \
+<&关闭/@exit>\
+
+
+[@回城]
+#IF
+#ACT
+MAPMOVE 3 339 329
+
+}
+
+
+
+
+
+[@PKA23标准配置]
+{
+[@MAIN]
+#if
+HOUR 23 23
+MIN 00 20
+#ACT
+Goto @PKA23对话框
+#ELSEACT
+Goto @天下第一_领取奖励
+
+[@PKA23对话框](2236,240,310)
+#IF
+random 5
+#ACT
+SENDMSG 4 比赛现正在进行中，23：20结束…地图刷新了阎殿尸王，或许就藏在你身边！
+SENDMSG 0 ╔═══════════════════╗
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　　　#6FFFF/8#6阎殿尸王出现在天下第一殿#5　　　　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　#6FFFF/8#6天下第一活动正在进行中　23：20结束#5　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ╚═══════════════════╝
+
+#IF
+#SAY
+　天下第一争霸赛正在进行，23：20结束\
+届时场地内最后1人可领取：\ \
+　--------------------------------\
+　{金刚石x1 　金币x500000=FCO=250}\
+　--------------------------------\
+　{比赛20分结束，现在时间是<$MINUTE>分<$SEC>秒=FCO=250}\
+　--------------------------------\ \
+<&发布全服挑战令/@天下第一_挑战全服>\
+<&{领取争霸赛奖励=FCO=251}/@天下第一_领取奖励>\ \
+<&返回土城/@回城>\
+
+
+[@天下第一_领取奖励]
+#if
+HOUR 23 23
+MIN 00 20
+#ACT
+MESSAGEBOX 比赛正在进行中，23：20以后，地图内仅剩1名玩家才能领奖！\
+Break
+
+#IF
+CHECKMAPHUMANCOUNT PKA23 > 9
+#ACT
+SENDMSG 4 当前地图还有10人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA23 > 4
+#ACT
+SENDMSG 4 当前地图还有5人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA23 > 3
+#ACT
+SENDMSG 4 当前地图还有4人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA23 > 2
+#ACT
+SENDMSG 4 当前地图还有3人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA23 > 1
+#ACT
+SENDMSG 4 当前地图还有2人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA23 = 1
+#ACT
+MAPMOVE 3 333 330
+GIVE 金刚石 1
+GIVE 金币 500000
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！！
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！
+MESSAGEBOX 恭喜，您获得了以下奖励，请查收：　\金刚石x1，金币x500000\
+Break
+
+
+
+[@天下第一_挑战全服](2236,240,310)
+#IF
+CHECKGOLD 10000
+#ACT
+TAKE 金币 10000
+MOV A99 <$USERNAME>
+Gmexecute 开始提问 @天下第一_全服召唤
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]在#6FFFF/8#6天下第一殿#5叫嚣着挑战全服，你有实力去干掉他吗？
+#SAY
+　全服召唤令已放出，请等待您的对手！\ \
+<&关闭/@exit>\
+#ELSESAY
+　您连10000金币都没，拿什么挑战全服呀！\ \
+<&关闭/@exit>\
+
+
+[@回城]
+#IF
+#ACT
+MAPMOVE 3 339 329
+
+}
+
+
+
+
+[@PKA01标准配置]
+{
+[@MAIN]
+#if
+HOUR 1 1
+MIN 00 20
+#ACT
+Goto @PKA01对话框
+#ELSEACT
+Goto @天下第一_领取奖励
+
+[@PKA01对话框](2236,240,310)
+#IF
+random 5
+#ACT
+SENDMSG 4 比赛现正在进行中，01：20结束…地图刷新了阎殿尸王，或许就藏在你身边！
+SENDMSG 0 ╔═══════════════════╗
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　　　#6FFFF/8#6阎殿尸王出现在天下第一殿#5　　　　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ║　#6FFFF/8#6天下第一活动正在进行中　01：20结束#5　║
+SENDMSG 0 ║　　　　　　　　　　　　　　　　　　　║
+SENDMSG 0 ╚═══════════════════╝
+
+#IF
+#SAY
+　天下第一争霸赛正在进行，01：20结束\
+届时场地内最后1人可领取：\ \
+　--------------------------------\
+　{金刚石x1 　金币x500000=FCO=250}\
+　--------------------------------\
+　{比赛20分结束，现在时间是<$MINUTE>分<$SEC>秒=FCO=250}\
+　--------------------------------\ \
+<&发布全服挑战令/@天下第一_挑战全服>\
+<&{领取争霸赛奖励=FCO=251}/@天下第一_领取奖励>\ \
+<&返回土城/@回城>\
+
+
+[@天下第一_领取奖励]
+#if
+HOUR 1 1
+MIN 00 20
+#ACT
+MESSAGEBOX 比赛正在进行中，01：20以后，地图内仅剩1名玩家才能领奖！\
+Break
+
+#IF
+CHECKMAPHUMANCOUNT PKA01 > 9
+#ACT
+SENDMSG 4 当前地图还有10人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA01 > 4
+#ACT
+SENDMSG 4 当前地图还有5人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA01 > 3
+#ACT
+SENDMSG 4 当前地图还有4人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA01 > 2
+#ACT
+SENDMSG 4 当前地图还有3人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA01 > 1
+#ACT
+SENDMSG 4 当前地图还有2人，最后1人为获胜者，才能领取奖励！
+Break
+#IF
+CHECKMAPHUMANCOUNT PKA01 = 1
+#ACT
+MAPMOVE 3 333 330
+GIVE 金刚石 1
+GIVE 金币 500000
+ADDGUILDLIST ../QuestDiary/据点战/天下第一名单.txt
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！！
+SENDMSG 0 【#6FFFF/8#6活动#5】：恭喜[#7<$USERNAME>#7]力战群雄，成为天下第一，获得(500000)#5金币，#6FFFF/8#6(1)#5金刚石，#6FFFF/的奖励！
+MESSAGEBOX 恭喜，您获得了以下奖励，请查收：　\金刚石x1，金币x500000\
+Break
+
+
+
+[@天下第一_挑战全服](2236,240,310)
+#IF
+CHECKGOLD 10000
+#ACT
+TAKE 金币 10000
+MOV A99 <$USERNAME>
+Gmexecute 开始提问 @天下第一_全服召唤
+SENDMSG 0 【#6FFFF/8#6活动#5】：勇士[#7<$USERNAME>#7]在#6FFFF/8#6天下第一殿#5叫嚣着挑战全服，你有实力去干掉他吗？
+#SAY
+　全服召唤令已放出，请等待您的对手！\ \
+<&关闭/@exit>\
+#ELSESAY
+　您连10000金币都没，拿什么挑战全服呀！\ \
+<&关闭/@exit>\
+
+
+[@回城]
+#IF
+#ACT
+MAPMOVE 3 339 329
+
+}
+
+

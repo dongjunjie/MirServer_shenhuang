@@ -1,0 +1,28 @@
+[@禁止登陆]
+{
+#IF
+CHECKIPLIST ../QuestDiary/数据/禁止登陆IP.txt
+#ACT
+messagebox 你的IP已被管理员禁止登陆\请联系管理员解封！
+KICK
+
+#IF
+checknamelist ..\QuestDiary\数据\禁止登陆人物.txt
+#ACT
+messagebox 你的人物已被管理员禁止登陆\请联系管理员解封！
+KICK
+
+#IF
+CHECKACCOUNTLIST ../QuestDiary/数据/禁止登陆帐号.txt
+#ACT
+messagebox 你的帐号已被管理员禁止登陆\请联系管理员解封！
+KICK
+
+#IF
+CheckTextList <$MACHINECODE> ..\QuestDiary\数据\禁止登陆机器码.txt
+#ACT
+messagebox 你的人物已被管理员禁止登陆\请联系管理员解封！
+KICK
+
+
+}

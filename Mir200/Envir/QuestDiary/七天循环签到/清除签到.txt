@@ -1,0 +1,9 @@
+[@清除签到]
+{
+#IF
+NOT CHECKNAMELIST ../QuestDiary/七天循环签到/签到名单.txt
+#act
+CALCVAR HUMAN 签到天数 = 0
+SAVEVAR HUMAN 签到天数 ..\QuestDiary\七天循环签到\签到变量.txt
+Break
+}

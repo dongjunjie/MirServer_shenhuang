@@ -1,0 +1,79 @@
+[@main](2250,300,540,3)
+
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\　\　\　\
+　{当前第6层，需要清理完全部怪物才可以下层！=FCO=250}\
+　{下层收费：=FCO=23}{400元宝=FCO=254} \
+　{本层通关：=FCO=23}{奖励600W经验=FCO=254}\
+
+　\　\　\　\　\　\
+　<{[领取奖励-挑战下层]=FCO=70}|[下层收费400元宝=FCO=00FF7F]/@下一层>\
+　<{[领取奖励-返回土城]=FCO=70}/@返回土城>\
+
+[@下一层]
+#IF
+CheckMapMonCount DDD6 < 1
+CheckGameGold ? 400
+#ACT
+
+ChangeExp + 6000000
+GameGold - 400
+mapmove DDD7
+MISSION DDD7 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 1 
+PARAM4 20 
+MOBPLACE [金丹]大老鼠
+
+MISSION DDD7 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]祖玛弓箭
+
+MISSION DDD7 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]祖玛雕像
+
+MISSION DDD7 20 20 
+PARAM1 13 
+PARAM2 17 
+PARAM3 3 
+PARAM4 20 
+MOBPLACE [金丹]祖玛卫士
+
+
+INC G100 400
+CALCVAR HUMAN 消费积分 + 400
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[400]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+
+SENDMSG 0 #6FFFF/8#6[系统]#5:恭喜玩家#7[<$USERNAME>]#7成功通关通天宝塔第6层，获得600W经验奖励！
+#elseact
+messagebox  失败：\1、你没有400元宝！2、本层怪物没清理干净
+
+
+[@返回土城]
+#IF
+CheckMapMonCount DDD6 < 1
+#ACT
+
+ChangeExp + 6000000
+mapmove 3 330 330
+SENDMSG 0 #6FFFF/8#6[系统]#5:恭喜玩家#7[<$USERNAME>]#7成功通关通天宝塔第6层，获得600W经验奖励！
+#elseact
+messagebox  失败：\1、本层怪物没清理干净

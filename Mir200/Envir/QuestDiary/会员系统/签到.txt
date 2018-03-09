@@ -1,0 +1,417 @@
+[@签到]
+{
+#IF
+CHECKVAR HUMAN 签到天数 > 0
+#SAY
+\
+　{天天快乐签到,每天签到领奖励，连续七天=FCO=254}\
+　{后还可领取更大的奖励!=FCO=254}\
+　{你当前的签到天数为:=FCO=250}{[<$HUMAN(签到天数)>]=FCO=253}{天.加油再接再励.=FCO=250}\
+　<&{[每日签到]=FCO=253}|需要等级40以上，在线时间大于30分钟/@每日签到> \ 
+　{连续签到1天:=FCO=254}{随机奖励各种宝物+300元宝=FCO=253}\
+　{连续签到2天:=FCO=254}{随机奖励各种宝物+600元宝=FCO=253}\
+　{连续签到3天:=FCO=254}{随机奖励各种宝物+900元宝=FCO=253}\
+　{连续签到4天:=FCO=254}{随机奖励各种宝物+1200元宝=FCO=253}\
+　{连续签到5天:=FCO=254}{随机奖励各种宝物+1500元宝=FCO=250}\
+　{额外奖励(兽蛋)千年树妖x1+[筑基]赞助3件套=FCO=250}\
+　{连续签到6天:=FCO=254}{随机奖励各种宝物+1800元宝=FCO=253}\
+　{连续签到7天:=FCO=254}{随机奖励各种宝物+2100元宝=FCO=253}\
+　{连续签到8天:=FCO=254}{随机奖励各种宝物+2400元宝=FCO=253}\
+　{连续签到9天:=FCO=254}{随机奖励各种宝物+2700元宝=FCO=253}\
+　{连续签到10天:=FCO=254}{随机奖励各种宝物+3000元宝=FCO=250}\
+　{额外奖励兽蛋(触龙神)x1+[金丹]赞助3件套=FCO=250}\
+　{连续签到11天:=FCO=254}{随机奖励各种宝物+3300元宝=FCO=253}\
+　{连续签到12天:=FCO=254}{随机奖励各种宝物+3600元宝=FCO=253}\
+　{连续签到13天:=FCO=254}{随机奖励各种宝物+3900元宝=FCO=253}\
+　{连续签到14天:=FCO=254}{随机奖励各种宝物+4200元宝=FCO=253}\
+　{连续签到15天:=FCO=254}{随机奖励各种宝物+4500元宝=FCO=250}\
+　{额外奖励兽蛋(火龙神)x1+[元婴]赞助3件套=FCO=250}\
+　{连续签到16天:=FCO=254}{随机奖励各种宝物+4800元宝=FCO=253}\
+　{连续签到17天:=FCO=254}{随机奖励各种宝物+5100元宝=FCO=253}\
+　{连续签到18天:=FCO=254}{随机奖励各种宝物+5400元宝=FCO=253}\
+　{连续签到19天:=FCO=254}{随机奖励各种宝物+5700元宝=FCO=253}\
+　{连续签到20天:=FCO=254}{随机奖励各种宝物+6000元宝=FCO=250}\
+　{额外奖励兽蛋(骨翼蝠王)x1+[渡劫]赞助3件套=FCO=250}\
+　{连续签到21天:=FCO=254}{随机奖励各种宝物+6300元宝=FCO=253}\
+　{连续签到22天:=FCO=254}{随机奖励各种宝物+6600元宝=FCO=253}\
+　{连续签到23天:=FCO=254}{随机奖励各种宝物+6900元宝=FCO=253}\
+　{连续签到24天:=FCO=254}{随机奖励各种宝物+7200元宝=FCO=253}\
+　{连续签到25天:=FCO=254}{随机奖励各种宝物+7500元宝=FCO=253}\
+　{连续签到26天:=FCO=254}{随机奖励各种宝物+7800元宝=FCO=253}\
+　{连续签到27天:=FCO=254}{随机奖励各种宝物+8100元宝=FCO=253}\
+　{连续签到28天:=FCO=254}{随机奖励各种宝物+8400元宝=FCO=253}\
+　{连续签到29天:=FCO=254}{随机奖励各种宝物+8700元宝=FCO=253}\
+　{连续签到30天:=FCO=254}{随机奖励各种宝物+9000元宝=FCO=253}\
+　{签到记录大于30天后自动清空！=FCO=249}\
+#elsesay
+\
+　{天天快乐签到,每天签到领奖励，=FCO=250}\
+　{连续七天后还可领取更大的奖励!=FCO=250}\
+　{你当前的签到天数为:=FCO=250}{[0]=FCO=253}{天.加油再接再励.=FCO=250}\
+　<&{[每日签到]=FCO=253}|需要等级40以上，在线时间大于30分钟/@每日签到> \  
+　{连续签到1天:=FCO=254}{随机奖励各种宝物+300元宝=FCO=253}\
+　{连续签到2天:=FCO=254}{随机奖励各种宝物+600元宝=FCO=253}\
+　{连续签到3天:=FCO=254}{随机奖励各种宝物+900元宝=FCO=253}\
+　{连续签到4天:=FCO=254}{随机奖励各种宝物+1200元宝=FCO=253}\
+　{连续签到5天:=FCO=254}{随机奖励各种宝物+1500元宝=FCO=250}\
+　{额外奖励(兽蛋)千年树妖x1+[筑基]赞助3件套=FCO=250}\
+　{连续签到6天:=FCO=254}{随机奖励各种宝物+1800元宝=FCO=253}\
+　{连续签到7天:=FCO=254}{随机奖励各种宝物+2100元宝=FCO=253}\
+　{连续签到8天:=FCO=254}{随机奖励各种宝物+2400元宝=FCO=253}\
+　{连续签到9天:=FCO=254}{随机奖励各种宝物+2700元宝=FCO=253}\
+　{连续签到10天:=FCO=254}{随机奖励各种宝物+3000元宝=FCO=250}\
+　{额外奖励兽蛋(触龙神)x1+[金丹]赞助3件套=FCO=250}\
+　{连续签到11天:=FCO=254}{随机奖励各种宝物+3300元宝=FCO=253}\
+　{连续签到12天:=FCO=254}{随机奖励各种宝物+3600元宝=FCO=253}\
+　{连续签到13天:=FCO=254}{随机奖励各种宝物+3900元宝=FCO=253}\
+　{连续签到14天:=FCO=254}{随机奖励各种宝物+4200元宝=FCO=253}\
+　{连续签到15天:=FCO=254}{随机奖励各种宝物+4500元宝=FCO=250}\
+　{额外奖励兽蛋(火龙神)x1+[元婴]赞助3件套=FCO=250}\
+　{连续签到16天:=FCO=254}{随机奖励各种宝物+4800元宝=FCO=253}\
+　{连续签到17天:=FCO=254}{随机奖励各种宝物+5100元宝=FCO=253}\
+　{连续签到18天:=FCO=254}{随机奖励各种宝物+5400元宝=FCO=253}\
+　{连续签到19天:=FCO=254}{随机奖励各种宝物+5700元宝=FCO=253}\
+　{连续签到20天:=FCO=254}{随机奖励各种宝物+6000元宝=FCO=250}\
+　{额外奖励兽蛋(骨翼蝠王)x1+[渡劫]赞助3件套=FCO=250}\
+　{连续签到21天:=FCO=254}{随机奖励各种宝物+6300元宝=FCO=253}\
+　{连续签到22天:=FCO=254}{随机奖励各种宝物+6600元宝=FCO=253}\
+　{连续签到23天:=FCO=254}{随机奖励各种宝物+6900元宝=FCO=253}\
+　{连续签到24天:=FCO=254}{随机奖励各种宝物+7200元宝=FCO=253}\
+　{连续签到25天:=FCO=254}{随机奖励各种宝物+7500元宝=FCO=253}\
+　{连续签到26天:=FCO=254}{随机奖励各种宝物+7800元宝=FCO=253}\
+　{连续签到27天:=FCO=254}{随机奖励各种宝物+8100元宝=FCO=253}\
+　{连续签到28天:=FCO=254}{随机奖励各种宝物+8400元宝=FCO=253}\
+　{连续签到29天:=FCO=254}{随机奖励各种宝物+8700元宝=FCO=253}\
+　{连续签到30天:=FCO=254}{随机奖励各种宝物+9000元宝=FCO=253}\
+　{签到记录大于30天后自动清空！=FCO=249}\
+
+
+
+[@每日签到]
+#IF
+NOT CHECKNAMELIST ../QuestDiary/七天循环签到/签到名单.txt
+#ACT
+DelayGoto 0 @每日签到1
+#elseact
+messagebox 你今日已经签过到了,请明天再来吧！
+break
+
+[@每日签到1]
+#IF
+checklevelex > 39
+OnLineLongMin > 29
+#ACT
+DelayGoto 1 @奖励
+CALCVAR HUMAN 签到天数 + 1
+SAVEVAR HUMAN 签到天数 ..\QuestDiary\七天循环签到\签到变量.txt
+ADDNAMELIST ..\QuestDiary\七天循环签到\签到名单.txt
+messagebox 签到天数成功,当前的签到天数为<$HUMAN(签到天数)>天.
+#elseact
+messagebox 在线时间不足30分钟，或者你等级不足40以上。
+break
+
+
+[@奖励]
+#if
+CheckVar Human 签到天数 = 1
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 300
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[1天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[300]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 2
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 600
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[2天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[600]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 3
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 900
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[3天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[900]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 4
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 1200
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[4天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[1200]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 5
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+DynamicGive [筑基]勋章 1
+DynamicGive [筑基]面巾 1
+DynamicGive [筑基]宝石 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+Give 兽蛋(千年树妖) 1
+GameGold + 1500
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[5天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[1500]#7元宝.#7额外奖励(兽蛋)千年树妖x1+[筑基]赞助3件套#7
+break
+#if
+CheckVar Human 签到天数 = 6
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[6天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[1800]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 7
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 2100
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[7天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[2100]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 8
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 2400
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[8天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[2400]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 9
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 2700
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[9天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[2700]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 10
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+DynamicGive [金丹]勋章 1
+DynamicGive [金丹]面巾 1
+DynamicGive [金丹]宝石 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+Give 兽蛋(触龙神) 1
+GameGold + 3000
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[10天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[3000]#7元宝.#7额外奖励兽蛋(触龙神)x1+[金丹]赞助3件套#7
+break
+
+#if
+CheckVar Human 签到天数 = 11
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 3300
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[11天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[3300]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 12
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 3600
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[12天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[3600]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 13
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 3900
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[13天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[3900]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 14
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 4200
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[14天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[4200]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 15
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+DynamicGive [元婴]勋章 1
+DynamicGive [元婴]面巾 1
+DynamicGive [元婴]宝石 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+Give 兽蛋(火龙神) 1
+GameGold + 4500
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[15天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[4500]#7元宝.#7额外奖励兽蛋(火龙神)x1+[元婴]赞助3件套#7
+break
+
+#if
+CheckVar Human 签到天数 = 16
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 4800
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[16天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[4800]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 17
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 5100
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[17天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[5100]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 18
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 5400
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[18天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[5400]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 19
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 5700
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[19天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[5700]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 20
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 6000
+DynamicGive [渡劫]勋章 1
+DynamicGive [渡劫]面巾 1
+DynamicGive [渡劫]宝石 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+Give 兽蛋(骨翼蝠王) 1
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[20天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[6000]#7元宝.#7额外奖励兽蛋(骨翼蝠王)x1+[渡劫]赞助3件套#7
+break
+
+#if
+CheckVar Human 签到天数 = 21
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 6300
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[21天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[6300]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 22
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 6600
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[22天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[6600]#7元宝.
+break
+
+#if
+CheckVar Human 签到天数 = 23
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 6900
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[23天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[6900]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 24
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 7200
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[24天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[7200]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 25
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 7500
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[25天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[7500]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 26
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 7800
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[26天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[7800]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 27
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 8100
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[27天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[8100]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 28
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 8400
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[28天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[8400]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 29
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 8700
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[29天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[8700]#7元宝.
+break
+#if
+CheckVar Human 签到天数 = 30
+#act
+GetRandomName ../QuestDiary/押镖奖励/押镖奖励.txt S18
+give <$STR(S18)> 1
+GameGold + 9000
+DelayGoto 1 @变量清零
+sendmsg 0 玩家#7[<$USERNAME>]#7连续签到#7[30天]#7随机奖励获取#7[<$STR(S18)>]#7一个+#7[9000]#7元宝.
+break
+
+
+[@变量清零]
+#IF
+#act
+CALCVAR HUMAN 签到天数 = 0
+SAVEVAR HUMAN 签到天数 ../QuestDiary/七天循环签到/签到变量.txt
+messagebox 你已连续签到30天，签到记录重置，请再接再厉！
+
+
+}

@@ -1,0 +1,185 @@
+[@换元宝]
+{
+[@main]
+{<$SELFNAME>=FCO=251}：\
+传闻世界各地的怪物身上都携带着一种纯度极高的矿石，\
+我研究了几年，总算能把这种矿石锻造到武器中，使之发生蜕变，\
+你要是能搞点金刚石回来，再加点报酬，我能帮你锻造神兵\
+{金刚石可以在任意怪物身上爆出哦(兑换后请刷新包裹)=FCO=249}\
+
+1,{i.134,c.1=item}\ \ <         裁决之杖=388金刚石+3金条/@裁决之杖>\    
+2,{i.136,c.1=item}\ \<         龙纹剑=388金刚石+3金条/@龙纹剑>\ 
+3,{i.135,c.1=item}\ \<         血饮=388金刚石+3金条/@血饮>\ 
+4,{i.137,c.1=item}\ \<         命运之刃=888金刚石+8金条+2裁决之杖/@命运之刃>\ 
+5,{i.270,c.1=item}\ \<         逍遥扇=888金刚石+8金条+2龙纹剑/@逍遥扇>\ 
+6,{i.139,c.1=item}\ \<         嗜魂法杖=888金刚石+8金条+2血饮/@嗜魂法杖>\ 
+7,{i.138,c.1=item}\ \<         屠龙=1888金刚石+25金条+1裁决之杖1龙纹剑+1血饮/@屠龙>\ 
+8,{i.268,c.1=item}\ \<         龙牙=1888金刚石+2血饮/@龙牙>\ 
+9,{i.269,c.1=item}\ \<         怒斩=1888金刚石+2裁决之杖/@怒斩>\ 
+10,{i.382,c.1=item}\ \<         恶魔心脏=88金刚石/@恶魔心脏>\ 
+11,{i.402,c.1=item}\ \<         勋章合成石=66金刚石/@勋章>\
+
+
+[@裁决之杖]
+#IF
+CheckItemCount 金刚石 ? 388
+CheckItemCount 金条 ? 3
+#ACT
+TakeCount 金刚石 388
+TakeCount 金条 3
+DYNAMICGIVE 裁决之杖 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出裁决之杖。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@龙纹剑]
+#IF
+CheckItemCount 金刚石 ? 388
+CheckItemCount 金条 ? 3
+#ACT
+TakeCount 金刚石 388
+TakeCount 金条 3
+DYNAMICGIVE 龙纹剑 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出龙纹剑。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@血饮]
+#IF
+CheckItemCount 金刚石 ? 388
+CheckItemCount 金条 ? 3
+#ACT
+TakeCount 金刚石 388
+TakeCount 金条 3
+DYNAMICGIVE 血饮 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出血饮。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@嗜魂法杖]
+#IF
+CheckItemCount 金刚石 ? 888
+CheckItemCount 金条 ? 8
+CheckItemCount 血饮 ? 2
+#ACT
+TakeCount 金刚石 888
+TakeCount 金条 8
+TakeCount 血饮 2
+DYNAMICGIVE 嗜魂法杖 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出嗜魂法杖。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@命运之刃]
+#IF
+CheckItemCount 金刚石 ? 888
+CheckItemCount 金条 ? 8
+CheckItemCount 裁决之杖 ? 2
+#ACT
+TakeCount 金刚石 888
+TakeCount 金条 8
+TakeCount 裁决之杖 2
+DYNAMICGIVE 命运之刃 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出命运之刃。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@逍遥扇]
+#IF
+CheckItemCount 金刚石 ? 888
+CheckItemCount 金条 ? 8
+CheckItemCount 龙纹剑 ? 2
+#ACT
+TakeCount 金刚石 888
+TakeCount 金条 8
+TakeCount 龙纹剑 2
+DYNAMICGIVE 逍遥扇 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出霸者之刃。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@屠龙]
+#IF
+CheckItemCount 金刚石 ? 1888
+CheckItemCount 金条 ? 25
+CheckItemCount 龙纹剑 ? 1
+CheckItemCount 裁决之杖 ? 1
+CheckItemCount 血饮 ? 1
+#ACT
+TakeCount 金刚石 1888
+TakeCount 金条 25
+TakeCount 龙纹剑 1
+TakeCount 裁决之杖 1
+TakeCount 血饮 1
+DYNAMICGIVE 屠龙 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出屠龙。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@恶魔心脏]
+#IF
+CheckItemCount 金刚石 ? 88
+#ACT
+TakeCount 金刚石 88
+DYNAMICGIVE 恶魔心脏 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石兑换恶魔心脏。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@怒斩]
+#IF
+CheckItemCount 金刚石 ? 1888
+CheckItemCount 裁决之杖 ? 2
+#ACT
+TakeCount 金刚石 1888
+TakeCount 裁决之杖 2
+DYNAMICGIVE 怒斩 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出怒斩。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@龙牙]
+#IF
+CheckItemCount 金刚石 ? 1888
+CheckItemCount 血饮 ? 2
+#ACT
+TakeCount 金刚石 1888
+TakeCount 血饮 2
+DYNAMICGIVE 龙牙 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石锻造出龙牙。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+[@勋章]
+#IF
+CheckItemCount 金刚石 ? 66
+#ACT
+TakeCount 金刚石 66
+DYNAMICGIVE 勋章合成石 1
+SENDMSG 0 【#6FFFF/8#6神兵降临#5】恭喜[#7%s#7]用金刚石兑换勋章合成石。
+BREAK
+#elseact
+messagebox 没带齐东西点毛线！！！！
+BREAK
+
+}

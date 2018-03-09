@@ -1,0 +1,198 @@
+[@MAIN](2396,550,367,3)
+#IF
+#SAY
+　\　\　\　\
+　　　{如果拥有的契约宝宝太多了，又不舍得丢掉，可以花费元宝寄存到我这里。=FCO=254}\
+　　　{寄存每个宝宝需要300元宝一次，取出免费，最多寄存五个宝宝。=FCO=254}\
+　　　{提示：请签订了契约宝宝再寄存。取出宝宝会覆盖当前签订的契约宝宝，注意了。=FCO=249}\
+　\　\
+　　　{[当前契约宠物]：=FCO=253}{[<$STR(B15)>]=FCO=250}\
+　　　{[宠物1号仓库]：=FCO=253} {[<$STR(B180)>]=FCO=250}　　　　　<[寄存]/@寄存1> <[取出]/@取出1>\
+　　　{[宠物2号仓库]：=FCO=253} {[<$STR(B181)>]=FCO=250}　　　　　<[寄存]/@寄存2> <[取出]/@取出2>\
+　　　{[宠物3号仓库]：=FCO=253} {[<$STR(B182)>]=FCO=250}　　　　　<[寄存]/@寄存3> <[取出]/@取出3>\
+　　　{[宠物4号仓库]：=FCO=253} {[<$STR(B183)>]=FCO=250}　　　　　<[寄存]/@寄存4> <[取出]/@取出4>\
+　　　{[宠物5号仓库]：=FCO=253} {[<$STR(B184)>]=FCO=250}　　　　　<[寄存]/@寄存5> <[取出]/@取出5>\
+　\　\　\　\
+　　　<{[关闭页面]=FCO=249}/@exit>\
+#ACT
+GOTO @检测
+
+
+
+[@检测]
+#IF
+EQUAL C180 0
+#ACT
+MOV C180 1
+MOV B180 空
+MOV B181 空
+MOV B182 空
+MOV B183 空
+MOV B184 空
+
+
+[@寄存1]
+#IF
+CheckGameGold ? 300
+NOT EQUAL <$STR(B15)> 空
+EQUAL B180 空
+#ACT
+GameGold - 300
+KillSlave <$STR(B15)>
+MOV B180 <$STR(B15)>
+MOV B15 空
+SendMsg 6  恭喜你成功寄存<$STR(B180)>到宠物1号仓库。
+GOTO @MAIN
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[300]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起\1.你当前没有签订的契约宝宝\2.你没有300元宝\3.或者你的宠物1号仓库已经寄存有宝宝了。
+
+
+[@取出1]
+#IF
+NOT EQUAL B180 空
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 <$STR(B180)>
+MOV B180 空
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 对不起\1.你的宠物1号仓库没有寄存的契约宝宝\
+
+;===================================================================================
+[@寄存2]
+#IF
+CheckGameGold ? 300
+NOT EQUAL <$STR(B15)> 空
+EQUAL B181 空
+#ACT
+GameGold - 300
+KillSlave <$STR(B15)>
+MOV B181 <$STR(B15)>
+MOV B15 空
+SendMsg 6  恭喜你成功寄存<$STR(B181)>到宠物2号仓库。
+GOTO @MAIN
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[300]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起\1.你当前没有签订的契约宝宝\2.你没有300元宝\3.或者你的宠物2号仓库已经寄存有宝宝了。
+
+
+[@取出2]
+#IF
+NOT EQUAL B181 空
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 <$STR(B181)>
+MOV B181 空
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 对不起\1.你的宠物2号仓库没有寄存的契约宝宝\
+
+;===================================================================================
+[@寄存3]
+#IF
+CheckGameGold ? 300
+NOT EQUAL <$STR(B15)> 空
+EQUAL B182 空
+#ACT
+GameGold - 300
+KillSlave <$STR(B15)>
+MOV B182 <$STR(B15)>
+MOV B15 空
+SendMsg 6  恭喜你成功寄存<$STR(B182)>到宠物3号仓库。
+GOTO @MAIN
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[300]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起\1.你当前没有签订的契约宝宝\2.你没有300元宝\3.或者你的宠物3号仓库已经寄存有宝宝了。
+
+
+[@取出3]
+#IF
+NOT EQUAL B182 空
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 <$STR(B182)>
+MOV B182 空
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 对不起\1.你的宠物3号仓库没有寄存的契约宝宝\
+
+;===================================================================================
+[@寄存4]
+#IF
+CheckGameGold ? 300
+NOT EQUAL <$STR(B15)> 空
+EQUAL B183 空
+#ACT
+GameGold - 300
+KillSlave <$STR(B15)>
+MOV B183 <$STR(B15)>
+MOV B15 空
+SendMsg 6  恭喜你成功寄存<$STR(B183)>到宠物4号仓库。
+GOTO @MAIN
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[300]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起\1.你当前没有签订的契约宝宝\2.你没有300元宝\3.或者你的宠物4号仓库已经寄存有宝宝了。
+
+
+[@取出4]
+#IF
+NOT EQUAL B183 空
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 <$STR(B183)>
+MOV B183 空
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 对不起\1.你的宠物4号仓库没有寄存的契约宝宝\
+
+;===================================================================================
+[@寄存5]
+#IF
+CheckGameGold ? 300
+NOT EQUAL <$STR(B15)> 空
+EQUAL B184 空
+#ACT
+GameGold - 300
+KillSlave <$STR(B15)>
+MOV B184 <$STR(B15)>
+MOV B15 空
+SendMsg 6  恭喜你成功寄存<$STR(B184)>到宠物5号仓库。
+GOTO @MAIN
+INC G100 300
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值排行榜\消费积分.txt
+SENDMSG 6 #7[系统]：#7恭喜你获得#7[300]#7个消费积分，今周累计消费积分#7[<$HUMAN(消费积分)>]#7。
+#ELSEACT
+MESSAGEBOX 对不起\1.你当前没有签订的契约宝宝\2.你没有300元宝\3.或者你的宠物5号仓库已经寄存有宝宝了。
+
+
+[@取出5]
+#IF
+NOT EQUAL B184 空
+#ACT
+KillSlave <$STR(B15)>
+MOV B15 <$STR(B184)>
+MOV B184 空
+SendMsg 6  恭喜你成功与<$STR(B15)>完成滴血认主契约，从此效忠于你。
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 对不起\1.你的宠物5号仓库没有寄存的契约宝宝\
+
+;===================================================================================

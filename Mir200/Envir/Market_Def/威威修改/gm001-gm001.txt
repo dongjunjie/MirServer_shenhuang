@@ -1,0 +1,227 @@
+[@main]
+#IF
+IsAdmin
+#SAY
+尊敬的管理员!感谢您的支持!\ \
+<加战士强化技能套/@11>       <加法师强化技能套/@22>\ \
+{70=x}<加道士强化技能套/@33>\ \
+{80=x}<刷铭文石1000/@44>\
+{80=x}<刷战士终极套/@55>\
+{80=x}<刷法师终极套/@66>\
+{80=x}<刷道士终极套/@77>\
+{80=x}<刷取终极法宝/@法宝>\
+{80=x}<刷取专用武器/@武器>\
+{80=x}<刷取七档战宠/@战宠>\
+{80=x}<刷取战宠主动/@主动>\
+{80=x}<刷取战宠被动/@被动>\
+{80=x}<刷取钻石材料/@钻石>\
+{80=x}<增加冲级奖励/@冲级>\
+{80=x}<神秘商店归零/@神秘>\
+{80=x}<返回盟重土城/@0001>\
+#Elsesay
+　\
+　\
+　\
+　\
+<对不起！这里不是你来的地方！>\
+
+
+
+
+[@冲级]
+#IF
+#ACT
+INC G481 100
+INC G482 100
+INC G483 100
+INC G484 100
+INC G485 100
+INC G486 100
+INC G487 100
+INC G488 100
+INC G489 100
+INC G490 100
+INC G491 100
+INC G492 100
+INC G493 100
+INC G494 100
+SENDMSG 9 [提示]:冲级奖励名额已经刷新!请加速冲级哦! 249 60
+break
+
+
+[@神秘]
+#IF
+#ACT
+MOV G300 0
+MOV G301 0
+MOV G302 0
+MOV G303 0
+MOV G304 0
+MOV G305 0
+MOV G306 0
+MOV G307 0
+MOV G308 0
+MOV G309 0
+MOV G310 0
+MOV G311 0
+DEC C90 5
+SENDMSG 9 [提示]:今日[神秘商店]已经刷新!欲购从速哟! 249 60
+break
+
+
+
+
+[@钻石]
+#IF
+#act
+give 钻石 10000
+break
+
+[@被动]
+#IF
+#act
+give 嘲讽 1
+give 骨甲 1
+give 鬼眼 1
+give 护体 1
+give 会心 1
+give 坚韧 1
+give 狂放 1
+give 猎豹 1
+give 绿袍 1
+give 魔神 1
+give 漠视 1
+give 涅槃 1
+give 契约 1
+give 胜天 1
+give 兽瞳 1
+give 洗礼 1
+give 下凡 1
+give 阴阳 1
+give 鹰眼 1
+give 智慧 1
+give 咒甲 1
+break
+
+[@主动]
+#IF
+#act
+give 暗咒术 1
+give 荡八荒 1
+give 风裂波 1
+give 龙虎破 1
+give 圣光术 1
+give 十字斩 1
+break
+
+[@战宠]
+#IF
+#act
+give 变异金刚猿猴 1
+give 变异六道魔君 1
+break
+
+[@武器]
+#IF
+#act
+give 上古神剑 1
+break
+
+[@法宝]
+#IF
+#act
+give [渡劫]阴阳令 1
+break
+
+[@0001]
+#IF
+#act
+mapmove 3 330 330
+break
+
+
+[@11]
+#IF
+#act
+ADDSKILL 强化基本剑术 9
+ADDSKILL 强化攻杀剑术 9
+ADDSKILL 强化刺杀剑术 9
+ADDSKILL 强化半月弯刀 9
+ADDSKILL 强化烈火剑法 9
+break
+
+
+
+[@22]
+#IF
+#act
+ADDSKILL 强化雷电术 9
+ADDSKILL 强化火墙 9
+ADDSKILL 强化雷电术 9
+ADDSKILL 强化爆裂火焰 9
+ADDSKILL 强化冰咆哮 9
+break
+
+[@33]
+#IF
+#act
+ADDSKILL 强化施毒术 9
+ADDSKILL 强化灵魂火符 9
+ADDSKILL 强化幽灵盾 9
+ADDSKILL 强化神圣战甲术9
+ADDSKILL 强化召唤骷髅 9
+ADDSKILL 强化召唤神兽 9
+break
+
+[@44]
+#IF
+#act
+give 铭文洗练石 1000
+break
+
+
+[@55]
+#IF
+#act
+give 灭世神★斩战 1 4
+give 灭世神★男战袍 1 4
+give 灭世神★女战袍 1 4
+give 灭世神★战盔 1 4
+give 灭世神★战链 1 4
+give 灭世神★战镯 2 4
+give 灭世神★战戒 2 4
+give 灭世神★战带 2 4
+give 灭世神★战靴 2 4
+break
+
+
+[@66]
+#IF
+#act
+give 灭世神★灭魔 1 4
+give 灭世神★男魔袍 1 4
+give 灭世神★女魔袍 1 4
+give 灭世神★魔盔 1 4
+give 灭世神★魔镯 2 4
+give 灭世神★魔戒 1 4
+give 灭世神★魔链 1 4
+give 灭世神★魔带 1 4
+give 灭世神★魔靴 1 4
+break
+
+
+[@77]
+#IF
+#act
+give 灭世神★抹道 1 4
+give 灭世神★男道袍 1 4
+give 灭世神★女道袍 1 4
+give 灭世神★道盔 1 4
+give 灭世神★道戒 2 4
+give 灭世神★道镯 2 4
+give 灭世神★道链 1 4
+give 灭世神★道带 1 4
+give 灭世神★道靴 1 4
+break
+
+

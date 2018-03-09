@@ -1,0 +1,2 @@
+(@buy @sell )
+#CALLX [\游戏配置\商店NPC\肉店.txt] @肉店脚本头

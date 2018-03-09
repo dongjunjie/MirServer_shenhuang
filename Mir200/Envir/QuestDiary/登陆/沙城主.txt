@@ -1,0 +1,9 @@
+[@沙城主]
+{
+#IF
+ISCASTLEMASTER
+#ACT
+SENDMSG 1 沙巴克城城主〖%s〗进入游戏中！！！
+;SETRANKLEVELNAME 〖城　主〗\%s
+CHANGENAMECOLOR 215
+}

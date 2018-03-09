@@ -1,0 +1,2 @@
+(@buy @sell @repair @s_repair @BindBuy)
+#CALLX [\游戏配置\商店NPC\服装店.txt] @服装店脚本头

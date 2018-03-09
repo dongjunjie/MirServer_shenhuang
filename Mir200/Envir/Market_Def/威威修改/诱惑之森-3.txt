@@ -1,0 +1,57 @@
+[@main](2302,300,540,3)
+
+　　　　　　　　　　　　 {哎哟！官人，=FCO=250}\
+　　　　　　　　　　　　 {宣传一下本服嘛!=FCO=250}\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\
+　\　\
+　{首次充值只需30元以上，即可额外领取以下=FCO=254}\
+　{超值游戏道具。=FCO=254}\
+　{提示：每个角色只限一次首冲礼包。=FCO=23}\
+1,{i.1738,c.1=item}        2,{i.1036,c.3=item}        3,{i.931,c.10=item}        4,{i.1117,c.100=item} \  \
+　  　  \ 
+5,{i.1735,c.5=item}        6,{i.1736,c.5=item}        7,{i.1021,c.5=item}        8,{i.1123,c.5=item} \  \
+　  　  \ 
+　\
+　<{[领取首冲礼包]=FCO=70}|[累积充值30元即可领取=FCO=00FF7F]
+^[每个角色只限一次首冲礼包。=FCO=00FF7F]
+^[提示：请空出包袱26个空位=FCO=7280FA]/@首冲>\ \ \
+　<{[结束对话]=FCO=249}/@exit>\
+          
+
+
+[@首冲]
+#if
+CheckBagSize 26
+Large C33 29
+Check [230] 0
+#ACT
+Set [230] 1
+DynamicGive 金蚕丝包 3
+DynamicGive 星级卷礼包 5
+DynamicGive 强化卷礼包 5
+DynamicGive 还魂丹 10
+DynamicGive 铭文洗练石 100
+DynamicGive 中级传送卷礼包 5
+DynamicGive 高级传送卷礼包 5
+DynamicGive 砍猪印(首冲奖励) 1
+CHANGEGIVEITEM 2 0 1
+CHANGEGIVEITEM 2 4 1
+CHANGEGIVEITEM 2 6 1
+CHANGEGIVEITEM 2 7 1
+CHANGEGIVEITEM 8
+messagebox  恭喜你成功领取首冲礼包
+goto @main
+SENDMSG 0 [系统]:玩家#7[<$USERNAME>]#7成功领取首冲礼包.您的支持就是对我们最大的动力！
+Break
+#ELSEACT
+MESSAGEBOX 领取失败\1.你的充值金额不足30元。\2.你的包裹里的空位小于26格。\3.或者你已领过首冲礼包。
+Break
+
+

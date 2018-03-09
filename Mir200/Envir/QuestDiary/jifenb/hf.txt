@@ -1,0 +1,362 @@
+[@领取积分]
+{
+#IF
+CheckAccountList ..\QuestDiary\jifenb\1.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 1
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了1消费积分。
+DelAccountList ..\QuestDiary\jifenb\1.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\10.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 10
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了10消费积分。
+DelAccountList ..\QuestDiary\jifenb\10.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\100.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 100
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了100消费积分。
+DelAccountList ..\QuestDiary\jifenb\100.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\1000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 1000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了1000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\1000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\2.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 2
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了2消费积分。 
+DelAccountList ..\QuestDiary\jifenb\2.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\20.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 20
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了20消费积分。 
+DelAccountList ..\QuestDiary\jifenb\20.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\200.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 200
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了200消费积分。 
+DelAccountList ..\QuestDiary\jifenb\200.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\2000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 2000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了2000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\2000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\3.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 3
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了3消费积分。 
+DelAccountList ..\QuestDiary\jifenb\3.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\30.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 30
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了30消费积分。 
+DelAccountList ..\QuestDiary\jifenb\30.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\300.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 300
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了300消费积分。 
+DelAccountList ..\QuestDiary\jifenb\300.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\3000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 3000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了3000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\3000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\4.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 4
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了4消费积分。 
+DelAccountList ..\QuestDiary\jifenb\4.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\40.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 40
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了40消费积分。 
+DelAccountList ..\QuestDiary\jifenb\40.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\400.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 400
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了400消费积分。 
+DelAccountList ..\QuestDiary\jifenb\400.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\4000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 4000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了4000消费积分。
+DelAccountList ..\QuestDiary\jifenb\4000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\5.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 5
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了5<消费积分>。 
+DelAccountList ..\QuestDiary\jifenb\5.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\50.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 50
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了50消费积分。 
+DelAccountList ..\QuestDiary\jifenb\50.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\500.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 500
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了500消费积分。 
+DelAccountList ..\QuestDiary\jifenb\500.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\5000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 5000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了5000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\5000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\6.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 6
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了6消费积分。 
+DelAccountList ..\QuestDiary\jifenb\6.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\60.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 60
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了60消费积分。 
+DelAccountList ..\QuestDiary\jifenb\60.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\600.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 600
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了600消费积分。 
+DelAccountList ..\QuestDiary\jifenb\600.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\6000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 6000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了6000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\6000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\7.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 7
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了7消费积分。 
+DelAccountList ..\QuestDiary\jifenb\7.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\70.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 70
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了70消费积分。 
+DelAccountList ..\QuestDiary\jifenb\70.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\700.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 700
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了700消费积分。 
+DelAccountList ..\QuestDiary\jifenb\700.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\7000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 7000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了7000消费积分。
+DelAccountList ..\QuestDiary\jifenb\7000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\8.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 8
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了8消费积分。 
+DelAccountList ..\QuestDiary\jifenb\8.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\80.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 80
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了80消费积分。 
+DelAccountList ..\QuestDiary\jifenb\80.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\800.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 800
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了800消费积分。 
+DelAccountList ..\QuestDiary\jifenb\800.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\8000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 8000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了8000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\8000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\9.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 9
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了9消费积分。 
+DelAccountList ..\QuestDiary\jifenb\9.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\90.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 90
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了90消费积分。 
+DelAccountList ..\QuestDiary\jifenb\90.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\900.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 900
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了900消费积分。 
+DelAccountList ..\QuestDiary\jifenb\900.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\9000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 9000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了9000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\9000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\10000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 10000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了10000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\10000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\20000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 20000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了20000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\20000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\30000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 30000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了30000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\30000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\40000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 40000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了40000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\40000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\50000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 50000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了50000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\50000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\60000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 60000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了60000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\60000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\70000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 70000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了70000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\70000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\80000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 80000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了80000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\80000.txt
+goto @领取积分
+#IF
+CheckAccountList ..\QuestDiary\jifenb\90000.txt
+#ACT
+CALCVAR HUMAN 消费积分 + 90000
+SAVEVAR HUMAN 消费积分 ..\QuestDiary\充值积分\消费积分Save.txt
+SENDMSG 1  ★[%s]:玩家<$USERNAME>通过在线充值额外获得了90000消费积分。 
+DelAccountList ..\QuestDiary\jifenb\90000.txt
+}

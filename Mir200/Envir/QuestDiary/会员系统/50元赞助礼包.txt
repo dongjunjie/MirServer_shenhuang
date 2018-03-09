@@ -1,0 +1,244 @@
+[@50元赞助礼包]
+{
+#if
+CheckBagSize 3
+#ACT
+GOTO @50元赞助礼包1
+#ELSEACT
+Give 50元赞助礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于3格！
+
+[@50元赞助礼包1]
+#if
+GENDER MAN
+#ACT
+DynamicGive VIP1青铜赞助 1
+DynamicGive 青铜赞助剑 1
+DynamicGive 青铜赞助袍 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP1青铜赞助#7，伊春传奇感谢有你的支持。(散人只需宣传15群即可领取50元等额元宝+赞助礼包)
+#ELSEACT
+DynamicGive VIP1青铜赞助 1
+DynamicGive 青铜赞助剑 1
+DynamicGive 青铜赞助衣 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP1青铜赞助#7，伊春传奇感谢有你的支持。(散人只需宣传15群即可领取50元等额元宝+赞助礼包)
+Break
+
+;---------------------------------------------------------------------------------------------
+
+
+[@100元赞助礼包]
+#if
+CheckBagSize 3
+#ACT
+GOTO @100元赞助礼包1
+#ELSEACT
+Give 100元赞助礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于3格！
+
+[@100元赞助礼包1]
+#if
+GENDER MAN
+#ACT
+DynamicGive VIP2白银赞助 1
+DynamicGive 白银赞助剑 1
+DynamicGive 白银赞助袍 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP2白银赞助#7，伊春传奇感谢有你的支持。
+#ELSEACT
+DynamicGive VIP2白银赞助 1
+DynamicGive 白银赞助剑 1
+DynamicGive 白银赞助衣 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP2白银赞助#7，伊春传奇感谢有你的支持。
+Break
+
+;---------------------------------------------------------------------------------------------
+
+
+[@300元赞助礼包]
+#if
+CheckBagSize 3
+#ACT
+GOTO @300元赞助礼包1
+#ELSEACT
+Give 300元赞助礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于3格！
+
+[@300元赞助礼包1]
+#if
+GENDER MAN
+#ACT
+DynamicGive VIP3黄金赞助 1
+DynamicGive 黄金赞助剑 1
+DynamicGive 黄金赞助袍 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP3黄金赞助#7，伊春传奇感谢有你的支持。
+#ELSEACT
+DynamicGive VIP3黄金赞助 1
+DynamicGive 黄金赞助剑 1
+DynamicGive 黄金赞助衣 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP3黄金赞助#7，伊春传奇感谢有你的支持。
+Break
+
+;---------------------------------------------------------------------------------------------
+
+
+
+[@500元赞助礼包]
+#if
+CheckBagSize 3
+#ACT
+GOTO @500元赞助礼包1
+#ELSEACT
+Give 500元赞助礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于3格！
+
+[@500元赞助礼包1]
+#if
+GENDER MAN
+#ACT
+DynamicGive VIP4白金赞助 1
+DynamicGive 白金赞助剑 1
+DynamicGive 白金赞助袍 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP4白金赞助#7，伊春传奇感谢有你的支持。
+#ELSEACT
+DynamicGive VIP4白金赞助 1
+DynamicGive 白金赞助剑 1
+DynamicGive 白金赞助衣 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP4白金赞助#7，伊春传奇感谢有你的支持。
+Break
+
+;---------------------------------------------------------------------------------------------
+
+
+
+[@700元赞助礼包]
+#if
+CheckBagSize 3
+#ACT
+GOTO @700元赞助礼包1
+#ELSEACT
+Give 700元赞助礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于3格！
+
+[@700元赞助礼包1]
+#if
+GENDER MAN
+#ACT
+DynamicGive VIP5钻石赞助 1
+DynamicGive 钻石赞助剑 1
+DynamicGive 钻石赞助袍 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP5钻石赞助#7，伊春传奇感谢有你的支持。
+#ELSEACT
+DynamicGive VIP5钻石赞助 1
+DynamicGive 钻石赞助剑 1
+DynamicGive 钻石赞助衣 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP5钻石赞助#7，伊春传奇感谢有你的支持。
+Break
+
+;---------------------------------------------------------------------------------------------
+
+
+
+
+[@1000元赞助礼包]
+#if
+CheckBagSize 3
+#ACT
+GOTO @1000元赞助礼包1
+#ELSEACT
+Give 1000元赞助礼包 1
+MESSAGEBOX 开启失败\你的包裹里的空位小于3格！
+
+[@1000元赞助礼包1]
+#if
+GENDER MAN
+#ACT
+DynamicGive VIP6王者赞助 1
+DynamicGive 王者赞助剑 1
+DynamicGive 王者赞助袍 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP6王者赞助#7，伊春传奇感谢有你的支持。
+#ELSEACT
+DynamicGive VIP6王者赞助 1
+DynamicGive 王者赞助剑 1
+DynamicGive 王者赞助衣 1
+ChangeGiveItem 14 1
+ChangeGiveItem 7 75 251
+ChangeGiveItem 2 0 1
+ChangeGiveItem 2 4 1
+ChangeGiveItem 2 7 1
+ChangeGiveItem 8
+SENDMSG 0 恭喜#7<$USERNAME>#7成功普升#7VIP6王者赞助#7，伊春传奇感谢有你的支持。
+Break
+
+;---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+}

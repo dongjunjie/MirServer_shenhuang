@@ -1,0 +1,938 @@
+[@称号系统]
+{
+#IF
+#ACT
+GOTO @称号系统1
+Break
+
+[@称号系统1](2405,700,400,3)
+《<称号展示>》\ \ \ \ \
+<{f.23,x.30,y.38,i.125-125,t.100=img}>
+<{f.23,x.130,y.22,i.124-124,t.100=img}>
+<{f.23,x.300,y.22,i.123-123,t.100=img}>
+<{f.23,x.500,y.40,i.122-122,t.100=img}>
+
+　　　<{[开启√一掷千金]=FCO=70}|[开启条件:充值VIP等级达到VIP1=FCO=00FF7F]
+^[称号属性：经验加成30%。=FCO=7280FA]/@一掷千金>
+　　　　<{[开启√挥金如土]=FCO=70}||[开启条件:充值VIP等级达到VIP2=FCO=00FF7F]
+^[称号属性：经验加成40%。=FCO=7280FA]/@挥金如土>
+　　　　　<{[开启√纸醉金迷]=FCO=70}|[开启条件:充值VIP等级达到VIP3=FCO=00FF7F]
+^[称号属性：经验加成50%。=FCO=7280FA]/@纸醉金迷>
+　　　　　　<{[开启√富可敌国]=FCO=70}|[开启条件:充值VIP等级达到VIP4=FCO=00FF7F]
+^[称号属性：经验加成60%。=FCO=7280FA]/@富可敌国>\　
+<{f.23,x.30,y.100,i.121-121,t.100=img}>
+<{f.23,x.170,y.94,i.120-120,t.100=img}>
+<{f.23,x.220,y.50,i.255-266,t.100=img}>
+<{f.23,x.380,y.60,i.218-224,t.100=img}>
+\ \ \
+　　　<{[开启√富甲天下]=FCO=70}|[开启条件:充值VIP等级达到VIP5=FCO=00FF7F]
+^[称号属性：经验加成70%。=FCO=7280FA]/@富甲天下>
+　　　　<{[开启√我是土豪]=FCO=70}|[开启条件:充值VIP等级达到VIP6=FCO=00FF7F]
+^[称号属性：经验加成80%。=FCO=7280FA]/@我是土豪>
+　　　　　<{[开启√武林高手]=FCO=70}|[开启条件:需要境界(一重の筑基期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.20。=FCO=7280FA]/@武林高手>
+　　　　　　<{[开启√傲视群雄]=FCO=70}|[开启条件:需要境界(二重の金丹期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.25。=FCO=7280FA]/@傲视群雄>\　
+<{f.23,x.-95,y.150,i.328-342,t.100=img}>
+<{f.23,x.60,y.150,i.225-239,t.100=img}>
+<{f.23,x.300,y.140,i.196-206,t.100=img}>
+<{f.23,x.450,y.140,i.185-195,t.100=img}>
+\ \ \ \ \
+　　　<{[开启√一代天骄]=FCO=70}|[开启条件:需要境界(三重の元婴期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.30。=FCO=7280FA]/@一代天骄>
+　　　　<{[开启√不死邪神]=FCO=70}|[开启条件:需要境界(四重の出窍期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.35。=FCO=7280FA]/@不死邪神>
+　　　　　<{[开启√独步青云]=FCO=70}|[开启条件:需要境界(五重の分神期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.40。=FCO=7280FA]/@独步青云>
+　　　　　　<{[开启√登峰造极]=FCO=70}|[开启条件:需要境界(六重の合体期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.45。=FCO=7280FA]/@登峰造极>\　
+<{f.23,x.-20,y.230,i.163-172,t.100=img}>
+<{f.23,x.140,y.230,i.153-162,t.100=img}>
+<{f.23,x.220,y.230,i.343-352,t.100=img}>
+<{f.23,x.460,y.225,i.207-217,t.100=img}>
+
+\ \ \ \
+　　　<{[开启√战力无双]=FCO=70}|[开启条件:需要境界(七重の洞虚期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.50。=FCO=7280FA]/@战力无双>
+　　　　<{[开启√盖世无双]=FCO=70}|[开启条件:需要境界(八重の大乘期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.55。=FCO=7280FA]/@盖世无双>
+　　　　　<{[开启√天下第一]=FCO=70}|[开启条件:需要境界(九重の渡劫期)=FCO=00FF7F]
+^[称号属性：攻击倍数1.60。=FCO=7280FA]/@天下第一>
+　　　　　　<{[开启√十大高手]=FCO=70}|[开启条件:每周累计个人杀怪1000个以上=FCO=00FF7F]
+^[称号属性：HP+1000,MP+1000,防御+15，魔御+15=FCO=7280FA]/@十大高手>\　
+{12=y}    <{[下一页]=FCO=249}/@下一页VVVV>  <{[关闭]=FCO=249}/@exit>\
+
+[@下一页VVVV](2405,700,400,3)
+《<称号展示>》\ \ \ \ \ \ \
+<{f.23,x.-15,y.15,i.173-184,t.100=img}>
+<{f.23,x.133,y.18,i.128-128,t.100=img}>
+<{f.23,x.215,y.25,i.313-327,t.100=img}>
+<{f.23,x.450,y.20,i.127-127,t.100=img}>
+
+　　　<{[开启√十大战神]=FCO=70}|[开启条件:每周累计个人杀怪3000个以上=FCO=00FF7F]
+^[称号属性：HP+2000,MP+2000,防御+30，魔御+30=FCO=7280FA]/@十大战神>
+　　　　<{[开启√凤舞九天]=FCO=70}|[开启条件:每周累计个人杀怪5000个以上=FCO=00FF7F]
+^[称号属性：HP+3000,MP+3000,防御+45，魔御+45=FCO=7280FA]/@凤舞九天>
+　　　　　<{[开启√威震八方]=FCO=70}|[开启条件:每周累计个人杀怪8000个以上=FCO=00FF7F]
+^[称号属性：HP+4000,MP+4000,防御+60，魔御+60=FCO=7280FA]/@威震八方>
+　　　　　　<{[开启√羽化登仙]=FCO=70}|[开启条件:每周累计个人杀怪10000个以上=FCO=00FF7F]
+^[称号属性：HP+5000,MP+5000,防御+75，魔御+75=FCO=7280FA]/@羽化登仙>\　
+<{f.23,x.-85,y.105,i.240-250,t.100=img}>
+<{f.23,x.155,y.115,i.141-152,t.100=img}>
+\ \ \ \
+　　　<{[开启√盟　　主]=FCO=70}|[开启条件:行会掌门人=FCO=00FF7F]
+^[称号属性：HP+1000,MP+1000,防御+15，魔御+15=FCO=7280FA]/@盟主>
+　　　　<{[开启√统领皇城]=FCO=70}|[开启条件:沙巴克城主=FCO=00FF7F]
+^[称号属性：HP+10000,MP+10000,防御+90，魔御+90=FCO=7280FA]
+^[称号属性：爆率1.7倍=FCO=7280FA]/@统领皇城>
+\ \ \ \ \ \ \ \ \
+{12=y}      <{[上一页]=FCO=249}/@main>  <{[关闭]=FCO=249}/@exit>\
+
+
+
+;====================================================================================
+[@一掷千金]
+#IF
+Check [201] 1
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/一掷千金.txt
+messagebox 恭喜你成功开启称号[一掷千金]，\获得称号属性经验加成30%。(请小退获得称号属性生效)
+SETHUMICON 3 23 125 1 20 0 50 19
+#ELSEACT
+messagebox 对不起!您的充值VIP没达到要求!\或者没有领取赞助大使!\请领取奖励或者充值后再来!!!
+BREAK
+
+[@挥金如土]
+#IF
+Check [202] 1
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/挥金如土.txt
+messagebox 恭喜你成功开启称号[挥金如土]，\获得称号属性经验加成40%。(请小退获得称号属性生效)
+SETHUMICON 3 23 124 1 20 0 98 10
+#ELSEACT
+messagebox 对不起!您的充值VIP没达到要求!\或者没有领取赞助大使!\请领取奖励或者充值后再来!!!
+BREAK
+
+
+[@纸醉金迷]
+#IF
+Check [203] 1
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/纸醉金迷.txt
+messagebox 恭喜你成功开启称号[纸醉金迷]，\获得称号属性经验加成50%。(请小退获得称号属性生效)
+SETHUMICON 3 23 123 1 20 0 83 10
+#ELSEACT
+messagebox 对不起!您的充值VIP没达到要求!\或者没有领取赞助大使!\请领取奖励或者充值后再来!!!
+BREAK
+
+[@富可敌国]
+#IF
+Check [204] 1
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/富可敌国.txt
+messagebox 恭喜你成功开启称号[富可敌国]，\获得称号属性经验加成60%。(请小退获得称号属性生效)
+SETHUMICON 3 23 122 1 20 0 55 19
+#ELSEACT
+messagebox 对不起!您的充值VIP没达到要求!\或者没有领取赞助大使!\请领取奖励或者充值后再来!!!
+BREAK
+
+[@富甲天下]
+#IF
+Check [205] 1
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/富甲天下.txt
+messagebox 恭喜你成功开启称号[富甲天下]，\获得称号属性经验加成70%。(请小退获得称号属性生效)
+SETHUMICON 3 23 121 1 20 0 60 19
+#ELSEACT
+messagebox 对不起!您的充值VIP没达到要求!\或者没有领取赞助大使!\请领取奖励或者充值后再来!!!
+BREAK
+
+[@我是土豪]
+#IF
+Check [206] 1
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/我是土豪.txt
+messagebox 恭喜你成功开启称号[我是土豪]，\获得称号属性经验加成80%。(请小退获得称号属性生效)
+SETHUMICON 3 23 120 1 20 0 60 15
+#ELSEACT
+messagebox 对不起!您的充值VIP没达到要求!\或者没有领取赞助大使!\请领取奖励或者充值后再来!!!
+BREAK
+
+
+[@武林高手]
+#IF
+CheckRenewLevel ？ 1
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/武林高手.txt
+messagebox 恭喜你成功开启称号[武林高手]，\获得称号属性攻击倍数1.20(请小退获得称号属性生效)
+SETHUMICON 3 23 255 12 15 0 170 -245
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+[@傲视群雄]
+#IF
+CheckRenewLevel ？ 2
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/傲视群雄.txt
+messagebox 恭喜你成功开启称号[傲视群雄]，\获得称号属性攻击倍数1.25(请小退获得称号属性生效)
+SETHUMICON 3 23 218 7 15 0 170 -255
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+[@一代天骄]
+#IF
+CheckRenewLevel ？ 3
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/一代天骄.txt
+messagebox 恭喜你成功开启称号[一代天骄]，\获得称号属性攻击倍数1.30(请小退获得称号属性生效)
+SETHUMICON 3 23 328 15 15 0 175 -255
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+[@不死邪神]
+#IF
+CheckRenewLevel ？ 4
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/不死邪神.txt
+messagebox 恭喜你成功开启称号[不死邪神]，\获得称号属性攻击倍数1.35(请小退获得称号属性生效)
+SETHUMICON 3 23 225 15 15 0 175 -245
+
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+[@独步青云]
+#IF
+CheckRenewLevel ？ 5
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/独步青云.txt
+messagebox 恭喜你成功开启称号[独步青云]，\获得称号属性攻击倍数1.40(请小退获得称号属性生效)
+SETHUMICON 3 23 196 11 15 0 95 5
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+[@登峰造极]
+#IF
+CheckRenewLevel ？ 6
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/登峰造极.txt
+messagebox 恭喜你成功开启称号[登峰造极]，\获得称号属性攻击倍数1.45(请小退获得称号属性生效)
+SETHUMICON 3 23 185 11 15 0 105 5
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+[@战力无双]
+#IF
+CheckRenewLevel ？ 7
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/战力无双.txt
+messagebox 恭喜你成功开启称号[战力无双]，\获得称号属性攻击倍数1.50(请小退获得称号属性生效)
+SETHUMICON 3 23 163 10 15 0 95 5
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+
+[@盖世无双]
+#IF
+CheckRenewLevel ？ 8
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/盖世无双.txt
+messagebox 恭喜你成功开启称号[盖世无双]，\获得称号属性攻击倍数1.55(请小退获得称号属性生效)
+SETHUMICON 3 23 153 10 15 0 100 1
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+
+[@天下第一]
+#IF
+CheckRenewLevel ？ 9
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/天下第一.txt
+messagebox 恭喜你成功开启称号[天下第一]，\获得称号属性攻击倍数1.60(请小退获得称号属性生效)
+SETHUMICON 3 23 343 10 15 0 173 -250
+#ELSEACT
+messagebox 对不起！你的境界条件不足开启称号！
+BREAK
+
+
+[@十大高手]
+#IF
+large <$HUMAN(个人杀怪)> 999
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/十大高手.txt
+messagebox 恭喜你成功开启称号[十大高手]，\获得称号属性HP+1000,MP+1000,防御+15，魔御+15(请小退获得称号属性生效)
+SETHUMICON 3 23 207 11 15 0 90 1
+#ELSEACT
+messagebox 对不起！你的个人杀怪数量不足开启称号！
+BREAK
+
+[@十大战神]
+#IF
+large <$HUMAN(个人杀怪)> 2999
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/十大战神.txt
+messagebox 恭喜你成功开启称号[十大战神]，\获得称号属性HP+2000,MP+2000,防御+30，魔御+30(请小退获得称号属性生效)
+SETHUMICON 3 23 173 12 15 0 100 1
+#ELSEACT
+messagebox 对不起！你的个人杀怪数量不足开启称号！
+BREAK
+
+[@凤舞九天]
+#IF
+large <$HUMAN(个人杀怪)> 4999
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/凤舞九天.txt
+messagebox 恭喜你成功开启称号[凤舞九天]，\获得称号属性HP+3000,MP+3000,防御+45，魔御+45(请小退获得称号属性生效)
+SETHUMICON 3 23 128 1 15 0 93 10
+#ELSEACT
+messagebox 对不起！你的个人杀怪数量不足开启称号！
+BREAK
+
+[@威震八方]
+#IF
+large <$HUMAN(个人杀怪)> 7999
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/威震八方.txt
+messagebox 恭喜你成功开启称号[威震八方]，\获得称号属性HP+4000,MP+4000,防御+60，魔御+60(请小退获得称号属性生效)
+SETHUMICON 3 23 313 15 15 0 170 -260
+#ELSEACT
+messagebox 对不起！你的个人杀怪数量不足开启称号！
+BREAK
+
+
+[@羽化登仙]
+#IF
+large <$HUMAN(个人杀怪)> 9999
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/羽化登仙.txt
+messagebox 恭喜你成功开启称号[羽化登仙]，\获得称号属性HP+5000,MP+5000,防御+75，魔御+75(请小退获得称号属性生效)
+SETHUMICON 3 23 127 1 15 0 98 1
+#ELSEACT
+messagebox 对不起！你的个人杀怪数量不足开启称号！
+BREAK
+
+[@盟主]
+#IF
+IsGuildMaster
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/盟主.txt
+messagebox 恭喜你成功开启称号[盟主]，\获得称号属性HP+1000,MP+1000,防御+15，魔御+15(请小退获得称号属性生效)
+SETHUMICON 3 23 240 15 15 0 170 -255
+#ELSEACT
+messagebox 对不起！你不是行会掌门，不能开启称号！
+BREAK
+
+
+[@统领皇城]
+#IF
+IsCastleMaster
+#ACT
+DelNameList ../QuestDiary/称号管理/一掷千金.txt
+DelNameList ../QuestDiary/称号管理/挥金如土.txt
+DelNameList ../QuestDiary/称号管理/纸醉金迷.txt
+DelNameList ../QuestDiary/称号管理/富可敌国.txt
+DelNameList ../QuestDiary/称号管理/富甲天下.txt
+DelNameList ../QuestDiary/称号管理/我是土豪.txt
+DelNameList ../QuestDiary/称号管理/武林高手.txt
+DelNameList ../QuestDiary/称号管理/傲视群雄.txt
+DelNameList ../QuestDiary/称号管理/一代天骄.txt
+DelNameList ../QuestDiary/称号管理/不死邪神.txt
+DelNameList ../QuestDiary/称号管理/独步青云.txt
+DelNameList ../QuestDiary/称号管理/登峰造极.txt
+DelNameList ../QuestDiary/称号管理/战力无双.txt
+DelNameList ../QuestDiary/称号管理/盖世无双.txt
+DelNameList ../QuestDiary/称号管理/天下第一.txt
+DelNameList ../QuestDiary/称号管理/十大高手.txt
+DelNameList ../QuestDiary/称号管理/十大战神.txt
+DelNameList ../QuestDiary/称号管理/凤舞九天.txt
+DelNameList ../QuestDiary/称号管理/威震八方.txt
+DelNameList ../QuestDiary/称号管理/羽化登仙.txt
+DelNameList ../QuestDiary/称号管理/盟主.txt
+DelNameList ../QuestDiary/称号管理/统领皇城.txt
+AddNameList ../QuestDiary/称号管理/统领皇城.txt
+messagebox 恭喜你成功开启称号[统领皇城]，\获得称号属性HP+10000,MP+10000,防御+90，魔御+90,爆率1.7倍(请小退获得称号属性生效)
+SETHUMICON 3 23 141 12 15 0 77 -5
+#ELSEACT
+messagebox 对不起！你不是沙巴克城主，不能开启称号！
+BREAK
+;=============================================================================
+[@4]
+#IF
+#ACT
+CLEARNAMELIST ..\QuestDiary\充值排行榜\杀人次数.txt
+CALCVAR HUMAN 杀人次数 = 0
+CLEARNAMELIST ..\QuestDiary\充值排行榜\被杀次数.txt
+CALCVAR HUMAN 被杀次数 = 0
+Break
+
+
+[@1]
+#IF
+#ACT
+CALCVAR HUMAN 杀人次数 + 10
+SAVEVAR HUMAN 杀人次数 ..\QuestDiary\充值排行榜\杀人次数.txt
+SendMsg 5 你杀死了<$STR(S0)>，当前杀敌数量<$STR(C150)>！
+
+[@2]
+#IF
+#ACT
+CALCVAR HUMAN 被杀次数 + 10
+SAVEVAR HUMAN 被杀次数 ..\QuestDiary\充值排行榜\被杀次数.txt
+SendMsg 5 当前被杀数量<$STR(C151)>！
+
+[@关闭]
+#IF
+#ACT
+SetHumIcon 0 0 0 0
+SetHumIcon 1 0 0 0
+SetHumIcon 2 0 0 0
+SENDMSG 7 【花翎】特殊效果已经消失！
+Break
+
+[@盟主]
+#IF
+EQUAL C150 3
+#ACT
+SETHUMICON 2 3 2253 8 10 0 173 -249
+PowerRate 110 600000
+PowerRate 110 600000 1
+SENDMSG 9 热烈欢迎【战神】：【%s】进入游戏！ 250 216
+SENDMSG 5 当前#7杀敌次数达到30以上#7获得#7爆率1.1倍，攻击力1.1倍#7属性加成.
+#ELSEACT
+messagebox 你不是行会掌门身份！
+BREAK
+
+[@行会掌门]
+#IF
+IsGuildMaster
+#ACT
+SetHumIcon 2 3 2340 7 10   0 175 -270
+SENDMSG 7 【系统:恭喜您开启封号成功！】
+#ELSEACT
+messagebox 你不是行会掌门身份！
+BREAK
+
+[@VIP]
+#IF
+checknamelist ../QuestDiary/会员管理/赞助会员.txt
+#ACT
+SetHumIcon 2 3 2457 8 9   0 175 -260
+SENDMSG 7 【系统:恭喜您开启封号成功！】
+#ELSEACT
+messagebox 你还未加入月卡会员！
+BREAK
+
+[@富甲天下]
+#if
+checkgold 50000
+#ACT
+take 金币 50000
+SetHumIcon 2 3 2310 18 10   0 175 -280
+SENDMSG 7 【系统:恭喜您开启封号成功！】
+#ELSEACT
+messagebox 你的包裹里不满5W金币！
+BREAK
+
+[@我才不怕]
+#if
+CheckItem 祖玛头像 1
+#ACT
+Take 祖玛头像 1
+SetHumIcon 2 3 2466 8 18   0 175 -241
+SENDMSG 7 【系统:恭喜您开启封号成功！】
+#ELSEACT
+messagebox 你没有恶魔的头颅！
+BREAK
+
+[@不死邪神]
+#if
+CheckPKPoint 1
+#ACT
+SetHumIcon 0 3 2347 15 10   0 175 -260
+SENDMSG 7 【系统:恭喜您开启封号成功！】
+#ELSEACT
+messagebox  对不起,杀人的PK值没有超过800点！
+BREAK
+
+[@武林高手]
+#if
+CheckLevelEx > 39
+#ACT
+SetHumIcon 0 3 2404 12 10   0 175 -262
+SENDMSG 7 【系统:恭喜您开启封号成功！】
+#ELSEACT
+messagebox 你没有达到40级！
+BREAK
+
+
+
+}

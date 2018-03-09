@@ -1,0 +1,45 @@
+[@main]
+#IF
+hour 14 14
+min  00 30
+#ACT
+GOTO @时间正确检测距离
+Break
+#IF
+hour 19 19
+min  00 30
+#ACT
+GOTO @时间正确检测距离
+#ELSEACT
+MESSAGEBOX 夺旗时间已过!\请明日再来!!!
+[@时间正确检测距离]
+#if
+CHECKINMAPRANGE hhzb 46 39 3
+#act
+GOTO @三步之内
+#ELSEACT
+MESSAGEBOX 请靠近大旗三步之内!!!
+[@三步之内]
+#IF
+NOT CHECKGUILDLIST ../QuestDiary/大旗行会.txt
+#ACT
+SETGUAGEBAR 30 @test2 正在争夺大旗(30秒完成)...
+#ELSEACT
+MESSAGEBOX 当前大旗占领行会和你同属同一行会!\无需重复占领!!!
+Break
+
+[@test2]
+#IF
+#ACT
+DELGUILDLIST ../QuestDiary/大旗行会.txt
+ADDGUILDLIST ../QuestDiary/大旗行会.txt
+SENDMSG 0 【#6FFFF/8#6大旗#5】：【行会争霸大旗】被<$GUILDNAME>行会的<$USERNAME>抢夺成功！
+SENDMSG 0 【#6FFFF/8#6大旗#5】：【行会争霸大旗】被<$GUILDNAME>行会的<$USERNAME>抢夺成功！
+SENDMSG 0 【#6FFFF/8#6大旗#5】：【行会争霸大旗】被<$GUILDNAME>行会的<$USERNAME>抢夺成功！
+SENDMSG 0 【#6FFFF/8#6大旗#5】：【行会争霸大旗】被<$GUILDNAME>行会的<$USERNAME>抢夺成功！
+SENDMSG 0 【#6FFFF/8#6大旗#5】：【行会争霸大旗】被<$GUILDNAME>行会的<$USERNAME>抢夺成功！
+MOV A201 <$GUILDNAME>
+MOV G201 <$EFFIGYSTATE>
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G201)> 40
+Break
